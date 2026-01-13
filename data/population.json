@@ -1,0 +1,8370 @@
+{
+  "10101": {
+    "name": "Eisenstadt",
+    "population": 16118
+  },
+  "10201": {
+    "name": "Rust",
+    "population": 1933
+  },
+  "10301": {
+    "name": "Breitenbrunn am Neusiedler See",
+    "population": 1943
+  },
+  "10302": {
+    "name": "Donnerskirchen",
+    "population": 1881
+  },
+  "10303": {
+    "name": "Großhöflein",
+    "population": 2078
+  },
+  "10304": {
+    "name": "Hornstein",
+    "population": 3323
+  },
+  "10305": {
+    "name": "Klingenbach",
+    "population": 1203
+  },
+  "10306": {
+    "name": "Leithaprodersdorf",
+    "population": 1258
+  },
+  "10307": {
+    "name": "Mörbisch am See",
+    "population": 2181
+  },
+  "10308": {
+    "name": "Müllendorf",
+    "population": 1521
+  },
+  "10309": {
+    "name": "Neufeld an der Leitha",
+    "population": 3594
+  },
+  "10310": {
+    "name": "Oggau am Neusiedler See",
+    "population": 1691
+  },
+  "10311": {
+    "name": "Oslip",
+    "population": 1304
+  },
+  "10312": {
+    "name": "Purbach am Neusiedler See",
+    "population": 3053
+  },
+  "10313": {
+    "name": "Sankt Margarethen im Burgenland",
+    "population": 2720
+  },
+  "10314": {
+    "name": "Schützen am Gebirge",
+    "population": 1448
+  },
+  "10315": {
+    "name": "Siegendorf",
+    "population": 3228
+  },
+  "10316": {
+    "name": "Steinbrunn",
+    "population": 2996
+  },
+  "10317": {
+    "name": "Trausdorf an der Wulka",
+    "population": 2143
+  },
+  "10318": {
+    "name": "Wimpassing an der Leitha",
+    "population": 1724
+  },
+  "10319": {
+    "name": "Wulkaprodersdorf",
+    "population": 1938
+  },
+  "10320": {
+    "name": "Loretto",
+    "population": 520
+  },
+  "10321": {
+    "name": "Stotzing",
+    "population": 821
+  },
+  "10322": {
+    "name": "Zillingtal",
+    "population": 1045
+  },
+  "10323": {
+    "name": "Zagersdorf",
+    "population": 1142
+  },
+  "10401": {
+    "name": "Bocksdorf",
+    "population": 790
+  },
+  "10402": {
+    "name": "Burgauberg-Neudauberg",
+    "population": 1434
+  },
+  "10403": {
+    "name": "Eberau",
+    "population": 910
+  },
+  "10404": {
+    "name": "Gerersdorf-Sulz",
+    "population": 1028
+  },
+  "10405": {
+    "name": "Güssing",
+    "population": 3520
+  },
+  "10406": {
+    "name": "Güttenbach",
+    "population": 843
+  },
+  "10407": {
+    "name": "Heiligenbrunn",
+    "population": 710
+  },
+  "10408": {
+    "name": "Kukmirn",
+    "population": 1985
+  },
+  "10409": {
+    "name": "Neuberg im Burgenland",
+    "population": 943
+  },
+  "10410": {
+    "name": "Neustift bei Güssing",
+    "population": 444
+  },
+  "10411": {
+    "name": "Olbendorf",
+    "population": 1470
+  },
+  "10412": {
+    "name": "Ollersdorf im Burgenland",
+    "population": 955
+  },
+  "10413": {
+    "name": "Sankt Michael im Burgenland",
+    "population": 1007
+  },
+  "10414": {
+    "name": "Stegersbach",
+    "population": 2741
+  },
+  "10415": {
+    "name": "Stinatz",
+    "population": 1193
+  },
+  "10416": {
+    "name": "Strem",
+    "population": 934
+  },
+  "10417": {
+    "name": "Tobaj",
+    "population": 1369
+  },
+  "10418": {
+    "name": "Hackerberg",
+    "population": 383
+  },
+  "10419": {
+    "name": "Wörterberg",
+    "population": 538
+  },
+  "10420": {
+    "name": "Großmürbisch",
+    "population": 232
+  },
+  "10421": {
+    "name": "Inzenhof",
+    "population": 336
+  },
+  "10422": {
+    "name": "Kleinmürbisch",
+    "population": 227
+  },
+  "10423": {
+    "name": "Tschanigraben",
+    "population": 64
+  },
+  "10424": {
+    "name": "Heugraben",
+    "population": 233
+  },
+  "10425": {
+    "name": "Rohr im Burgenland",
+    "population": 369
+  },
+  "10426": {
+    "name": "Bildein",
+    "population": 352
+  },
+  "10427": {
+    "name": "Rauchwart",
+    "population": 478
+  },
+  "10428": {
+    "name": "Moschendorf",
+    "population": 364
+  },
+  "10501": {
+    "name": "Deutsch Kaltenbrunn",
+    "population": 1730
+  },
+  "10502": {
+    "name": "Eltendorf",
+    "population": 900
+  },
+  "10503": {
+    "name": "Heiligenkreuz im Lafnitztal",
+    "population": 1242
+  },
+  "10504": {
+    "name": "Jennersdorf",
+    "population": 4159
+  },
+  "10505": {
+    "name": "Minihof-Liebau",
+    "population": 1041
+  },
+  "10506": {
+    "name": "Mogersdorf",
+    "population": 1153
+  },
+  "10507": {
+    "name": "Neuhaus am Klausenbach",
+    "population": 879
+  },
+  "10508": {
+    "name": "Rudersdorf",
+    "population": 2241
+  },
+  "10509": {
+    "name": "Sankt Martin an der Raab",
+    "population": 1941
+  },
+  "10510": {
+    "name": "Weichselbaum",
+    "population": 712
+  },
+  "10511": {
+    "name": "Königsdorf",
+    "population": 784
+  },
+  "10512": {
+    "name": "Mühlgraben",
+    "population": 375
+  },
+  "10601": {
+    "name": "Draßburg",
+    "population": 1233
+  },
+  "10602": {
+    "name": "Forchtenstein",
+    "population": 2800
+  },
+  "10603": {
+    "name": "Hirm",
+    "population": 1103
+  },
+  "10604": {
+    "name": "Loipersbach im Burgenland",
+    "population": 1214
+  },
+  "10605": {
+    "name": "Marz",
+    "population": 2074
+  },
+  "10606": {
+    "name": "Mattersburg",
+    "population": 7554
+  },
+  "10607": {
+    "name": "Neudörfl",
+    "population": 5015
+  },
+  "10608": {
+    "name": "Pöttelsdorf",
+    "population": 754
+  },
+  "10609": {
+    "name": "Pöttsching",
+    "population": 3068
+  },
+  "10610": {
+    "name": "Rohrbach bei Mattersburg",
+    "population": 2684
+  },
+  "10611": {
+    "name": "Bad Sauerbrunn",
+    "population": 2355
+  },
+  "10612": {
+    "name": "Schattendorf",
+    "population": 2360
+  },
+  "10613": {
+    "name": "Sieggraben",
+    "population": 1253
+  },
+  "10614": {
+    "name": "Sigleß",
+    "population": 1183
+  },
+  "10615": {
+    "name": "Wiesen",
+    "population": 2792
+  },
+  "10616": {
+    "name": "Antau",
+    "population": 846
+  },
+  "10617": {
+    "name": "Baumgarten",
+    "population": 922
+  },
+  "10618": {
+    "name": "Zemendorf-Stöttera",
+    "population": 1320
+  },
+  "10619": {
+    "name": "Krensdorf",
+    "population": 624
+  },
+  "10701": {
+    "name": "Andau",
+    "population": 2266
+  },
+  "10702": {
+    "name": "Apetlon",
+    "population": 1749
+  },
+  "10703": {
+    "name": "Bruckneudorf",
+    "population": 3108
+  },
+  "10704": {
+    "name": "Deutsch Jahrndorf",
+    "population": 643
+  },
+  "10705": {
+    "name": "Frauenkirchen",
+    "population": 2963
+  },
+  "10706": {
+    "name": "Gattendorf",
+    "population": 1518
+  },
+  "10707": {
+    "name": "Gols",
+    "population": 3937
+  },
+  "10708": {
+    "name": "Halbturn",
+    "population": 1871
+  },
+  "10709": {
+    "name": "Illmitz",
+    "population": 2333
+  },
+  "10710": {
+    "name": "Jois",
+    "population": 1655
+  },
+  "10711": {
+    "name": "Kittsee",
+    "population": 3803
+  },
+  "10712": {
+    "name": "Mönchhof",
+    "population": 2191
+  },
+  "10713": {
+    "name": "Neusiedl am See",
+    "population": 8885
+  },
+  "10714": {
+    "name": "Nickelsdorf",
+    "population": 1843
+  },
+  "10715": {
+    "name": "Pama",
+    "population": 1284
+  },
+  "10716": {
+    "name": "Pamhagen",
+    "population": 1472
+  },
+  "10717": {
+    "name": "Parndorf",
+    "population": 5362
+  },
+  "10718": {
+    "name": "Podersdorf am See",
+    "population": 2146
+  },
+  "10719": {
+    "name": "Sankt Andrä am Zicksee",
+    "population": 1389
+  },
+  "10720": {
+    "name": "Tadten",
+    "population": 1142
+  },
+  "10721": {
+    "name": "Wallern im Burgenland",
+    "population": 1624
+  },
+  "10722": {
+    "name": "Weiden am See",
+    "population": 2597
+  },
+  "10723": {
+    "name": "Winden am See",
+    "population": 1384
+  },
+  "10724": {
+    "name": "Zurndorf",
+    "population": 2320
+  },
+  "10725": {
+    "name": "Neudorf",
+    "population": 857
+  },
+  "10726": {
+    "name": "Potzneusiedl",
+    "population": 679
+  },
+  "10727": {
+    "name": "Edelstal",
+    "population": 824
+  },
+  "10801": {
+    "name": "Deutschkreutz",
+    "population": 3140
+  },
+  "10802": {
+    "name": "Draßmarkt",
+    "population": 1381
+  },
+  "10803": {
+    "name": "Frankenau-Unterpullendorf",
+    "population": 1088
+  },
+  "10804": {
+    "name": "Großwarasdorf",
+    "population": 1362
+  },
+  "10805": {
+    "name": "Horitschon",
+    "population": 1807
+  },
+  "10806": {
+    "name": "Kaisersdorf",
+    "population": 595
+  },
+  "10807": {
+    "name": "Kobersdorf",
+    "population": 1878
+  },
+  "10808": {
+    "name": "Lackenbach",
+    "population": 1161
+  },
+  "10809": {
+    "name": "Lockenhaus",
+    "population": 2072
+  },
+  "10810": {
+    "name": "Lutzmannsburg",
+    "population": 842
+  },
+  "10811": {
+    "name": "Mannersdorf an der Rabnitz",
+    "population": 1783
+  },
+  "10812": {
+    "name": "Markt Sankt Martin",
+    "population": 1281
+  },
+  "10813": {
+    "name": "Neckenmarkt",
+    "population": 1675
+  },
+  "10814": {
+    "name": "Neutal",
+    "population": 1140
+  },
+  "10815": {
+    "name": "Nikitsch",
+    "population": 1389
+  },
+  "10816": {
+    "name": "Oberpullendorf",
+    "population": 3337
+  },
+  "10817": {
+    "name": "Pilgersdorf",
+    "population": 1569
+  },
+  "10818": {
+    "name": "Piringsdorf",
+    "population": 824
+  },
+  "10819": {
+    "name": "Raiding",
+    "population": 916
+  },
+  "10820": {
+    "name": "Ritzing",
+    "population": 911
+  },
+  "10821": {
+    "name": "Steinberg-Dörfl",
+    "population": 1308
+  },
+  "10822": {
+    "name": "Stoob",
+    "population": 1354
+  },
+  "10823": {
+    "name": "Weppersdorf",
+    "population": 1910
+  },
+  "10824": {
+    "name": "Lackendorf",
+    "population": 615
+  },
+  "10825": {
+    "name": "Unterfrauenhaid",
+    "population": 645
+  },
+  "10826": {
+    "name": "Unterrabnitz-Schwendgraben",
+    "population": 615
+  },
+  "10827": {
+    "name": "Weingraben",
+    "population": 348
+  },
+  "10828": {
+    "name": "Oberloisdorf",
+    "population": 798
+  },
+  "10901": {
+    "name": "Bad Tatzmannsdorf",
+    "population": 1658
+  },
+  "10902": {
+    "name": "Bernstein",
+    "population": 2159
+  },
+  "10903": {
+    "name": "Deutsch Schützen-Eisenberg",
+    "population": 1077
+  },
+  "10904": {
+    "name": "Grafenschachen",
+    "population": 1253
+  },
+  "10905": {
+    "name": "Großpetersdorf",
+    "population": 3595
+  },
+  "10906": {
+    "name": "Hannersdorf",
+    "population": 740
+  },
+  "10907": {
+    "name": "Kemeten",
+    "population": 1539
+  },
+  "10908": {
+    "name": "Kohfidisch",
+    "population": 1437
+  },
+  "10909": {
+    "name": "Litzelsdorf",
+    "population": 1151
+  },
+  "10910": {
+    "name": "Loipersdorf-Kitzladen",
+    "population": 1360
+  },
+  "10911": {
+    "name": "Mariasdorf",
+    "population": 1136
+  },
+  "10912": {
+    "name": "Markt Allhau",
+    "population": 2011
+  },
+  "10913": {
+    "name": "Markt Neuhodis",
+    "population": 643
+  },
+  "10914": {
+    "name": "Mischendorf",
+    "population": 1442
+  },
+  "10915": {
+    "name": "Oberdorf im Burgenland",
+    "population": 978
+  },
+  "10916": {
+    "name": "Oberschützen",
+    "population": 2472
+  },
+  "10917": {
+    "name": "Oberwart",
+    "population": 8060
+  },
+  "10918": {
+    "name": "Pinkafeld",
+    "population": 5890
+  },
+  "10919": {
+    "name": "Rechnitz",
+    "population": 3053
+  },
+  "10920": {
+    "name": "Riedlingsdorf",
+    "population": 1691
+  },
+  "10921": {
+    "name": "Rotenturm an der Pinka",
+    "population": 1447
+  },
+  "10922": {
+    "name": "Schachendorf",
+    "population": 743
+  },
+  "10923": {
+    "name": "Stadtschlaining",
+    "population": 2050
+  },
+  "10924": {
+    "name": "Unterkohlstätten",
+    "population": 970
+  },
+  "10925": {
+    "name": "Unterwart",
+    "population": 1013
+  },
+  "10926": {
+    "name": "Weiden bei Rechnitz",
+    "population": 786
+  },
+  "10927": {
+    "name": "Wiesfleck",
+    "population": 1205
+  },
+  "10928": {
+    "name": "Wolfau",
+    "population": 1516
+  },
+  "10929": {
+    "name": "Neustift an der Lafnitz",
+    "population": 823
+  },
+  "10930": {
+    "name": "Jabing",
+    "population": 720
+  },
+  "10931": {
+    "name": "Badersdorf",
+    "population": 286
+  },
+  "10932": {
+    "name": "Schandorf",
+    "population": 328
+  },
+  "20101": {
+    "name": "Klagenfurt am Wörthersee",
+    "population": 105256
+  },
+  "20201": {
+    "name": "Villach",
+    "population": 65749
+  },
+  "20302": {
+    "name": "Dellach",
+    "population": 1185
+  },
+  "20305": {
+    "name": "Hermagor-Pressegger See",
+    "population": 6905
+  },
+  "20306": {
+    "name": "Kirchbach",
+    "population": 2478
+  },
+  "20307": {
+    "name": "Kötschach-Mauthen",
+    "population": 3320
+  },
+  "20316": {
+    "name": "Sankt Stefan im Gailtal",
+    "population": 1551
+  },
+  "20320": {
+    "name": "Gitschtal",
+    "population": 1228
+  },
+  "20321": {
+    "name": "Lesachtal",
+    "population": 1274
+  },
+  "20402": {
+    "name": "Ebenthal in Kärnten",
+    "population": 8224
+  },
+  "20403": {
+    "name": "Feistritz im Rosental",
+    "population": 2502
+  },
+  "20405": {
+    "name": "Ferlach",
+    "population": 7513
+  },
+  "20409": {
+    "name": "Grafenstein",
+    "population": 3088
+  },
+  "20412": {
+    "name": "Keutschach am See",
+    "population": 2418
+  },
+  "20414": {
+    "name": "Köttmannsdorf",
+    "population": 3186
+  },
+  "20415": {
+    "name": "Krumpendorf am Wörthersee",
+    "population": 3579
+  },
+  "20416": {
+    "name": "Ludmannsdorf",
+    "population": 1812
+  },
+  "20417": {
+    "name": "Maria Rain",
+    "population": 2732
+  },
+  "20418": {
+    "name": "Maria Saal",
+    "population": 4024
+  },
+  "20419": {
+    "name": "Maria Wörth",
+    "population": 1661
+  },
+  "20421": {
+    "name": "Moosburg",
+    "population": 4667
+  },
+  "20424": {
+    "name": "Pörtschach am Wörther See",
+    "population": 3002
+  },
+  "20425": {
+    "name": "Poggersdorf",
+    "population": 3353
+  },
+  "20428": {
+    "name": "Sankt Margareten im Rosental",
+    "population": 1087
+  },
+  "20432": {
+    "name": "Schiefling am Wörthersee",
+    "population": 2683
+  },
+  "20435": {
+    "name": "Techelsberg am Wörther See",
+    "population": 2212
+  },
+  "20441": {
+    "name": "Zell",
+    "population": 587
+  },
+  "20442": {
+    "name": "Magdalensberg",
+    "population": 3730
+  },
+  "20501": {
+    "name": "Althofen",
+    "population": 4950
+  },
+  "20502": {
+    "name": "Brückl",
+    "population": 2734
+  },
+  "20503": {
+    "name": "Deutsch-Griffen",
+    "population": 822
+  },
+  "20504": {
+    "name": "Eberstein",
+    "population": 1227
+  },
+  "20505": {
+    "name": "Friesach",
+    "population": 4852
+  },
+  "20506": {
+    "name": "Glödnitz",
+    "population": 835
+  },
+  "20508": {
+    "name": "Gurk",
+    "population": 1178
+  },
+  "20509": {
+    "name": "Guttaring",
+    "population": 1498
+  },
+  "20511": {
+    "name": "Hüttenberg",
+    "population": 1274
+  },
+  "20512": {
+    "name": "Kappel am Krappfeld",
+    "population": 1936
+  },
+  "20513": {
+    "name": "Klein Sankt Paul",
+    "population": 1785
+  },
+  "20515": {
+    "name": "Liebenfels",
+    "population": 3416
+  },
+  "20518": {
+    "name": "Metnitz",
+    "population": 1810
+  },
+  "20519": {
+    "name": "Micheldorf",
+    "population": 959
+  },
+  "20520": {
+    "name": "Mölbling",
+    "population": 1314
+  },
+  "20523": {
+    "name": "Sankt Georgen am Längsee",
+    "population": 3600
+  },
+  "20527": {
+    "name": "Sankt Veit an der Glan",
+    "population": 12234
+  },
+  "20530": {
+    "name": "Straßburg",
+    "population": 1964
+  },
+  "20531": {
+    "name": "Weitensfeld im Gurktal",
+    "population": 1982
+  },
+  "20534": {
+    "name": "Frauenstein",
+    "population": 3580
+  },
+  "20601": {
+    "name": "Bad Kleinkirchheim",
+    "population": 1657
+  },
+  "20602": {
+    "name": "Baldramsdorf",
+    "population": 1839
+  },
+  "20603": {
+    "name": "Berg im Drautal",
+    "population": 1224
+  },
+  "20604": {
+    "name": "Dellach im Drautal",
+    "population": 1626
+  },
+  "20605": {
+    "name": "Großkirchheim",
+    "population": 1307
+  },
+  "20607": {
+    "name": "Flattach",
+    "population": 1121
+  },
+  "20608": {
+    "name": "Gmünd in Kärnten",
+    "population": 2554
+  },
+  "20609": {
+    "name": "Greifenburg",
+    "population": 1702
+  },
+  "20610": {
+    "name": "Heiligenblut am Großglockner",
+    "population": 959
+  },
+  "20611": {
+    "name": "Irschen",
+    "population": 1912
+  },
+  "20613": {
+    "name": "Kleblach-Lind",
+    "population": 1161
+  },
+  "20616": {
+    "name": "Lendorf",
+    "population": 1779
+  },
+  "20618": {
+    "name": "Mallnitz",
+    "population": 771
+  },
+  "20619": {
+    "name": "Malta",
+    "population": 1867
+  },
+  "20620": {
+    "name": "Millstatt am See",
+    "population": 3464
+  },
+  "20622": {
+    "name": "Mörtschach",
+    "population": 816
+  },
+  "20624": {
+    "name": "Mühldorf",
+    "population": 1022
+  },
+  "20625": {
+    "name": "Oberdrauburg",
+    "population": 1198
+  },
+  "20627": {
+    "name": "Obervellach",
+    "population": 2154
+  },
+  "20630": {
+    "name": "Radenthein",
+    "population": 5742
+  },
+  "20631": {
+    "name": "Rangersdorf",
+    "population": 1700
+  },
+  "20632": {
+    "name": "Rennweg am Katschberg",
+    "population": 1650
+  },
+  "20633": {
+    "name": "Sachsenburg",
+    "population": 1333
+  },
+  "20634": {
+    "name": "Seeboden am Millstätter See",
+    "population": 6706
+  },
+  "20635": {
+    "name": "Spittal an der Drau",
+    "population": 15341
+  },
+  "20636": {
+    "name": "Stall",
+    "population": 1493
+  },
+  "20637": {
+    "name": "Steinfeld",
+    "population": 1996
+  },
+  "20638": {
+    "name": "Trebesing",
+    "population": 1143
+  },
+  "20639": {
+    "name": "Weißensee",
+    "population": 759
+  },
+  "20640": {
+    "name": "Winklern",
+    "population": 1185
+  },
+  "20642": {
+    "name": "Krems in Kärnten",
+    "population": 1603
+  },
+  "20643": {
+    "name": "Lurnfeld",
+    "population": 2676
+  },
+  "20644": {
+    "name": "Reißeck",
+    "population": 2085
+  },
+  "20701": {
+    "name": "Afritz am See",
+    "population": 1480
+  },
+  "20702": {
+    "name": "Arnoldstein",
+    "population": 7157
+  },
+  "20703": {
+    "name": "Arriach",
+    "population": 1333
+  },
+  "20705": {
+    "name": "Bad Bleiberg",
+    "population": 2141
+  },
+  "20707": {
+    "name": "Feistritz an der Gail",
+    "population": 643
+  },
+  "20708": {
+    "name": "Feld am See",
+    "population": 1042
+  },
+  "20710": {
+    "name": "Ferndorf",
+    "population": 2013
+  },
+  "20711": {
+    "name": "Finkenstein am Faaker See",
+    "population": 9466
+  },
+  "20712": {
+    "name": "Fresach",
+    "population": 1239
+  },
+  "20713": {
+    "name": "Hohenthurn",
+    "population": 872
+  },
+  "20719": {
+    "name": "Nötsch im Gailtal",
+    "population": 2340
+  },
+  "20720": {
+    "name": "Paternion",
+    "population": 5778
+  },
+  "20721": {
+    "name": "Rosegg",
+    "population": 1910
+  },
+  "20722": {
+    "name": "Sankt Jakob im Rosental",
+    "population": 4357
+  },
+  "20723": {
+    "name": "Stockenboi",
+    "population": 1556
+  },
+  "20724": {
+    "name": "Treffen am Ossiacher See",
+    "population": 4563
+  },
+  "20725": {
+    "name": "Velden am Wörther See",
+    "population": 9183
+  },
+  "20726": {
+    "name": "Weißenstein",
+    "population": 2921
+  },
+  "20727": {
+    "name": "Wernberg",
+    "population": 5662
+  },
+  "20801": {
+    "name": "Bleiburg",
+    "population": 3983
+  },
+  "20802": {
+    "name": "Diex",
+    "population": 788
+  },
+  "20803": {
+    "name": "Eberndorf",
+    "population": 5989
+  },
+  "20804": {
+    "name": "Eisenkappel-Vellach",
+    "population": 2218
+  },
+  "20805": {
+    "name": "Feistritz ob Bleiburg",
+    "population": 2241
+  },
+  "20806": {
+    "name": "Gallizien",
+    "population": 1791
+  },
+  "20807": {
+    "name": "Globasnitz",
+    "population": 1576
+  },
+  "20808": {
+    "name": "Griffen",
+    "population": 3391
+  },
+  "20810": {
+    "name": "Neuhaus",
+    "population": 1020
+  },
+  "20812": {
+    "name": "Ruden",
+    "population": 1499
+  },
+  "20813": {
+    "name": "Sankt Kanzian am Klopeiner See",
+    "population": 4636
+  },
+  "20815": {
+    "name": "Sittersdorf",
+    "population": 1947
+  },
+  "20817": {
+    "name": "Völkermarkt",
+    "population": 10902
+  },
+  "20901": {
+    "name": "Bad Sankt Leonhard im Lavanttal",
+    "population": 4244
+  },
+  "20905": {
+    "name": "Frantschach-Sankt Gertraud",
+    "population": 2394
+  },
+  "20909": {
+    "name": "Lavamünd",
+    "population": 2757
+  },
+  "20911": {
+    "name": "Preitenegg",
+    "population": 891
+  },
+  "20912": {
+    "name": "Reichenfels",
+    "population": 1700
+  },
+  "20913": {
+    "name": "Sankt Andrä",
+    "population": 9840
+  },
+  "20914": {
+    "name": "Sankt Georgen im Lavanttal",
+    "population": 1915
+  },
+  "20918": {
+    "name": "Sankt Paul im Lavanttal",
+    "population": 3144
+  },
+  "20923": {
+    "name": "Wolfsberg",
+    "population": 24961
+  },
+  "21001": {
+    "name": "Albeck",
+    "population": 965
+  },
+  "21002": {
+    "name": "Feldkirchen in Kärnten",
+    "population": 14528
+  },
+  "21003": {
+    "name": "Glanegg",
+    "population": 1780
+  },
+  "21004": {
+    "name": "Gnesau",
+    "population": 1034
+  },
+  "21005": {
+    "name": "Himmelberg",
+    "population": 2329
+  },
+  "21006": {
+    "name": "Ossiach",
+    "population": 724
+  },
+  "21007": {
+    "name": "Reichenau",
+    "population": 1695
+  },
+  "21008": {
+    "name": "Sankt Urban",
+    "population": 1639
+  },
+  "21009": {
+    "name": "Steindorf am Ossiacher See",
+    "population": 3844
+  },
+  "21010": {
+    "name": "Steuerberg",
+    "population": 1573
+  },
+  "30101": {
+    "name": "Krems an der Donau",
+    "population": 25473
+  },
+  "30201": {
+    "name": "Sankt Pölten",
+    "population": 59767
+  },
+  "30301": {
+    "name": "Waidhofen an der Ybbs",
+    "population": 11062
+  },
+  "30401": {
+    "name": "Wiener Neustadt",
+    "population": 49156
+  },
+  "30501": {
+    "name": "Allhartsberg",
+    "population": 2218
+  },
+  "30502": {
+    "name": "Amstetten",
+    "population": 24008
+  },
+  "30503": {
+    "name": "Ardagger",
+    "population": 3604
+  },
+  "30504": {
+    "name": "Aschbach-Markt",
+    "population": 3796
+  },
+  "30506": {
+    "name": "Behamberg",
+    "population": 3444
+  },
+  "30507": {
+    "name": "Biberbach",
+    "population": 2348
+  },
+  "30508": {
+    "name": "Ennsdorf",
+    "population": 3303
+  },
+  "30509": {
+    "name": "Ernsthofen",
+    "population": 2315
+  },
+  "30510": {
+    "name": "Ertl",
+    "population": 1246
+  },
+  "30511": {
+    "name": "Euratsfeld",
+    "population": 2805
+  },
+  "30512": {
+    "name": "Ferschnitz",
+    "population": 1865
+  },
+  "30514": {
+    "name": "Haag",
+    "population": 5851
+  },
+  "30515": {
+    "name": "Haidershofen",
+    "population": 3721
+  },
+  "30516": {
+    "name": "Hollenstein an der Ybbs",
+    "population": 1685
+  },
+  "30517": {
+    "name": "Kematen an der Ybbs",
+    "population": 2698
+  },
+  "30520": {
+    "name": "Neuhofen an der Ybbs",
+    "population": 3086
+  },
+  "30521": {
+    "name": "Neustadtl an der Donau",
+    "population": 2167
+  },
+  "30522": {
+    "name": "Oed-Oehling",
+    "population": 2160
+  },
+  "30524": {
+    "name": "Opponitz",
+    "population": 880
+  },
+  "30526": {
+    "name": "Sankt Georgen am Reith",
+    "population": 529
+  },
+  "30527": {
+    "name": "Sankt Georgen am Ybbsfelde",
+    "population": 2807
+  },
+  "30529": {
+    "name": "Sankt Pantaleon-Erla",
+    "population": 2707
+  },
+  "30530": {
+    "name": "Sankt Peter in der Au",
+    "population": 5128
+  },
+  "30531": {
+    "name": "Sankt Valentin",
+    "population": 9356
+  },
+  "30532": {
+    "name": "Seitenstetten",
+    "population": 3355
+  },
+  "30533": {
+    "name": "Sonntagberg",
+    "population": 3661
+  },
+  "30534": {
+    "name": "Strengberg",
+    "population": 2215
+  },
+  "30536": {
+    "name": "Viehdorf",
+    "population": 1368
+  },
+  "30538": {
+    "name": "Wallsee-Sindelburg",
+    "population": 2225
+  },
+  "30539": {
+    "name": "Weistrach",
+    "population": 2455
+  },
+  "30541": {
+    "name": "Winklarn",
+    "population": 1861
+  },
+  "30542": {
+    "name": "Wolfsbach",
+    "population": 2239
+  },
+  "30543": {
+    "name": "Ybbsitz",
+    "population": 3364
+  },
+  "30544": {
+    "name": "Zeillern",
+    "population": 1933
+  },
+  "30601": {
+    "name": "Alland",
+    "population": 2680
+  },
+  "30602": {
+    "name": "Altenmarkt an der Triesting",
+    "population": 2154
+  },
+  "30603": {
+    "name": "Bad Vöslau",
+    "population": 12478
+  },
+  "30604": {
+    "name": "Baden",
+    "population": 25931
+  },
+  "30605": {
+    "name": "Berndorf",
+    "population": 8919
+  },
+  "30607": {
+    "name": "Ebreichsdorf",
+    "population": 12003
+  },
+  "30608": {
+    "name": "Enzesfeld-Lindabrunn",
+    "population": 4315
+  },
+  "30609": {
+    "name": "Furth an der Triesting",
+    "population": 866
+  },
+  "30612": {
+    "name": "Günselsdorf",
+    "population": 1734
+  },
+  "30613": {
+    "name": "Heiligenkreuz",
+    "population": 1597
+  },
+  "30614": {
+    "name": "Hernstein",
+    "population": 1571
+  },
+  "30615": {
+    "name": "Hirtenberg",
+    "population": 2614
+  },
+  "30616": {
+    "name": "Klausen-Leopoldsdorf",
+    "population": 1672
+  },
+  "30618": {
+    "name": "Kottingbrunn",
+    "population": 7451
+  },
+  "30620": {
+    "name": "Leobersdorf",
+    "population": 5344
+  },
+  "30621": {
+    "name": "Mitterndorf an der Fischa",
+    "population": 3125
+  },
+  "30623": {
+    "name": "Oberwaltersdorf",
+    "population": 5290
+  },
+  "30625": {
+    "name": "Pfaffstätten",
+    "population": 3502
+  },
+  "30626": {
+    "name": "Pottendorf",
+    "population": 7770
+  },
+  "30627": {
+    "name": "Pottenstein",
+    "population": 2983
+  },
+  "30629": {
+    "name": "Reisenberg",
+    "population": 1749
+  },
+  "30631": {
+    "name": "Schönau an der Triesting",
+    "population": 2141
+  },
+  "30633": {
+    "name": "Seibersdorf",
+    "population": 1614
+  },
+  "30635": {
+    "name": "Sooß",
+    "population": 1077
+  },
+  "30636": {
+    "name": "Tattendorf",
+    "population": 1456
+  },
+  "30637": {
+    "name": "Teesdorf",
+    "population": 1899
+  },
+  "30639": {
+    "name": "Traiskirchen",
+    "population": 18925
+  },
+  "30641": {
+    "name": "Trumau",
+    "population": 3724
+  },
+  "30645": {
+    "name": "Weissenbach an der Triesting",
+    "population": 1682
+  },
+  "30646": {
+    "name": "Blumau-Neurißhof",
+    "population": 1950
+  },
+  "30701": {
+    "name": "Au am Leithaberge",
+    "population": 950
+  },
+  "30702": {
+    "name": "Bad Deutsch-Altenburg",
+    "population": 1993
+  },
+  "30703": {
+    "name": "Berg",
+    "population": 974
+  },
+  "30704": {
+    "name": "Bruck an der Leitha",
+    "population": 8687
+  },
+  "30706": {
+    "name": "Enzersdorf an der Fischa",
+    "population": 3664
+  },
+  "30708": {
+    "name": "Göttlesbrunn-Arbesthal",
+    "population": 1489
+  },
+  "30709": {
+    "name": "Götzendorf an der Leitha",
+    "population": 2227
+  },
+  "30710": {
+    "name": "Hainburg an der Donau",
+    "population": 7038
+  },
+  "30711": {
+    "name": "Haslau-Maria Ellend",
+    "population": 2027
+  },
+  "30712": {
+    "name": "Höflein",
+    "population": 1232
+  },
+  "30713": {
+    "name": "Hof am Leithaberge",
+    "population": 1678
+  },
+  "30715": {
+    "name": "Hundsheim",
+    "population": 668
+  },
+  "30716": {
+    "name": "Mannersdorf am Leithagebirge",
+    "population": 4274
+  },
+  "30718": {
+    "name": "Petronell-Carnuntum",
+    "population": 1260
+  },
+  "30719": {
+    "name": "Prellenkirchen",
+    "population": 1705
+  },
+  "30721": {
+    "name": "Rohrau",
+    "population": 1666
+  },
+  "30722": {
+    "name": "Scharndorf",
+    "population": 1239
+  },
+  "30724": {
+    "name": "Sommerein",
+    "population": 2265
+  },
+  "30726": {
+    "name": "Trautmannsdorf an der Leitha",
+    "population": 2929
+  },
+  "30728": {
+    "name": "Wolfsthal",
+    "population": 1256
+  },
+  "30729": {
+    "name": "Ebergassing",
+    "population": 4372
+  },
+  "30730": {
+    "name": "Fischamend",
+    "population": 5736
+  },
+  "30731": {
+    "name": "Gramatneusiedl",
+    "population": 3700
+  },
+  "30732": {
+    "name": "Himberg",
+    "population": 8324
+  },
+  "30733": {
+    "name": "Klein-Neusiedl",
+    "population": 921
+  },
+  "30734": {
+    "name": "Lanzendorf",
+    "population": 1949
+  },
+  "30735": {
+    "name": "Leopoldsdorf",
+    "population": 5613
+  },
+  "30736": {
+    "name": "Maria-Lanzendorf",
+    "population": 2264
+  },
+  "30737": {
+    "name": "Moosbrunn",
+    "population": 1808
+  },
+  "30738": {
+    "name": "Rauchenwarth",
+    "population": 803
+  },
+  "30739": {
+    "name": "Schwadorf",
+    "population": 2405
+  },
+  "30740": {
+    "name": "Schwechat",
+    "population": 21243
+  },
+  "30741": {
+    "name": "Zwölfaxing",
+    "population": 1679
+  },
+  "30801": {
+    "name": "Aderklaa",
+    "population": 236
+  },
+  "30802": {
+    "name": "Andlersdorf",
+    "population": 159
+  },
+  "30803": {
+    "name": "Angern an der March",
+    "population": 3526
+  },
+  "30804": {
+    "name": "Auersthal",
+    "population": 2020
+  },
+  "30805": {
+    "name": "Bad Pirawarth",
+    "population": 1743
+  },
+  "30808": {
+    "name": "Deutsch-Wagram",
+    "population": 9257
+  },
+  "30810": {
+    "name": "Drösing",
+    "population": 1119
+  },
+  "30811": {
+    "name": "Dürnkrut",
+    "population": 2224
+  },
+  "30812": {
+    "name": "Ebenthal",
+    "population": 883
+  },
+  "30813": {
+    "name": "Eckartsau",
+    "population": 1370
+  },
+  "30814": {
+    "name": "Engelhartstetten",
+    "population": 2208
+  },
+  "30817": {
+    "name": "Gänserndorf",
+    "population": 12285
+  },
+  "30819": {
+    "name": "Glinzendorf",
+    "population": 360
+  },
+  "30821": {
+    "name": "Groß-Enzersdorf",
+    "population": 12088
+  },
+  "30822": {
+    "name": "Großhofen",
+    "population": 100
+  },
+  "30824": {
+    "name": "Groß-Schweinbarth",
+    "population": 1387
+  },
+  "30825": {
+    "name": "Haringsee",
+    "population": 1159
+  },
+  "30826": {
+    "name": "Hauskirchen",
+    "population": 1278
+  },
+  "30827": {
+    "name": "Hohenau an der March",
+    "population": 2746
+  },
+  "30828": {
+    "name": "Hohenruppersdorf",
+    "population": 962
+  },
+  "30829": {
+    "name": "Jedenspeigen",
+    "population": 1112
+  },
+  "30830": {
+    "name": "Lassee",
+    "population": 3010
+  },
+  "30831": {
+    "name": "Leopoldsdorf im Marchfeld",
+    "population": 3027
+  },
+  "30834": {
+    "name": "Mannsdorf an der Donau",
+    "population": 341
+  },
+  "30835": {
+    "name": "Marchegg",
+    "population": 3113
+  },
+  "30836": {
+    "name": "Markgrafneusiedl",
+    "population": 921
+  },
+  "30838": {
+    "name": "Matzen-Raggendorf",
+    "population": 3006
+  },
+  "30841": {
+    "name": "Neusiedl an der Zaya",
+    "population": 1207
+  },
+  "30842": {
+    "name": "Obersiebenbrunn",
+    "population": 1753
+  },
+  "30844": {
+    "name": "Orth an der Donau",
+    "population": 2235
+  },
+  "30845": {
+    "name": "Palterndorf-Dobermannsdorf",
+    "population": 1331
+  },
+  "30846": {
+    "name": "Parbasdorf",
+    "population": 177
+  },
+  "30848": {
+    "name": "Prottes",
+    "population": 1443
+  },
+  "30849": {
+    "name": "Raasdorf",
+    "population": 725
+  },
+  "30850": {
+    "name": "Ringelsdorf-Niederabsdorf",
+    "population": 1286
+  },
+  "30852": {
+    "name": "Schönkirchen-Reyersdorf",
+    "population": 2020
+  },
+  "30854": {
+    "name": "Spannberg",
+    "population": 984
+  },
+  "30856": {
+    "name": "Strasshof an der Nordbahn",
+    "population": 12202
+  },
+  "30857": {
+    "name": "Sulz im Weinviertel",
+    "population": 1257
+  },
+  "30858": {
+    "name": "Untersiebenbrunn",
+    "population": 1795
+  },
+  "30859": {
+    "name": "Velm-Götzendorf",
+    "population": 785
+  },
+  "30860": {
+    "name": "Weikendorf",
+    "population": 2068
+  },
+  "30863": {
+    "name": "Zistersdorf",
+    "population": 5487
+  },
+  "30865": {
+    "name": "Weiden an der March",
+    "population": 997
+  },
+  "30902": {
+    "name": "Amaliendorf-Aalfang",
+    "population": 1095
+  },
+  "30903": {
+    "name": "Brand-Nagelberg",
+    "population": 1427
+  },
+  "30904": {
+    "name": "Eggern",
+    "population": 662
+  },
+  "30906": {
+    "name": "Eisgarn",
+    "population": 702
+  },
+  "30908": {
+    "name": "Gmünd",
+    "population": 5140
+  },
+  "30909": {
+    "name": "Großdietmanns",
+    "population": 2157
+  },
+  "30910": {
+    "name": "Bad Großpertholz",
+    "population": 1279
+  },
+  "30912": {
+    "name": "Großschönau",
+    "population": 1206
+  },
+  "30913": {
+    "name": "Moorbad Harbach",
+    "population": 680
+  },
+  "30915": {
+    "name": "Haugschlag",
+    "population": 474
+  },
+  "30916": {
+    "name": "Heidenreichstein",
+    "population": 3755
+  },
+  "30917": {
+    "name": "Hirschbach",
+    "population": 573
+  },
+  "30920": {
+    "name": "Hoheneich",
+    "population": 1344
+  },
+  "30921": {
+    "name": "Kirchberg am Walde",
+    "population": 1254
+  },
+  "30925": {
+    "name": "Litschau",
+    "population": 2093
+  },
+  "30929": {
+    "name": "Reingers",
+    "population": 606
+  },
+  "30932": {
+    "name": "Sankt Martin",
+    "population": 1061
+  },
+  "30935": {
+    "name": "Schrems",
+    "population": 5272
+  },
+  "30939": {
+    "name": "Unserfrau-Altweitra",
+    "population": 997
+  },
+  "30940": {
+    "name": "Waldenstein",
+    "population": 1176
+  },
+  "30942": {
+    "name": "Weitra",
+    "population": 2563
+  },
+  "31001": {
+    "name": "Alberndorf im Pulkautal",
+    "population": 707
+  },
+  "31008": {
+    "name": "Göllersdorf",
+    "population": 3214
+  },
+  "31009": {
+    "name": "Grabern",
+    "population": 1732
+  },
+  "31014": {
+    "name": "Guntersdorf",
+    "population": 1157
+  },
+  "31015": {
+    "name": "Hadres",
+    "population": 1699
+  },
+  "31016": {
+    "name": "Hardegg",
+    "population": 1305
+  },
+  "31018": {
+    "name": "Haugsdorf",
+    "population": 1591
+  },
+  "31019": {
+    "name": "Heldenberg",
+    "population": 1478
+  },
+  "31021": {
+    "name": "Hohenwarth-Mühlbach am Manhartsberg",
+    "population": 1345
+  },
+  "31022": {
+    "name": "Hollabrunn",
+    "population": 12514
+  },
+  "31025": {
+    "name": "Mailberg",
+    "population": 560
+  },
+  "31026": {
+    "name": "Maissau",
+    "population": 1965
+  },
+  "31028": {
+    "name": "Nappersdorf-Kammersdorf",
+    "population": 1191
+  },
+  "31033": {
+    "name": "Pernersdorf",
+    "population": 1067
+  },
+  "31035": {
+    "name": "Pulkau",
+    "population": 1460
+  },
+  "31036": {
+    "name": "Ravelsbach",
+    "population": 1668
+  },
+  "31037": {
+    "name": "Retz",
+    "population": 4189
+  },
+  "31038": {
+    "name": "Retzbach",
+    "population": 995
+  },
+  "31041": {
+    "name": "Schrattenthal",
+    "population": 874
+  },
+  "31042": {
+    "name": "Seefeld-Kadolz",
+    "population": 940
+  },
+  "31043": {
+    "name": "Sitzendorf an der Schmida",
+    "population": 2205
+  },
+  "31051": {
+    "name": "Wullersdorf",
+    "population": 2441
+  },
+  "31052": {
+    "name": "Zellerndorf",
+    "population": 2389
+  },
+  "31053": {
+    "name": "Ziersdorf",
+    "population": 3349
+  },
+  "31101": {
+    "name": "Altenburg",
+    "population": 822
+  },
+  "31102": {
+    "name": "Brunn an der Wild",
+    "population": 862
+  },
+  "31103": {
+    "name": "Burgschleinitz-Kühnring",
+    "population": 1304
+  },
+  "31104": {
+    "name": "Drosendorf-Zissersdorf",
+    "population": 1134
+  },
+  "31105": {
+    "name": "Eggenburg",
+    "population": 3509
+  },
+  "31106": {
+    "name": "Gars am Kamp",
+    "population": 3473
+  },
+  "31107": {
+    "name": "Geras",
+    "population": 1253
+  },
+  "31109": {
+    "name": "Horn",
+    "population": 6492
+  },
+  "31110": {
+    "name": "Irnfritz-Messern",
+    "population": 1419
+  },
+  "31111": {
+    "name": "Japons",
+    "population": 696
+  },
+  "31113": {
+    "name": "Langau",
+    "population": 676
+  },
+  "31114": {
+    "name": "Meiseldorf",
+    "population": 841
+  },
+  "31117": {
+    "name": "Pernegg",
+    "population": 693
+  },
+  "31119": {
+    "name": "Röhrenbach",
+    "population": 482
+  },
+  "31120": {
+    "name": "Röschitz",
+    "population": 1134
+  },
+  "31121": {
+    "name": "Rosenburg-Mold",
+    "population": 863
+  },
+  "31123": {
+    "name": "Sankt Bernhard-Frauenhofen",
+    "population": 1279
+  },
+  "31124": {
+    "name": "Sigmundsherberg",
+    "population": 1698
+  },
+  "31129": {
+    "name": "Weitersfeld",
+    "population": 1525
+  },
+  "31130": {
+    "name": "Straning-Grafenberg",
+    "population": 692
+  },
+  "31201": {
+    "name": "Bisamberg",
+    "population": 4875
+  },
+  "31202": {
+    "name": "Enzersfeld im Weinviertel",
+    "population": 1867
+  },
+  "31203": {
+    "name": "Ernstbrunn",
+    "population": 3316
+  },
+  "31204": {
+    "name": "Großmugl",
+    "population": 1613
+  },
+  "31205": {
+    "name": "Großrußbach",
+    "population": 2305
+  },
+  "31206": {
+    "name": "Hagenbrunn",
+    "population": 2411
+  },
+  "31207": {
+    "name": "Harmannsdorf",
+    "population": 4142
+  },
+  "31208": {
+    "name": "Hausleiten",
+    "population": 3843
+  },
+  "31213": {
+    "name": "Korneuburg",
+    "population": 13805
+  },
+  "31214": {
+    "name": "Langenzersdorf",
+    "population": 8194
+  },
+  "31215": {
+    "name": "Leitzersdorf",
+    "population": 1147
+  },
+  "31216": {
+    "name": "Leobendorf",
+    "population": 5265
+  },
+  "31224": {
+    "name": "Rußbach",
+    "population": 1371
+  },
+  "31226": {
+    "name": "Sierndorf",
+    "population": 3985
+  },
+  "31227": {
+    "name": "Spillern",
+    "population": 2644
+  },
+  "31228": {
+    "name": "Stetteldorf am Wagram",
+    "population": 1065
+  },
+  "31229": {
+    "name": "Stetten",
+    "population": 1388
+  },
+  "31230": {
+    "name": "Stockerau",
+    "population": 17210
+  },
+  "31234": {
+    "name": "Niederhollabrunn",
+    "population": 1509
+  },
+  "31235": {
+    "name": "Gerasdorf bei Wien",
+    "population": 12158
+  },
+  "31301": {
+    "name": "Aggsbach",
+    "population": 615
+  },
+  "31302": {
+    "name": "Albrechtsberg an der Großen Krems",
+    "population": 989
+  },
+  "31303": {
+    "name": "Bergern im Dunkelsteinerwald",
+    "population": 1309
+  },
+  "31304": {
+    "name": "Dürnstein",
+    "population": 816
+  },
+  "31308": {
+    "name": "Grafenegg",
+    "population": 3308
+  },
+  "31309": {
+    "name": "Furth bei Göttweig",
+    "population": 3003
+  },
+  "31310": {
+    "name": "Gedersdorf",
+    "population": 2132
+  },
+  "31311": {
+    "name": "Gföhl",
+    "population": 3848
+  },
+  "31315": {
+    "name": "Hadersdorf-Kammern",
+    "population": 1975
+  },
+  "31319": {
+    "name": "Jaidhof",
+    "population": 1225
+  },
+  "31321": {
+    "name": "Krumau am Kamp",
+    "population": 722
+  },
+  "31322": {
+    "name": "Langenlois",
+    "population": 7477
+  },
+  "31323": {
+    "name": "Lengenfeld",
+    "population": 1393
+  },
+  "31324": {
+    "name": "Lichtenau im Waldviertel",
+    "population": 2028
+  },
+  "31326": {
+    "name": "Maria Laach am Jauerling",
+    "population": 888
+  },
+  "31327": {
+    "name": "Mautern an der Donau",
+    "population": 3375
+  },
+  "31330": {
+    "name": "Mühldorf",
+    "population": 1225
+  },
+  "31333": {
+    "name": "Paudorf",
+    "population": 2714
+  },
+  "31336": {
+    "name": "Rastenfeld",
+    "population": 1573
+  },
+  "31337": {
+    "name": "Rohrendorf bei Krems",
+    "population": 2107
+  },
+  "31338": {
+    "name": "Rossatz-Arnsdorf",
+    "population": 1046
+  },
+  "31340": {
+    "name": "Sankt Leonhard am Hornerwald",
+    "population": 1118
+  },
+  "31343": {
+    "name": "Senftenberg",
+    "population": 1917
+  },
+  "31344": {
+    "name": "Spitz",
+    "population": 1526
+  },
+  "31346": {
+    "name": "Straß im Straßertale",
+    "population": 1764
+  },
+  "31347": {
+    "name": "Stratzing",
+    "population": 883
+  },
+  "31350": {
+    "name": "Weinzierl am Walde",
+    "population": 1218
+  },
+  "31351": {
+    "name": "Weißenkirchen in der Wachau",
+    "population": 1359
+  },
+  "31355": {
+    "name": "Schönberg am Kamp",
+    "population": 1836
+  },
+  "31356": {
+    "name": "Droß",
+    "population": 1034
+  },
+  "31401": {
+    "name": "Annaberg",
+    "population": 479
+  },
+  "31402": {
+    "name": "Eschenau",
+    "population": 1286
+  },
+  "31403": {
+    "name": "Hainfeld",
+    "population": 3755
+  },
+  "31404": {
+    "name": "Hohenberg",
+    "population": 1396
+  },
+  "31405": {
+    "name": "Kaumberg",
+    "population": 1073
+  },
+  "31406": {
+    "name": "Kleinzell",
+    "population": 854
+  },
+  "31407": {
+    "name": "Lilienfeld",
+    "population": 2618
+  },
+  "31408": {
+    "name": "Mitterbach am Erlaufsee",
+    "population": 472
+  },
+  "31409": {
+    "name": "Ramsau",
+    "population": 802
+  },
+  "31410": {
+    "name": "Rohrbach an der Gölsen",
+    "population": 1531
+  },
+  "31411": {
+    "name": "Sankt Aegyd am Neuwalde",
+    "population": 1791
+  },
+  "31412": {
+    "name": "Sankt Veit an der Gölsen",
+    "population": 3848
+  },
+  "31413": {
+    "name": "Traisen",
+    "population": 3385
+  },
+  "31414": {
+    "name": "Türnitz",
+    "population": 1845
+  },
+  "31502": {
+    "name": "Artstetten-Pöbring",
+    "population": 1263
+  },
+  "31503": {
+    "name": "Bergland",
+    "population": 1901
+  },
+  "31504": {
+    "name": "Bischofstetten",
+    "population": 1196
+  },
+  "31505": {
+    "name": "Blindenmarkt",
+    "population": 2795
+  },
+  "31506": {
+    "name": "Dorfstetten",
+    "population": 547
+  },
+  "31507": {
+    "name": "Dunkelsteinerwald",
+    "population": 2408
+  },
+  "31508": {
+    "name": "Erlauf",
+    "population": 1119
+  },
+  "31509": {
+    "name": "Golling an der Erlauf",
+    "population": 1475
+  },
+  "31511": {
+    "name": "Hofamt Priel",
+    "population": 1714
+  },
+  "31513": {
+    "name": "Hürm",
+    "population": 2011
+  },
+  "31514": {
+    "name": "Kilb",
+    "population": 2595
+  },
+  "31515": {
+    "name": "Kirnberg an der Mank",
+    "population": 1114
+  },
+  "31516": {
+    "name": "Klein-Pöchlarn",
+    "population": 1053
+  },
+  "31517": {
+    "name": "Krummnußbaum",
+    "population": 1724
+  },
+  "31519": {
+    "name": "Leiben",
+    "population": 1321
+  },
+  "31520": {
+    "name": "Loosdorf",
+    "population": 3872
+  },
+  "31521": {
+    "name": "Mank",
+    "population": 3346
+  },
+  "31522": {
+    "name": "Marbach an der Donau",
+    "population": 1690
+  },
+  "31523": {
+    "name": "Maria Taferl",
+    "population": 953
+  },
+  "31524": {
+    "name": "Melk",
+    "population": 5725
+  },
+  "31525": {
+    "name": "Münichreith-Laimbach",
+    "population": 1610
+  },
+  "31527": {
+    "name": "Neumarkt an der Ybbs",
+    "population": 2168
+  },
+  "31528": {
+    "name": "Nöchling",
+    "population": 1017
+  },
+  "31530": {
+    "name": "Persenbeug-Gottsdorf",
+    "population": 2152
+  },
+  "31531": {
+    "name": "Petzenkirchen",
+    "population": 1597
+  },
+  "31533": {
+    "name": "Pöchlarn",
+    "population": 3969
+  },
+  "31534": {
+    "name": "Pöggstall",
+    "population": 2384
+  },
+  "31535": {
+    "name": "Raxendorf",
+    "population": 1010
+  },
+  "31537": {
+    "name": "Ruprechtshofen",
+    "population": 2332
+  },
+  "31539": {
+    "name": "Sankt Leonhard am Forst",
+    "population": 3109
+  },
+  "31540": {
+    "name": "Sankt Martin-Karlsbach",
+    "population": 1634
+  },
+  "31541": {
+    "name": "Sankt Oswald",
+    "population": 1140
+  },
+  "31542": {
+    "name": "Schönbühel-Aggsbach",
+    "population": 939
+  },
+  "31543": {
+    "name": "Schollach",
+    "population": 1082
+  },
+  "31546": {
+    "name": "Weiten",
+    "population": 1092
+  },
+  "31549": {
+    "name": "Ybbs an der Donau",
+    "population": 5648
+  },
+  "31550": {
+    "name": "Zelking-Matzleinsdorf",
+    "population": 1198
+  },
+  "31551": {
+    "name": "Texingtal",
+    "population": 1669
+  },
+  "31552": {
+    "name": "Yspertal",
+    "population": 2003
+  },
+  "31553": {
+    "name": "Emmersdorf an der Donau",
+    "population": 1776
+  },
+  "31601": {
+    "name": "Altlichtenwarth",
+    "population": 758
+  },
+  "31603": {
+    "name": "Asparn an der Zaya",
+    "population": 1936
+  },
+  "31604": {
+    "name": "Bernhardsthal",
+    "population": 1585
+  },
+  "31605": {
+    "name": "Bockfließ",
+    "population": 1288
+  },
+  "31606": {
+    "name": "Drasenhofen",
+    "population": 1117
+  },
+  "31608": {
+    "name": "Falkenstein",
+    "population": 559
+  },
+  "31609": {
+    "name": "Fallbach",
+    "population": 794
+  },
+  "31611": {
+    "name": "Gaubitsch",
+    "population": 934
+  },
+  "31612": {
+    "name": "Gaweinstal",
+    "population": 4124
+  },
+  "31613": {
+    "name": "Gnadendorf",
+    "population": 1162
+  },
+  "31614": {
+    "name": "Großebersdorf",
+    "population": 2316
+  },
+  "31615": {
+    "name": "Großengersdorf",
+    "population": 1549
+  },
+  "31616": {
+    "name": "Großharras",
+    "population": 1066
+  },
+  "31617": {
+    "name": "Großkrut",
+    "population": 1691
+  },
+  "31620": {
+    "name": "Hausbrunn",
+    "population": 898
+  },
+  "31621": {
+    "name": "Herrnbaumgarten",
+    "population": 926
+  },
+  "31622": {
+    "name": "Hochleithen",
+    "population": 1091
+  },
+  "31627": {
+    "name": "Kreuttal",
+    "population": 1467
+  },
+  "31628": {
+    "name": "Kreuzstetten",
+    "population": 1696
+  },
+  "31629": {
+    "name": "Laa an der Thaya",
+    "population": 6280
+  },
+  "31630": {
+    "name": "Ladendorf",
+    "population": 2321
+  },
+  "31633": {
+    "name": "Mistelbach",
+    "population": 12044
+  },
+  "31634": {
+    "name": "Neudorf im Weinviertel",
+    "population": 1348
+  },
+  "31636": {
+    "name": "Niederleis",
+    "population": 927
+  },
+  "31642": {
+    "name": "Pillichsdorf",
+    "population": 1249
+  },
+  "31644": {
+    "name": "Poysdorf",
+    "population": 5600
+  },
+  "31645": {
+    "name": "Rabensburg",
+    "population": 1061
+  },
+  "31646": {
+    "name": "Schrattenberg",
+    "population": 842
+  },
+  "31649": {
+    "name": "Staatz",
+    "population": 1923
+  },
+  "31650": {
+    "name": "Stronsdorf",
+    "population": 1535
+  },
+  "31651": {
+    "name": "Ulrichskirchen-Schleinbach",
+    "population": 2653
+  },
+  "31652": {
+    "name": "Unterstinkenbrunn",
+    "population": 560
+  },
+  "31653": {
+    "name": "Wildendürnbach",
+    "population": 1526
+  },
+  "31654": {
+    "name": "Wilfersdorf",
+    "population": 2087
+  },
+  "31655": {
+    "name": "Wolkersdorf im Weinviertel",
+    "population": 7544
+  },
+  "31658": {
+    "name": "Ottenthal",
+    "population": 529
+  },
+  "31701": {
+    "name": "Achau",
+    "population": 1727
+  },
+  "31702": {
+    "name": "Biedermannsdorf",
+    "population": 3137
+  },
+  "31703": {
+    "name": "Breitenfurt bei Wien",
+    "population": 5998
+  },
+  "31704": {
+    "name": "Brunn am Gebirge",
+    "population": 12310
+  },
+  "31706": {
+    "name": "Gaaden",
+    "population": 1595
+  },
+  "31707": {
+    "name": "Gießhübl",
+    "population": 2433
+  },
+  "31709": {
+    "name": "Gumpoldskirchen",
+    "population": 4022
+  },
+  "31710": {
+    "name": "Guntramsdorf",
+    "population": 9450
+  },
+  "31711": {
+    "name": "Hennersdorf",
+    "population": 1526
+  },
+  "31712": {
+    "name": "Hinterbrühl",
+    "population": 3895
+  },
+  "31713": {
+    "name": "Kaltenleutgeben",
+    "population": 3299
+  },
+  "31714": {
+    "name": "Laab im Walde",
+    "population": 1093
+  },
+  "31715": {
+    "name": "Laxenburg",
+    "population": 3091
+  },
+  "31716": {
+    "name": "Maria Enzersdorf",
+    "population": 8802
+  },
+  "31717": {
+    "name": "Mödling",
+    "population": 20662
+  },
+  "31718": {
+    "name": "Münchendorf",
+    "population": 3242
+  },
+  "31719": {
+    "name": "Perchtoldsdorf",
+    "population": 14960
+  },
+  "31723": {
+    "name": "Vösendorf",
+    "population": 7706
+  },
+  "31725": {
+    "name": "Wiener Neudorf",
+    "population": 9647
+  },
+  "31726": {
+    "name": "Wienerwald",
+    "population": 2930
+  },
+  "31801": {
+    "name": "Altendorf",
+    "population": 357
+  },
+  "31802": {
+    "name": "Aspang-Markt",
+    "population": 1804
+  },
+  "31803": {
+    "name": "Aspangberg-Sankt Peter",
+    "population": 1850
+  },
+  "31804": {
+    "name": "Breitenau",
+    "population": 1558
+  },
+  "31805": {
+    "name": "Breitenstein",
+    "population": 272
+  },
+  "31806": {
+    "name": "Buchbach",
+    "population": 354
+  },
+  "31807": {
+    "name": "Edlitz",
+    "population": 905
+  },
+  "31808": {
+    "name": "Enzenreith",
+    "population": 1942
+  },
+  "31809": {
+    "name": "Feistritz am Wechsel",
+    "population": 1029
+  },
+  "31810": {
+    "name": "Gloggnitz",
+    "population": 5834
+  },
+  "31811": {
+    "name": "Grafenbach-Sankt Valentin",
+    "population": 2322
+  },
+  "31812": {
+    "name": "Grimmenstein",
+    "population": 1335
+  },
+  "31813": {
+    "name": "Grünbach am Schneeberg",
+    "population": 1636
+  },
+  "31814": {
+    "name": "Kirchberg am Wechsel",
+    "population": 2519
+  },
+  "31815": {
+    "name": "Mönichkirchen",
+    "population": 622
+  },
+  "31817": {
+    "name": "Natschbach-Loipersbach",
+    "population": 1742
+  },
+  "31818": {
+    "name": "Neunkirchen",
+    "population": 12940
+  },
+  "31820": {
+    "name": "Otterthal",
+    "population": 537
+  },
+  "31821": {
+    "name": "Payerbach",
+    "population": 2103
+  },
+  "31823": {
+    "name": "Pitten",
+    "population": 2967
+  },
+  "31825": {
+    "name": "Prigglitz",
+    "population": 435
+  },
+  "31826": {
+    "name": "Puchberg am Schneeberg",
+    "population": 2701
+  },
+  "31827": {
+    "name": "Raach am Hochgebirge",
+    "population": 323
+  },
+  "31829": {
+    "name": "Reichenau an der Rax",
+    "population": 2473
+  },
+  "31830": {
+    "name": "Sankt Corona am Wechsel",
+    "population": 396
+  },
+  "31831": {
+    "name": "Sankt Egyden am Steinfeld",
+    "population": 2308
+  },
+  "31832": {
+    "name": "Scheiblingkirchen-Thernberg",
+    "population": 1956
+  },
+  "31833": {
+    "name": "Schottwien",
+    "population": 669
+  },
+  "31834": {
+    "name": "Schrattenbach",
+    "population": 387
+  },
+  "31835": {
+    "name": "Schwarzau am Steinfeld",
+    "population": 2187
+  },
+  "31836": {
+    "name": "Schwarzau im Gebirge",
+    "population": 620
+  },
+  "31837": {
+    "name": "Seebenstein",
+    "population": 1490
+  },
+  "31838": {
+    "name": "Semmering",
+    "population": 615
+  },
+  "31839": {
+    "name": "Ternitz",
+    "population": 14697
+  },
+  "31840": {
+    "name": "Thomasberg",
+    "population": 1233
+  },
+  "31841": {
+    "name": "Trattenbach",
+    "population": 514
+  },
+  "31842": {
+    "name": "Bürg-Vöstenhof",
+    "population": 158
+  },
+  "31843": {
+    "name": "Warth",
+    "population": 1570
+  },
+  "31844": {
+    "name": "Wartmannstetten",
+    "population": 1616
+  },
+  "31845": {
+    "name": "Willendorf",
+    "population": 993
+  },
+  "31846": {
+    "name": "Wimpassing im Schwarzatale",
+    "population": 1637
+  },
+  "31847": {
+    "name": "Würflach",
+    "population": 1657
+  },
+  "31848": {
+    "name": "Zöbern",
+    "population": 1351
+  },
+  "31849": {
+    "name": "Höflein an der Hohen Wand",
+    "population": 886
+  },
+  "31901": {
+    "name": "Altlengbach",
+    "population": 3265
+  },
+  "31902": {
+    "name": "Asperhofen",
+    "population": 2361
+  },
+  "31903": {
+    "name": "Böheimkirchen",
+    "population": 5294
+  },
+  "31904": {
+    "name": "Brand-Laaben",
+    "population": 1258
+  },
+  "31905": {
+    "name": "Eichgraben",
+    "population": 4794
+  },
+  "31906": {
+    "name": "Frankenfels",
+    "population": 1862
+  },
+  "31907": {
+    "name": "Gerersdorf",
+    "population": 1082
+  },
+  "31909": {
+    "name": "Hofstetten-Grünau",
+    "population": 2693
+  },
+  "31910": {
+    "name": "Hafnerbach",
+    "population": 1668
+  },
+  "31911": {
+    "name": "Haunoldstein",
+    "population": 1207
+  },
+  "31912": {
+    "name": "Herzogenburg",
+    "population": 7990
+  },
+  "31913": {
+    "name": "Inzersdorf-Getzersdorf",
+    "population": 1696
+  },
+  "31915": {
+    "name": "Kapelln",
+    "population": 1343
+  },
+  "31916": {
+    "name": "Karlstetten",
+    "population": 2250
+  },
+  "31917": {
+    "name": "Kasten bei Böheimkirchen",
+    "population": 1441
+  },
+  "31918": {
+    "name": "Kirchberg an der Pielach",
+    "population": 3117
+  },
+  "31919": {
+    "name": "Kirchstetten",
+    "population": 2292
+  },
+  "31920": {
+    "name": "Loich",
+    "population": 536
+  },
+  "31921": {
+    "name": "Maria Anzbach",
+    "population": 3236
+  },
+  "31922": {
+    "name": "Markersdorf-Haindorf",
+    "population": 2038
+  },
+  "31923": {
+    "name": "Michelbach",
+    "population": 852
+  },
+  "31925": {
+    "name": "Neidling",
+    "population": 1526
+  },
+  "31926": {
+    "name": "Neulengbach",
+    "population": 8675
+  },
+  "31927": {
+    "name": "Neustift-Innermanzing",
+    "population": 1579
+  },
+  "31928": {
+    "name": "Nußdorf ob der Traisen",
+    "population": 1905
+  },
+  "31929": {
+    "name": "Ober-Grafendorf",
+    "population": 4990
+  },
+  "31930": {
+    "name": "Obritzberg-Rust",
+    "population": 2387
+  },
+  "31932": {
+    "name": "Prinzersdorf",
+    "population": 1740
+  },
+  "31934": {
+    "name": "Pyhra",
+    "population": 3615
+  },
+  "31935": {
+    "name": "Rabenstein an der Pielach",
+    "population": 2488
+  },
+  "31938": {
+    "name": "Sankt Margarethen an der Sierning",
+    "population": 1053
+  },
+  "31939": {
+    "name": "Schwarzenbach an der Pielach",
+    "population": 339
+  },
+  "31940": {
+    "name": "Statzendorf",
+    "population": 1402
+  },
+  "31941": {
+    "name": "Stössing",
+    "population": 852
+  },
+  "31943": {
+    "name": "Traismauer",
+    "population": 6481
+  },
+  "31945": {
+    "name": "Weinburg",
+    "population": 1409
+  },
+  "31946": {
+    "name": "Perschling",
+    "population": 1564
+  },
+  "31947": {
+    "name": "Wilhelmsburg",
+    "population": 6557
+  },
+  "31948": {
+    "name": "Wölbling",
+    "population": 2436
+  },
+  "31949": {
+    "name": "Gablitz",
+    "population": 5172
+  },
+  "31950": {
+    "name": "Mauerbach",
+    "population": 3665
+  },
+  "31951": {
+    "name": "Pressbaum",
+    "population": 7932
+  },
+  "31952": {
+    "name": "Purkersdorf",
+    "population": 9970
+  },
+  "31953": {
+    "name": "Tullnerbach",
+    "population": 2938
+  },
+  "31954": {
+    "name": "Wolfsgraben",
+    "population": 1805
+  },
+  "32001": {
+    "name": "Gaming",
+    "population": 2879
+  },
+  "32002": {
+    "name": "Göstling an der Ybbs",
+    "population": 2040
+  },
+  "32003": {
+    "name": "Gresten",
+    "population": 1985
+  },
+  "32004": {
+    "name": "Gresten-Land",
+    "population": 1493
+  },
+  "32005": {
+    "name": "Lunz am See",
+    "population": 1758
+  },
+  "32006": {
+    "name": "Oberndorf an der Melk",
+    "population": 3015
+  },
+  "32007": {
+    "name": "Puchenstuben",
+    "population": 271
+  },
+  "32008": {
+    "name": "Purgstall an der Erlauf",
+    "population": 5359
+  },
+  "32009": {
+    "name": "Randegg",
+    "population": 1826
+  },
+  "32010": {
+    "name": "Reinsberg",
+    "population": 1040
+  },
+  "32011": {
+    "name": "Sankt Anton an der Jeßnitz",
+    "population": 1132
+  },
+  "32012": {
+    "name": "Sankt Georgen an der Leys",
+    "population": 1310
+  },
+  "32013": {
+    "name": "Scheibbs",
+    "population": 4198
+  },
+  "32014": {
+    "name": "Steinakirchen am Forst",
+    "population": 2292
+  },
+  "32015": {
+    "name": "Wang",
+    "population": 1370
+  },
+  "32016": {
+    "name": "Wieselburg",
+    "population": 4850
+  },
+  "32017": {
+    "name": "Wieselburg-Land",
+    "population": 3391
+  },
+  "32018": {
+    "name": "Wolfpassing",
+    "population": 1767
+  },
+  "32101": {
+    "name": "Absdorf",
+    "population": 2503
+  },
+  "32104": {
+    "name": "Atzenbrugg",
+    "population": 3493
+  },
+  "32106": {
+    "name": "Fels am Wagram",
+    "population": 2547
+  },
+  "32107": {
+    "name": "Grafenwörth",
+    "population": 3329
+  },
+  "32109": {
+    "name": "Großriedenthal",
+    "population": 975
+  },
+  "32110": {
+    "name": "Großweikersdorf",
+    "population": 3366
+  },
+  "32112": {
+    "name": "Judenau-Baumgarten",
+    "population": 2378
+  },
+  "32114": {
+    "name": "Kirchberg am Wagram",
+    "population": 3840
+  },
+  "32115": {
+    "name": "Königsbrunn am Wagram",
+    "population": 1438
+  },
+  "32116": {
+    "name": "Königstetten",
+    "population": 2521
+  },
+  "32119": {
+    "name": "Langenrohr",
+    "population": 2554
+  },
+  "32120": {
+    "name": "Michelhausen",
+    "population": 4373
+  },
+  "32131": {
+    "name": "Sieghartskirchen",
+    "population": 7813
+  },
+  "32132": {
+    "name": "Sitzenberg-Reidling",
+    "population": 2458
+  },
+  "32134": {
+    "name": "Tulbing",
+    "population": 3299
+  },
+  "32135": {
+    "name": "Tulln an der Donau",
+    "population": 16951
+  },
+  "32139": {
+    "name": "Würmla",
+    "population": 1641
+  },
+  "32140": {
+    "name": "Zeiselmauer-Wolfpassing",
+    "population": 2299
+  },
+  "32141": {
+    "name": "Zwentendorf an der Donau",
+    "population": 4190
+  },
+  "32142": {
+    "name": "Sankt Andrä-Wördern",
+    "population": 7956
+  },
+  "32143": {
+    "name": "Muckendorf-Wipfing",
+    "population": 1688
+  },
+  "32144": {
+    "name": "Klosterneuburg",
+    "population": 28152
+  },
+  "32202": {
+    "name": "Dietmanns",
+    "population": 1024
+  },
+  "32203": {
+    "name": "Dobersberg",
+    "population": 1531
+  },
+  "32206": {
+    "name": "Gastern",
+    "population": 1152
+  },
+  "32207": {
+    "name": "Groß-Siegharts",
+    "population": 2583
+  },
+  "32209": {
+    "name": "Karlstein an der Thaya",
+    "population": 1449
+  },
+  "32210": {
+    "name": "Kautzen",
+    "population": 1074
+  },
+  "32212": {
+    "name": "Ludweis-Aigen",
+    "population": 882
+  },
+  "32214": {
+    "name": "Pfaffenschlag bei Waidhofen an der Thaya",
+    "population": 904
+  },
+  "32216": {
+    "name": "Raabs an der Thaya",
+    "population": 2623
+  },
+  "32217": {
+    "name": "Thaya",
+    "population": 1472
+  },
+  "32219": {
+    "name": "Vitis",
+    "population": 2693
+  },
+  "32220": {
+    "name": "Waidhofen an der Thaya",
+    "population": 5236
+  },
+  "32221": {
+    "name": "Waidhofen an der Thaya-Land",
+    "population": 1287
+  },
+  "32222": {
+    "name": "Waldkirchen an der Thaya",
+    "population": 484
+  },
+  "32223": {
+    "name": "Windigsteig",
+    "population": 956
+  },
+  "32301": {
+    "name": "Bad Fischau-Brunn",
+    "population": 3532
+  },
+  "32302": {
+    "name": "Bad Schönau",
+    "population": 738
+  },
+  "32304": {
+    "name": "Ebenfurth",
+    "population": 3255
+  },
+  "32305": {
+    "name": "Eggendorf",
+    "population": 5096
+  },
+  "32306": {
+    "name": "Bad Erlach",
+    "population": 3312
+  },
+  "32307": {
+    "name": "Felixdorf",
+    "population": 4575
+  },
+  "32308": {
+    "name": "Gutenstein",
+    "population": 1256
+  },
+  "32309": {
+    "name": "Hochneukirchen-Gschaidt",
+    "population": 1639
+  },
+  "32310": {
+    "name": "Hochwolkersdorf",
+    "population": 982
+  },
+  "32311": {
+    "name": "Hohe Wand",
+    "population": 1457
+  },
+  "32312": {
+    "name": "Hollenthon",
+    "population": 1014
+  },
+  "32313": {
+    "name": "Katzelsdorf",
+    "population": 3162
+  },
+  "32314": {
+    "name": "Kirchschlag in der Buckligen Welt",
+    "population": 2767
+  },
+  "32315": {
+    "name": "Krumbach",
+    "population": 2398
+  },
+  "32316": {
+    "name": "Lanzenkirchen",
+    "population": 4431
+  },
+  "32317": {
+    "name": "Lichtenegg",
+    "population": 1056
+  },
+  "32318": {
+    "name": "Lichtenwörth",
+    "population": 2947
+  },
+  "32319": {
+    "name": "Markt Piesting",
+    "population": 3114
+  },
+  "32320": {
+    "name": "Matzendorf-Hölles",
+    "population": 2148
+  },
+  "32321": {
+    "name": "Miesenbach",
+    "population": 641
+  },
+  "32322": {
+    "name": "Muggendorf",
+    "population": 499
+  },
+  "32323": {
+    "name": "Pernitz",
+    "population": 2547
+  },
+  "32324": {
+    "name": "Rohr im Gebirge",
+    "population": 425
+  },
+  "32325": {
+    "name": "Bromberg",
+    "population": 1164
+  },
+  "32326": {
+    "name": "Schwarzenbach",
+    "population": 932
+  },
+  "32327": {
+    "name": "Sollenau",
+    "population": 5477
+  },
+  "32330": {
+    "name": "Theresienfeld",
+    "population": 4254
+  },
+  "32331": {
+    "name": "Waidmannsfeld",
+    "population": 1474
+  },
+  "32332": {
+    "name": "Waldegg",
+    "population": 1993
+  },
+  "32333": {
+    "name": "Walpersbach",
+    "population": 1230
+  },
+  "32334": {
+    "name": "Weikersdorf am Steinfelde",
+    "population": 1112
+  },
+  "32335": {
+    "name": "Wiesmath",
+    "population": 1543
+  },
+  "32336": {
+    "name": "Winzendorf-Muthmannsdorf",
+    "population": 1859
+  },
+  "32337": {
+    "name": "Wöllersdorf-Steinabrückl",
+    "population": 5094
+  },
+  "32338": {
+    "name": "Zillingdorf",
+    "population": 2080
+  },
+  "32501": {
+    "name": "Allentsteig",
+    "population": 1739
+  },
+  "32502": {
+    "name": "Arbesbach",
+    "population": 1580
+  },
+  "32503": {
+    "name": "Bärnkopf",
+    "population": 328
+  },
+  "32504": {
+    "name": "Echsenbach",
+    "population": 1246
+  },
+  "32505": {
+    "name": "Göpfritz an der Wild",
+    "population": 1743
+  },
+  "32506": {
+    "name": "Grafenschlag",
+    "population": 833
+  },
+  "32508": {
+    "name": "Groß Gerungs",
+    "population": 4459
+  },
+  "32509": {
+    "name": "Großgöttfritz",
+    "population": 1317
+  },
+  "32511": {
+    "name": "Gutenbrunn",
+    "population": 511
+  },
+  "32514": {
+    "name": "Kirchschlag",
+    "population": 621
+  },
+  "32515": {
+    "name": "Kottes-Purk",
+    "population": 1436
+  },
+  "32516": {
+    "name": "Langschlag",
+    "population": 1716
+  },
+  "32517": {
+    "name": "Martinsberg",
+    "population": 1050
+  },
+  "32518": {
+    "name": "Ottenschlag",
+    "population": 1015
+  },
+  "32519": {
+    "name": "Altmelon",
+    "population": 849
+  },
+  "32520": {
+    "name": "Pölla",
+    "population": 915
+  },
+  "32521": {
+    "name": "Rappottenstein",
+    "population": 1736
+  },
+  "32522": {
+    "name": "Sallingberg",
+    "population": 1256
+  },
+  "32523": {
+    "name": "Schönbach",
+    "population": 738
+  },
+  "32524": {
+    "name": "Schwarzenau",
+    "population": 1470
+  },
+  "32525": {
+    "name": "Schweiggers",
+    "population": 2028
+  },
+  "32528": {
+    "name": "Bad Traunstein",
+    "population": 983
+  },
+  "32529": {
+    "name": "Waldhausen",
+    "population": 1188
+  },
+  "32530": {
+    "name": "Zwettl-Niederösterreich",
+    "population": 10771
+  },
+  "40101": {
+    "name": "Linz",
+    "population": 213557
+  },
+  "40201": {
+    "name": "Steyr",
+    "population": 38036
+  },
+  "40301": {
+    "name": "Wels",
+    "population": 65482
+  },
+  "40401": {
+    "name": "Altheim",
+    "population": 5092
+  },
+  "40402": {
+    "name": "Aspach",
+    "population": 2662
+  },
+  "40403": {
+    "name": "Auerbach",
+    "population": 836
+  },
+  "40404": {
+    "name": "Braunau am Inn",
+    "population": 17604
+  },
+  "40405": {
+    "name": "Burgkirchen",
+    "population": 2757
+  },
+  "40406": {
+    "name": "Eggelsberg",
+    "population": 2959
+  },
+  "40407": {
+    "name": "Feldkirchen bei Mattighofen",
+    "population": 2142
+  },
+  "40408": {
+    "name": "Franking",
+    "population": 1034
+  },
+  "40409": {
+    "name": "Geretsberg",
+    "population": 1193
+  },
+  "40410": {
+    "name": "Gilgenberg am Weilhart",
+    "population": 1327
+  },
+  "40411": {
+    "name": "Haigermoos",
+    "population": 654
+  },
+  "40412": {
+    "name": "Handenberg",
+    "population": 1326
+  },
+  "40413": {
+    "name": "Helpfau-Uttendorf",
+    "population": 3788
+  },
+  "40414": {
+    "name": "Hochburg-Ach",
+    "population": 3379
+  },
+  "40415": {
+    "name": "Höhnhart",
+    "population": 1489
+  },
+  "40416": {
+    "name": "Jeging",
+    "population": 796
+  },
+  "40417": {
+    "name": "Kirchberg bei Mattighofen",
+    "population": 1316
+  },
+  "40418": {
+    "name": "Lengau",
+    "population": 5144
+  },
+  "40419": {
+    "name": "Lochen am See",
+    "population": 3019
+  },
+  "40420": {
+    "name": "Maria Schmolln",
+    "population": 1473
+  },
+  "40421": {
+    "name": "Mattighofen",
+    "population": 7701
+  },
+  "40422": {
+    "name": "Mauerkirchen",
+    "population": 2689
+  },
+  "40423": {
+    "name": "Mining",
+    "population": 1307
+  },
+  "40424": {
+    "name": "Moosbach",
+    "population": 1141
+  },
+  "40425": {
+    "name": "Moosdorf",
+    "population": 1727
+  },
+  "40426": {
+    "name": "Munderfing",
+    "population": 3104
+  },
+  "40427": {
+    "name": "Neukirchen an der Enknach",
+    "population": 2339
+  },
+  "40428": {
+    "name": "Ostermiething",
+    "population": 3403
+  },
+  "40429": {
+    "name": "Palting",
+    "population": 1294
+  },
+  "40430": {
+    "name": "Perwang am Grabensee",
+    "population": 1133
+  },
+  "40431": {
+    "name": "Pfaffstätt",
+    "population": 1293
+  },
+  "40432": {
+    "name": "Pischelsdorf am Engelbach",
+    "population": 1780
+  },
+  "40433": {
+    "name": "Polling im Innkreis",
+    "population": 992
+  },
+  "40434": {
+    "name": "Roßbach",
+    "population": 890
+  },
+  "40435": {
+    "name": "Sankt Georgen am Fillmannsbach",
+    "population": 472
+  },
+  "40436": {
+    "name": "Sankt Johann am Walde",
+    "population": 2044
+  },
+  "40437": {
+    "name": "Sankt Pantaleon",
+    "population": 3295
+  },
+  "40438": {
+    "name": "Sankt Peter am Hart",
+    "population": 2575
+  },
+  "40439": {
+    "name": "Sankt Radegund",
+    "population": 701
+  },
+  "40440": {
+    "name": "Sankt Veit im Innkreis",
+    "population": 406
+  },
+  "40441": {
+    "name": "Schalchen",
+    "population": 4173
+  },
+  "40442": {
+    "name": "Schwand im Innkreis",
+    "population": 1063
+  },
+  "40443": {
+    "name": "Tarsdorf",
+    "population": 2123
+  },
+  "40444": {
+    "name": "Treubach",
+    "population": 790
+  },
+  "40445": {
+    "name": "Überackern",
+    "population": 689
+  },
+  "40446": {
+    "name": "Weng im Innkreis",
+    "population": 1457
+  },
+  "40501": {
+    "name": "Alkoven",
+    "population": 6172
+  },
+  "40502": {
+    "name": "Aschach an der Donau",
+    "population": 2226
+  },
+  "40503": {
+    "name": "Eferding",
+    "population": 4367
+  },
+  "40504": {
+    "name": "Fraham",
+    "population": 2614
+  },
+  "40505": {
+    "name": "Haibach ob der Donau",
+    "population": 1260
+  },
+  "40506": {
+    "name": "Hartkirchen",
+    "population": 3919
+  },
+  "40507": {
+    "name": "Hinzenbach",
+    "population": 2052
+  },
+  "40508": {
+    "name": "Prambachkirchen",
+    "population": 2996
+  },
+  "40509": {
+    "name": "Pupping",
+    "population": 1861
+  },
+  "40510": {
+    "name": "Sankt Marienkirchen an der Polsenz",
+    "population": 2348
+  },
+  "40511": {
+    "name": "Scharten",
+    "population": 2374
+  },
+  "40512": {
+    "name": "Stroheim",
+    "population": 1695
+  },
+  "40601": {
+    "name": "Freistadt",
+    "population": 8270
+  },
+  "40602": {
+    "name": "Grünbach",
+    "population": 1867
+  },
+  "40603": {
+    "name": "Gutau",
+    "population": 2789
+  },
+  "40604": {
+    "name": "Hagenberg im Mühlkreis",
+    "population": 3163
+  },
+  "40605": {
+    "name": "Hirschbach im Mühlkreis",
+    "population": 1224
+  },
+  "40606": {
+    "name": "Kaltenberg",
+    "population": 587
+  },
+  "40607": {
+    "name": "Kefermarkt",
+    "population": 2217
+  },
+  "40608": {
+    "name": "Königswiesen",
+    "population": 3046
+  },
+  "40609": {
+    "name": "Lasberg",
+    "population": 2882
+  },
+  "40610": {
+    "name": "Leopoldschlag",
+    "population": 985
+  },
+  "40611": {
+    "name": "Liebenau",
+    "population": 1618
+  },
+  "40612": {
+    "name": "Neumarkt im Mühlkreis",
+    "population": 3259
+  },
+  "40613": {
+    "name": "Pierbach",
+    "population": 1019
+  },
+  "40614": {
+    "name": "Pregarten",
+    "population": 5608
+  },
+  "40615": {
+    "name": "Rainbach im Mühlkreis",
+    "population": 3018
+  },
+  "40616": {
+    "name": "Sandl",
+    "population": 1405
+  },
+  "40617": {
+    "name": "Sankt Leonhard bei Freistadt",
+    "population": 1320
+  },
+  "40618": {
+    "name": "Sankt Oswald bei Freistadt",
+    "population": 3019
+  },
+  "40619": {
+    "name": "Schönau im Mühlkreis",
+    "population": 1975
+  },
+  "40620": {
+    "name": "Tragwein",
+    "population": 3152
+  },
+  "40621": {
+    "name": "Unterweißenbach",
+    "population": 2184
+  },
+  "40622": {
+    "name": "Unterweitersdorf",
+    "population": 2197
+  },
+  "40623": {
+    "name": "Waldburg",
+    "population": 1464
+  },
+  "40624": {
+    "name": "Wartberg ob der Aist",
+    "population": 4489
+  },
+  "40625": {
+    "name": "Weitersfelden",
+    "population": 1021
+  },
+  "40626": {
+    "name": "Windhaag bei Freistadt",
+    "population": 1586
+  },
+  "40627": {
+    "name": "Bad Zell",
+    "population": 2962
+  },
+  "40701": {
+    "name": "Altmünster",
+    "population": 9998
+  },
+  "40702": {
+    "name": "Bad Goisern am Hallstättersee",
+    "population": 7575
+  },
+  "40703": {
+    "name": "Bad Ischl",
+    "population": 14107
+  },
+  "40704": {
+    "name": "Ebensee am Traunsee",
+    "population": 7452
+  },
+  "40705": {
+    "name": "Gmunden",
+    "population": 13231
+  },
+  "40706": {
+    "name": "Gosau",
+    "population": 1865
+  },
+  "40707": {
+    "name": "Grünau im Almtal",
+    "population": 2030
+  },
+  "40708": {
+    "name": "Gschwandt",
+    "population": 2977
+  },
+  "40709": {
+    "name": "Hallstatt",
+    "population": 737
+  },
+  "40710": {
+    "name": "Kirchham",
+    "population": 2238
+  },
+  "40711": {
+    "name": "Laakirchen",
+    "population": 9766
+  },
+  "40712": {
+    "name": "Obertraun",
+    "population": 728
+  },
+  "40713": {
+    "name": "Ohlsdorf",
+    "population": 5348
+  },
+  "40714": {
+    "name": "Pinsdorf",
+    "population": 4439
+  },
+  "40715": {
+    "name": "Roitham am Traunfall",
+    "population": 2140
+  },
+  "40716": {
+    "name": "Sankt Konrad",
+    "population": 1163
+  },
+  "40717": {
+    "name": "Sankt Wolfgang im Salzkammergut",
+    "population": 2880
+  },
+  "40718": {
+    "name": "Traunkirchen",
+    "population": 1717
+  },
+  "40719": {
+    "name": "Scharnstein",
+    "population": 4897
+  },
+  "40720": {
+    "name": "Vorchdorf",
+    "population": 7867
+  },
+  "40801": {
+    "name": "Aistersheim",
+    "population": 1013
+  },
+  "40802": {
+    "name": "Bad Schallerbach",
+    "population": 4545
+  },
+  "40804": {
+    "name": "Eschenau im Hausruckkreis",
+    "population": 1050
+  },
+  "40805": {
+    "name": "Gallspach",
+    "population": 2842
+  },
+  "40806": {
+    "name": "Gaspoltshofen",
+    "population": 3651
+  },
+  "40807": {
+    "name": "Geboltskirchen",
+    "population": 1469
+  },
+  "40808": {
+    "name": "Grieskirchen",
+    "population": 5226
+  },
+  "40809": {
+    "name": "Haag am Hausruck",
+    "population": 2352
+  },
+  "40810": {
+    "name": "Heiligenberg",
+    "population": 723
+  },
+  "40811": {
+    "name": "Hofkirchen an der Trattnach",
+    "population": 1696
+  },
+  "40812": {
+    "name": "Kallham",
+    "population": 2510
+  },
+  "40813": {
+    "name": "Kematen am Innbach",
+    "population": 1403
+  },
+  "40814": {
+    "name": "Meggenhofen",
+    "population": 1538
+  },
+  "40815": {
+    "name": "Michaelnbach",
+    "population": 1301
+  },
+  "40816": {
+    "name": "Natternbach",
+    "population": 2311
+  },
+  "40817": {
+    "name": "Neukirchen am Walde",
+    "population": 1670
+  },
+  "40818": {
+    "name": "Neumarkt im Hausruckkreis",
+    "population": 1523
+  },
+  "40820": {
+    "name": "Pötting",
+    "population": 569
+  },
+  "40821": {
+    "name": "Pollham",
+    "population": 1029
+  },
+  "40822": {
+    "name": "Pram",
+    "population": 1754
+  },
+  "40823": {
+    "name": "Rottenbach",
+    "population": 1153
+  },
+  "40824": {
+    "name": "Sankt Agatha",
+    "population": 2183
+  },
+  "40825": {
+    "name": "Sankt Georgen bei Grieskirchen",
+    "population": 1319
+  },
+  "40826": {
+    "name": "Sankt Thomas",
+    "population": 584
+  },
+  "40827": {
+    "name": "Schlüßlberg",
+    "population": 3051
+  },
+  "40828": {
+    "name": "Steegen",
+    "population": 1097
+  },
+  "40829": {
+    "name": "Taufkirchen an der Trattnach",
+    "population": 1955
+  },
+  "40830": {
+    "name": "Tollet",
+    "population": 948
+  },
+  "40831": {
+    "name": "Waizenkirchen",
+    "population": 3909
+  },
+  "40832": {
+    "name": "Wallern an der Trattnach",
+    "population": 3119
+  },
+  "40833": {
+    "name": "Weibern",
+    "population": 1675
+  },
+  "40834": {
+    "name": "Wendling",
+    "population": 893
+  },
+  "40835": {
+    "name": "Peuerbach",
+    "population": 4689
+  },
+  "40901": {
+    "name": "Edlbach",
+    "population": 645
+  },
+  "40902": {
+    "name": "Grünburg",
+    "population": 3834
+  },
+  "40903": {
+    "name": "Hinterstoder",
+    "population": 860
+  },
+  "40904": {
+    "name": "Inzersdorf im Kremstal",
+    "population": 1890
+  },
+  "40905": {
+    "name": "Kirchdorf an der Krems",
+    "population": 5011
+  },
+  "40906": {
+    "name": "Klaus an der Pyhrnbahn",
+    "population": 1137
+  },
+  "40907": {
+    "name": "Kremsmünster",
+    "population": 7041
+  },
+  "40908": {
+    "name": "Micheldorf in Oberösterreich",
+    "population": 5976
+  },
+  "40909": {
+    "name": "Molln",
+    "population": 3599
+  },
+  "40910": {
+    "name": "Nußbach",
+    "population": 2298
+  },
+  "40911": {
+    "name": "Oberschlierbach",
+    "population": 476
+  },
+  "40912": {
+    "name": "Pettenbach",
+    "population": 5409
+  },
+  "40913": {
+    "name": "Ried im Traunkreis",
+    "population": 2951
+  },
+  "40914": {
+    "name": "Rosenau am Hengstpaß",
+    "population": 649
+  },
+  "40915": {
+    "name": "Roßleithen",
+    "population": 1826
+  },
+  "40916": {
+    "name": "Sankt Pankraz",
+    "population": 376
+  },
+  "40917": {
+    "name": "Schlierbach",
+    "population": 2941
+  },
+  "40918": {
+    "name": "Spital am Pyhrn",
+    "population": 2304
+  },
+  "40919": {
+    "name": "Steinbach am Ziehberg",
+    "population": 887
+  },
+  "40920": {
+    "name": "Steinbach an der Steyr",
+    "population": 1961
+  },
+  "40921": {
+    "name": "Vorderstoder",
+    "population": 838
+  },
+  "40922": {
+    "name": "Wartberg an der Krems",
+    "population": 2934
+  },
+  "40923": {
+    "name": "Windischgarsten",
+    "population": 2356
+  },
+  "41001": {
+    "name": "Allhaming",
+    "population": 1259
+  },
+  "41002": {
+    "name": "Ansfelden",
+    "population": 18271
+  },
+  "41003": {
+    "name": "Asten",
+    "population": 7444
+  },
+  "41004": {
+    "name": "Eggendorf im Traunkreis",
+    "population": 1161
+  },
+  "41005": {
+    "name": "Enns",
+    "population": 12184
+  },
+  "41006": {
+    "name": "Hargelsberg",
+    "population": 1455
+  },
+  "41007": {
+    "name": "Hörsching",
+    "population": 6571
+  },
+  "41008": {
+    "name": "Hofkirchen im Traunkreis",
+    "population": 2085
+  },
+  "41009": {
+    "name": "Kematen an der Krems",
+    "population": 3090
+  },
+  "41010": {
+    "name": "Kirchberg-Thening",
+    "population": 2540
+  },
+  "41011": {
+    "name": "Kronstorf",
+    "population": 3490
+  },
+  "41012": {
+    "name": "Leonding",
+    "population": 29244
+  },
+  "41013": {
+    "name": "Sankt Florian",
+    "population": 6318
+  },
+  "41014": {
+    "name": "Neuhofen an der Krems",
+    "population": 6865
+  },
+  "41015": {
+    "name": "Niederneukirchen",
+    "population": 2090
+  },
+  "41016": {
+    "name": "Oftering",
+    "population": 2121
+  },
+  "41017": {
+    "name": "Pasching",
+    "population": 7931
+  },
+  "41018": {
+    "name": "Piberbach",
+    "population": 2045
+  },
+  "41019": {
+    "name": "Pucking",
+    "population": 4187
+  },
+  "41020": {
+    "name": "Sankt Marien",
+    "population": 5240
+  },
+  "41021": {
+    "name": "Traun",
+    "population": 25345
+  },
+  "41022": {
+    "name": "Wilhering",
+    "population": 6215
+  },
+  "41101": {
+    "name": "Allerheiligen im Mühlkreis",
+    "population": 1288
+  },
+  "41102": {
+    "name": "Arbing",
+    "population": 1545
+  },
+  "41103": {
+    "name": "Baumgartenberg",
+    "population": 1879
+  },
+  "41104": {
+    "name": "Dimbach",
+    "population": 996
+  },
+  "41105": {
+    "name": "Grein",
+    "population": 2925
+  },
+  "41106": {
+    "name": "Katsdorf",
+    "population": 3316
+  },
+  "41107": {
+    "name": "Klam",
+    "population": 974
+  },
+  "41108": {
+    "name": "Bad Kreuzen",
+    "population": 2372
+  },
+  "41109": {
+    "name": "Langenstein",
+    "population": 2574
+  },
+  "41110": {
+    "name": "Luftenberg an der Donau",
+    "population": 4329
+  },
+  "41111": {
+    "name": "Mauthausen",
+    "population": 4915
+  },
+  "41112": {
+    "name": "Mitterkirchen im Machland",
+    "population": 1777
+  },
+  "41113": {
+    "name": "Münzbach",
+    "population": 1898
+  },
+  "41114": {
+    "name": "Naarn im Machlande",
+    "population": 3859
+  },
+  "41115": {
+    "name": "Pabneukirchen",
+    "population": 1693
+  },
+  "41116": {
+    "name": "Perg",
+    "population": 9482
+  },
+  "41117": {
+    "name": "Rechberg",
+    "population": 1046
+  },
+  "41118": {
+    "name": "Ried in der Riedmark",
+    "population": 4394
+  },
+  "41119": {
+    "name": "Sankt Georgen am Walde",
+    "population": 1975
+  },
+  "41120": {
+    "name": "Sankt Georgen an der Gusen",
+    "population": 4459
+  },
+  "41121": {
+    "name": "Sankt Nikola an der Donau",
+    "population": 758
+  },
+  "41122": {
+    "name": "Sankt Thomas am Blasenstein",
+    "population": 949
+  },
+  "41123": {
+    "name": "Saxen",
+    "population": 1687
+  },
+  "41124": {
+    "name": "Schwertberg",
+    "population": 5476
+  },
+  "41125": {
+    "name": "Waldhausen im Strudengau",
+    "population": 2879
+  },
+  "41126": {
+    "name": "Windhaag bei Perg",
+    "population": 1540
+  },
+  "41201": {
+    "name": "Andrichsfurt",
+    "population": 797
+  },
+  "41202": {
+    "name": "Antiesenhofen",
+    "population": 1102
+  },
+  "41203": {
+    "name": "Aurolzmünster",
+    "population": 3248
+  },
+  "41204": {
+    "name": "Eberschwang",
+    "population": 3532
+  },
+  "41205": {
+    "name": "Eitzing",
+    "population": 911
+  },
+  "41206": {
+    "name": "Geiersberg",
+    "population": 484
+  },
+  "41207": {
+    "name": "Geinberg",
+    "population": 1444
+  },
+  "41208": {
+    "name": "Gurten",
+    "population": 1190
+  },
+  "41209": {
+    "name": "Hohenzell",
+    "population": 2343
+  },
+  "41210": {
+    "name": "Kirchdorf am Inn",
+    "population": 661
+  },
+  "41211": {
+    "name": "Kirchheim im Innkreis",
+    "population": 803
+  },
+  "41212": {
+    "name": "Lambrechten",
+    "population": 1322
+  },
+  "41213": {
+    "name": "Lohnsburg am Kobernaußerwald",
+    "population": 2205
+  },
+  "41214": {
+    "name": "Mehrnbach",
+    "population": 2356
+  },
+  "41215": {
+    "name": "Mettmach",
+    "population": 2444
+  },
+  "41216": {
+    "name": "Mörschwang",
+    "population": 327
+  },
+  "41217": {
+    "name": "Mühlheim am Inn",
+    "population": 719
+  },
+  "41218": {
+    "name": "Neuhofen im Innkreis",
+    "population": 2529
+  },
+  "41219": {
+    "name": "Obernberg am Inn",
+    "population": 1715
+  },
+  "41220": {
+    "name": "Ort im Innkreis",
+    "population": 1388
+  },
+  "41221": {
+    "name": "Pattigham",
+    "population": 1092
+  },
+  "41222": {
+    "name": "Peterskirchen",
+    "population": 661
+  },
+  "41223": {
+    "name": "Pramet",
+    "population": 1038
+  },
+  "41224": {
+    "name": "Reichersberg",
+    "population": 1666
+  },
+  "41225": {
+    "name": "Ried im Innkreis",
+    "population": 12766
+  },
+  "41226": {
+    "name": "Sankt Georgen bei Obernberg am Inn",
+    "population": 526
+  },
+  "41227": {
+    "name": "Sankt Marienkirchen am Hausruck",
+    "population": 904
+  },
+  "41228": {
+    "name": "Sankt Martin im Innkreis",
+    "population": 2218
+  },
+  "41229": {
+    "name": "Schildorn",
+    "population": 1230
+  },
+  "41230": {
+    "name": "Senftenbach",
+    "population": 789
+  },
+  "41231": {
+    "name": "Taiskirchen im Innkreis",
+    "population": 2437
+  },
+  "41232": {
+    "name": "Tumeltsham",
+    "population": 1587
+  },
+  "41233": {
+    "name": "Utzenaich",
+    "population": 1661
+  },
+  "41234": {
+    "name": "Waldzell",
+    "population": 2299
+  },
+  "41235": {
+    "name": "Weilbach",
+    "population": 609
+  },
+  "41236": {
+    "name": "Wippenham",
+    "population": 574
+  },
+  "41304": {
+    "name": "Altenfelden",
+    "population": 2284
+  },
+  "41305": {
+    "name": "Arnreit",
+    "population": 1199
+  },
+  "41306": {
+    "name": "Atzesberg",
+    "population": 446
+  },
+  "41307": {
+    "name": "Auberg",
+    "population": 616
+  },
+  "41309": {
+    "name": "Haslach an der Mühl",
+    "population": 2581
+  },
+  "41311": {
+    "name": "Hörbich",
+    "population": 421
+  },
+  "41312": {
+    "name": "Hofkirchen im Mühlkreis",
+    "population": 1547
+  },
+  "41313": {
+    "name": "Julbach",
+    "population": 1528
+  },
+  "41314": {
+    "name": "Kirchberg ob der Donau",
+    "population": 1071
+  },
+  "41315": {
+    "name": "Klaffer am Hochficht",
+    "population": 1376
+  },
+  "41316": {
+    "name": "Kleinzell im Mühlkreis",
+    "population": 1707
+  },
+  "41317": {
+    "name": "Kollerschlag",
+    "population": 1542
+  },
+  "41318": {
+    "name": "Lembach im Mühlkreis",
+    "population": 1512
+  },
+  "41319": {
+    "name": "Lichtenau im Mühlkreis",
+    "population": 481
+  },
+  "41320": {
+    "name": "Nebelberg",
+    "population": 641
+  },
+  "41321": {
+    "name": "Neufelden",
+    "population": 1214
+  },
+  "41322": {
+    "name": "Niederkappel",
+    "population": 996
+  },
+  "41323": {
+    "name": "Niederwaldkirchen",
+    "population": 1866
+  },
+  "41324": {
+    "name": "Oberkappel",
+    "population": 743
+  },
+  "41325": {
+    "name": "Oepping",
+    "population": 1555
+  },
+  "41326": {
+    "name": "Peilstein im Mühlviertel",
+    "population": 1562
+  },
+  "41327": {
+    "name": "Pfarrkirchen im Mühlkreis",
+    "population": 1385
+  },
+  "41328": {
+    "name": "Putzleinsdorf",
+    "population": 1546
+  },
+  "41329": {
+    "name": "Neustift im Mühlkreis",
+    "population": 1465
+  },
+  "41331": {
+    "name": "Sankt Johann am Wimberg",
+    "population": 1009
+  },
+  "41332": {
+    "name": "Sankt Martin im Mühlkreis",
+    "population": 3805
+  },
+  "41333": {
+    "name": "Sankt Oswald bei Haslach",
+    "population": 521
+  },
+  "41334": {
+    "name": "Sankt Peter am Wimberg",
+    "population": 1790
+  },
+  "41336": {
+    "name": "Sankt Ulrich im Mühlkreis",
+    "population": 719
+  },
+  "41337": {
+    "name": "Sankt Veit im Mühlkreis",
+    "population": 1337
+  },
+  "41338": {
+    "name": "Sarleinsbach",
+    "population": 2246
+  },
+  "41341": {
+    "name": "Schwarzenberg am Böhmerwald",
+    "population": 576
+  },
+  "41342": {
+    "name": "Ulrichsberg",
+    "population": 2858
+  },
+  "41343": {
+    "name": "Aigen-Schlägl",
+    "population": 3282
+  },
+  "41344": {
+    "name": "Rohrbach-Berg",
+    "population": 5291
+  },
+  "41345": {
+    "name": "Helfenberg",
+    "population": 1552
+  },
+  "41346": {
+    "name": "Sankt Stefan-Afiesl",
+    "population": 1094
+  },
+  "41401": {
+    "name": "Altschwendt",
+    "population": 721
+  },
+  "41402": {
+    "name": "Andorf",
+    "population": 5221
+  },
+  "41403": {
+    "name": "Brunnenthal",
+    "population": 2080
+  },
+  "41404": {
+    "name": "Diersbach",
+    "population": 1522
+  },
+  "41405": {
+    "name": "Dorf an der Pram",
+    "population": 1088
+  },
+  "41406": {
+    "name": "Eggerding",
+    "population": 1378
+  },
+  "41407": {
+    "name": "Engelhartszell",
+    "population": 906
+  },
+  "41408": {
+    "name": "Enzenkirchen",
+    "population": 1780
+  },
+  "41409": {
+    "name": "Esternberg",
+    "population": 2849
+  },
+  "41410": {
+    "name": "Freinberg",
+    "population": 1531
+  },
+  "41411": {
+    "name": "Kopfing im Innkreis",
+    "population": 1965
+  },
+  "41412": {
+    "name": "Mayrhof",
+    "population": 329
+  },
+  "41413": {
+    "name": "Münzkirchen",
+    "population": 2575
+  },
+  "41414": {
+    "name": "Raab",
+    "population": 2324
+  },
+  "41415": {
+    "name": "Rainbach im Innkreis",
+    "population": 1576
+  },
+  "41416": {
+    "name": "Riedau",
+    "population": 2012
+  },
+  "41417": {
+    "name": "Sankt Aegidi",
+    "population": 1569
+  },
+  "41418": {
+    "name": "Sankt Florian am Inn",
+    "population": 3225
+  },
+  "41419": {
+    "name": "Sankt Marienkirchen bei Schärding",
+    "population": 2029
+  },
+  "41420": {
+    "name": "Sankt Roman",
+    "population": 1776
+  },
+  "41421": {
+    "name": "Sankt Willibald",
+    "population": 1074
+  },
+  "41422": {
+    "name": "Schärding",
+    "population": 5595
+  },
+  "41423": {
+    "name": "Schardenberg",
+    "population": 2472
+  },
+  "41424": {
+    "name": "Sigharting",
+    "population": 892
+  },
+  "41425": {
+    "name": "Suben",
+    "population": 1722
+  },
+  "41426": {
+    "name": "Taufkirchen an der Pram",
+    "population": 2963
+  },
+  "41427": {
+    "name": "Vichtenstein",
+    "population": 615
+  },
+  "41428": {
+    "name": "Waldkirchen am Wesen",
+    "population": 1155
+  },
+  "41429": {
+    "name": "Wernstein am Inn",
+    "population": 1534
+  },
+  "41430": {
+    "name": "Zell an der Pram",
+    "population": 1955
+  },
+  "41501": {
+    "name": "Adlwang",
+    "population": 2166
+  },
+  "41502": {
+    "name": "Aschach an der Steyr",
+    "population": 2302
+  },
+  "41503": {
+    "name": "Bad Hall",
+    "population": 5868
+  },
+  "41504": {
+    "name": "Dietach",
+    "population": 3460
+  },
+  "41505": {
+    "name": "Gaflenz",
+    "population": 1961
+  },
+  "41506": {
+    "name": "Garsten",
+    "population": 6674
+  },
+  "41507": {
+    "name": "Großraming",
+    "population": 2636
+  },
+  "41508": {
+    "name": "Laussa",
+    "population": 1240
+  },
+  "41509": {
+    "name": "Losenstein",
+    "population": 1678
+  },
+  "41510": {
+    "name": "Maria Neustift",
+    "population": 1633
+  },
+  "41511": {
+    "name": "Pfarrkirchen bei Bad Hall",
+    "population": 2359
+  },
+  "41512": {
+    "name": "Reichraming",
+    "population": 1670
+  },
+  "41513": {
+    "name": "Rohr im Kremstal",
+    "population": 1494
+  },
+  "41514": {
+    "name": "Sankt Ulrich bei Steyr",
+    "population": 3235
+  },
+  "41515": {
+    "name": "Schiedlberg",
+    "population": 1317
+  },
+  "41516": {
+    "name": "Sierning",
+    "population": 9867
+  },
+  "41517": {
+    "name": "Ternberg",
+    "population": 3390
+  },
+  "41518": {
+    "name": "Waldneukirchen",
+    "population": 2279
+  },
+  "41521": {
+    "name": "Wolfern",
+    "population": 3389
+  },
+  "41522": {
+    "name": "Weyer",
+    "population": 3995
+  },
+  "41601": {
+    "name": "Alberndorf in der Riedmark",
+    "population": 4214
+  },
+  "41602": {
+    "name": "Altenberg bei Linz",
+    "population": 4835
+  },
+  "41603": {
+    "name": "Bad Leonfelden",
+    "population": 4434
+  },
+  "41604": {
+    "name": "Eidenberg",
+    "population": 2141
+  },
+  "41605": {
+    "name": "Engerwitzdorf",
+    "population": 9099
+  },
+  "41606": {
+    "name": "Feldkirchen an der Donau",
+    "population": 5580
+  },
+  "41607": {
+    "name": "Gallneukirchen",
+    "population": 6747
+  },
+  "41608": {
+    "name": "Goldwörth",
+    "population": 750
+  },
+  "41609": {
+    "name": "Gramastetten",
+    "population": 5137
+  },
+  "41610": {
+    "name": "Haibach im Mühlkreis",
+    "population": 973
+  },
+  "41611": {
+    "name": "Hellmonsödt",
+    "population": 2428
+  },
+  "41612": {
+    "name": "Herzogsdorf",
+    "population": 2741
+  },
+  "41613": {
+    "name": "Kirchschlag bei Linz",
+    "population": 2247
+  },
+  "41614": {
+    "name": "Lichtenberg",
+    "population": 2904
+  },
+  "41615": {
+    "name": "Oberneukirchen",
+    "population": 3254
+  },
+  "41616": {
+    "name": "Ottenschlag im Mühlkreis",
+    "population": 588
+  },
+  "41617": {
+    "name": "Ottensheim",
+    "population": 4748
+  },
+  "41618": {
+    "name": "Puchenau",
+    "population": 4695
+  },
+  "41619": {
+    "name": "Reichenau im Mühlkreis",
+    "population": 1355
+  },
+  "41620": {
+    "name": "Reichenthal",
+    "population": 1553
+  },
+  "41621": {
+    "name": "Sankt Gotthard im Mühlkreis",
+    "population": 1321
+  },
+  "41622": {
+    "name": "Schenkenfelden",
+    "population": 1619
+  },
+  "41623": {
+    "name": "Sonnberg im Mühlkreis",
+    "population": 1115
+  },
+  "41624": {
+    "name": "Steyregg",
+    "population": 5005
+  },
+  "41626": {
+    "name": "Walding",
+    "population": 4290
+  },
+  "41627": {
+    "name": "Zwettl an der Rodl",
+    "population": 1807
+  },
+  "41628": {
+    "name": "Vorderweißenbach",
+    "population": 2758
+  },
+  "41701": {
+    "name": "Ampflwang im Hausruckwald",
+    "population": 3441
+  },
+  "41702": {
+    "name": "Attersee am Attersee",
+    "population": 1672
+  },
+  "41703": {
+    "name": "Attnang-Puchheim",
+    "population": 9289
+  },
+  "41704": {
+    "name": "Atzbach",
+    "population": 1205
+  },
+  "41705": {
+    "name": "Aurach am Hongar",
+    "population": 1873
+  },
+  "41706": {
+    "name": "Berg im Attergau",
+    "population": 1148
+  },
+  "41707": {
+    "name": "Desselbrunn",
+    "population": 1951
+  },
+  "41708": {
+    "name": "Fornach",
+    "population": 1004
+  },
+  "41709": {
+    "name": "Frankenburg am Hausruck",
+    "population": 4965
+  },
+  "41710": {
+    "name": "Frankenmarkt",
+    "population": 3868
+  },
+  "41711": {
+    "name": "Gampern",
+    "population": 3123
+  },
+  "41712": {
+    "name": "Innerschwand am Mondsee",
+    "population": 1288
+  },
+  "41713": {
+    "name": "Lenzing an der Ager ",
+    "population": 5252
+  },
+  "41714": {
+    "name": "Manning",
+    "population": 799
+  },
+  "41715": {
+    "name": "Mondsee",
+    "population": 3940
+  },
+  "41716": {
+    "name": "Neukirchen an der Vöckla",
+    "population": 2617
+  },
+  "41717": {
+    "name": "Niederthalheim",
+    "population": 1156
+  },
+  "41718": {
+    "name": "Nußdorf am Attersee",
+    "population": 1132
+  },
+  "41719": {
+    "name": "Oberhofen am Irrsee",
+    "population": 1730
+  },
+  "41720": {
+    "name": "Oberndorf bei Schwanenstadt",
+    "population": 1385
+  },
+  "41721": {
+    "name": "Oberwang",
+    "population": 1771
+  },
+  "41722": {
+    "name": "Ottnang am Hausruck",
+    "population": 4111
+  },
+  "41723": {
+    "name": "Pfaffing",
+    "population": 1521
+  },
+  "41724": {
+    "name": "Pilsbach",
+    "population": 680
+  },
+  "41725": {
+    "name": "Pitzenberg",
+    "population": 576
+  },
+  "41726": {
+    "name": "Pöndorf",
+    "population": 2433
+  },
+  "41727": {
+    "name": "Puchkirchen am Trattberg",
+    "population": 1092
+  },
+  "41728": {
+    "name": "Pühret",
+    "population": 666
+  },
+  "41729": {
+    "name": "Redleiten",
+    "population": 529
+  },
+  "41730": {
+    "name": "Redlham",
+    "population": 1649
+  },
+  "41731": {
+    "name": "Regau",
+    "population": 7200
+  },
+  "41732": {
+    "name": "Rüstorf",
+    "population": 2304
+  },
+  "41733": {
+    "name": "Rutzenham",
+    "population": 291
+  },
+  "41734": {
+    "name": "Sankt Georgen im Attergau",
+    "population": 4935
+  },
+  "41735": {
+    "name": "Sankt Lorenz",
+    "population": 2648
+  },
+  "41736": {
+    "name": "Schlatt",
+    "population": 1413
+  },
+  "41737": {
+    "name": "Schörfling am Attersee",
+    "population": 3519
+  },
+  "41738": {
+    "name": "Schwanenstadt",
+    "population": 4800
+  },
+  "41739": {
+    "name": "Seewalchen am Attersee",
+    "population": 5741
+  },
+  "41740": {
+    "name": "Steinbach am Attersee",
+    "population": 910
+  },
+  "41741": {
+    "name": "Straß im Attergau",
+    "population": 1542
+  },
+  "41742": {
+    "name": "Tiefgraben",
+    "population": 4189
+  },
+  "41743": {
+    "name": "Timelkam",
+    "population": 5913
+  },
+  "41744": {
+    "name": "Ungenach",
+    "population": 1459
+  },
+  "41745": {
+    "name": "Unterach am Attersee",
+    "population": 1561
+  },
+  "41746": {
+    "name": "Vöcklabruck",
+    "population": 12989
+  },
+  "41747": {
+    "name": "Vöcklamarkt",
+    "population": 5192
+  },
+  "41748": {
+    "name": "Weißenkirchen im Attergau",
+    "population": 950
+  },
+  "41749": {
+    "name": "Weyregg am Attersee",
+    "population": 1630
+  },
+  "41750": {
+    "name": "Wolfsegg am Hausruck",
+    "population": 1997
+  },
+  "41751": {
+    "name": "Zell am Moos",
+    "population": 1665
+  },
+  "41752": {
+    "name": "Zell am Pettenfirst",
+    "population": 1274
+  },
+  "41801": {
+    "name": "Aichkirchen",
+    "population": 622
+  },
+  "41802": {
+    "name": "Bachmanning",
+    "population": 725
+  },
+  "41803": {
+    "name": "Bad Wimsbach-Neydharting",
+    "population": 2509
+  },
+  "41804": {
+    "name": "Buchkirchen",
+    "population": 4106
+  },
+  "41805": {
+    "name": "Eberstalzell",
+    "population": 2913
+  },
+  "41806": {
+    "name": "Edt bei Lambach",
+    "population": 2366
+  },
+  "41807": {
+    "name": "Fischlham",
+    "population": 1381
+  },
+  "41808": {
+    "name": "Gunskirchen",
+    "population": 6513
+  },
+  "41809": {
+    "name": "Holzhausen",
+    "population": 1167
+  },
+  "41810": {
+    "name": "Krenglbach",
+    "population": 3260
+  },
+  "41811": {
+    "name": "Lambach",
+    "population": 3912
+  },
+  "41812": {
+    "name": "Marchtrenk",
+    "population": 14815
+  },
+  "41813": {
+    "name": "Neukirchen bei Lambach",
+    "population": 996
+  },
+  "41814": {
+    "name": "Offenhausen",
+    "population": 1697
+  },
+  "41815": {
+    "name": "Pennewang",
+    "population": 1059
+  },
+  "41816": {
+    "name": "Pichl bei Wels",
+    "population": 2952
+  },
+  "41817": {
+    "name": "Sattledt",
+    "population": 2755
+  },
+  "41818": {
+    "name": "Schleißheim",
+    "population": 1439
+  },
+  "41819": {
+    "name": "Sipbachzell",
+    "population": 2254
+  },
+  "41820": {
+    "name": "Stadl-Paura",
+    "population": 5307
+  },
+  "41821": {
+    "name": "Steinerkirchen an der Traun",
+    "population": 2458
+  },
+  "41822": {
+    "name": "Steinhaus",
+    "population": 2775
+  },
+  "41823": {
+    "name": "Thalheim bei Wels",
+    "population": 5559
+  },
+  "41824": {
+    "name": "Weißkirchen an der Traun",
+    "population": 3570
+  },
+  "50101": {
+    "name": "Salzburg",
+    "population": 157659
+  },
+  "50201": {
+    "name": "Abtenau",
+    "population": 6008
+  },
+  "50202": {
+    "name": "Adnet",
+    "population": 3793
+  },
+  "50203": {
+    "name": "Annaberg-Lungötz",
+    "population": 2230
+  },
+  "50204": {
+    "name": "Golling an der Salzach",
+    "population": 4510
+  },
+  "50205": {
+    "name": "Hallein",
+    "population": 21654
+  },
+  "50206": {
+    "name": "Krispl",
+    "population": 863
+  },
+  "50207": {
+    "name": "Kuchl",
+    "population": 7512
+  },
+  "50208": {
+    "name": "Oberalm",
+    "population": 4392
+  },
+  "50209": {
+    "name": "Puch bei Hallein",
+    "population": 4919
+  },
+  "50210": {
+    "name": "Rußbach am Paß Gschütt",
+    "population": 772
+  },
+  "50211": {
+    "name": "Sankt Koloman",
+    "population": 1819
+  },
+  "50212": {
+    "name": "Scheffau am Tennengebirge",
+    "population": 1512
+  },
+  "50213": {
+    "name": "Bad Vigaun",
+    "population": 2131
+  },
+  "50301": {
+    "name": "Anif",
+    "population": 4425
+  },
+  "50302": {
+    "name": "Anthering",
+    "population": 3733
+  },
+  "50303": {
+    "name": "Bergheim",
+    "population": 5717
+  },
+  "50304": {
+    "name": "Berndorf bei Salzburg",
+    "population": 1776
+  },
+  "50305": {
+    "name": "Bürmoos",
+    "population": 5052
+  },
+  "50306": {
+    "name": "Dorfbeuern",
+    "population": 1605
+  },
+  "50307": {
+    "name": "Ebenau",
+    "population": 1458
+  },
+  "50308": {
+    "name": "Elixhausen",
+    "population": 3141
+  },
+  "50309": {
+    "name": "Elsbethen",
+    "population": 5453
+  },
+  "50310": {
+    "name": "Eugendorf",
+    "population": 7134
+  },
+  "50311": {
+    "name": "Faistenau",
+    "population": 3143
+  },
+  "50312": {
+    "name": "Fuschl am See",
+    "population": 1731
+  },
+  "50313": {
+    "name": "Göming",
+    "population": 767
+  },
+  "50314": {
+    "name": "Grödig",
+    "population": 7376
+  },
+  "50315": {
+    "name": "Großgmain",
+    "population": 2728
+  },
+  "50316": {
+    "name": "Hallwang",
+    "population": 4270
+  },
+  "50317": {
+    "name": "Henndorf am Wallersee",
+    "population": 5166
+  },
+  "50318": {
+    "name": "Hintersee",
+    "population": 472
+  },
+  "50319": {
+    "name": "Hof bei Salzburg",
+    "population": 3625
+  },
+  "50320": {
+    "name": "Köstendorf",
+    "population": 2742
+  },
+  "50321": {
+    "name": "Koppl",
+    "population": 3714
+  },
+  "50322": {
+    "name": "Lamprechtshausen",
+    "population": 4108
+  },
+  "50323": {
+    "name": "Mattsee",
+    "population": 3538
+  },
+  "50324": {
+    "name": "Neumarkt am Wallersee",
+    "population": 6657
+  },
+  "50325": {
+    "name": "Nußdorf am Haunsberg",
+    "population": 2552
+  },
+  "50326": {
+    "name": "Oberndorf bei Salzburg",
+    "population": 6058
+  },
+  "50327": {
+    "name": "Obertrum am See",
+    "population": 5036
+  },
+  "50328": {
+    "name": "Plainfeld",
+    "population": 1291
+  },
+  "50329": {
+    "name": "Sankt Georgen bei Salzburg",
+    "population": 3227
+  },
+  "50330": {
+    "name": "Sankt Gilgen",
+    "population": 4042
+  },
+  "50331": {
+    "name": "Schleedorf",
+    "population": 1144
+  },
+  "50332": {
+    "name": "Seeham",
+    "population": 2035
+  },
+  "50335": {
+    "name": "Straßwalchen",
+    "population": 8194
+  },
+  "50336": {
+    "name": "Strobl",
+    "population": 3748
+  },
+  "50337": {
+    "name": "Thalgau",
+    "population": 6229
+  },
+  "50338": {
+    "name": "Wals-Siezenheim",
+    "population": 14413
+  },
+  "50339": {
+    "name": "Seekirchen am Wallersee",
+    "population": 11708
+  },
+  "50401": {
+    "name": "Altenmarkt im Pongau",
+    "population": 4705
+  },
+  "50402": {
+    "name": "Bad Hofgastein",
+    "population": 6677
+  },
+  "50403": {
+    "name": "Bad Gastein",
+    "population": 4009
+  },
+  "50404": {
+    "name": "Bischofshofen",
+    "population": 10743
+  },
+  "50405": {
+    "name": "Dorfgastein",
+    "population": 1745
+  },
+  "50406": {
+    "name": "Eben im Pongau",
+    "population": 2682
+  },
+  "50407": {
+    "name": "Filzmoos",
+    "population": 1507
+  },
+  "50408": {
+    "name": "Flachau",
+    "population": 3106
+  },
+  "50409": {
+    "name": "Forstau",
+    "population": 561
+  },
+  "50410": {
+    "name": "Goldegg",
+    "population": 2736
+  },
+  "50411": {
+    "name": "Großarl",
+    "population": 3843
+  },
+  "50412": {
+    "name": "Hüttau",
+    "population": 1490
+  },
+  "50413": {
+    "name": "Hüttschlag",
+    "population": 885
+  },
+  "50414": {
+    "name": "Kleinarl",
+    "population": 832
+  },
+  "50415": {
+    "name": "Mühlbach am Hochkönig",
+    "population": 1403
+  },
+  "50416": {
+    "name": "Pfarrwerfen",
+    "population": 2614
+  },
+  "50417": {
+    "name": "Radstadt",
+    "population": 5043
+  },
+  "50418": {
+    "name": "Sankt Johann im Pongau",
+    "population": 11643
+  },
+  "50419": {
+    "name": "Sankt Martin am Tennengebirge",
+    "population": 1777
+  },
+  "50420": {
+    "name": "Sankt Veit im Pongau",
+    "population": 3944
+  },
+  "50421": {
+    "name": "Schwarzach im Pongau",
+    "population": 3541
+  },
+  "50422": {
+    "name": "Untertauern",
+    "population": 450
+  },
+  "50423": {
+    "name": "Wagrain",
+    "population": 3177
+  },
+  "50424": {
+    "name": "Werfen",
+    "population": 3092
+  },
+  "50425": {
+    "name": "Werfenweng",
+    "population": 1105
+  },
+  "50501": {
+    "name": "Göriach",
+    "population": 339
+  },
+  "50502": {
+    "name": "Lessach",
+    "population": 542
+  },
+  "50503": {
+    "name": "Mariapfarr",
+    "population": 2507
+  },
+  "50504": {
+    "name": "Mauterndorf",
+    "population": 1591
+  },
+  "50505": {
+    "name": "Muhr",
+    "population": 490
+  },
+  "50506": {
+    "name": "Ramingstein",
+    "population": 1060
+  },
+  "50507": {
+    "name": "Sankt Andrä im Lungau",
+    "population": 768
+  },
+  "50508": {
+    "name": "Sankt Margarethen im Lungau",
+    "population": 778
+  },
+  "50509": {
+    "name": "Sankt Michael im Lungau",
+    "population": 3527
+  },
+  "50510": {
+    "name": "Tamsweg",
+    "population": 5784
+  },
+  "50511": {
+    "name": "Thomatal",
+    "population": 331
+  },
+  "50512": {
+    "name": "Tweng",
+    "population": 246
+  },
+  "50513": {
+    "name": "Unternberg",
+    "population": 1024
+  },
+  "50514": {
+    "name": "Weißpriach",
+    "population": 297
+  },
+  "50515": {
+    "name": "Zederhaus",
+    "population": 1176
+  },
+  "50601": {
+    "name": "Bramberg am Wildkogel",
+    "population": 4121
+  },
+  "50602": {
+    "name": "Bruck an der Großglocknerstraße",
+    "population": 4920
+  },
+  "50603": {
+    "name": "Dienten am Hochkönig",
+    "population": 723
+  },
+  "50604": {
+    "name": "Fusch an der Großglocknerstraße",
+    "population": 746
+  },
+  "50605": {
+    "name": "Hollersbach im Pinzgau",
+    "population": 1230
+  },
+  "50606": {
+    "name": "Kaprun",
+    "population": 3158
+  },
+  "50607": {
+    "name": "Krimml",
+    "population": 821
+  },
+  "50608": {
+    "name": "Lend",
+    "population": 1288
+  },
+  "50609": {
+    "name": "Leogang",
+    "population": 3582
+  },
+  "50610": {
+    "name": "Lofer",
+    "population": 2107
+  },
+  "50611": {
+    "name": "Maishofen",
+    "population": 3667
+  },
+  "50612": {
+    "name": "Maria Alm am Steinernen Meer",
+    "population": 2265
+  },
+  "50613": {
+    "name": "Mittersill",
+    "population": 5723
+  },
+  "50614": {
+    "name": "Neukirchen am Großvenediger",
+    "population": 2685
+  },
+  "50615": {
+    "name": "Niedernsill",
+    "population": 2860
+  },
+  "50616": {
+    "name": "Piesendorf",
+    "population": 3863
+  },
+  "50617": {
+    "name": "Rauris",
+    "population": 3084
+  },
+  "50618": {
+    "name": "Saalbach-Hinterglemm",
+    "population": 2881
+  },
+  "50619": {
+    "name": "Saalfelden am Steinernen Meer",
+    "population": 17299
+  },
+  "50620": {
+    "name": "Sankt Martin bei Lofer",
+    "population": 1218
+  },
+  "50621": {
+    "name": "Stuhlfelden",
+    "population": 1554
+  },
+  "50622": {
+    "name": "Taxenbach",
+    "population": 2828
+  },
+  "50623": {
+    "name": "Unken",
+    "population": 2034
+  },
+  "50624": {
+    "name": "Uttendorf",
+    "population": 3064
+  },
+  "50625": {
+    "name": "Viehhofen",
+    "population": 598
+  },
+  "50626": {
+    "name": "Wald im Pinzgau",
+    "population": 1132
+  },
+  "50627": {
+    "name": "Weißbach bei Lofer",
+    "population": 416
+  },
+  "50628": {
+    "name": "Zell am See",
+    "population": 10227
+  },
+  "60101": {
+    "name": "Graz",
+    "population": 305314
+  },
+  "60305": {
+    "name": "Frauental an der Laßnitz",
+    "population": 3170
+  },
+  "60318": {
+    "name": "Lannach",
+    "population": 3670
+  },
+  "60323": {
+    "name": "Pölfing-Brunn",
+    "population": 1561
+  },
+  "60324": {
+    "name": "Preding",
+    "population": 1896
+  },
+  "60326": {
+    "name": "Sankt Josef (Weststeiermark)",
+    "population": 1675
+  },
+  "60329": {
+    "name": "Sankt Peter im Sulmtal",
+    "population": 1271
+  },
+  "60341": {
+    "name": "Wettmannstätten",
+    "population": 1649
+  },
+  "60344": {
+    "name": "Deutschlandsberg",
+    "population": 11757
+  },
+  "60345": {
+    "name": "Eibiswald",
+    "population": 6154
+  },
+  "60346": {
+    "name": "Groß Sankt Florian",
+    "population": 4090
+  },
+  "60347": {
+    "name": "Sankt Martin im Sulmtal",
+    "population": 3000
+  },
+  "60348": {
+    "name": "Sankt Stefan ob Stainz",
+    "population": 3671
+  },
+  "60349": {
+    "name": "Bad Schwanberg",
+    "population": 4421
+  },
+  "60350": {
+    "name": "Stainz",
+    "population": 8783
+  },
+  "60351": {
+    "name": "Wies",
+    "population": 4297
+  },
+  "60608": {
+    "name": "Feldkirchen bei Graz",
+    "population": 7299
+  },
+  "60611": {
+    "name": "Gössendorf",
+    "population": 4220
+  },
+  "60613": {
+    "name": "Gratkorn",
+    "population": 8279
+  },
+  "60617": {
+    "name": "Hart bei Graz",
+    "population": 5533
+  },
+  "60618": {
+    "name": "Haselsdorf-Tobelbad",
+    "population": 1610
+  },
+  "60619": {
+    "name": "Hausmannstätten",
+    "population": 3803
+  },
+  "60623": {
+    "name": "Kainbach bei Graz",
+    "population": 2883
+  },
+  "60624": {
+    "name": "Kalsdorf bei Graz",
+    "population": 9010
+  },
+  "60626": {
+    "name": "Kumberg",
+    "population": 3947
+  },
+  "60628": {
+    "name": "Laßnitzhöhe",
+    "population": 2902
+  },
+  "60629": {
+    "name": "Lieboch",
+    "population": 5754
+  },
+  "60632": {
+    "name": "Peggau",
+    "population": 2432
+  },
+  "60639": {
+    "name": "Sankt Bartholomä",
+    "population": 1504
+  },
+  "60641": {
+    "name": "Sankt Oswald bei Plankenwarth",
+    "population": 1260
+  },
+  "60642": {
+    "name": "Sankt Radegund bei Graz",
+    "population": 2156
+  },
+  "60645": {
+    "name": "Semriach",
+    "population": 3143
+  },
+  "60646": {
+    "name": "Stattegg",
+    "population": 3029
+  },
+  "60647": {
+    "name": "Stiwoll",
+    "population": 691
+  },
+  "60648": {
+    "name": "Thal",
+    "population": 2541
+  },
+  "60651": {
+    "name": "Übelbach",
+    "population": 2068
+  },
+  "60653": {
+    "name": "Vasoldsberg",
+    "population": 4789
+  },
+  "60654": {
+    "name": "Weinitzen",
+    "population": 2751
+  },
+  "60655": {
+    "name": "Werndorf",
+    "population": 2956
+  },
+  "60656": {
+    "name": "Wundschuh",
+    "population": 1684
+  },
+  "60659": {
+    "name": "Deutschfeistritz",
+    "population": 4432
+  },
+  "60660": {
+    "name": "Dobl-Zwaring",
+    "population": 3798
+  },
+  "60661": {
+    "name": "Eggersdorf bei Graz",
+    "population": 7329
+  },
+  "60662": {
+    "name": "Fernitz-Mellach",
+    "population": 4951
+  },
+  "60663": {
+    "name": "Frohnleiten",
+    "population": 6690
+  },
+  "60664": {
+    "name": "Gratwein-Straßengel",
+    "population": 12799
+  },
+  "60665": {
+    "name": "Hitzendorf",
+    "population": 7398
+  },
+  "60666": {
+    "name": "Nestelbach bei Graz",
+    "population": 2734
+  },
+  "60667": {
+    "name": "Raaba-Grambach",
+    "population": 5060
+  },
+  "60668": {
+    "name": "Sankt Marein bei Graz",
+    "population": 3752
+  },
+  "60669": {
+    "name": "Seiersberg-Pirka",
+    "population": 12289
+  },
+  "60670": {
+    "name": "Premstätten",
+    "population": 7178
+  },
+  "61001": {
+    "name": "Allerheiligen bei Wildon",
+    "population": 1615
+  },
+  "61002": {
+    "name": "Arnfels",
+    "population": 960
+  },
+  "61007": {
+    "name": "Empersdorf",
+    "population": 1394
+  },
+  "61008": {
+    "name": "Gabersdorf",
+    "population": 1310
+  },
+  "61012": {
+    "name": "Gralla",
+    "population": 2876
+  },
+  "61013": {
+    "name": "Großklein",
+    "population": 2232
+  },
+  "61016": {
+    "name": "Heimschuh",
+    "population": 1997
+  },
+  "61017": {
+    "name": "Hengsberg",
+    "population": 1574
+  },
+  "61019": {
+    "name": "Kitzeck im Sausal",
+    "population": 1175
+  },
+  "61020": {
+    "name": "Lang",
+    "population": 1373
+  },
+  "61021": {
+    "name": "Lebring-Sankt Margarethen",
+    "population": 2260
+  },
+  "61024": {
+    "name": "Oberhaag",
+    "population": 2021
+  },
+  "61027": {
+    "name": "Ragnitz",
+    "population": 1647
+  },
+  "61030": {
+    "name": "Sankt Andrä-Höch",
+    "population": 1730
+  },
+  "61032": {
+    "name": "Sankt Johann im Saggautal",
+    "population": 1961
+  },
+  "61033": {
+    "name": "Sankt Nikolai im Sausal",
+    "population": 2345
+  },
+  "61043": {
+    "name": "Tillmitsch",
+    "population": 3959
+  },
+  "61045": {
+    "name": "Wagna",
+    "population": 6524
+  },
+  "61049": {
+    "name": "Ehrenhausen an der Weinstraße",
+    "population": 2410
+  },
+  "61050": {
+    "name": "Gamlitz",
+    "population": 3144
+  },
+  "61051": {
+    "name": "Gleinstätten",
+    "population": 2811
+  },
+  "61052": {
+    "name": "Heiligenkreuz am Waasen",
+    "population": 2928
+  },
+  "61053": {
+    "name": "Leibnitz",
+    "population": 13517
+  },
+  "61054": {
+    "name": "Leutschach an der Weinstraße",
+    "population": 3535
+  },
+  "61055": {
+    "name": "Sankt Georgen an der Stiefing",
+    "population": 1614
+  },
+  "61057": {
+    "name": "Schwarzautal",
+    "population": 2361
+  },
+  "61059": {
+    "name": "Wildon",
+    "population": 5745
+  },
+  "61060": {
+    "name": "Sankt Veit in der Südsteiermark",
+    "population": 4426
+  },
+  "61061": {
+    "name": "Straß in Steiermark",
+    "population": 6535
+  },
+  "61101": {
+    "name": "Eisenerz",
+    "population": 3362
+  },
+  "61105": {
+    "name": "Kalwang",
+    "population": 1040
+  },
+  "61106": {
+    "name": "Kammern im Liesingtal",
+    "population": 1671
+  },
+  "61107": {
+    "name": "Kraubath an der Mur",
+    "population": 1339
+  },
+  "61108": {
+    "name": "Leoben",
+    "population": 24561
+  },
+  "61109": {
+    "name": "Mautern in Steiermark",
+    "population": 1656
+  },
+  "61110": {
+    "name": "Niklasdorf",
+    "population": 2346
+  },
+  "61111": {
+    "name": "Proleb",
+    "population": 1553
+  },
+  "61112": {
+    "name": "Radmer",
+    "population": 474
+  },
+  "61113": {
+    "name": "Sankt Michael in Obersteiermark",
+    "population": 3027
+  },
+  "61114": {
+    "name": "Sankt Peter-Freienstein",
+    "population": 2306
+  },
+  "61115": {
+    "name": "Sankt Stefan ob Leoben",
+    "population": 1816
+  },
+  "61116": {
+    "name": "Traboch",
+    "population": 1417
+  },
+  "61118": {
+    "name": "Vordernberg",
+    "population": 945
+  },
+  "61119": {
+    "name": "Wald am Schoberpaß",
+    "population": 528
+  },
+  "61120": {
+    "name": "Trofaiach",
+    "population": 11030
+  },
+  "61203": {
+    "name": "Aigen im Ennstal",
+    "population": 2745
+  },
+  "61204": {
+    "name": "Altaussee",
+    "population": 1913
+  },
+  "61205": {
+    "name": "Altenmarkt bei Sankt Gallen",
+    "population": 779
+  },
+  "61206": {
+    "name": "Ardning",
+    "population": 1308
+  },
+  "61207": {
+    "name": "Bad Aussee",
+    "population": 4988
+  },
+  "61213": {
+    "name": "Gröbming",
+    "population": 3202
+  },
+  "61215": {
+    "name": "Grundlsee",
+    "population": 1181
+  },
+  "61217": {
+    "name": "Haus",
+    "population": 2451
+  },
+  "61222": {
+    "name": "Lassing",
+    "population": 1684
+  },
+  "61236": {
+    "name": "Ramsau am Dachstein",
+    "population": 2910
+  },
+  "61243": {
+    "name": "Selzthal",
+    "population": 1476
+  },
+  "61247": {
+    "name": "Trieben",
+    "population": 3297
+  },
+  "61251": {
+    "name": "Wildalpen",
+    "population": 432
+  },
+  "61252": {
+    "name": "Wörschach",
+    "population": 1226
+  },
+  "61253": {
+    "name": "Admont",
+    "population": 4910
+  },
+  "61254": {
+    "name": "Aich",
+    "population": 1322
+  },
+  "61255": {
+    "name": "Bad Mitterndorf",
+    "population": 4964
+  },
+  "61256": {
+    "name": "Gaishorn am See",
+    "population": 1356
+  },
+  "61257": {
+    "name": "Irdning-Donnersbachtal",
+    "population": 4173
+  },
+  "61258": {
+    "name": "Landl",
+    "population": 2474
+  },
+  "61259": {
+    "name": "Liezen",
+    "population": 8147
+  },
+  "61260": {
+    "name": "Michaelerberg-Pruggern",
+    "population": 1271
+  },
+  "61261": {
+    "name": "Mitterberg-Sankt Martin",
+    "population": 1975
+  },
+  "61262": {
+    "name": "Öblarn",
+    "population": 1891
+  },
+  "61263": {
+    "name": "Rottenmann",
+    "population": 4960
+  },
+  "61264": {
+    "name": "Sankt Gallen",
+    "population": 1797
+  },
+  "61265": {
+    "name": "Schladming",
+    "population": 6572
+  },
+  "61266": {
+    "name": "Sölk",
+    "population": 1461
+  },
+  "61267": {
+    "name": "Stainach-Pürgg",
+    "population": 2714
+  },
+  "61410": {
+    "name": "Mühlen",
+    "population": 864
+  },
+  "61413": {
+    "name": "Niederwölz",
+    "population": 597
+  },
+  "61425": {
+    "name": "Sankt Peter am Kammersberg",
+    "population": 1978
+  },
+  "61428": {
+    "name": "Schöder",
+    "population": 865
+  },
+  "61437": {
+    "name": "Krakau",
+    "population": 1355
+  },
+  "61438": {
+    "name": "Murau",
+    "population": 3330
+  },
+  "61439": {
+    "name": "Neumarkt in der Steiermark",
+    "population": 4805
+  },
+  "61440": {
+    "name": "Oberwölz",
+    "population": 2917
+  },
+  "61441": {
+    "name": "Ranten",
+    "population": 1115
+  },
+  "61442": {
+    "name": "Sankt Georgen am Kreischberg",
+    "population": 1666
+  },
+  "61443": {
+    "name": "Sankt Lambrecht",
+    "population": 1784
+  },
+  "61444": {
+    "name": "Scheifling",
+    "population": 2117
+  },
+  "61445": {
+    "name": "Stadl-Predlitz",
+    "population": 1672
+  },
+  "61446": {
+    "name": "Teufenbach-Katsch",
+    "population": 1833
+  },
+  "61611": {
+    "name": "Krottendorf-Gaisfeld",
+    "population": 2416
+  },
+  "61612": {
+    "name": "Ligist",
+    "population": 3232
+  },
+  "61615": {
+    "name": "Mooskirchen",
+    "population": 2226
+  },
+  "61618": {
+    "name": "Rosental an der Kainach",
+    "population": 1682
+  },
+  "61621": {
+    "name": "Sankt Martin am Wöllmißberg",
+    "population": 790
+  },
+  "61624": {
+    "name": "Stallhofen",
+    "population": 3257
+  },
+  "61625": {
+    "name": "Voitsberg",
+    "population": 9547
+  },
+  "61626": {
+    "name": "Bärnbach",
+    "population": 5894
+  },
+  "61627": {
+    "name": "Edelschrott",
+    "population": 1640
+  },
+  "61628": {
+    "name": "Geistthal-Södingberg",
+    "population": 1425
+  },
+  "61629": {
+    "name": "Hirschegg-Pack",
+    "population": 1004
+  },
+  "61630": {
+    "name": "Kainach bei Voitsberg",
+    "population": 1510
+  },
+  "61631": {
+    "name": "Köflach",
+    "population": 9489
+  },
+  "61632": {
+    "name": "Maria Lankowitz",
+    "population": 2703
+  },
+  "61633": {
+    "name": "Söding-Sankt Johann",
+    "population": 4357
+  },
+  "61701": {
+    "name": "Albersdorf-Prebuch",
+    "population": 2288
+  },
+  "61708": {
+    "name": "Fischbach",
+    "population": 1493
+  },
+  "61710": {
+    "name": "Floing",
+    "population": 1199
+  },
+  "61711": {
+    "name": "Gasen",
+    "population": 848
+  },
+  "61716": {
+    "name": "Markt Hartmannsdorf",
+    "population": 2997
+  },
+  "61719": {
+    "name": "Hofstätten an der Raab",
+    "population": 2368
+  },
+  "61727": {
+    "name": "Ludersdorf-Wilfersdorf",
+    "population": 2581
+  },
+  "61728": {
+    "name": "Miesenbach bei Birkfeld",
+    "population": 666
+  },
+  "61729": {
+    "name": "Mitterdorf an der Raab",
+    "population": 2140
+  },
+  "61730": {
+    "name": "Mortantsch",
+    "population": 2269
+  },
+  "61731": {
+    "name": "Naas",
+    "population": 1321
+  },
+  "61740": {
+    "name": "Puch bei Weiz",
+    "population": 2049
+  },
+  "61741": {
+    "name": "Ratten",
+    "population": 1087
+  },
+  "61743": {
+    "name": "Rettenegg",
+    "population": 688
+  },
+  "61744": {
+    "name": "Sankt Kathrein am Hauenstein",
+    "population": 613
+  },
+  "61745": {
+    "name": "Sankt Kathrein am Offenegg",
+    "population": 1068
+  },
+  "61746": {
+    "name": "Sankt Margarethen an der Raab",
+    "population": 4199
+  },
+  "61748": {
+    "name": "Sinabelkirchen",
+    "population": 4491
+  },
+  "61750": {
+    "name": "Strallegg",
+    "population": 1904
+  },
+  "61751": {
+    "name": "Thannhausen",
+    "population": 2427
+  },
+  "61756": {
+    "name": "Anger",
+    "population": 3992
+  },
+  "61757": {
+    "name": "Birkfeld",
+    "population": 4941
+  },
+  "61758": {
+    "name": "Fladnitz an der Teichalm",
+    "population": 1799
+  },
+  "61759": {
+    "name": "Gersdorf an der Feistritz",
+    "population": 1745
+  },
+  "61760": {
+    "name": "Gleisdorf",
+    "population": 11533
+  },
+  "61761": {
+    "name": "Gutenberg",
+    "population": 1641
+  },
+  "61762": {
+    "name": "Ilztal",
+    "population": 2243
+  },
+  "61763": {
+    "name": "Passail",
+    "population": 4366
+  },
+  "61764": {
+    "name": "Pischelsdorf am Kulm",
+    "population": 3898
+  },
+  "61765": {
+    "name": "Sankt Ruprecht an der Raab",
+    "population": 5681
+  },
+  "61766": {
+    "name": "Weiz",
+    "population": 12116
+  },
+  "62007": {
+    "name": "Fohnsdorf",
+    "population": 7662
+  },
+  "62008": {
+    "name": "Gaal",
+    "population": 1301
+  },
+  "62010": {
+    "name": "Hohentauern",
+    "population": 372
+  },
+  "62014": {
+    "name": "Kobenz",
+    "population": 2091
+  },
+  "62021": {
+    "name": "Pusterwald",
+    "population": 426
+  },
+  "62026": {
+    "name": "Sankt Georgen ob Judenburg",
+    "population": 823
+  },
+  "62032": {
+    "name": "Sankt Peter ob Judenburg",
+    "population": 1119
+  },
+  "62034": {
+    "name": "Seckau",
+    "population": 1326
+  },
+  "62036": {
+    "name": "Unzmarkt-Frauenburg",
+    "population": 1274
+  },
+  "62038": {
+    "name": "Zeltweg",
+    "population": 6993
+  },
+  "62039": {
+    "name": "Lobmingtal",
+    "population": 1820
+  },
+  "62040": {
+    "name": "Judenburg",
+    "population": 9607
+  },
+  "62041": {
+    "name": "Knittelfeld",
+    "population": 12870
+  },
+  "62042": {
+    "name": "Obdach",
+    "population": 3788
+  },
+  "62043": {
+    "name": "Pöls-Oberkurzheim",
+    "population": 2762
+  },
+  "62044": {
+    "name": "Pölstal",
+    "population": 2515
+  },
+  "62045": {
+    "name": "Sankt Marein-Feistritz",
+    "population": 1995
+  },
+  "62046": {
+    "name": "Sankt Margarethen bei Knittelfeld",
+    "population": 2666
+  },
+  "62047": {
+    "name": "Spielberg",
+    "population": 5351
+  },
+  "62048": {
+    "name": "Weißkirchen in Steiermark",
+    "population": 4755
+  },
+  "62105": {
+    "name": "Breitenau am Hochlantsch",
+    "population": 1561
+  },
+  "62115": {
+    "name": "Krieglach",
+    "population": 5438
+  },
+  "62116": {
+    "name": "Langenwang",
+    "population": 3902
+  },
+  "62125": {
+    "name": "Pernegg an der Mur",
+    "population": 2572
+  },
+  "62128": {
+    "name": "Sankt Lorenzen im Mürztal",
+    "population": 3766
+  },
+  "62131": {
+    "name": "Spital am Semmering",
+    "population": 1424
+  },
+  "62132": {
+    "name": "Stanz im Mürztal",
+    "population": 1769
+  },
+  "62135": {
+    "name": "Turnau",
+    "population": 1553
+  },
+  "62138": {
+    "name": "Aflenz",
+    "population": 2445
+  },
+  "62139": {
+    "name": "Bruck an der Mur",
+    "population": 15735
+  },
+  "62140": {
+    "name": "Kapfenberg",
+    "population": 21907
+  },
+  "62141": {
+    "name": "Kindberg",
+    "population": 8149
+  },
+  "62142": {
+    "name": "Mariazell",
+    "population": 3547
+  },
+  "62143": {
+    "name": "Mürzzuschlag",
+    "population": 7819
+  },
+  "62144": {
+    "name": "Neuberg an der Mürz",
+    "population": 2249
+  },
+  "62145": {
+    "name": "Sankt Barbara im Mürztal",
+    "population": 6412
+  },
+  "62146": {
+    "name": "Sankt Marein im Mürztal",
+    "population": 2879
+  },
+  "62147": {
+    "name": "Thörl",
+    "population": 2159
+  },
+  "62148": {
+    "name": "Tragöß-Sankt Katharein",
+    "population": 1791
+  },
+  "62202": {
+    "name": "Bad Blumau",
+    "population": 1672
+  },
+  "62205": {
+    "name": "Buch-Sankt Magdalena",
+    "population": 2195
+  },
+  "62206": {
+    "name": "Burgau",
+    "population": 1087
+  },
+  "62209": {
+    "name": "Ebersdorf",
+    "population": 1304
+  },
+  "62211": {
+    "name": "Friedberg",
+    "population": 2677
+  },
+  "62214": {
+    "name": "Greinbach",
+    "population": 1856
+  },
+  "62216": {
+    "name": "Großsteinbach",
+    "population": 1297
+  },
+  "62219": {
+    "name": "Hartberg",
+    "population": 6725
+  },
+  "62220": {
+    "name": "Hartberg Umgebung",
+    "population": 2216
+  },
+  "62226": {
+    "name": "Lafnitz",
+    "population": 1451
+  },
+  "62232": {
+    "name": "Ottendorf an der Rittschein",
+    "population": 1612
+  },
+  "62233": {
+    "name": "Pinggau",
+    "population": 3081
+  },
+  "62235": {
+    "name": "Pöllauberg",
+    "population": 1967
+  },
+  "62242": {
+    "name": "Sankt Jakob im Walde",
+    "population": 1021
+  },
+  "62244": {
+    "name": "Sankt Johann in der Haide",
+    "population": 2321
+  },
+  "62245": {
+    "name": "Sankt Lorenzen am Wechsel",
+    "population": 1416
+  },
+  "62247": {
+    "name": "Schäffern",
+    "population": 1342
+  },
+  "62256": {
+    "name": "Stubenberg",
+    "population": 2224
+  },
+  "62262": {
+    "name": "Wenigzell",
+    "population": 1370
+  },
+  "62264": {
+    "name": "Bad Waltersdorf",
+    "population": 3978
+  },
+  "62265": {
+    "name": "Dechantskirchen",
+    "population": 2005
+  },
+  "62266": {
+    "name": "Feistritztal",
+    "population": 2324
+  },
+  "62268": {
+    "name": "Grafendorf bei Hartberg",
+    "population": 3247
+  },
+  "62269": {
+    "name": "Großwilfersdorf",
+    "population": 2103
+  },
+  "62270": {
+    "name": "Hartl",
+    "population": 2119
+  },
+  "62271": {
+    "name": "Ilz",
+    "population": 3842
+  },
+  "62272": {
+    "name": "Kaindorf",
+    "population": 3030
+  },
+  "62273": {
+    "name": "Bad Loipersdorf",
+    "population": 1823
+  },
+  "62274": {
+    "name": "Neudau",
+    "population": 1511
+  },
+  "62275": {
+    "name": "Pöllau",
+    "population": 5890
+  },
+  "62276": {
+    "name": "Rohr bei Hartberg",
+    "population": 1397
+  },
+  "62277": {
+    "name": "Rohrbach an der Lafnitz",
+    "population": 2611
+  },
+  "62278": {
+    "name": "Vorau",
+    "population": 4591
+  },
+  "62279": {
+    "name": "Waldbach-Mönichwald",
+    "population": 1386
+  },
+  "62280": {
+    "name": "Fürstenfeld",
+    "population": 10391
+  },
+  "62311": {
+    "name": "Edelsbach bei Feldbach",
+    "population": 1356
+  },
+  "62314": {
+    "name": "Eichkögl",
+    "population": 1387
+  },
+  "62326": {
+    "name": "Halbenrain",
+    "population": 1696
+  },
+  "62330": {
+    "name": "Jagerberg",
+    "population": 1588
+  },
+  "62332": {
+    "name": "Kapfenstein",
+    "population": 1499
+  },
+  "62335": {
+    "name": "Klöch",
+    "population": 1162
+  },
+  "62343": {
+    "name": "Mettersdorf am Saßbach",
+    "population": 1360
+  },
+  "62368": {
+    "name": "Tieschen",
+    "population": 1193
+  },
+  "62372": {
+    "name": "Unterlamm",
+    "population": 1265
+  },
+  "62375": {
+    "name": "Bad Gleichenberg",
+    "population": 5232
+  },
+  "62376": {
+    "name": "Bad Radkersburg",
+    "population": 3220
+  },
+  "62377": {
+    "name": "Deutsch Goritz",
+    "population": 1779
+  },
+  "62378": {
+    "name": "Fehring",
+    "population": 7146
+  },
+  "62379": {
+    "name": "Feldbach",
+    "population": 13495
+  },
+  "62380": {
+    "name": "Gnas",
+    "population": 5969
+  },
+  "62381": {
+    "name": "Kirchbach-Zerlach",
+    "population": 3200
+  },
+  "62382": {
+    "name": "Kirchberg an der Raab",
+    "population": 4574
+  },
+  "62383": {
+    "name": "Mureck",
+    "population": 3503
+  },
+  "62384": {
+    "name": "Paldau",
+    "population": 3142
+  },
+  "62385": {
+    "name": "Pirching am Traubenberg",
+    "population": 2513
+  },
+  "62386": {
+    "name": "Riegersburg",
+    "population": 4950
+  },
+  "62387": {
+    "name": "Sankt Anna am Aigen",
+    "population": 2350
+  },
+  "62388": {
+    "name": "Sankt Peter am Ottersbach",
+    "population": 2884
+  },
+  "62389": {
+    "name": "Sankt Stefan im Rosental",
+    "population": 3795
+  },
+  "62390": {
+    "name": "Straden",
+    "population": 3400
+  },
+  "70101": {
+    "name": "Innsbruck",
+    "population": 132499
+  },
+  "70201": {
+    "name": "Arzl im Pitztal",
+    "population": 3195
+  },
+  "70202": {
+    "name": "Haiming",
+    "population": 4877
+  },
+  "70203": {
+    "name": "Imst",
+    "population": 11183
+  },
+  "70204": {
+    "name": "Imsterberg",
+    "population": 832
+  },
+  "70205": {
+    "name": "Jerzens",
+    "population": 889
+  },
+  "70206": {
+    "name": "Karres",
+    "population": 621
+  },
+  "70207": {
+    "name": "Karrösten",
+    "population": 721
+  },
+  "70208": {
+    "name": "Längenfeld",
+    "population": 4911
+  },
+  "70209": {
+    "name": "Mieming",
+    "population": 3946
+  },
+  "70210": {
+    "name": "Mils bei Imst",
+    "population": 667
+  },
+  "70211": {
+    "name": "Mötz",
+    "population": 1380
+  },
+  "70212": {
+    "name": "Nassereith",
+    "population": 2263
+  },
+  "70213": {
+    "name": "Obsteig",
+    "population": 1460
+  },
+  "70214": {
+    "name": "Oetz",
+    "population": 2411
+  },
+  "70215": {
+    "name": "Rietz",
+    "population": 2518
+  },
+  "70216": {
+    "name": "Roppen",
+    "population": 1969
+  },
+  "70217": {
+    "name": "Sankt Leonhard im Pitztal",
+    "population": 1450
+  },
+  "70218": {
+    "name": "Sautens",
+    "population": 1609
+  },
+  "70219": {
+    "name": "Silz",
+    "population": 2625
+  },
+  "70220": {
+    "name": "Sölden",
+    "population": 3080
+  },
+  "70221": {
+    "name": "Stams",
+    "population": 1574
+  },
+  "70222": {
+    "name": "Tarrenz",
+    "population": 2813
+  },
+  "70223": {
+    "name": "Umhausen",
+    "population": 3534
+  },
+  "70224": {
+    "name": "Wenns",
+    "population": 2160
+  },
+  "70301": {
+    "name": "Absam",
+    "population": 7333
+  },
+  "70302": {
+    "name": "Aldrans",
+    "population": 2828
+  },
+  "70303": {
+    "name": "Ampass",
+    "population": 1829
+  },
+  "70304": {
+    "name": "Axams",
+    "population": 6361
+  },
+  "70305": {
+    "name": "Baumkirchen",
+    "population": 1261
+  },
+  "70306": {
+    "name": "Birgitz",
+    "population": 1478
+  },
+  "70307": {
+    "name": "Ellbögen",
+    "population": 1180
+  },
+  "70308": {
+    "name": "Flaurling",
+    "population": 1325
+  },
+  "70309": {
+    "name": "Fritzens",
+    "population": 2191
+  },
+  "70310": {
+    "name": "Fulpmes",
+    "population": 4623
+  },
+  "70311": {
+    "name": "Gnadenwald",
+    "population": 858
+  },
+  "70312": {
+    "name": "Götzens",
+    "population": 4220
+  },
+  "70313": {
+    "name": "Gries am Brenner",
+    "population": 1341
+  },
+  "70314": {
+    "name": "Gries im Sellrain",
+    "population": 633
+  },
+  "70315": {
+    "name": "Grinzens",
+    "population": 1489
+  },
+  "70317": {
+    "name": "Gschnitz",
+    "population": 466
+  },
+  "70318": {
+    "name": "Hatting",
+    "population": 1491
+  },
+  "70319": {
+    "name": "Inzing",
+    "population": 4146
+  },
+  "70320": {
+    "name": "Kematen in Tirol",
+    "population": 3319
+  },
+  "70322": {
+    "name": "Kolsass",
+    "population": 1675
+  },
+  "70323": {
+    "name": "Kolsassberg",
+    "population": 879
+  },
+  "70325": {
+    "name": "Lans",
+    "population": 1195
+  },
+  "70326": {
+    "name": "Leutasch",
+    "population": 2550
+  },
+  "70328": {
+    "name": "Mieders",
+    "population": 2000
+  },
+  "70329": {
+    "name": "Mils",
+    "population": 4720
+  },
+  "70331": {
+    "name": "Mutters",
+    "population": 2309
+  },
+  "70332": {
+    "name": "Natters",
+    "population": 2167
+  },
+  "70333": {
+    "name": "Navis",
+    "population": 2052
+  },
+  "70334": {
+    "name": "Neustift im Stubaital",
+    "population": 5002
+  },
+  "70335": {
+    "name": "Oberhofen im Inntal",
+    "population": 1953
+  },
+  "70336": {
+    "name": "Obernberg am Brenner",
+    "population": 397
+  },
+  "70337": {
+    "name": "Oberperfuss",
+    "population": 3155
+  },
+  "70338": {
+    "name": "Patsch",
+    "population": 1146
+  },
+  "70339": {
+    "name": "Pettnau",
+    "population": 1124
+  },
+  "70340": {
+    "name": "Pfaffenhofen",
+    "population": 1308
+  },
+  "70342": {
+    "name": "Polling in Tirol",
+    "population": 1384
+  },
+  "70343": {
+    "name": "Ranggen",
+    "population": 1141
+  },
+  "70344": {
+    "name": "Reith bei Seefeld",
+    "population": 1572
+  },
+  "70345": {
+    "name": "Rinn",
+    "population": 1927
+  },
+  "70346": {
+    "name": "Rum",
+    "population": 9493
+  },
+  "70347": {
+    "name": "Sankt Sigmund im Sellrain",
+    "population": 177
+  },
+  "70348": {
+    "name": "Scharnitz",
+    "population": 1416
+  },
+  "70349": {
+    "name": "Schmirn",
+    "population": 870
+  },
+  "70350": {
+    "name": "Schönberg im Stubaital",
+    "population": 1074
+  },
+  "70351": {
+    "name": "Seefeld in Tirol",
+    "population": 3616
+  },
+  "70352": {
+    "name": "Sellrain",
+    "population": 1352
+  },
+  "70353": {
+    "name": "Sistrans",
+    "population": 2299
+  },
+  "70354": {
+    "name": "Hall in Tirol",
+    "population": 14698
+  },
+  "70355": {
+    "name": "Steinach am Brenner",
+    "population": 3661
+  },
+  "70356": {
+    "name": "Telfes im Stubai",
+    "population": 1626
+  },
+  "70357": {
+    "name": "Telfs",
+    "population": 16439
+  },
+  "70358": {
+    "name": "Thaur",
+    "population": 4365
+  },
+  "70359": {
+    "name": "Trins",
+    "population": 1391
+  },
+  "70360": {
+    "name": "Tulfes",
+    "population": 1739
+  },
+  "70361": {
+    "name": "Unterperfuss",
+    "population": 246
+  },
+  "70362": {
+    "name": "Vals",
+    "population": 531
+  },
+  "70364": {
+    "name": "Völs",
+    "population": 7339
+  },
+  "70365": {
+    "name": "Volders",
+    "population": 4624
+  },
+  "70366": {
+    "name": "Wattenberg",
+    "population": 793
+  },
+  "70367": {
+    "name": "Wattens",
+    "population": 8138
+  },
+  "70368": {
+    "name": "Wildermieming",
+    "population": 1017
+  },
+  "70369": {
+    "name": "Zirl",
+    "population": 8250
+  },
+  "70370": {
+    "name": "Matrei am Brenner",
+    "population": 3561
+  },
+  "70401": {
+    "name": "Aurach bei Kitzbühel",
+    "population": 1129
+  },
+  "70402": {
+    "name": "Brixen im Thale",
+    "population": 2698
+  },
+  "70403": {
+    "name": "Fieberbrunn",
+    "population": 4551
+  },
+  "70404": {
+    "name": "Going am Wilden Kaiser",
+    "population": 1980
+  },
+  "70405": {
+    "name": "Hochfilzen",
+    "population": 1326
+  },
+  "70406": {
+    "name": "Hopfgarten im Brixental",
+    "population": 5847
+  },
+  "70407": {
+    "name": "Itter",
+    "population": 1176
+  },
+  "70408": {
+    "name": "Jochberg",
+    "population": 1517
+  },
+  "70409": {
+    "name": "Kirchberg in Tirol",
+    "population": 5206
+  },
+  "70410": {
+    "name": "Kirchdorf in Tirol",
+    "population": 4184
+  },
+  "70411": {
+    "name": "Kitzbühel",
+    "population": 8281
+  },
+  "70412": {
+    "name": "Kössen",
+    "population": 4602
+  },
+  "70413": {
+    "name": "Oberndorf in Tirol",
+    "population": 2378
+  },
+  "70414": {
+    "name": "Reith bei Kitzbühel",
+    "population": 1761
+  },
+  "70415": {
+    "name": "Sankt Jakob in Haus",
+    "population": 837
+  },
+  "70416": {
+    "name": "Sankt Johann in Tirol",
+    "population": 9891
+  },
+  "70417": {
+    "name": "Sankt Ulrich am Pillersee",
+    "population": 1949
+  },
+  "70418": {
+    "name": "Schwendt",
+    "population": 921
+  },
+  "70419": {
+    "name": "Waidring",
+    "population": 2085
+  },
+  "70420": {
+    "name": "Westendorf",
+    "population": 3748
+  },
+  "70501": {
+    "name": "Alpbach",
+    "population": 2545
+  },
+  "70502": {
+    "name": "Angath",
+    "population": 1013
+  },
+  "70503": {
+    "name": "Bad Häring",
+    "population": 3008
+  },
+  "70504": {
+    "name": "Brandenberg",
+    "population": 1513
+  },
+  "70505": {
+    "name": "Breitenbach am Inn",
+    "population": 3563
+  },
+  "70506": {
+    "name": "Brixlegg",
+    "population": 3120
+  },
+  "70508": {
+    "name": "Ebbs",
+    "population": 5966
+  },
+  "70509": {
+    "name": "Ellmau",
+    "population": 2954
+  },
+  "70510": {
+    "name": "Erl",
+    "population": 1623
+  },
+  "70511": {
+    "name": "Kirchbichl",
+    "population": 6029
+  },
+  "70512": {
+    "name": "Kramsach",
+    "population": 5088
+  },
+  "70513": {
+    "name": "Kufstein",
+    "population": 20212
+  },
+  "70514": {
+    "name": "Kundl",
+    "population": 5001
+  },
+  "70515": {
+    "name": "Langkampfen",
+    "population": 4332
+  },
+  "70516": {
+    "name": "Mariastein",
+    "population": 463
+  },
+  "70517": {
+    "name": "Münster",
+    "population": 3600
+  },
+  "70518": {
+    "name": "Niederndorf",
+    "population": 2912
+  },
+  "70519": {
+    "name": "Niederndorferberg",
+    "population": 726
+  },
+  "70520": {
+    "name": "Radfeld",
+    "population": 2542
+  },
+  "70521": {
+    "name": "Rattenberg",
+    "population": 462
+  },
+  "70522": {
+    "name": "Reith im Alpbachtal",
+    "population": 2867
+  },
+  "70523": {
+    "name": "Rettenschöss",
+    "population": 565
+  },
+  "70524": {
+    "name": "Scheffau am Wilden Kaiser",
+    "population": 1542
+  },
+  "70525": {
+    "name": "Schwoich",
+    "population": 2643
+  },
+  "70526": {
+    "name": "Söll",
+    "population": 3781
+  },
+  "70527": {
+    "name": "Thiersee",
+    "population": 3176
+  },
+  "70528": {
+    "name": "Angerberg",
+    "population": 1968
+  },
+  "70529": {
+    "name": "Walchsee",
+    "population": 2198
+  },
+  "70530": {
+    "name": "Wildschönau",
+    "population": 4405
+  },
+  "70531": {
+    "name": "Wörgl",
+    "population": 14412
+  },
+  "70601": {
+    "name": "Faggen",
+    "population": 397
+  },
+  "70602": {
+    "name": "Fendels",
+    "population": 291
+  },
+  "70603": {
+    "name": "Fiss",
+    "population": 1056
+  },
+  "70604": {
+    "name": "Fließ",
+    "population": 3105
+  },
+  "70605": {
+    "name": "Flirsch",
+    "population": 1009
+  },
+  "70606": {
+    "name": "Galtür",
+    "population": 789
+  },
+  "70607": {
+    "name": "Grins",
+    "population": 1391
+  },
+  "70608": {
+    "name": "Ischgl",
+    "population": 1635
+  },
+  "70609": {
+    "name": "Kappl",
+    "population": 2548
+  },
+  "70610": {
+    "name": "Kaunerberg",
+    "population": 456
+  },
+  "70611": {
+    "name": "Kaunertal",
+    "population": 632
+  },
+  "70612": {
+    "name": "Kauns",
+    "population": 549
+  },
+  "70613": {
+    "name": "Ladis",
+    "population": 548
+  },
+  "70614": {
+    "name": "Landeck",
+    "population": 7711
+  },
+  "70615": {
+    "name": "Nauders",
+    "population": 1561
+  },
+  "70616": {
+    "name": "Pettneu am Arlberg",
+    "population": 1450
+  },
+  "70617": {
+    "name": "Pfunds",
+    "population": 2585
+  },
+  "70618": {
+    "name": "Pians",
+    "population": 799
+  },
+  "70619": {
+    "name": "Prutz",
+    "population": 1879
+  },
+  "70620": {
+    "name": "Ried im Oberinntal",
+    "population": 1354
+  },
+  "70621": {
+    "name": "Sankt Anton am Arlberg",
+    "population": 2319
+  },
+  "70622": {
+    "name": "Schönwies",
+    "population": 1766
+  },
+  "70623": {
+    "name": "See",
+    "population": 1249
+  },
+  "70624": {
+    "name": "Serfaus",
+    "population": 1212
+  },
+  "70625": {
+    "name": "Spiss",
+    "population": 97
+  },
+  "70626": {
+    "name": "Stanz bei Landeck",
+    "population": 584
+  },
+  "70627": {
+    "name": "Strengen",
+    "population": 1197
+  },
+  "70628": {
+    "name": "Tobadill",
+    "population": 500
+  },
+  "70629": {
+    "name": "Tösens",
+    "population": 748
+  },
+  "70630": {
+    "name": "Zams",
+    "population": 3613
+  },
+  "70701": {
+    "name": "Abfaltersbach",
+    "population": 646
+  },
+  "70702": {
+    "name": "Ainet",
+    "population": 914
+  },
+  "70703": {
+    "name": "Amlach",
+    "population": 528
+  },
+  "70704": {
+    "name": "Anras",
+    "population": 1210
+  },
+  "70705": {
+    "name": "Assling",
+    "population": 1730
+  },
+  "70706": {
+    "name": "Außervillgraten",
+    "population": 715
+  },
+  "70707": {
+    "name": "Dölsach",
+    "population": 2319
+  },
+  "70708": {
+    "name": "Gaimberg",
+    "population": 865
+  },
+  "70709": {
+    "name": "Hopfgarten in Defereggen",
+    "population": 661
+  },
+  "70710": {
+    "name": "Innervillgraten",
+    "population": 905
+  },
+  "70711": {
+    "name": "Iselsberg-Stronach",
+    "population": 612
+  },
+  "70712": {
+    "name": "Kals am Großglockner",
+    "population": 1111
+  },
+  "70713": {
+    "name": "Kartitsch",
+    "population": 759
+  },
+  "70714": {
+    "name": "Lavant",
+    "population": 347
+  },
+  "70715": {
+    "name": "Leisach",
+    "population": 731
+  },
+  "70716": {
+    "name": "Lienz",
+    "population": 12107
+  },
+  "70717": {
+    "name": "Matrei in Osttirol",
+    "population": 4619
+  },
+  "70718": {
+    "name": "Nikolsdorf",
+    "population": 865
+  },
+  "70719": {
+    "name": "Nußdorf-Debant",
+    "population": 3415
+  },
+  "70720": {
+    "name": "Oberlienz",
+    "population": 1485
+  },
+  "70721": {
+    "name": "Obertilliach",
+    "population": 669
+  },
+  "70723": {
+    "name": "Prägraten am Großvenediger",
+    "population": 1134
+  },
+  "70724": {
+    "name": "Sankt Jakob in Defereggen",
+    "population": 821
+  },
+  "70725": {
+    "name": "Sankt Johann im Walde",
+    "population": 295
+  },
+  "70726": {
+    "name": "Sankt Veit in Defereggen",
+    "population": 616
+  },
+  "70727": {
+    "name": "Schlaiten",
+    "population": 469
+  },
+  "70728": {
+    "name": "Sillian",
+    "population": 2028
+  },
+  "70729": {
+    "name": "Strassen",
+    "population": 809
+  },
+  "70731": {
+    "name": "Thurn",
+    "population": 646
+  },
+  "70732": {
+    "name": "Tristach",
+    "population": 1500
+  },
+  "70733": {
+    "name": "Untertilliach",
+    "population": 213
+  },
+  "70734": {
+    "name": "Virgen",
+    "population": 2241
+  },
+  "70735": {
+    "name": "Heinfels",
+    "population": 1026
+  },
+  "70801": {
+    "name": "Bach",
+    "population": 658
+  },
+  "70802": {
+    "name": "Berwang",
+    "population": 630
+  },
+  "70803": {
+    "name": "Biberwier",
+    "population": 665
+  },
+  "70804": {
+    "name": "Bichlbach",
+    "population": 794
+  },
+  "70805": {
+    "name": "Breitenwang",
+    "population": 1440
+  },
+  "70806": {
+    "name": "Ehenbichl",
+    "population": 839
+  },
+  "70807": {
+    "name": "Ehrwald",
+    "population": 2620
+  },
+  "70808": {
+    "name": "Elbigenalp",
+    "population": 882
+  },
+  "70809": {
+    "name": "Elmen",
+    "population": 394
+  },
+  "70810": {
+    "name": "Forchach",
+    "population": 258
+  },
+  "70811": {
+    "name": "Grän",
+    "population": 639
+  },
+  "70812": {
+    "name": "Gramais",
+    "population": 43
+  },
+  "70813": {
+    "name": "Häselgehr",
+    "population": 696
+  },
+  "70814": {
+    "name": "Heiterwang",
+    "population": 555
+  },
+  "70815": {
+    "name": "Hinterhornbach",
+    "population": 89
+  },
+  "70816": {
+    "name": "Höfen",
+    "population": 1287
+  },
+  "70817": {
+    "name": "Holzgau",
+    "population": 386
+  },
+  "70818": {
+    "name": "Jungholz",
+    "population": 299
+  },
+  "70819": {
+    "name": "Kaisers",
+    "population": 71
+  },
+  "70820": {
+    "name": "Lechaschau",
+    "population": 2074
+  },
+  "70821": {
+    "name": "Lermoos",
+    "population": 1155
+  },
+  "70822": {
+    "name": "Musau",
+    "population": 382
+  },
+  "70823": {
+    "name": "Namlos",
+    "population": 54
+  },
+  "70824": {
+    "name": "Nesselwängle",
+    "population": 465
+  },
+  "70825": {
+    "name": "Pfafflar",
+    "population": 93
+  },
+  "70826": {
+    "name": "Pflach",
+    "population": 1665
+  },
+  "70827": {
+    "name": "Pinswang",
+    "population": 424
+  },
+  "70828": {
+    "name": "Reutte",
+    "population": 7308
+  },
+  "70829": {
+    "name": "Schattwald",
+    "population": 465
+  },
+  "70830": {
+    "name": "Stanzach",
+    "population": 515
+  },
+  "70831": {
+    "name": "Steeg",
+    "population": 643
+  },
+  "70832": {
+    "name": "Tannheim",
+    "population": 1171
+  },
+  "70833": {
+    "name": "Vils",
+    "population": 1517
+  },
+  "70834": {
+    "name": "Vorderhornbach",
+    "population": 279
+  },
+  "70835": {
+    "name": "Wängle",
+    "population": 999
+  },
+  "70836": {
+    "name": "Weißenbach am Lech",
+    "population": 1253
+  },
+  "70837": {
+    "name": "Zöblen",
+    "population": 239
+  },
+  "70901": {
+    "name": "Achenkirch",
+    "population": 2238
+  },
+  "70902": {
+    "name": "Aschau im Zillertal",
+    "population": 1886
+  },
+  "70903": {
+    "name": "Brandberg",
+    "population": 383
+  },
+  "70904": {
+    "name": "Bruck am Ziller",
+    "population": 1135
+  },
+  "70905": {
+    "name": "Buch in Tirol",
+    "population": 2610
+  },
+  "70907": {
+    "name": "Eben am Achensee",
+    "population": 3560
+  },
+  "70908": {
+    "name": "Finkenberg",
+    "population": 1422
+  },
+  "70909": {
+    "name": "Fügen",
+    "population": 4317
+  },
+  "70910": {
+    "name": "Fügenberg",
+    "population": 1504
+  },
+  "70911": {
+    "name": "Gallzein",
+    "population": 697
+  },
+  "70912": {
+    "name": "Gerlos",
+    "population": 792
+  },
+  "70913": {
+    "name": "Gerlosberg",
+    "population": 480
+  },
+  "70914": {
+    "name": "Hainzenberg",
+    "population": 750
+  },
+  "70915": {
+    "name": "Hart im Zillertal",
+    "population": 1682
+  },
+  "70916": {
+    "name": "Hippach",
+    "population": 1437
+  },
+  "70917": {
+    "name": "Jenbach",
+    "population": 7644
+  },
+  "70918": {
+    "name": "Kaltenbach",
+    "population": 1294
+  },
+  "70920": {
+    "name": "Mayrhofen",
+    "population": 3979
+  },
+  "70921": {
+    "name": "Pill",
+    "population": 1279
+  },
+  "70922": {
+    "name": "Ramsau im Zillertal",
+    "population": 1745
+  },
+  "70923": {
+    "name": "Ried im Zillertal",
+    "population": 1236
+  },
+  "70924": {
+    "name": "Rohrberg",
+    "population": 588
+  },
+  "70925": {
+    "name": "Schlitters",
+    "population": 1594
+  },
+  "70926": {
+    "name": "Schwaz",
+    "population": 14480
+  },
+  "70927": {
+    "name": "Schwendau",
+    "population": 1788
+  },
+  "70928": {
+    "name": "Stans",
+    "population": 2244
+  },
+  "70929": {
+    "name": "Steinberg am Rofan",
+    "population": 298
+  },
+  "70930": {
+    "name": "Strass im Zillertal",
+    "population": 842
+  },
+  "70931": {
+    "name": "Stumm",
+    "population": 1916
+  },
+  "70932": {
+    "name": "Stummerberg",
+    "population": 869
+  },
+  "70933": {
+    "name": "Terfens",
+    "population": 2298
+  },
+  "70934": {
+    "name": "Tux",
+    "population": 1913
+  },
+  "70935": {
+    "name": "Uderns",
+    "population": 2025
+  },
+  "70936": {
+    "name": "Vomp",
+    "population": 5479
+  },
+  "70937": {
+    "name": "Weer",
+    "population": 1830
+  },
+  "70938": {
+    "name": "Weerberg",
+    "population": 2570
+  },
+  "70939": {
+    "name": "Wiesing",
+    "population": 2224
+  },
+  "70940": {
+    "name": "Zell am Ziller",
+    "population": 1757
+  },
+  "70941": {
+    "name": "Zellberg",
+    "population": 662
+  },
+  "80101": {
+    "name": "Bartholomäberg",
+    "population": 2419
+  },
+  "80102": {
+    "name": "Blons",
+    "population": 351
+  },
+  "80103": {
+    "name": "Bludenz",
+    "population": 15102
+  },
+  "80104": {
+    "name": "Bludesch",
+    "population": 2608
+  },
+  "80105": {
+    "name": "Brand",
+    "population": 754
+  },
+  "80106": {
+    "name": "Bürs",
+    "population": 3447
+  },
+  "80107": {
+    "name": "Bürserberg",
+    "population": 617
+  },
+  "80108": {
+    "name": "Dalaas",
+    "population": 1627
+  },
+  "80109": {
+    "name": "Fontanella",
+    "population": 468
+  },
+  "80110": {
+    "name": "Gaschurn",
+    "population": 1570
+  },
+  "80111": {
+    "name": "Innerbraz",
+    "population": 1091
+  },
+  "80112": {
+    "name": "Klösterle",
+    "population": 667
+  },
+  "80113": {
+    "name": "Lech",
+    "population": 1569
+  },
+  "80114": {
+    "name": "Lorüns",
+    "population": 305
+  },
+  "80115": {
+    "name": "Ludesch",
+    "population": 3696
+  },
+  "80116": {
+    "name": "Nenzing",
+    "population": 6528
+  },
+  "80117": {
+    "name": "Nüziders",
+    "population": 4957
+  },
+  "80118": {
+    "name": "Raggal",
+    "population": 903
+  },
+  "80119": {
+    "name": "Sankt Anton im Montafon",
+    "population": 728
+  },
+  "80120": {
+    "name": "Sankt Gallenkirch",
+    "population": 2222
+  },
+  "80121": {
+    "name": "Sankt Gerold",
+    "population": 396
+  },
+  "80122": {
+    "name": "Schruns",
+    "population": 4000
+  },
+  "80123": {
+    "name": "Silbertal",
+    "population": 849
+  },
+  "80124": {
+    "name": "Sonntag",
+    "population": 624
+  },
+  "80125": {
+    "name": "Stallehr",
+    "population": 284
+  },
+  "80126": {
+    "name": "Thüringen",
+    "population": 2336
+  },
+  "80127": {
+    "name": "Thüringerberg",
+    "population": 745
+  },
+  "80128": {
+    "name": "Tschagguns",
+    "population": 2257
+  },
+  "80129": {
+    "name": "Vandans",
+    "population": 2828
+  },
+  "80201": {
+    "name": "Alberschwende",
+    "population": 3338
+  },
+  "80202": {
+    "name": "Andelsbuch",
+    "population": 2705
+  },
+  "80203": {
+    "name": "Au",
+    "population": 1905
+  },
+  "80204": {
+    "name": "Bezau",
+    "population": 2034
+  },
+  "80205": {
+    "name": "Bildstein",
+    "population": 830
+  },
+  "80206": {
+    "name": "Bizau",
+    "population": 1113
+  },
+  "80207": {
+    "name": "Bregenz",
+    "population": 29476
+  },
+  "80208": {
+    "name": "Buch",
+    "population": 598
+  },
+  "80209": {
+    "name": "Damüls",
+    "population": 339
+  },
+  "80210": {
+    "name": "Doren",
+    "population": 1048
+  },
+  "80211": {
+    "name": "Egg",
+    "population": 3774
+  },
+  "80212": {
+    "name": "Eichenberg",
+    "population": 419
+  },
+  "80213": {
+    "name": "Fußach",
+    "population": 4080
+  },
+  "80214": {
+    "name": "Gaißau",
+    "population": 1886
+  },
+  "80215": {
+    "name": "Hard",
+    "population": 13639
+  },
+  "80216": {
+    "name": "Hittisau",
+    "population": 2068
+  },
+  "80217": {
+    "name": "Höchst",
+    "population": 8566
+  },
+  "80218": {
+    "name": "Hörbranz",
+    "population": 6731
+  },
+  "80219": {
+    "name": "Hohenweiler",
+    "population": 1423
+  },
+  "80220": {
+    "name": "Kennelbach",
+    "population": 1860
+  },
+  "80221": {
+    "name": "Krumbach",
+    "population": 1110
+  },
+  "80222": {
+    "name": "Langen bei Bregenz",
+    "population": 1500
+  },
+  "80223": {
+    "name": "Langenegg",
+    "population": 1187
+  },
+  "80224": {
+    "name": "Lauterach",
+    "population": 10568
+  },
+  "80225": {
+    "name": "Lingenau",
+    "population": 1594
+  },
+  "80226": {
+    "name": "Lochau",
+    "population": 6696
+  },
+  "80227": {
+    "name": "Mellau",
+    "population": 1303
+  },
+  "80228": {
+    "name": "Mittelberg",
+    "population": 5077
+  },
+  "80229": {
+    "name": "Möggers",
+    "population": 559
+  },
+  "80230": {
+    "name": "Reuthe",
+    "population": 671
+  },
+  "80231": {
+    "name": "Riefensberg",
+    "population": 1070
+  },
+  "80232": {
+    "name": "Schnepfau",
+    "population": 485
+  },
+  "80233": {
+    "name": "Schoppernau",
+    "population": 941
+  },
+  "80234": {
+    "name": "Schröcken",
+    "population": 216
+  },
+  "80235": {
+    "name": "Schwarzach",
+    "population": 3854
+  },
+  "80236": {
+    "name": "Schwarzenberg",
+    "population": 1900
+  },
+  "80237": {
+    "name": "Sibratsgfäll",
+    "population": 475
+  },
+  "80238": {
+    "name": "Sulzberg",
+    "population": 1854
+  },
+  "80239": {
+    "name": "Warth",
+    "population": 184
+  },
+  "80240": {
+    "name": "Wolfurt",
+    "population": 8954
+  },
+  "80301": {
+    "name": "Dornbirn",
+    "population": 52108
+  },
+  "80302": {
+    "name": "Hohenems",
+    "population": 17432
+  },
+  "80303": {
+    "name": "Lustenau",
+    "population": 24603
+  },
+  "80401": {
+    "name": "Altach",
+    "population": 7198
+  },
+  "80402": {
+    "name": "Düns",
+    "population": 445
+  },
+  "80403": {
+    "name": "Dünserberg",
+    "population": 154
+  },
+  "80404": {
+    "name": "Feldkirch",
+    "population": 36708
+  },
+  "80405": {
+    "name": "Frastanz",
+    "population": 6670
+  },
+  "80406": {
+    "name": "Fraxern",
+    "population": 768
+  },
+  "80407": {
+    "name": "Göfis",
+    "population": 3332
+  },
+  "80408": {
+    "name": "Götzis",
+    "population": 12405
+  },
+  "80409": {
+    "name": "Klaus",
+    "population": 3073
+  },
+  "80410": {
+    "name": "Koblach",
+    "population": 4956
+  },
+  "80411": {
+    "name": "Laterns",
+    "population": 703
+  },
+  "80412": {
+    "name": "Mäder",
+    "population": 4249
+  },
+  "80413": {
+    "name": "Meiningen",
+    "population": 2532
+  },
+  "80414": {
+    "name": "Rankweil",
+    "population": 12157
+  },
+  "80415": {
+    "name": "Röns",
+    "population": 390
+  },
+  "80416": {
+    "name": "Röthis",
+    "population": 2239
+  },
+  "80417": {
+    "name": "Satteins",
+    "population": 2799
+  },
+  "80418": {
+    "name": "Schlins",
+    "population": 2592
+  },
+  "80419": {
+    "name": "Schnifis",
+    "population": 805
+  },
+  "80420": {
+    "name": "Sulz",
+    "population": 2712
+  },
+  "80421": {
+    "name": "Übersaxen",
+    "population": 622
+  },
+  "80422": {
+    "name": "Viktorsberg",
+    "population": 438
+  },
+  "80423": {
+    "name": "Weiler",
+    "population": 2297
+  },
+  "80424": {
+    "name": "Zwischenwasser",
+    "population": 3419
+  },
+  "90001": {
+    "name": "Wien",
+    "population": 2028289
+  }
+}

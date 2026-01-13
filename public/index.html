@@ -209,31 +209,45 @@
                 <!-- Austria totals -->
                 <div class="stats-grid">
                     <div class="stat-card full-width">
-                        <div class="stat-label">Gesamteinschlag Österreich</div>
+                        <div class="stat-label">🛰️ Waldverlust (Hansen Satellitendaten)</div>
                         <div class="stat-value">
+                            <span x-text="formatNumber(yearSummary?.total_loss_area_ha)"></span>
+                            <span class="stat-unit">ha</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">🌲 Geschätzter Einschlag</div>
+                        <div class="stat-value small">
                             <span x-text="formatNumber(yearSummary?.total_harvest_efm)"></span>
                             <span class="stat-unit">Efm</span>
                         </div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-label">💰 Geschätzter Wert</div>
+                        <div class="stat-label">💰 Holzwert</div>
                         <div class="stat-value small">
-                            €<span x-text="formatBillion(yearSummary?.total_value_eur)"></span>
-                            <span class="stat-unit">Mrd.</span>
+                            €<span x-text="formatMillion(yearSummary?.total_value_eur)"></span>
+                            <span class="stat-unit">Mio.</span>
+                        </div>
+                    </div>
+                    <div class="stat-card" style="background: #ffebee;">
+                        <div class="stat-label">🏭 CO₂-Emissionen</div>
+                        <div class="stat-value small" style="color: #c0392b;">
+                            <span x-text="formatNumber(yearSummary?.total_co2_tonnes)"></span>
+                            <span class="stat-unit">t</span>
+                        </div>
+                    </div>
+                    <div class="stat-card" style="background: #fff3e0;">
+                        <div class="stat-label">💸 ETS-Haftung</div>
+                        <div class="stat-value small" style="color: #e65100;">
+                            €<span x-text="formatMillion(yearSummary?.total_ets_liability_eur)"></span>
+                            <span class="stat-unit">Mio.</span>
                         </div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-label">📊 Holzpreis</div>
+                        <div class="stat-label">📊 ETS-Preis</div>
                         <div class="stat-value small">
-                            €<span x-text="yearSummary?.price_eur_efm?.toFixed(2)"></span>
-                            <span class="stat-unit">/Efm</span>
-                        </div>
-                    </div>
-                    <div class="stat-card full-width">
-                        <div class="stat-label">🛰️ Waldverlust (Hansen Satellitendaten)</div>
-                        <div class="stat-value small">
-                            <span x-text="formatNumber(yearSummary?.deforestation_ha)"></span>
-                            <span class="stat-unit">ha</span>
+                            €<span x-text="yearSummary?.ets_price_eur_tco2"></span>
+                            <span class="stat-unit">/tCO₂</span>
                         </div>
                     </div>
                 </div>
@@ -253,8 +267,8 @@
                                 <div class="muni-state" x-text="muni.state"></div>
                             </div>
                             <div class="muni-stats">
-                                <div class="muni-harvest" x-text="formatNumber(muni.harvest) + ' Efm'"></div>
-                                <div class="muni-value" x-text="'€' + formatThousand(muni.value)"></div>
+                                <div class="muni-harvest" x-text="muni.lossArea.toFixed(0) + ' ha'"></div>
+                                <div class="muni-value" x-text="'€' + muni.etsPc.toFixed(0) + '/Kopf'"></div>
                             </div>
                         </div>
                     </template>
@@ -325,10 +339,15 @@
                             iso,
                             name: d.n,
                             state: d.s,
-                            harvest: d.h,
-                            value: d.v,
-                            loss: d.l,
-                            price: d.p
+                            harvest: d.h || 0,
+                            value: d.v || 0,
+                            lossPixels: d.lp || 0,
+                            lossArea: d.la || 0,
+                            price: d.p || 0,
+                            population: d.pop || 0,
+                            co2: d.co2 || 0,
+                            ets: d.ets || 0,
+                            etsPc: d.ets_pc || 0
                         }))
                         .sort((a, b) => b.harvest - a.harvest);
                 },
@@ -340,7 +359,7 @@
                 async init() {
                     // Load data
                     const [yearlyResp, geoResp] = await Promise.all([
-                        fetch('/data/gemeinde_yearly.json'),
+                        fetch('/data/gemeinde_emissions.json'),
                         fetch('/data/austria_gemeinden.geojson')
                     ]);
                     
@@ -436,25 +455,36 @@
                     
                     this.selectedMuni = iso;
                     
+                    const pop = data.pop || 0;
                     const content = `
                         <div class="popup-title">${data.n}</div>
                         <div style="font-size: 0.75rem; color: #666; margin-bottom: 0.5rem;">${data.s} | ${this.selectedYear}</div>
                         <div class="popup-stat popup-highlight">
-                            <span class="popup-stat-label">🪵 Einschlag</span>
-                            <span class="popup-stat-value" style="color: #2e7d32;">${this.formatNumber(data.h)} Efm</span>
-                        </div>
-                        <div class="popup-stat popup-highlight">
-                            <span class="popup-stat-label">💰 Geschätzter Wert</span>
-                            <span class="popup-stat-value" style="color: #2e7d32;">€${this.formatNumber(data.v)}</span>
+                            <span class="popup-stat-label">🛰️ Waldverlust</span>
+                            <span class="popup-stat-value" style="color: #2e7d32;">${(data.la || 0).toFixed(1)} ha</span>
                         </div>
                         <div class="popup-stat">
-                            <span class="popup-stat-label">🛰️ Waldverlust (kumulativ)</span>
-                            <span class="popup-stat-value">${data.l.toFixed(1)} ha</span>
+                            <span class="popup-stat-label">🪵 Gesch. Einschlag</span>
+                            <span class="popup-stat-value">${this.formatNumber(data.h)} Efm</span>
                         </div>
                         <div class="popup-stat">
-                            <span class="popup-stat-label">📊 Holzpreis</span>
-                            <span class="popup-stat-value">€${data.p.toFixed(2)}/Efm</span>
+                            <span class="popup-stat-label">💰 Holzwert</span>
+                            <span class="popup-stat-value">€${this.formatNumber(data.v)}</span>
                         </div>
+                        <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid #ddd;">
+                        <div class="popup-stat" style="background: #ffebee; margin: 0 -0.5rem; padding: 0.25rem 0.5rem;">
+                            <span class="popup-stat-label">🏭 CO₂-Emissionen</span>
+                            <span class="popup-stat-value" style="color: #c0392b;">${this.formatNumber(data.co2)} t</span>
+                        </div>
+                        <div class="popup-stat" style="background: #fff3e0; margin: 0 -0.5rem; padding: 0.25rem 0.5rem;">
+                            <span class="popup-stat-label">💸 ETS-Haftung</span>
+                            <span class="popup-stat-value" style="color: #e65100;">€${this.formatNumber(data.ets)}</span>
+                        </div>
+                        <div class="popup-stat">
+                            <span class="popup-stat-label">👥 ETS pro Kopf</span>
+                            <span class="popup-stat-value" style="font-weight: bold;">€${(data.ets_pc || 0).toFixed(2)}</span>
+                        </div>
+                        <div style="font-size: 0.65rem; color: #999; margin-top: 0.5rem;">Bevölkerung: ${this.formatNumber(pop)}</div>
                     `;
                     layer.bindPopup(content, { maxWidth: 300 }).openPopup();
                 },
@@ -501,6 +531,11 @@
                 formatBillion(num) {
                     if (!num) return '0';
                     return (num / 1e9).toFixed(2);
+                },
+                
+                formatMillion(num) {
+                    if (!num) return '0';
+                    return (num / 1e6).toFixed(1);
                 },
                 
                 formatThousand(num) {
