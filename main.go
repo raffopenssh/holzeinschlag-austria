@@ -52,6 +52,7 @@ func checkPassword(password string) bool {
 func isValidSession(r *http.Request) bool {
 	cookie, err := r.Cookie("session")
 	if err != nil {
+		log.Printf("No session cookie found: %v", err)
 		return false
 	}
 
@@ -59,6 +60,7 @@ func isValidSession(r *http.Request) bool {
 	expiry, exists := sessions[cookie.Value]
 	sessionMutex.RUnlock()
 
+	log.Printf("Session check: token=%s..., exists=%v, valid=%v", cookie.Value[:8], exists, exists && time.Now().Before(expiry))
 	return exists && time.Now().Before(expiry)
 }
 
@@ -72,13 +74,20 @@ func createSession(w http.ResponseWriter, r *http.Request) {
 	// Check if behind HTTPS proxy
 	isSecure := r.Header.Get("X-Forwarded-Proto") == "https" || r.TLS != nil
 
+	log.Printf("Creating session: token=%s, secure=%v, X-Forwarded-Proto=%s", token[:8]+"...", isSecure, r.Header.Get("X-Forwarded-Proto"))
+
+	sameSite := http.SameSiteLaxMode
+	if isSecure {
+		sameSite = http.SameSiteNoneMode
+	}
+
 	http.SetCookie(w, &http.Cookie{
 		Name:     "session",
 		Value:    token,
 		Path:     "/",
 		HttpOnly: true,
 		Secure:   isSecure,
-		SameSite: http.SameSiteLaxMode,
+		SameSite: sameSite,
 		MaxAge:   int(sessionDuration.Seconds()),
 	})
 }

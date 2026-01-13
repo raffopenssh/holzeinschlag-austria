@@ -565,7 +565,8 @@
                 async selectYear(year) {
                     if (year === this.selectedYear) return;
                     
-                    const hadPopupOpen = this.selectedMuni;
+                    const currentMuni = this.selectedMuni;
+                    const hadPopupOpen = this.activePopup && this.activePopup.isOpen();
                     
                     await this.loadYearData(year);
                     this.selectedYear = year;
@@ -577,19 +578,28 @@
                     }
                     
                     // Update popup content if one was open
-                    if (hadPopupOpen && this.activePopup) {
-                        this.updatePopupContent(hadPopupOpen);
+                    if (currentMuni && hadPopupOpen && this.activePopup) {
+                        const content = this.buildPopupContent(currentMuni);
+                        this.activePopup.setContent(content);
                     }
                 },
                 
-                prevYear() {
+                prevYear(event) {
+                    if (event) {
+                        event.stopPropagation();
+                        event.preventDefault();
+                    }
                     const idx = this.availableYears.indexOf(this.selectedYear);
                     if (idx > 0) {
                         this.selectYear(this.availableYears[idx - 1]);
                     }
                 },
                 
-                nextYear() {
+                nextYear(event) {
+                    if (event) {
+                        event.stopPropagation();
+                        event.preventDefault();
+                    }
                     const idx = this.availableYears.indexOf(this.selectedYear);
                     if (idx < this.availableYears.length - 1) {
                         this.selectYear(this.availableYears[idx + 1]);
@@ -695,9 +705,9 @@
                         return `
                             <div class="popup-title">${name}</div>
                             <div class="popup-year-nav">
-                                <button class="popup-nav-btn" ${!hasPrev ? 'disabled' : ''} onclick="window.holzApp.prevYear()">◀</button>
+                                <button class="popup-nav-btn" ${!hasPrev ? 'disabled' : ''} onclick="event.stopPropagation(); window.holzApp.prevYear(event)">◀</button>
                                 <span>${this.selectedYear}</span>
-                                <button class="popup-nav-btn" ${!hasNext ? 'disabled' : ''} onclick="window.holzApp.nextYear()">▶</button>
+                                <button class="popup-nav-btn" ${!hasNext ? 'disabled' : ''} onclick="event.stopPropagation(); window.holzApp.nextYear(event)">▶</button>
                             </div>
                             <div style="padding: 1rem 0; color: #999; text-align: center;">Keine Daten für ${this.selectedYear}</div>
                         `;
@@ -707,9 +717,9 @@
                     return `
                         <div class="popup-title">${name}</div>
                         <div class="popup-year-nav">
-                            <button class="popup-nav-btn" ${!hasPrev ? 'disabled' : ''} onclick="window.holzApp.prevYear()">◀</button>
+                            <button class="popup-nav-btn" ${!hasPrev ? 'disabled' : ''} onclick="event.stopPropagation(); window.holzApp.prevYear(event)">◀</button>
                             <span>${state} | ${this.selectedYear}</span>
-                            <button class="popup-nav-btn" ${!hasNext ? 'disabled' : ''} onclick="window.holzApp.nextYear()">▶</button>
+                            <button class="popup-nav-btn" ${!hasNext ? 'disabled' : ''} onclick="event.stopPropagation(); window.holzApp.nextYear(event)">▶</button>
                         </div>
                         <div class="popup-stat popup-highlight">
                             <span class="popup-stat-label">🛰️ Waldverlust</span>
@@ -744,12 +754,12 @@
                     const content = this.buildPopupContent(iso);
                     
                     if (layer) {
-                        this.activePopup = layer.bindPopup(content, { maxWidth: 300 }).openPopup().getPopup();
+                        this.activePopup = layer.bindPopup(content, { maxWidth: 300, closeOnClick: false, autoClose: false }).openPopup().getPopup();
                     } else {
                         // Find layer by ISO
                         this.gemeindenLayer.eachLayer((l) => {
                             if (l.feature?.properties?.iso === iso) {
-                                this.activePopup = l.bindPopup(content, { maxWidth: 300 }).openPopup().getPopup();
+                                this.activePopup = l.bindPopup(content, { maxWidth: 300, closeOnClick: false, autoClose: false }).openPopup().getPopup();
                             }
                         });
                     }
