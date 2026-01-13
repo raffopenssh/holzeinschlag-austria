@@ -184,7 +184,35 @@
         
         /* Popup */
         .leaflet-popup-content-wrapper { border-radius: 10px; }
-        .popup-title { font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem; color: var(--primary); }
+        .popup-title { font-weight: 600; font-size: 1rem; margin-bottom: 0.25rem; color: var(--primary); }
+        .popup-year-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            color: #666;
+        }
+        .popup-nav-btn {
+            background: var(--bg);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 28px;
+            height: 24px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            color: var(--primary);
+            transition: all 0.15s;
+        }
+        .popup-nav-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .popup-nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
         .popup-stat { display: flex; justify-content: space-between; padding: 0.25rem 0; font-size: 0.85rem; }
         .popup-stat-label { color: var(--text-light); }
         .popup-stat-value { font-weight: 500; }
@@ -501,6 +529,9 @@
                 },
                 
                 async init() {
+                    // Expose app instance globally for popup button callbacks
+                    window.holzApp = this;
+                    
                     this.loading = true;
                     
                     // Load metadata and lookup (small files, load first)
@@ -534,26 +565,42 @@
                 async selectYear(year) {
                     if (year === this.selectedYear) return;
                     
-                    // Close any open popup
-                    if (this.activePopup) {
-                        this.map.closePopup(this.activePopup);
-                        this.activePopup = null;
-                    }
+                    const hadPopupOpen = this.selectedMuni;
                     
                     await this.loadYearData(year);
                     this.selectedYear = year;
                     this.displayCount = 20;
-                    this.selectedMuni = null;
                     
                     // Update map colors
                     if (this.gemeindenLayer) {
                         this.gemeindenLayer.setStyle((f) => this.getStyle(f));
                     }
                     
-                    // Reopen popup for selected municipality if any
-                    if (this.selectedMuni) {
-                        this.openPopupFor(this.selectedMuni);
+                    // Update popup content if one was open
+                    if (hadPopupOpen && this.activePopup) {
+                        this.updatePopupContent(hadPopupOpen);
                     }
+                },
+                
+                prevYear() {
+                    const idx = this.availableYears.indexOf(this.selectedYear);
+                    if (idx > 0) {
+                        this.selectYear(this.availableYears[idx - 1]);
+                    }
+                },
+                
+                nextYear() {
+                    const idx = this.availableYears.indexOf(this.selectedYear);
+                    if (idx < this.availableYears.length - 1) {
+                        this.selectYear(this.availableYears[idx + 1]);
+                    }
+                },
+                
+                updatePopupContent(iso) {
+                    if (!this.activePopup) return;
+                    
+                    const content = this.buildPopupContent(iso);
+                    this.activePopup.setContent(content);
                 },
                 
                 initMap() {
@@ -634,22 +681,36 @@
                     this.openPopupFor(iso, layer);
                 },
                 
-                openPopupFor(iso, layer) {
+                buildPopupContent(iso) {
                     const d = this.currentYearData[iso];
                     const name = this.lookup?.names?.[iso] || iso;
                     const state = this.lookup?.states?.[iso] || '';
                     const pop = this.lookup?.population?.[iso] || 0;
                     
+                    const yearIdx = this.availableYears.indexOf(this.selectedYear);
+                    const hasPrev = yearIdx > 0;
+                    const hasNext = yearIdx < this.availableYears.length - 1;
+                    
                     if (!d) {
-                        const content = `<b>${name}</b><br>Keine Daten für ${this.selectedYear}`;
-                        if (layer) layer.bindPopup(content).openPopup();
-                        return;
+                        return `
+                            <div class="popup-title">${name}</div>
+                            <div class="popup-year-nav">
+                                <button class="popup-nav-btn" ${!hasPrev ? 'disabled' : ''} onclick="window.holzApp.prevYear()">◀</button>
+                                <span>${this.selectedYear}</span>
+                                <button class="popup-nav-btn" ${!hasNext ? 'disabled' : ''} onclick="window.holzApp.nextYear()">▶</button>
+                            </div>
+                            <div style="padding: 1rem 0; color: #999; text-align: center;">Keine Daten für ${this.selectedYear}</div>
+                        `;
                     }
                     
                     // d = [lp, la, h, v, co2, ets, ets_pc]
-                    const content = `
+                    return `
                         <div class="popup-title">${name}</div>
-                        <div style="font-size: 0.75rem; color: #666; margin-bottom: 0.5rem;">${state} | ${this.selectedYear}</div>
+                        <div class="popup-year-nav">
+                            <button class="popup-nav-btn" ${!hasPrev ? 'disabled' : ''} onclick="window.holzApp.prevYear()">◀</button>
+                            <span>${state} | ${this.selectedYear}</span>
+                            <button class="popup-nav-btn" ${!hasNext ? 'disabled' : ''} onclick="window.holzApp.nextYear()">▶</button>
+                        </div>
                         <div class="popup-stat popup-highlight">
                             <span class="popup-stat-label">🛰️ Waldverlust</span>
                             <span class="popup-stat-value" style="color: #2e7d32;">${(d[1] || 0).toFixed(1)} ha</span>
@@ -677,6 +738,10 @@
                         </div>
                         <div style="font-size: 0.65rem; color: #999; margin-top: 0.5rem;">Bevölkerung: ${this.formatNumber(pop)}</div>
                     `;
+                },
+                
+                openPopupFor(iso, layer) {
+                    const content = this.buildPopupContent(iso);
                     
                     if (layer) {
                         this.activePopup = layer.bindPopup(content, { maxWidth: 300 }).openPopup().getPopup();
