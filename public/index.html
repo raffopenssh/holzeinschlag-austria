@@ -408,12 +408,13 @@
             background: var(--bg);
             border: 1px solid #ddd;
             border-radius: 6px;
-            width: 36px;
-            height: 32px;
+            width: 32px;
+            height: 28px;
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--primary);
             transition: all 0.15s;
+            flex-shrink: 0;
         }
         .muni-modal-nav-btn:hover:not(:disabled) {
             background: var(--primary);
@@ -424,7 +425,77 @@
             opacity: 0.3;
             cursor: not-allowed;
         }
+        .muni-modal-chart-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            overflow: visible;
+        }
         .muni-modal-year {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.35rem;
+        }
+        .muni-modal-chart {
+            display: flex;
+            align-items: flex-end;
+            height: 40px;
+            gap: 2px;
+            padding: 0 12px 16px 12px;  /* Side padding for year labels, bottom for labels */
+        }
+        .muni-modal-chart-bar {
+            flex: 1;
+            min-width: 8px;
+            background: #c8e6c9;
+            border-radius: 2px 2px 0 0;
+            cursor: pointer;
+            transition: all 0.15s;
+            position: relative;
+        }
+        .muni-modal-chart-bar:hover {
+            background: #81c784;
+        }
+        .muni-modal-chart-bar.active {
+            background: var(--primary);
+        }
+        .muni-modal-chart-bar.active:hover {
+            background: var(--primary-dark);
+        }
+        .muni-modal-chart-bar::after {
+            content: attr(data-year);
+            position: absolute;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.6rem;
+            color: transparent;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+        .muni-modal-chart-bar:first-of-type::after {
+            color: var(--text-light);
+            left: 0;
+            transform: none;
+        }
+        .muni-modal-chart-bar:last-of-type::after {
+            color: var(--text-light);
+            left: auto;
+            right: 0;
+            transform: none;
+        }
+        .muni-modal-chart-bar.active::after,
+        .muni-modal-chart-bar:first-of-type.active::after,
+        .muni-modal-chart-bar:last-of-type.active::after {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .muni-modal-chart-labels {
+            display: none;  /* Labels now shown on bars */
+        }
+        .muni-modal-year-old {
             flex: 1;
             text-align: center;
             font-size: 1.1rem;
@@ -496,7 +567,10 @@
             .muni-modal-stats { gap: 0.5rem; }
             .muni-modal-stat { padding: 0.75rem; }
             .muni-modal-stat-value { font-size: 1.1rem; }
-            .muni-modal-nav-btn { width: 32px; height: 28px; }
+            .muni-modal-nav-btn { width: 28px; height: 26px; font-size: 0.7rem; }
+            .muni-modal-chart { height: 35px; gap: 1px; }
+            .muni-modal-chart-bar { min-width: 6px; }
+            .muni-modal-year { font-size: 0.9rem; }
         }
         
         @media (max-width: 480px) {
@@ -507,6 +581,8 @@
             .year-btn { padding: 4px 6px; font-size: 0.65rem; }
             .muni-modal-stats { grid-template-columns: 1fr; }
             .muni-modal-stat.full { grid-column: 1; }
+            .muni-modal-chart { height: 30px; }
+            .muni-modal-chart-bar { min-width: 5px; }
         }
     </style>
 </head>
@@ -668,7 +744,19 @@
                     <button class="muni-modal-nav-btn" 
                             :disabled="!canGoPrevYear" 
                             @click="prevYearModal()">◀</button>
-                    <div class="muni-modal-year" x-text="selectedYear"></div>
+                    <div class="muni-modal-chart-container">
+                        <div class="muni-modal-year" x-text="selectedYear"></div>
+                        <div class="muni-modal-chart">
+                            <template x-for="year in availableYears" :key="year">
+                                <div class="muni-modal-chart-bar" 
+                                     :class="{ active: year === selectedYear }"
+                                     :style="{ height: getYearBarHeight(year) + '%' }"
+                                     :data-year="year.slice(-2)"
+                                     :title="year + ': ' + formatNumber(getYearLossArea(year)) + ' ha'"
+                                     @click="selectYear(year)"></div>
+                            </template>
+                        </div>
+                    </div>
                     <button class="muni-modal-nav-btn" 
                             :disabled="!canGoNextYear" 
                             @click="nextYearModal()">▶</button>
@@ -781,7 +869,7 @@
                 gemeindenGeoJson: null,
                 
                 // UI state
-                selectedYear: '2023',
+                selectedYear: '2024',
                 selectedMuni: null,
                 highlightedMuni: null,
                 displayCount: 20,
@@ -935,10 +1023,19 @@
                 },
                 
                 // Modal functionality
-                openMuniModal(iso) {
+                async openMuniModal(iso) {
                     this.modalMuniIso = iso;
                     this.showMuniModal = true;
                     this.closeAllPopups();
+                    
+                    // Preload all years data for the chart
+                    await this.preloadAllYears();
+                },
+                
+                async preloadAllYears() {
+                    // Load all years in parallel for the chart
+                    const promises = this.availableYears.map(year => this.loadYearData(year));
+                    await Promise.all(promises);
                 },
                 
                 closeMuniModal() {
@@ -1248,6 +1345,31 @@
                     if (num >= 1e6) return (num / 1e6).toFixed(1) + 'M';
                     if (num >= 1e3) return (num / 1e3).toFixed(0) + 'k';
                     return Math.round(num).toString();
+                },
+                
+                // Get loss area for a specific year for the modal municipality
+                getYearLossArea(year) {
+                    if (!this.modalMuniIso) return 0;
+                    const d = this.yearData[year]?.[this.modalMuniIso];
+                    return d ? (d[1] || 0) : 0; // d[1] is loss_area_ha
+                },
+                
+                // Get bar height as percentage for chart
+                getYearBarHeight(year) {
+                    if (!this.modalMuniIso) return 5;
+                    
+                    // Find max loss area across all years for this municipality
+                    let maxLoss = 0;
+                    for (const y of this.availableYears) {
+                        const d = this.yearData[y]?.[this.modalMuniIso];
+                        if (d && d[1] > maxLoss) maxLoss = d[1];
+                    }
+                    
+                    if (maxLoss === 0) return 5;
+                    
+                    const loss = this.getYearLossArea(year);
+                    // Minimum height of 5%, scale the rest
+                    return Math.max(5, (loss / maxLoss) * 100);
                 }
             };
         }
