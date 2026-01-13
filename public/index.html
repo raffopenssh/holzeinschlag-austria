@@ -209,6 +209,41 @@
         }
         @keyframes spin { to { transform: rotate(360deg); } }
         
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+        .modal {
+            background: white;
+            border-radius: 12px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 1.5rem;
+            margin: 1rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .modal h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem; }
+        .modal h3 { color: var(--text); margin: 1rem 0 0.5rem; font-size: 0.95rem; }
+        .modal p, .modal li { font-size: 0.85rem; line-height: 1.5; color: var(--text); margin-bottom: 0.5rem; }
+        .modal ul { padding-left: 1.2rem; }
+        .modal a { color: var(--primary); }
+        .modal-close {
+            float: right;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+        .modal-close:hover { color: var(--text); }
+        
         @media (max-width: 768px) {
             .app-container { flex-direction: column; }
             .sidebar { width: 100%; height: auto; max-height: 45vh; }
@@ -325,9 +360,8 @@
             </div>
             
             <div class="sidebar-footer">
-                Daten: <a href="https://glad.umd.edu/" target="_blank">Hansen/GLAD</a> Satellite, 
-                <a href="https://www.bmluk.gv.at" target="_blank">BML</a> | 
-                CO₂ nach Schadholzanteil
+                <a href="#" @click.prevent="showMethodsModal = true" style="margin-right: 1rem;">Methoden & Quellen</a>
+                <a href="/holzeinschlag_austria.gpkg" download>📥 GeoPackage</a>
             </div>
         </aside>
         
@@ -336,6 +370,53 @@
             <div id="map"></div>
             <div class="loading-overlay" x-show="loading" x-cloak>
                 <div class="spinner"></div>
+            </div>
+        </div>
+        
+        <!-- Methods Modal -->
+        <div class="modal-overlay" x-show="showMethodsModal" x-cloak @click.self="showMethodsModal = false">
+            <div class="modal">
+                <button class="modal-close" @click="showMethodsModal = false">&times;</button>
+                <h2>📊 Methoden & Datenquellen</h2>
+                
+                <h3>🛰️ Waldverlust (Forest Loss)</h3>
+                <p>Satellitendaten aus dem <a href="https://glad.umd.edu/dataset/gfc-2023-v1.11" target="_blank">Hansen Global Forest Change</a> Datensatz (v1.11, 2023). 30m Auflösung, Wert 1-23 entspricht Verlustjahr 2001-2023.</p>
+                
+                <h3>🌲 Geschätzter Einschlag</h3>
+                <p>Berechnet aus Waldverlustfläche × bundeslandspezifischem Efm/ha-Faktor. Der Faktor basiert auf dem Verhältnis von offiziellen Einschlagszahlen (<a href="https://www.bmluk.gv.at" target="_blank">BML</a>) zur Hansen-Verlustfläche pro Bundesland.</p>
+                
+                <h3>💰 Holzwert</h3>
+                <p>Geschätzter Einschlag × historischer Holzpreis (gewichteter Durchschnitt aus Sägerundholz und Industrieholz).</p>
+                
+                <h3>🏭 CO₂-Emissionen</h3>
+                <p>Berechnung basiert auf Schadholzanteil:</p>
+                <ul>
+                    <li>Schadholzfraktion: 40-55% je Bundesland</li>
+                    <li>Emissionsfaktor: 0.9 tCO₂/m³ für Holz, das verbrannt oder zu Zellstoff verarbeitet wird</li>
+                    <li>Nachhaltig bewirtschaftetes Sägeholz wird nicht eingerechnet (Kohlenstoffbindung in Produkten)</li>
+                </ul>
+                
+                <h3>💸 ETS-Haftung</h3>
+                <p>CO₂-Emissionen × historischer EU-ETS-Preis. Preise von 2005-2023 basieren auf realen Marktdaten. <em>Hinweis: Forstwirtschaft ist derzeit nicht im EU-ETS enthalten - dies ist eine hypothetische Berechnung.</em></p>
+                
+                <h3>📥 Datendownload</h3>
+                <p>GeoPackage enthält alle 2.118 Gemeinden mit Daten für 2001-2023. Felder pro Jahr:</p>
+                <ul>
+                    <li><code>loss_pixels_YYYY</code> - Anzahl 30m-Pixel</li>
+                    <li><code>loss_area_ha_YYYY</code> - Verlustfläche in Hektar</li>
+                    <li><code>harvest_efm_YYYY</code> - Geschätzter Einschlag</li>
+                    <li><code>value_eur_YYYY</code> - Holzwert in EUR</li>
+                    <li><code>co2_tonnes_YYYY</code> - CO₂-Emissionen</li>
+                    <li><code>ets_eur_YYYY</code> - ETS-Haftung</li>
+                    <li><code>ets_per_capita_YYYY</code> - ETS pro Einwohner</li>
+                </ul>
+                
+                <h3>⚠️ Einschränkungen</h3>
+                <ul>
+                    <li>Hansen-Daten erfassen Kronenverlust, nicht nur Holzeinschlag</li>
+                    <li>Einschlagschätzung ist ein Proxy, keine direkte Messung</li>
+                    <li>Bevölkerungsdaten nur für aktuelle Jahre verfügbar</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -356,6 +437,7 @@
                 displayCount: 20,
                 loading: true,
                 loadingYear: null,
+                showMethodsModal: false,
                 
                 // Map
                 map: null,
