@@ -1,0 +1,33 @@
+{
+  "download": {
+    "lossyear": {
+      "status": "complete",
+      "progress": 100,
+      "message": "Downloaded 42.7 MB"
+    },
+    "treecover2000": {
+      "status": "complete",
+      "progress": 100,
+      "message": "Downloaded 384.2 MB"
+    }
+  },
+  "clip": {
+    "lossyear": {
+      "status": "complete",
+      "progress": 100,
+      "message": "Clipped successfully"
+    },
+    "treecover2000": {
+      "status": "complete",
+      "progress": 100,
+      "message": "Clipped successfully"
+    }
+  },
+  "analyze": {
+    "aggregate": {
+      "status": "complete",
+      "progress": 100,
+      "message": "Saved to /home/exedev/holzeinschlag-austria/data/hansen_state_analysis.json"
+    }
+  }
+}

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holzeinschlag Österreich 2024</title>
+    <title>Holzeinschlag Österreich 2024 - Satellite + Official Data</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {
             margin: 0;
@@ -391,14 +392,36 @@
                     </template>
                 </div>
                 
+                <!-- Combined Analysis Section -->
+                <div class="section-header" x-show="hansenData">🛰️ Satellite Analysis</div>
+                <div class="stats-grid" x-show="hansenData">
+                    <div class="stat-card">
+                        <div class="stat-label">Forest Loss (2001-2023)</div>
+                        <div class="stat-value small" x-text="formatNumber(totalLossHa) + ' ha'"></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Avg. Harvest Intensity</div>
+                        <div class="stat-value small" x-text="avgEfmPerHa.toFixed(1) + ' Efm/ha'"></div>
+                    </div>
+                </div>
+                
+                <!-- Time series chart -->
+                <div x-show="hansenData" style="margin: 1rem 0; background: var(--bg); border-radius: 10px; padding: 1rem;">
+                    <div class="legend-title">Forest Loss by Year (Hansen satellite data)</div>
+                    <canvas id="lossChart" style="max-height: 150px;"></canvas>
+                </div>
+                
                 <!-- Legend -->
                 <div class="legend">
-                    <div class="legend-title">Harvest Intensity</div>
+                    <div class="legend-title">Map: Harvest Intensity (Efm/ha)</div>
                     <div class="legend-scale" style="background: linear-gradient(90deg, #c8e6c9, #4caf50, #2e7d32, #1b5e20);"></div>
                     <div class="legend-labels">
-                        <span>Low</span>
-                        <span>Medium</span>
-                        <span>High</span>
+                        <span>20</span>
+                        <span>25</span>
+                        <span>30+</span>
+                    </div>
+                    <div style="margin-top: 0.5rem; font-size: 0.7rem; color: var(--text-light);">
+                        Efm/ha = Official harvest ÷ Satellite-detected loss area
                     </div>
                 </div>
             </div>
@@ -429,24 +452,36 @@
             return {
                 data: null,
                 geoJson: null,
+                hansenData: null,
                 map: null,
                 stateLayer: null,
                 selectedState: null,
                 highlightedState: null,
                 showForestLoss: false,
                 forestLossLayer: null,
+                lossChart: null,
                 
                 async init() {
                     // Load data
-                    const [dataResp, geoResp] = await Promise.all([
+                    const [dataResp, geoResp, hansenResp] = await Promise.all([
                         fetch('/data/holzeinschlag_full.json'),
-                        fetch('/data/austria_states.geojson')
+                        fetch('/data/austria_states.geojson'),
+                        fetch('/data/hansen_state_analysis.json').catch(() => null)
                     ]);
                     this.data = await dataResp.json();
                     this.geoJson = await geoResp.json();
                     
+                    if (hansenResp && hansenResp.ok) {
+                        this.hansenData = await hansenResp.json();
+                    }
+                    
                     // Initialize map
                     this.initMap();
+                    
+                    // Initialize chart if hansen data available
+                    if (this.hansenData) {
+                        this.$nextTick(() => this.initLossChart());
+                    }
                     
                     // Watch for forest loss toggle
                     this.$watch('showForestLoss', (value) => {
@@ -457,6 +492,56 @@
                                 this.forestLossLayer.addTo(this.map);
                             } else {
                                 this.map.removeLayer(this.forestLossLayer);
+                            }
+                        }
+                    });
+                },
+                
+                initLossChart() {
+                    const ctx = document.getElementById('lossChart');
+                    if (!ctx || !this.hansenData) return;
+                    
+                    // Aggregate loss by year across all states
+                    const years = this.hansenData.years;
+                    const lossData = years.map(year => {
+                        let total = 0;
+                        for (const state of Object.values(this.hansenData.states)) {
+                            total += state.yearly[year]?.area_ha || 0;
+                        }
+                        return total;
+                    });
+                    
+                    this.lossChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: years,
+                            datasets: [{
+                                label: 'Forest Loss (ha)',
+                                data: lossData,
+                                backgroundColor: 'rgba(46, 125, 50, 0.7)',
+                                borderColor: 'rgba(46, 125, 50, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { display: false }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    ticks: {
+                                        callback: (v) => (v / 1000).toFixed(0) + 'k'
+                                    }
+                                },
+                                x: {
+                                    ticks: {
+                                        maxRotation: 45,
+                                        minRotation: 45
+                                    }
+                                }
                             }
                         }
                     });
@@ -496,10 +581,19 @@
                 getStateStyle(feature) {
                     const stateName = feature.properties.name;
                     const stateData = this.data.states[stateName];
-                    const harvest = stateData ? stateData.harvest_2024 : 0;
+                    const hansenState = this.hansenData?.states[stateName];
+                    
+                    // Use Efm/ha ratio for coloring if available, otherwise fall back to harvest volume
+                    let fillColor;
+                    if (hansenState && hansenState.efm_per_ha_ratio) {
+                        fillColor = this.getColorByIntensity(hansenState.efm_per_ha_ratio);
+                    } else {
+                        const harvest = stateData ? stateData.harvest_2024 : 0;
+                        fillColor = this.getColorByVolume(harvest);
+                    }
                     
                     return {
-                        fillColor: this.getColor(harvest),
+                        fillColor: fillColor,
                         weight: this.highlightedState === stateName ? 3 : 1.5,
                         opacity: 1,
                         color: this.highlightedState === stateName ? '#1e3d1a' : '#ffffff',
@@ -507,8 +601,20 @@
                     };
                 },
                 
-                getColor(harvest) {
-                    // Color scale based on harvest volume
+                getColorByIntensity(efmPerHa) {
+                    // Color scale based on Efm/ha (harvest intensity)
+                    // Range: ~20-35 Efm/ha for most states, Vorarlberg is outlier at ~280
+                    const colors = ['#c8e6c9', '#a5d6a7', '#81c784', '#66bb6a', '#4caf50', '#43a047', '#388e3c', '#2e7d32', '#1b5e20'];
+                    const thresholds = [21, 23, 25, 27, 29, 31, 33, 35];
+                    
+                    for (let i = 0; i < thresholds.length; i++) {
+                        if (efmPerHa < thresholds[i]) return colors[i];
+                    }
+                    return colors[colors.length - 1];
+                },
+                
+                getColorByVolume(harvest) {
+                    // Fallback: Color scale based on harvest volume
                     const colors = ['#c8e6c9', '#a5d6a7', '#81c784', '#66bb6a', '#4caf50', '#43a047', '#388e3c', '#2e7d32', '#1b5e20'];
                     const thresholds = [100000, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000];
                     
@@ -522,12 +628,13 @@
                     const stateName = feature.properties.name;
                     this.selectedState = stateName;
                     const stateData = this.data.states[stateName];
+                    const hansenState = this.hansenData?.states[stateName];
                     
                     if (stateData) {
-                        const popupContent = `
+                        let popupContent = `
                             <div class="popup-title">${stateName}</div>
                             <div class="popup-stat">
-                                <span class="popup-stat-label">Harvest 2024</span>
+                                <span class="popup-stat-label">Official Harvest 2024</span>
                                 <span class="popup-stat-value">${this.formatNumber(stateData.harvest_2024)} Efm</span>
                             </div>
                             <div class="popup-stat">
@@ -535,13 +642,33 @@
                                 <span class="popup-stat-value" style="color: ${stateData.change_pct > 0 ? '#27ae60' : '#c0392b'}">
                                     ${stateData.change_pct > 0 ? '+' : ''}${stateData.change_pct}%
                                 </span>
+                            </div>`;
+                        
+                        if (hansenState) {
+                            popupContent += `
+                            <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid #eee;">
+                            <div style="font-size: 0.75rem; color: #666; margin-bottom: 0.25rem;">🛰️ Satellite Analysis (2001-2023)</div>
+                            <div class="popup-stat">
+                                <span class="popup-stat-label">Detected Loss</span>
+                                <span class="popup-stat-value">${this.formatNumber(hansenState.total_area_ha)} ha</span>
                             </div>
+                            <div class="popup-stat">
+                                <span class="popup-stat-label">Harvest Intensity</span>
+                                <span class="popup-stat-value" style="color: #2e7d32; font-weight: bold;">${hansenState.efm_per_ha_ratio.toFixed(1)} Efm/ha</span>
+                            </div>
+                            <div class="popup-stat">
+                                <span class="popup-stat-label">Loss Pixels</span>
+                                <span class="popup-stat-value">${this.formatNumber(hansenState.total_pixels)}</span>
+                            </div>`;
+                        }
+                        
+                        popupContent += `
                             <div class="popup-stat">
                                 <span class="popup-stat-label">Damage wood share</span>
                                 <span class="popup-stat-value">${stateData.damage_share_pct || 'N/A'}%</span>
                             </div>
                         `;
-                        layer.bindPopup(popupContent).openPopup();
+                        layer.bindPopup(popupContent, { maxWidth: 300 }).openPopup();
                     }
                 },
                 
@@ -594,6 +721,17 @@
                 get maxHarvest() {
                     if (!this.data) return 1;
                     return Math.max(...Object.values(this.data.states).map(s => s.harvest_2024 || 0));
+                },
+                
+                get totalLossHa() {
+                    if (!this.hansenData) return 0;
+                    return Object.values(this.hansenData.states).reduce((sum, s) => sum + s.total_area_ha, 0);
+                },
+                
+                get avgEfmPerHa() {
+                    if (!this.hansenData || this.totalLossHa === 0) return 0;
+                    const totalHarvest = Object.values(this.hansenData.states).reduce((sum, s) => sum + s.official_harvest_2024, 0);
+                    return totalHarvest / this.totalLossHa;
                 }
             };
         }

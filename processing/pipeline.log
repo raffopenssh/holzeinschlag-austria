@@ -1,0 +1,123 @@
+========================================
+Hansen Forest Loss Processing Pipeline
+Started: Tue Jan 13 09:27:37 UTC 2026
+========================================
+
+PHASE A: Downloading Hansen data...
+============================================================
+Hansen Global Forest Change - Download
+============================================================
+Downloading lossyear...
+  URL: https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_50N_010E.tif
+  Dest: /home/exedev/holzeinschlag-austria/raster/hansen_lossyear.tif
+  Progress: 0%  Progress: 1%  Progress: 3%  Progress: 5%  Progress: 7%  Progress: 9%  Progress: 10%  Progress: 12%  Progress: 14%  Progress: 16%  Progress: 18%  Progress: 20%  Progress: 21%  Progress: 23%  Progress: 25%  Progress: 27%  Progress: 29%  Progress: 31%  Progress: 32%  Progress: 34%  Progress: 36%  Progress: 38%  Progress: 40%  Progress: 42%  Progress: 43%  Progress: 45%  Progress: 47%  Progress: 49%  Progress: 51%  Progress: 53%  Progress: 54%  Progress: 56%  Progress: 58%  Progress: 60%  Progress: 62%  Progress: 64%  Progress: 65%  Progress: 67%  Progress: 69%  Progress: 71%  Progress: 73%  Progress: 74%  Progress: 76%  Progress: 78%  Progress: 80%  Progress: 82%  Progress: 84%  Progress: 85%  Progress: 87%  Progress: 89%  Progress: 91%  Progress: 93%  Progress: 95%  Progress: 96%  Progress: 98%
+  Complete: /home/exedev/holzeinschlag-austria/raster/hansen_lossyear.tif
+Downloading treecover2000...
+  URL: https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_50N_010E.tif
+  Dest: /home/exedev/holzeinschlag-austria/raster/hansen_treecover2000.tif
+  Progress: 0%  Progress: 0%  Progress: 0%  Progress: 0%  Progress: 0%  Progress: 1%  Progress: 1%  Progress: 1%  Progress: 1%  Progress: 1%  Progress: 2%  Progress: 2%  Progress: 2%  Progress: 2%  Progress: 2%  Progress: 3%  Progress: 3%  Progress: 3%  Progress: 3%  Progress: 3%  Progress: 4%  Progress: 4%  Progress: 4%  Progress: 4%  Progress: 4%  Progress: 5%  Progress: 5%  Progress: 5%  Progress: 5%  Progress: 5%  Progress: 6%  Progress: 6%  Progress: 6%  Progress: 6%  Progress: 6%  Progress: 7%  Progress: 7%  Progress: 7%  Progress: 7%  Progress: 7%  Progress: 8%  Progress: 8%  Progress: 8%  Progress: 8%  Progress: 8%  Progress: 9%  Progress: 9%  Progress: 9%  Progress: 9%  Progress: 9%  Progress: 10%  Progress: 10%  Progress: 10%  Progress: 10%  Progress: 10%  Progress: 11%  Progress: 11%  Progress: 11%  Progress: 11%  Progress: 11%  Progress: 12%  Progress: 12%  Progress: 12%  Progress: 12%  Progress: 13%  Progress: 13%  Progress: 13%  Progress: 13%  Progress: 13%  Progress: 14%  Progress: 14%  Progress: 14%  Progress: 14%  Progress: 14%  Progress: 15%  Progress: 15%  Progress: 15%  Progress: 15%  Progress: 15%  Progress: 16%  Progress: 16%  Progress: 16%  Progress: 16%  Progress: 16%  Progress: 17%  Progress: 17%  Progress: 17%  Progress: 17%  Progress: 17%  Progress: 18%  Progress: 18%  Progress: 18%  Progress: 18%  Progress: 18%  Progress: 19%  Progress: 19%  Progress: 19%  Progress: 19%  Progress: 19%  Progress: 20%  Progress: 20%  Progress: 20%  Progress: 20%  Progress: 20%  Progress: 21%  Progress: 21%  Progress: 21%  Progress: 21%  Progress: 21%  Progress: 22%  Progress: 22%  Progress: 22%  Progress: 22%  Progress: 22%  Progress: 23%  Progress: 23%  Progress: 23%  Progress: 23%  Progress: 23%  Progress: 24%  Progress: 24%  Progress: 24%  Progress: 24%  Progress: 25%  Progress: 25%  Progress: 25%  Progress: 25%  Progress: 25%  Progress: 26%  Progress: 26%  Progress: 26%  Progress: 26%  Progress: 26%  Progress: 27%  Progress: 27%  Progress: 27%  Progress: 27%  Progress: 27%  Progress: 28%  Progress: 28%  Progress: 28%  Progress: 28%  Progress: 28%  Progress: 29%  Progress: 29%  Progress: 29%  Progress: 29%  Progress: 29%  Progress: 30%  Progress: 30%  Progress: 30%  Progress: 30%  Progress: 30%  Progress: 31%  Progress: 31%  Progress: 31%  Progress: 31%  Progress: 31%  Progress: 32%  Progress: 32%  Progress: 32%  Progress: 32%  Progress: 32%  Progress: 33%  Progress: 33%  Progress: 33%  Progress: 33%  Progress: 33%  Progress: 34%  Progress: 34%  Progress: 34%  Progress: 34%  Progress: 34%  Progress: 35%  Progress: 35%  Progress: 35%  Progress: 35%  Progress: 35%  Progress: 36%  Progress: 36%  Progress: 36%  Progress: 36%  Progress: 37%  Progress: 37%  Progress: 37%  Progress: 37%  Progress: 37%  Progress: 38%  Progress: 38%  Progress: 38%  Progress: 38%  Progress: 38%  Progress: 39%  Progress: 39%  Progress: 39%  Progress: 39%  Progress: 39%  Progress: 40%  Progress: 40%  Progress: 40%  Progress: 40%  Progress: 40%  Progress: 41%  Progress: 41%  Progress: 41%  Progress: 41%  Progress: 41%  Progress: 42%  Progress: 42%  Progress: 42%  Progress: 42%  Progress: 42%  Progress: 43%  Progress: 43%  Progress: 43%  Progress: 43%  Progress: 43%  Progress: 44%  Progress: 44%  Progress: 44%  Progress: 44%  Progress: 44%  Progress: 45%  Progress: 45%  Progress: 45%  Progress: 45%  Progress: 45%  Progress: 46%  Progress: 46%  Progress: 46%  Progress: 46%  Progress: 46%  Progress: 47%  Progress: 47%  Progress: 47%  Progress: 47%  Progress: 47%  Progress: 48%  Progress: 48%  Progress: 48%  Progress: 48%  Progress: 49%  Progress: 49%  Progress: 49%  Progress: 49%  Progress: 49%  Progress: 50%  Progress: 50%  Progress: 50%  Progress: 50%  Progress: 50%  Progress: 51%  Progress: 51%  Progress: 51%  Progress: 51%  Progress: 51%  Progress: 52%  Progress: 52%  Progress: 52%  Progress: 52%  Progress: 52%  Progress: 53%  Progress: 53%  Progress: 53%  Progress: 53%  Progress: 53%  Progress: 54%  Progress: 54%  Progress: 54%  Progress: 54%  Progress: 54%  Progress: 55%  Progress: 55%  Progress: 55%  Progress: 55%  Progress: 55%  Progress: 56%  Progress: 56%  Progress: 56%  Progress: 56%  Progress: 56%  Progress: 57%  Progress: 57%  Progress: 57%  Progress: 57%  Progress: 57%  Progress: 58%  Progress: 58%  Progress: 58%  Progress: 58%  Progress: 58%  Progress: 59%  Progress: 59%  Progress: 59%  Progress: 59%  Progress: 59%  Progress: 60%  Progress: 60%  Progress: 60%  Progress: 60%  Progress: 61%  Progress: 61%  Progress: 61%  Progress: 61%  Progress: 61%  Progress: 62%  Progress: 62%  Progress: 62%  Progress: 62%  Progress: 62%  Progress: 63%  Progress: 63%  Progress: 63%  Progress: 63%  Progress: 63%  Progress: 64%  Progress: 64%  Progress: 64%  Progress: 64%  Progress: 64%  Progress: 65%  Progress: 65%  Progress: 65%  Progress: 65%  Progress: 65%  Progress: 66%  Progress: 66%  Progress: 66%  Progress: 66%  Progress: 66%  Progress: 67%  Progress: 67%  Progress: 67%  Progress: 67%  Progress: 67%  Progress: 68%  Progress: 68%  Progress: 68%  Progress: 68%  Progress: 68%  Progress: 69%  Progress: 69%  Progress: 69%  Progress: 69%  Progress: 69%  Progress: 70%  Progress: 70%  Progress: 70%  Progress: 70%  Progress: 70%  Progress: 71%  Progress: 71%  Progress: 71%  Progress: 71%  Progress: 71%  Progress: 72%  Progress: 72%  Progress: 72%  Progress: 72%  Progress: 72%  Progress: 73%  Progress: 73%  Progress: 73%  Progress: 73%  Progress: 74%  Progress: 74%  Progress: 74%  Progress: 74%  Progress: 74%  Progress: 75%  Progress: 75%  Progress: 75%  Progress: 75%  Progress: 75%  Progress: 76%  Progress: 76%  Progress: 76%  Progress: 76%  Progress: 76%  Progress: 77%  Progress: 77%  Progress: 77%  Progress: 77%  Progress: 77%  Progress: 78%  Progress: 78%  Progress: 78%  Progress: 78%  Progress: 78%  Progress: 79%  Progress: 79%  Progress: 79%  Progress: 79%  Progress: 79%  Progress: 80%  Progress: 80%  Progress: 80%  Progress: 80%  Progress: 80%  Progress: 81%  Progress: 81%  Progress: 81%  Progress: 81%  Progress: 81%  Progress: 82%  Progress: 82%  Progress: 82%  Progress: 82%  Progress: 82%  Progress: 83%  Progress: 83%  Progress: 83%  Progress: 83%  Progress: 83%  Progress: 84%  Progress: 84%  Progress: 84%  Progress: 84%  Progress: 84%  Progress: 85%  Progress: 85%  Progress: 85%  Progress: 85%  Progress: 86%  Progress: 86%  Progress: 86%  Progress: 86%  Progress: 86%  Progress: 87%  Progress: 87%  Progress: 87%  Progress: 87%  Progress: 87%  Progress: 88%  Progress: 88%  Progress: 88%  Progress: 88%  Progress: 88%  Progress: 89%  Progress: 89%  Progress: 89%  Progress: 89%  Progress: 89%  Progress: 90%  Progress: 90%  Progress: 90%  Progress: 90%  Progress: 90%  Progress: 91%  Progress: 91%  Progress: 91%  Progress: 91%  Progress: 91%  Progress: 92%  Progress: 92%  Progress: 92%  Progress: 92%  Progress: 92%  Progress: 93%  Progress: 93%  Progress: 93%  Progress: 93%  Progress: 93%  Progress: 94%  Progress: 94%  Progress: 94%  Progress: 94%  Progress: 94%  Progress: 95%  Progress: 95%  Progress: 95%  Progress: 95%  Progress: 95%  Progress: 96%  Progress: 96%  Progress: 96%  Progress: 96%  Progress: 96%  Progress: 97%  Progress: 97%  Progress: 97%  Progress: 97%  Progress: 98%  Progress: 98%  Progress: 98%  Progress: 98%  Progress: 98%  Progress: 99%  Progress: 99%  Progress: 99%  Progress: 99%  Progress: 99%
+  Complete: /home/exedev/holzeinschlag-austria/raster/hansen_treecover2000.tif
+
+============================================================
+Download complete!
+============================================================
+
+PHASE B: Clipping rasters to Austria...
+============================================================
+Clip Hansen rasters to Austria
+============================================================
+
+Clipping lossyear...
+  Command: gdalwarp -te 9.5 46.3 17.2 49.1 -co COMPRESS=LZW -co TILED=YES /home/exedev/holzeinschlag-austria/raster/hansen_lossyear.tif /home/exedev/holzeinschlag-austria/raster/austria_lossyear.tif
+  Complete: /home/exedev/holzeinschlag-austria/raster/austria_lossyear.tif
+
+Clipping treecover2000...
+  Command: gdalwarp -te 9.5 46.3 17.2 49.1 -co COMPRESS=LZW -co TILED=YES /home/exedev/holzeinschlag-austria/raster/hansen_treecover2000.tif /home/exedev/holzeinschlag-austria/raster/austria_treecover2000.tif
+  Complete: /home/exedev/holzeinschlag-austria/raster/austria_treecover2000.tif
+
+============================================================
+Clipping complete!
+============================================================
+
+PHASE B: Aggregating by state...
+/usr/lib/python3/dist-packages/osgeo/gdal.py:312: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+============================================================
+Hansen Forest Loss Analysis by Bundesland
+============================================================
+Raster size: (11200, 30800)
+Loss year range: 1 - 23
+Loaded 9 states
+
+Processing Vorarlberg...
+  Total loss pixels: 13,546
+  Total loss area: 1,219.1 ha
+  Official harvest 2024: 339,744 Efm
+  Implied Efm/ha: 278.7
+
+Processing Tirol...
+  Total loss pixels: 671,479
+  Total loss area: 60,433.1 ha
+  Official harvest 2024: 1,938,159 Efm
+  Implied Efm/ha: 32.1
+
+Processing Wien...
+  Total loss pixels: 3,848
+  Total loss area: 346.3 ha
+  Official harvest 2024: 17,096 Efm
+  Implied Efm/ha: 49.4
+
+Processing Kärnten...
+  Total loss pixels: 1,456,385
+  Total loss area: 131,074.6 ha
+  Official harvest 2024: 3,044,996 Efm
+  Implied Efm/ha: 23.2
+
+Processing Burgenland...
+  Total loss pixels: 255,079
+  Total loss area: 22,957.1 ha
+  Official harvest 2024: 651,997 Efm
+  Implied Efm/ha: 28.4
+
+Processing Oberösterreich...
+  Total loss pixels: 1,094,001
+  Total loss area: 98,460.1 ha
+  Official harvest 2024: 3,171,058 Efm
+  Implied Efm/ha: 32.2
+
+Processing Niederösterreich...
+  Total loss pixels: 1,629,229
+  Total loss area: 146,630.6 ha
+  Official harvest 2024: 3,772,132 Efm
+  Implied Efm/ha: 25.7
+
+Processing Steiermark...
+  Total loss pixels: 2,201,025
+  Total loss area: 198,092.2 ha
+  Official harvest 2024: 5,930,674 Efm
+  Implied Efm/ha: 29.9
+
+Processing Salzburg...
+  Total loss pixels: 613,345
+  Total loss area: 55,201.0 ha
+  Official harvest 2024: 1,165,442 Efm
+  Implied Efm/ha: 21.1
+
+Results saved to /home/exedev/holzeinschlag-austria/data/hansen_state_analysis.json
+
+============================================================
+Summary by State:
+============================================================
+Steiermark: 2,201,025 pixels, 198,092 ha loss, 30 Efm/ha
+Niederösterreich: 1,629,229 pixels, 146,631 ha loss, 26 Efm/ha
+Kärnten: 1,456,385 pixels, 131,075 ha loss, 23 Efm/ha
+Oberösterreich: 1,094,001 pixels, 98,460 ha loss, 32 Efm/ha
+Tirol: 671,479 pixels, 60,433 ha loss, 32 Efm/ha
+Salzburg: 613,345 pixels, 55,201 ha loss, 21 Efm/ha
+Burgenland: 255,079 pixels, 22,957 ha loss, 28 Efm/ha
+Vorarlberg: 13,546 pixels, 1,219 ha loss, 279 Efm/ha
+Wien: 3,848 pixels, 346 ha loss, 49 Efm/ha
+
+========================================
+Pipeline complete: Tue Jan 13 09:30:01 UTC 2026
+========================================
