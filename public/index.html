@@ -439,15 +439,23 @@
                 
                 <!-- Legend -->
                 <div class="legend">
-                    <div class="legend-title">Map: Harvest Intensity (Efm/ha)</div>
-                    <div class="legend-scale" style="background: linear-gradient(90deg, #c8e6c9, #4caf50, #2e7d32, #1b5e20);"></div>
-                    <div class="legend-labels">
+                    <div class="legend-title" x-text="showGemeinden ? 'Municipality Harvest (Efm)' : 'State Intensity (Efm/ha)'"></div>
+                    <div class="legend-scale" style="background: linear-gradient(90deg, #e8f5e9, #81c784, #4caf50, #388e3c, #1b5e20);"></div>
+                    <div class="legend-labels" x-show="showGemeinden">
+                        <span>0</span>
+                        <span>25k</span>
+                        <span>100k+</span>
+                    </div>
+                    <div class="legend-labels" x-show="!showGemeinden">
                         <span>20</span>
                         <span>25</span>
                         <span>30+</span>
                     </div>
-                    <div style="margin-top: 0.5rem; font-size: 0.7rem; color: var(--text-light);">
-                        Efm/ha = Official harvest ÷ Satellite-detected loss area
+                    <div style="margin-top: 0.5rem; font-size: 0.7rem; color: var(--text-light);" x-show="showGemeinden">
+                        Click municipality for details
+                    </div>
+                    <div style="margin-top: 0.5rem; font-size: 0.7rem; color: var(--text-light);" x-show="!showGemeinden">
+                        Toggle 🏠 for municipality view
                     </div>
                 </div>
             </div>
@@ -463,13 +471,19 @@
             <div id="map"></div>
             
             <div class="map-overlay">
-                <div class="map-control">
-                    <label class="layer-toggle">
-                        <input type="checkbox" x-model="showForestLoss">
-                        <span>🛰️ Global Forest Change</span>
-                    </label>
+                    <div class="map-control">
+                        <label class="layer-toggle">
+                            <input type="checkbox" x-model="showGemeinden" @change="toggleGemeinden()">
+                            <span>🏠 Municipality View</span>
+                        </label>
+                    </div>
+                    <div class="map-control">
+                        <label class="layer-toggle">
+                            <input type="checkbox" x-model="showForestLoss">
+                            <span>🛰️ Satellite Layer</span>
+                        </label>
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
     
@@ -481,6 +495,10 @@
                 hansenData: null,
                 valueData: null,
                 priceData: null,
+                gemeindenGeoJson: null,
+                gemeindenData: null,
+                gemeindenLayer: null,
+                showGemeinden: false,
                 map: null,
                 stateLayer: null,
                 selectedState: null,
@@ -511,6 +529,9 @@
                     if (priceResp && priceResp.ok) {
                         this.priceData = await priceResp.json();
                     }
+                    
+                    // Load Gemeinden data (lazy - only when toggled)
+                    this.loadGemeindenData();
                     
                     // Initialize map
                     this.initMap();
@@ -585,6 +606,118 @@
                             }
                         }
                     });
+                },
+                
+                async loadGemeindenData() {
+                    try {
+                        const [geoResp, dataResp] = await Promise.all([
+                            fetch('/data/austria_gemeinden.geojson'),
+                            fetch('/data/gemeinde_map.json')
+                        ]);
+                        if (geoResp.ok && dataResp.ok) {
+                            this.gemeindenGeoJson = await geoResp.json();
+                            this.gemeindenData = await dataResp.json();
+                            console.log(`Loaded ${Object.keys(this.gemeindenData).length} municipalities`);
+                        }
+                    } catch (e) {
+                        console.log('Gemeinden data not available yet');
+                    }
+                },
+                
+                toggleGemeinden() {
+                    if (this.showGemeinden) {
+                        if (!this.gemeindenLayer && this.gemeindenGeoJson && this.gemeindenData) {
+                            this.createGemeindenLayer();
+                        }
+                        if (this.gemeindenLayer) {
+                            this.gemeindenLayer.addTo(this.map);
+                            // Hide state layer
+                            if (this.stateLayer) this.map.removeLayer(this.stateLayer);
+                        }
+                    } else {
+                        if (this.gemeindenLayer) {
+                            this.map.removeLayer(this.gemeindenLayer);
+                        }
+                        // Show state layer again
+                        if (this.stateLayer) this.stateLayer.addTo(this.map);
+                    }
+                },
+                
+                createGemeindenLayer() {
+                    this.gemeindenLayer = L.geoJSON(this.gemeindenGeoJson, {
+                        style: (feature) => this.getGemeindeStyle(feature),
+                        onEachFeature: (feature, layer) => {
+                            layer.on({
+                                click: (e) => this.onGemeindeClick(feature, layer),
+                                mouseover: (e) => {
+                                    layer.setStyle({ weight: 2, color: '#1e3d1a' });
+                                },
+                                mouseout: (e) => {
+                                    this.gemeindenLayer.resetStyle(layer);
+                                }
+                            });
+                        }
+                    });
+                },
+                
+                getGemeindeStyle(feature) {
+                    const iso = feature.properties.iso;
+                    const data = this.gemeindenData[iso];
+                    const harvest = data ? data.h : 0;
+                    
+                    return {
+                        fillColor: this.getGemeindeColor(harvest),
+                        weight: 0.5,
+                        opacity: 1,
+                        color: '#ffffff',
+                        fillOpacity: 0.75
+                    };
+                },
+                
+                getGemeindeColor(harvest) {
+                    // Color scale for municipality harvest (0 to 100,000+ Efm)
+                    if (harvest === 0) return '#f5f5f5';
+                    if (harvest < 1000) return '#e8f5e9';
+                    if (harvest < 5000) return '#c8e6c9';
+                    if (harvest < 10000) return '#a5d6a7';
+                    if (harvest < 25000) return '#81c784';
+                    if (harvest < 50000) return '#66bb6a';
+                    if (harvest < 75000) return '#4caf50';
+                    if (harvest < 100000) return '#43a047';
+                    if (harvest < 150000) return '#388e3c';
+                    return '#1b5e20';
+                },
+                
+                onGemeindeClick(feature, layer) {
+                    const iso = feature.properties.iso;
+                    const name = feature.properties.name;
+                    const data = this.gemeindenData[iso];
+                    
+                    if (!data) {
+                        layer.bindPopup(`<b>${name}</b><br>No data available`).openPopup();
+                        return;
+                    }
+                    
+                    const content = `
+                        <div class="popup-title">${data.n}</div>
+                        <div class="popup-stat">
+                            <span class="popup-stat-label">Est. Harvest</span>
+                            <span class="popup-stat-value">${this.formatNumber(data.h)} Efm</span>
+                        </div>
+                        <div class="popup-stat" style="background: #e8f5e9; margin: 0.25rem -0.5rem; padding: 0.25rem 0.5rem;">
+                            <span class="popup-stat-label">💰 Est. Value</span>
+                            <span class="popup-stat-value" style="color: #2e7d32;">€${this.formatNumber(data.v)}</span>
+                        </div>
+                        <div class="popup-stat">
+                            <span class="popup-stat-label">Forest Loss</span>
+                            <span class="popup-stat-value">${(data.p * 0.09).toFixed(1)} ha</span>
+                        </div>
+                        <div class="popup-stat">
+                            <span class="popup-stat-label">Intensity</span>
+                            <span class="popup-stat-value">${data.i} Efm/ha</span>
+                        </div>
+                    `;
+                    layer.bindPopup(content, { maxWidth: 280 }).openPopup();
                 },
                 
                 initPriceChart() {
