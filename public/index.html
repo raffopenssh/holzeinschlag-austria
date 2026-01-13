@@ -318,7 +318,7 @@
                 </div>
                 
                 <!-- Top municipalities -->
-                <div class="section-header">🏆 Top Gemeinden (nach Efm)</div>
+                <div class="section-header">🏆 Top Gemeinden in Karte (Efm)</div>
                 <div class="muni-list">
                     <template x-for="(muni, index) in displayedMunicipalities" :key="muni.iso">
                         <div class="muni-item"
@@ -438,6 +438,7 @@
                 loading: true,
                 loadingYear: null,
                 showMethodsModal: false,
+                visibleIsos: new Set(),  // ISOs visible in current map extent
                 
                 // Map
                 map: null,
@@ -461,6 +462,7 @@
                     const lookup = this.lookup || {};
                     
                     return Object.entries(data)
+                        .filter(([iso]) => this.visibleIsos.size === 0 || this.visibleIsos.has(iso))
                         .map(([iso, d]) => ({
                             iso,
                             name: lookup.names?.[iso] || iso,
@@ -479,6 +481,23 @@
                 
                 get displayedMunicipalities() {
                     return this.sortedMunicipalities.slice(0, this.displayCount);
+                },
+                
+                updateVisibleMunicipalities() {
+                    if (!this.map || !this.gemeindenLayer) return;
+                    
+                    const bounds = this.map.getBounds();
+                    const visible = new Set();
+                    
+                    this.gemeindenLayer.eachLayer((layer) => {
+                        const iso = layer.feature?.properties?.iso;
+                        if (iso && bounds.intersects(layer.getBounds())) {
+                            visible.add(iso);
+                        }
+                    });
+                    
+                    this.visibleIsos = visible;
+                    this.displayCount = 20; // Reset when view changes
                 },
                 
                 async init() {
@@ -553,6 +572,13 @@
                     }).addTo(this.map);
                     
                     this.createGemeindenLayer();
+                    
+                    // Update visible municipalities on map move/zoom
+                    this.map.on('moveend', () => this.updateVisibleMunicipalities());
+                    this.map.on('zoomend', () => this.updateVisibleMunicipalities());
+                    
+                    // Initial update
+                    this.$nextTick(() => this.updateVisibleMunicipalities());
                 },
                 
                 createGemeindenLayer() {
