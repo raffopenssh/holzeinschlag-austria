@@ -1,0 +1,163 @@
+{
+  "austria": {
+    "harvest_2024": 20031299.0,
+    "harvest_2023": 19018004.0,
+    "softwood_2024": 17007869.0,
+    "hardwood_2024": 3023430.0,
+    "damage_wood_2024": 11014163.0,
+    "damage_wood_2023": 9016825.0,
+    "change_pct": 5.33,
+    "damage_share_pct": 54.98
+  },
+  "states": {
+    "Burgenland": {
+      "abbrev": "B",
+      "name": "Burgenland",
+      "coordinates": [
+        47.15,
+        16.5
+      ],
+      "harvest_2024": 651997.0,
+      "harvest_2023": 724685.0,
+      "damage_wood_2024": 145314.0,
+      "damage_wood_2023": 141017.0,
+      "softwood_2024": 390967.0,
+      "hardwood_2024": 261030.0,
+      "change_pct": -10.03,
+      "damage_share_pct": 22.29
+    },
+    "Kärnten": {
+      "abbrev": "K",
+      "name": "Kärnten",
+      "coordinates": [
+        46.75,
+        13.85
+      ],
+      "harvest_2024": 3044996.0,
+      "harvest_2023": 3207412.0,
+      "damage_wood_2024": 1868614.0,
+      "damage_wood_2023": 2247016.0,
+      "softwood_2024": 2886303.0,
+      "hardwood_2024": 158693.0,
+      "change_pct": -5.06,
+      "damage_share_pct": 61.37
+    },
+    "Niederösterreich": {
+      "abbrev": "N",
+      "name": "Niederösterreich",
+      "coordinates": [
+        48.1,
+        15.8
+      ],
+      "harvest_2024": 3772132.0,
+      "harvest_2023": 3623667.0,
+      "damage_wood_2024": 1348606.0,
+      "damage_wood_2023": 974889.0,
+      "softwood_2024": 2681596.0,
+      "hardwood_2024": 1090536.0,
+      "change_pct": 4.1,
+      "damage_share_pct": 35.75
+    },
+    "Oberösterreich": {
+      "abbrev": "O",
+      "name": "Oberösterreich",
+      "coordinates": [
+        48.05,
+        13.95
+      ],
+      "harvest_2024": 3171058.0,
+      "harvest_2023": 2854125.0,
+      "damage_wood_2024": 1376097.0,
+      "damage_wood_2023": 987780.0,
+      "softwood_2024": 2458227.0,
+      "hardwood_2024": 712830.0,
+      "change_pct": 11.1,
+      "damage_share_pct": 43.4
+    },
+    "Salzburg": {
+      "abbrev": "S",
+      "name": "Salzburg",
+      "coordinates": [
+        47.4,
+        13.2
+      ],
+      "harvest_2024": 1165442.0,
+      "harvest_2023": 991757.0,
+      "damage_wood_2024": 778419.0,
+      "damage_wood_2023": 452025.0,
+      "softwood_2024": 1053938.0,
+      "hardwood_2024": 111504.0,
+      "change_pct": 17.51,
+      "damage_share_pct": 66.79
+    },
+    "Steiermark": {
+      "abbrev": "St",
+      "name": "Steiermark",
+      "coordinates": [
+        47.25,
+        14.9
+      ],
+      "harvest_2024": 5930674.0,
+      "harvest_2023": 5240565.0,
+      "damage_wood_2024": 3763827.0,
+      "damage_wood_2023": 2635632.0,
+      "softwood_2024": 5375185.0,
+      "hardwood_2024": 555490.0,
+      "change_pct": 13.17,
+      "damage_share_pct": 63.46
+    },
+    "Tirol": {
+      "abbrev": "T",
+      "name": "Tirol",
+      "coordinates": [
+        47.05,
+        11.35
+      ],
+      "harvest_2024": 1938159.0,
+      "harvest_2023": 2041576.0,
+      "damage_wood_2024": 1638467.0,
+      "damage_wood_2023": 1485754.0,
+      "softwood_2024": 1899855.0,
+      "hardwood_2024": 38304.0,
+      "change_pct": -5.07,
+      "damage_share_pct": 84.54
+    },
+    "Vorarlberg": {
+      "abbrev": "V",
+      "name": "Vorarlberg",
+      "coordinates": [
+        47.25,
+        9.9
+      ],
+      "harvest_2024": 339744.0,
+      "harvest_2023": 308292.0,
+      "damage_wood_2024": 91516.0,
+      "damage_wood_2023": 91314.0,
+      "softwood_2024": 261199.0,
+      "hardwood_2024": 78545.0,
+      "change_pct": 10.2,
+      "damage_share_pct": 26.94
+    },
+    "Wien": {
+      "abbrev": "W",
+      "name": "Wien",
+      "coordinates": [
+        48.21,
+        16.37
+      ],
+      "harvest_2024": 17096.0,
+      "harvest_2023": 25926.0,
+      "damage_wood_2024": 3303.0,
+      "damage_wood_2023": 1397.0,
+      "softwood_2024": 598.0,
+      "hardwood_2024": 16498.0,
+      "change_pct": -34.06,
+      "damage_share_pct": 19.32
+    }
+  },
+  "metadata": {
+    "source": "BMLUK Holzeinschlagsmeldung 2024",
+    "unit": "Efm o. R. (Erntefestmeter ohne Rinde)",
+    "unit_english": "solid cubic meters without bark"
+  }
+}

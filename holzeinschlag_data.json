@@ -1,0 +1,55 @@
+{
+  "austria": {
+    "year": 2024,
+    "total_harvest_efm": 20031299,
+    "softwood": 17007869,
+    "hardwood": 3023430,
+    "sawlogs": 11196780,
+    "industrial_roundwood": 3250037,
+    "energy_wood": 5584482,
+    "damage_wood": 11014163
+  },
+  "states": {
+    "Burgenland": {
+      "harvest_2024": 651997.0,
+      "abbrev": "B"
+    },
+    "Kärnten": {
+      "harvest_2024": 3044996.0,
+      "abbrev": "K"
+    },
+    "Niederösterreich": {
+      "harvest_2024": 3772132.0,
+      "abbrev": "N"
+    },
+    "Oberösterreich": {
+      "harvest_2024": 3171058.0,
+      "abbrev": "O"
+    },
+    "Salzburg": {
+      "harvest_2024": 1165442.0,
+      "abbrev": "S"
+    },
+    "Steiermark": {
+      "harvest_2024": 5930674.0,
+      "abbrev": "St"
+    },
+    "Tirol": {
+      "harvest_2024": 1938159.0,
+      "abbrev": "T"
+    },
+    "Vorarlberg": {
+      "harvest_2024": 339744.0,
+      "abbrev": "V"
+    },
+    "Wien": {
+      "harvest_2024": 17096.0,
+      "abbrev": "W"
+    }
+  },
+  "metadata": {
+    "source": "BMLUK Holzeinschlagsmeldung 2024",
+    "unit": "Efm o. R. (Erntefestmeter ohne Rinde)",
+    "unit_english": "solid cubic meters without bark"
+  }
+}
