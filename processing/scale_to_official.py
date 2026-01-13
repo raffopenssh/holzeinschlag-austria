@@ -175,7 +175,7 @@ def apply_scaling(emissions, scaling_factors, timber_prices):
         2009: 13, 2010: 15, 2011: 15, 2012: 8,
         2013: 5, 2014: 6, 2015: 8, 2016: 5,
         2017: 6, 2018: 16, 2019: 25, 2020: 25,
-        2021: 53, 2022: 81, 2023: 85,
+        2021: 53, 2022: 81, 2023: 85, 2024: 70,
     }
     
     scaled_emissions = {
@@ -275,7 +275,7 @@ def main():
         2006: 82, 2007: 90, 2008: 95, 2009: 70, 2010: 82,
         2011: 94, 2012: 96, 2013: 97, 2014: 98, 2015: 92,
         2016: 90, 2017: 91, 2018: 88, 2019: 77, 2020: 73,
-        2021: 100, 2022: 113, 2023: 103,
+        2021: 100, 2022: 113, 2023: 103, 2024: 98,
     }
     
     # Fill in missing years
@@ -310,7 +310,7 @@ def main():
     print(f"{'Year':<6} {'Scaled Total':<18} {'Official':<18} {'Difference':<12}")
     print("-"*60)
     
-    for year_str in ['2017', '2018', '2019', '2020', '2021', '2022', '2023']:
+    for year_str in ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']:
         scaled_total = scaled['summary'].get(year_str, {}).get('total_harvest_efm', 0)
         official_total = official_full.get(year_str, {}).get('austria_total', 0)
         diff = scaled_total - official_total

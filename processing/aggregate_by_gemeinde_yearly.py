@@ -100,7 +100,7 @@ def main():
     update_status("gemeinde_yearly", "aggregate", "running", 20, "Creating combined keys...")
     
     # Years: Hansen uses 1-23 for 2001-2023
-    years = list(range(2001, 2024))  # 2001-2023
+    years = list(range(2001, 2025))  # 2001-2024
     
     # Only process pixels with loss (lossyear > 0) and valid gemeinde (> 0)
     valid_mask = (lossyear_data > 0) & (gemeinde_data > 0)

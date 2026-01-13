@@ -22,7 +22,8 @@
     "2020",
     "2021",
     "2022",
-    "2023"
+    "2023",
+    "2024"
   ],
   "summary": {
     "2001": {
@@ -277,6 +278,17 @@
       "total_co2_tonnes": 9029898.0,
       "total_ets_liability_eur": 767541311.0,
       "gemeinde_count": 1829
+    },
+    "2024": {
+      "total_loss_pixels": 538149,
+      "total_loss_area_ha": 48433.4,
+      "total_harvest_efm": 20031298.0,
+      "total_value_eur": 1963067204.0,
+      "ets_price_eur_tco2": 70,
+      "timber_price_eur_efm": 98,
+      "total_co2_tonnes": 9537625.0,
+      "total_ets_liability_eur": 667633743.0,
+      "gemeinde_count": 1877
     }
   },
   "methodology": {
