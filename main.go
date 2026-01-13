@@ -1,8 +1,10 @@
 package main
 
 import (
+	"crypto/rand"
 	"crypto/sha256"
 	"crypto/subtle"
+	"encoding/hex"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -10,81 +12,323 @@ import (
 	"os/exec"
 	"path/filepath"
 	"sync"
+	"time"
 )
 
 var (
 	pipelineRunning bool
 	pipelineMutex   sync.Mutex
-	
-	// Valid passwords (hashed)
+
+	// Valid passwords
 	validPasswords = []string{
 		"fridolin2026",
 		"lutz2026",
 	}
+
+	// Session tokens (in-memory, cleared on restart)
+	sessions     = make(map[string]time.Time)
+	sessionMutex sync.RWMutex
 )
 
-// basicAuth wraps a handler with HTTP Basic Authentication
-func basicAuth(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		_, password, ok := r.BasicAuth()
-		if !ok {
-			w.Header().Set("WWW-Authenticate", `Basic realm="Holzeinschlag Austria"`)
-			http.Error(w, "Unauthorized", http.StatusUnauthorized)
-			return
+const sessionDuration = 24 * time.Hour
+
+func generateToken() string {
+	b := make([]byte, 32)
+	rand.Read(b)
+	return hex.EncodeToString(b)
+}
+
+func checkPassword(password string) bool {
+	for _, validPwd := range validPasswords {
+		pwdHash := sha256.Sum256([]byte(password))
+		validHash := sha256.Sum256([]byte(validPwd))
+		if subtle.ConstantTimeCompare(pwdHash[:], validHash[:]) == 1 {
+			return true
 		}
-		
-		// Check password against valid passwords
-		valid := false
-		for _, validPwd := range validPasswords {
-			// Use constant-time comparison to prevent timing attacks
-			pwdHash := sha256.Sum256([]byte(password))
-			validHash := sha256.Sum256([]byte(validPwd))
-			if subtle.ConstantTimeCompare(pwdHash[:], validHash[:]) == 1 {
-				valid = true
-				break
-			}
-		}
-		
-		if !valid {
-			w.Header().Set("WWW-Authenticate", `Basic realm="Holzeinschlag Austria"`)
-			http.Error(w, "Unauthorized", http.StatusUnauthorized)
-			return
-		}
-		
-		next.ServeHTTP(w, r)
+	}
+	return false
+}
+
+func isValidSession(r *http.Request) bool {
+	cookie, err := r.Cookie("session")
+	if err != nil {
+		return false
+	}
+
+	sessionMutex.RLock()
+	expiry, exists := sessions[cookie.Value]
+	sessionMutex.RUnlock()
+
+	return exists && time.Now().Before(expiry)
+}
+
+func createSession(w http.ResponseWriter) {
+	token := generateToken()
+
+	sessionMutex.Lock()
+	sessions[token] = time.Now().Add(sessionDuration)
+	sessionMutex.Unlock()
+
+	http.SetCookie(w, &http.Cookie{
+		Name:     "session",
+		Value:    token,
+		Path:     "/",
+		HttpOnly: true,
+		MaxAge:   int(sessionDuration.Seconds()),
 	})
 }
 
+var loginPage = `<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Holzeinschlag Österreich</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 360px;
+        }
+        h1 {
+            color: #2d5a27;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            color: #2c3e50;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #2d5a27;
+        }
+        button {
+            width: 100%;
+            padding: 0.875rem;
+            background: #2d5a27;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #1e3d1a;
+        }
+        .error {
+            color: #c0392b;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 1rem;
+            display: none;
+        }
+        .error.show { display: block; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>🌲 Holzeinschlag Österreich</h1>
+        <p class="subtitle">Bitte Passwort eingeben</p>
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label for="password">Passwort</label>
+                <input type="password" id="password" name="password" required autofocus>
+            </div>
+            <button type="submit">Anmelden</button>
+        </form>
+        <p class="error {{if .Error}}show{{end}}">Falsches Passwort</p>
+    </div>
+</body>
+</html>`
+
 func main() {
-	// Serve static files
 	publicDir := filepath.Join(".", "public")
 	dataDir := filepath.Join(".", "data")
 	processingDir := filepath.Join(".", "processing")
 
-	// Create a new mux for protected routes
-	mux := http.NewServeMux()
+	// Login page
+	http.HandleFunc("/login", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method == "GET" {
+			w.Header().Set("Content-Type", "text/html")
+			w.Write([]byte(loginPage))
+			return
+		}
 
-	// File server for public assets
-	mux.Handle("/", http.FileServer(http.Dir(publicDir)))
-	mux.Handle("/data/", http.StripPrefix("/data/", http.FileServer(http.Dir(dataDir))))
+		if r.Method == "POST" {
+			password := r.FormValue("password")
+			if checkPassword(password) {
+				createSession(w)
+				http.Redirect(w, r, "/", http.StatusSeeOther)
+				return
+			}
+			// Wrong password - show error
+			w.Header().Set("Content-Type", "text/html")
+			errorPage := `<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Holzeinschlag Österreich</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 360px;
+        }
+        h1 {
+            color: #2d5a27;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            color: #2c3e50;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #2d5a27;
+        }
+        button {
+            width: 100%;
+            padding: 0.875rem;
+            background: #2d5a27;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #1e3d1a;
+        }
+        .error {
+            color: #c0392b;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>🌲 Holzeinschlag Österreich</h1>
+        <p class="subtitle">Bitte Passwort eingeben</p>
+        <form method="POST" action="/login">
+            <div class="form-group">
+                <label for="password">Passwort</label>
+                <input type="password" id="password" name="password" required autofocus>
+            </div>
+            <button type="submit">Anmelden</button>
+        </form>
+        <p class="error">Falsches Passwort</p>
+    </div>
+</body>
+</html>`
+			w.Write([]byte(errorPage))
+			return
+		}
+	})
 
-	// API endpoints
-	mux.HandleFunc("/api/status", func(w http.ResponseWriter, r *http.Request) {
+	// Auth middleware for all other routes
+	authMiddleware := func(next http.Handler) http.Handler {
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			if !isValidSession(r) {
+				http.Redirect(w, r, "/login", http.StatusSeeOther)
+				return
+			}
+			next.ServeHTTP(w, r)
+		})
+	}
+
+	// Protected file servers
+	http.Handle("/", authMiddleware(http.FileServer(http.Dir(publicDir))))
+	http.Handle("/data/", authMiddleware(http.StripPrefix("/data/", http.FileServer(http.Dir(dataDir)))))
+
+	// Protected API endpoints
+	http.Handle("/api/status", authMiddleware(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
-		
 		statusFile := filepath.Join(processingDir, "status.json")
 		data, err := os.ReadFile(statusFile)
 		if err != nil {
 			json.NewEncoder(w).Encode(map[string]interface{}{
-				"status": "not_started",
+				"status":  "not_started",
 				"message": "Processing pipeline has not been run yet",
 			})
 			return
 		}
 		w.Write(data)
-	})
+	})))
 
-	mux.HandleFunc("/api/start-pipeline", func(w http.ResponseWriter, r *http.Request) {
+	http.Handle("/api/start-pipeline", authMiddleware(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != "POST" {
 			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 			return
@@ -95,7 +339,7 @@ func main() {
 			pipelineMutex.Unlock()
 			w.Header().Set("Content-Type", "application/json")
 			json.NewEncoder(w).Encode(map[string]interface{}{
-				"status": "already_running",
+				"status":  "already_running",
 				"message": "Pipeline is already running",
 			})
 			return
@@ -103,7 +347,6 @@ func main() {
 		pipelineRunning = true
 		pipelineMutex.Unlock()
 
-		// Start pipeline in background
 		go func() {
 			defer func() {
 				pipelineMutex.Lock()
@@ -113,9 +356,9 @@ func main() {
 
 			script := filepath.Join(processingDir, "run_pipeline.sh")
 			logFile := filepath.Join(processingDir, "pipeline.log")
-			
+
 			log.Println("Starting processing pipeline...")
-			
+
 			f, err := os.Create(logFile)
 			if err != nil {
 				log.Printf("Failed to create log file: %v", err)
@@ -137,12 +380,12 @@ func main() {
 
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(map[string]interface{}{
-			"status": "started",
+			"status":  "started",
 			"message": "Processing pipeline started",
 		})
-	})
+	})))
 
-	mux.HandleFunc("/api/pipeline-log", func(w http.ResponseWriter, r *http.Request) {
+	http.Handle("/api/pipeline-log", authMiddleware(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		logFile := filepath.Join(processingDir, "pipeline.log")
 		data, err := os.ReadFile(logFile)
 		if err != nil {
@@ -154,15 +397,12 @@ func main() {
 		}
 		w.Header().Set("Content-Type", "text/plain")
 		w.Write(data)
-	})
-
-	// Wrap entire mux with basic auth
-	protectedHandler := basicAuth(mux)
+	})))
 
 	log.Println("Starting server on :8000 (password protected)")
 	log.Println("View at http://localhost:8000")
 
-	if err := http.ListenAndServe(":8000", protectedHandler); err != nil {
+	if err := http.ListenAndServe(":8000", nil); err != nil {
 		log.Fatal(err)
 	}
 }
