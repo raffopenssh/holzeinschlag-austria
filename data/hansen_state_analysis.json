@@ -1,5 +1,5 @@
 {
-  "pixel_area_ha": 0.09,
+  "pixel_area_ha": 0.05232506285511766,
   "years": [
     2001,
     2002,
@@ -122,9 +122,9 @@
         }
       },
       "total_pixels": 13546,
-      "total_area_ha": 1219.1399999999999,
+      "total_area_ha": 708.8,
       "official_harvest_2024": 339744.0,
-      "efm_per_ha_ratio": 278.67513165017965
+      "efm_per_ha_ratio": 479.3
     },
     "Tirol": {
       "yearly": {
@@ -222,9 +222,9 @@
         }
       },
       "total_pixels": 671479,
-      "total_area_ha": 60433.11,
+      "total_area_ha": 35135.18,
       "official_harvest_2024": 1938159.0,
-      "efm_per_ha_ratio": 32.071144443832196
+      "efm_per_ha_ratio": 55.2
     },
     "Wien": {
       "yearly": {
@@ -322,9 +322,9 @@
         }
       },
       "total_pixels": 3848,
-      "total_area_ha": 346.32,
+      "total_area_ha": 201.35,
       "official_harvest_2024": 17096.0,
-      "efm_per_ha_ratio": 49.364749364749365
+      "efm_per_ha_ratio": 84.9
     },
     "K\u00e4rnten": {
       "yearly": {
@@ -422,9 +422,9 @@
         }
       },
       "total_pixels": 1456385,
-      "total_area_ha": 131074.65,
+      "total_area_ha": 76205.44,
       "official_harvest_2024": 3044996.0,
-      "efm_per_ha_ratio": 23.231006148023283
+      "efm_per_ha_ratio": 40.0
     },
     "Burgenland": {
       "yearly": {
@@ -522,9 +522,9 @@
         }
       },
       "total_pixels": 255079,
-      "total_area_ha": 22957.11,
+      "total_area_ha": 13347.02,
       "official_harvest_2024": 651997.0,
-      "efm_per_ha_ratio": 28.400656702868957
+      "efm_per_ha_ratio": 48.8
     },
     "Ober\u00f6sterreich": {
       "yearly": {
@@ -622,9 +622,9 @@
         }
       },
       "total_pixels": 1094001,
-      "total_area_ha": 98460.09,
+      "total_area_ha": 57243.67,
       "official_harvest_2024": 3171058.0,
-      "efm_per_ha_ratio": 32.206531600773474
+      "efm_per_ha_ratio": 55.4
     },
     "Nieder\u00f6sterreich": {
       "yearly": {
@@ -722,9 +722,9 @@
         }
       },
       "total_pixels": 1629229,
-      "total_area_ha": 146630.61,
+      "total_area_ha": 85249.51,
       "official_harvest_2024": 3772132.0,
-      "efm_per_ha_ratio": 25.72540617542272
+      "efm_per_ha_ratio": 44.2
     },
     "Steiermark": {
       "yearly": {
@@ -822,9 +822,9 @@
         }
       },
       "total_pixels": 2201025,
-      "total_area_ha": 198092.25,
+      "total_area_ha": 115168.77,
       "official_harvest_2024": 5930674.0,
-      "efm_per_ha_ratio": 29.938950160846776
+      "efm_per_ha_ratio": 51.5
     },
     "Salzburg": {
       "yearly": {
@@ -922,9 +922,9 @@
         }
       },
       "total_pixels": 613345,
-      "total_area_ha": 55201.049999999996,
+      "total_area_ha": 32093.32,
       "official_harvest_2024": 1165442.0,
-      "efm_per_ha_ratio": 21.112678110289572
+      "efm_per_ha_ratio": 36.3
     }
   },
   "austria_total": {

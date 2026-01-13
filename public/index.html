@@ -692,12 +692,14 @@
                     const iso = feature.properties.iso;
                     const name = feature.properties.name;
                     const data = this.gemeindenData[iso];
+                    const pixelAreaHa = 0.0523;  // Correct pixel area at ~47.5°N
                     
                     if (!data) {
                         layer.bindPopup(`<b>${name}</b><br>No data available`).openPopup();
                         return;
                     }
                     
+                    const lossHa = (data.p * pixelAreaHa).toFixed(1);
                     const content = `
                         <div class="popup-title">${data.n}</div>
                         <div class="popup-stat">
@@ -710,7 +712,7 @@
                         </div>
                         <div class="popup-stat">
                             <span class="popup-stat-label">Forest Loss</span>
-                            <span class="popup-stat-value">${(data.p * 0.09).toFixed(1)} ha</span>
+                            <span class="popup-stat-value">${lossHa} ha</span>
                         </div>
                         <div class="popup-stat">
                             <span class="popup-stat-label">Intensity</span>
@@ -956,7 +958,8 @@
                 
                 get totalLossHa() {
                     if (!this.hansenData) return 0;
-                    return Object.values(this.hansenData.states).reduce((sum, s) => sum + s.total_area_ha, 0);
+                    // Sum actual loss areas from state data
+                    return Object.values(this.hansenData.states).reduce((sum, s) => sum + (s.total_area_ha || 0), 0);
                 },
                 
                 get avgEfmPerHa() {
