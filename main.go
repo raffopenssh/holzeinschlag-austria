@@ -323,6 +323,17 @@ func main() {
 		})
 	}
 
+	// Public files (SEO, social sharing)
+	http.HandleFunc("/robots.txt", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, filepath.Join(publicDir, "robots.txt"))
+	})
+	http.HandleFunc("/sitemap.xml", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, filepath.Join(publicDir, "sitemap.xml"))
+	})
+	http.HandleFunc("/og-image.png", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, filepath.Join(publicDir, "og-image.png"))
+	})
+
 	// Protected file servers
 	http.Handle("/", authMiddleware(http.FileServer(http.Dir(publicDir))))
 	http.Handle("/data/", authMiddleware(http.StripPrefix("/data/", http.FileServer(http.Dir(dataDir)))))
