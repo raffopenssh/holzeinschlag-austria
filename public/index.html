@@ -297,8 +297,8 @@
                                 <div class="muni-state" x-text="muni.state"></div>
                             </div>
                             <div class="muni-stats">
-                                <div class="muni-harvest" x-text="muni.lossArea.toFixed(0) + ' ha'"></div>
-                                <div class="muni-value" x-text="'€' + muni.etsPc.toFixed(0) + '/Kopf'"></div>
+                                <div class="muni-harvest" x-text="formatNumber(muni.harvest) + ' Efm'"></div>
+                                <div class="muni-value" x-text="'€' + formatThousand(muni.value)"></div>
                             </div>
                         </div>
                     </template>
@@ -615,6 +615,13 @@
                 formatMillion(num) {
                     if (!num) return '0';
                     return (num / 1e6).toFixed(1);
+                },
+                
+                formatThousand(num) {
+                    if (!num) return '0';
+                    if (num >= 1e6) return (num / 1e6).toFixed(1) + 'M';
+                    if (num >= 1e3) return (num / 1e3).toFixed(0) + 'k';
+                    return Math.round(num).toString();
                 }
             };
         }
