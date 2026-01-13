@@ -1,0 +1,1515 @@
+{
+  "description": "Combined Austrian forestry data: harvest volumes, deforestation, and timber prices",
+  "data_sources": {
+    "harvest": "Holzeinschlagsmeldung (BML), 2011-2024 (missing 2010, 2013, 2015, 2016)",
+    "deforestation": "Hansen Global Forest Change v1.11, 2001-2023",
+    "prices": "preise.agrarforschung.at, 2010-2024"
+  },
+  "units": {
+    "harvest": "Erntefestmeter (Efm) - m³ of solid timber",
+    "deforestation": "hectares (ha)",
+    "price": "EUR/Efm"
+  },
+  "austria": {
+    "yearly_data": {
+      "2001": {
+        "year": 2001,
+        "deforestation_ha": 6931.9,
+        "deforestation_pixels": 132542
+      },
+      "2002": {
+        "year": 2002,
+        "deforestation_ha": 10893.4,
+        "deforestation_pixels": 208288
+      },
+      "2003": {
+        "year": 2003,
+        "deforestation_ha": 14504.9,
+        "deforestation_pixels": 277342
+      },
+      "2004": {
+        "year": 2004,
+        "deforestation_ha": 14518.1,
+        "deforestation_pixels": 277590
+      },
+      "2005": {
+        "year": 2005,
+        "deforestation_ha": 21643.2,
+        "deforestation_pixels": 413829
+      },
+      "2006": {
+        "year": 2006,
+        "deforestation_ha": 12519.5,
+        "deforestation_pixels": 239378
+      },
+      "2007": {
+        "year": 2007,
+        "deforestation_ha": 31868.5,
+        "deforestation_pixels": 609339
+      },
+      "2008": {
+        "year": 2008,
+        "deforestation_ha": 26823.2,
+        "deforestation_pixels": 512872
+      },
+      "2009": {
+        "year": 2009,
+        "deforestation_ha": 15860.0,
+        "deforestation_pixels": 303250
+      },
+      "2010": {
+        "year": 2010,
+        "deforestation_ha": 16669.6,
+        "deforestation_pixels": 318728,
+        "price_spruce_fir": 83.69
+      },
+      "2011": {
+        "year": 2011,
+        "harvest_efm": 18695671.0,
+        "deforestation_ha": 18084.0,
+        "deforestation_pixels": 345774,
+        "price_spruce_fir": 93.65
+      },
+      "2012": {
+        "year": 2012,
+        "harvest_efm": 18020680.0,
+        "deforestation_ha": 11200.2,
+        "deforestation_pixels": 214153,
+        "price_spruce_fir": 95.6
+      },
+      "2013": {
+        "year": 2013,
+        "deforestation_ha": 7888.6,
+        "deforestation_pixels": 150831,
+        "price_spruce_fir": 99.07
+      },
+      "2014": {
+        "year": 2014,
+        "harvest_efm": 17088552.0,
+        "deforestation_ha": 10080.1,
+        "deforestation_pixels": 192735,
+        "price_spruce_fir": 97.99
+      },
+      "2015": {
+        "year": 2015,
+        "deforestation_ha": 8044.1,
+        "deforestation_pixels": 153809,
+        "price_spruce_fir": 92.19
+      },
+      "2016": {
+        "year": 2016,
+        "deforestation_ha": 17418.9,
+        "deforestation_pixels": 333059,
+        "price_spruce_fir": 89.95
+      },
+      "2017": {
+        "year": 2017,
+        "harvest_efm": 17647118.0,
+        "deforestation_ha": 18731.1,
+        "deforestation_pixels": 358148,
+        "price_spruce_fir": 90.65
+      },
+      "2018": {
+        "year": 2018,
+        "harvest_efm": 19192059.0,
+        "deforestation_ha": 26656.9,
+        "deforestation_pixels": 509694,
+        "price_spruce_fir": 88.16
+      },
+      "2019": {
+        "year": 2019,
+        "harvest_efm": 18903716.0,
+        "deforestation_ha": 34160.2,
+        "deforestation_pixels": 653159,
+        "price_spruce_fir": 76.86
+      },
+      "2020": {
+        "year": 2020,
+        "harvest_efm": 16789570.0,
+        "deforestation_ha": 26370.1,
+        "deforestation_pixels": 504206,
+        "price_spruce_fir": 72.67
+      },
+      "2021": {
+        "year": 2021,
+        "harvest_efm": 18420265.0,
+        "deforestation_ha": 16912.8,
+        "deforestation_pixels": 323382,
+        "price_spruce_fir": 100.5
+      },
+      "2022": {
+        "year": 2022,
+        "harvest_efm": 19357935.0,
+        "deforestation_ha": 20338.4,
+        "deforestation_pixels": 388880,
+        "price_spruce_fir": 112.75
+      },
+      "2023": {
+        "year": 2023,
+        "harvest_efm": 19018004.0,
+        "deforestation_ha": 27036.5,
+        "deforestation_pixels": 516949,
+        "price_spruce_fir": 102.63
+      },
+      "2024": {
+        "year": 2024,
+        "harvest_efm": 20031299.0,
+        "price_spruce_fir": 101.91
+      }
+    },
+    "total_harvest_efm": 203164869.0,
+    "total_deforestation_ha": 415154.2
+  },
+  "states": {
+    "Burgenland": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 341.3,
+          "deforestation_pixels": 6525
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 597.2,
+          "deforestation_pixels": 11418
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 286.0,
+          "deforestation_pixels": 5469
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 458.9,
+          "deforestation_pixels": 8774
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 971.8,
+          "deforestation_pixels": 18581
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 420.3,
+          "deforestation_pixels": 8037
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 419.2,
+          "deforestation_pixels": 8016
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 479.4,
+          "deforestation_pixels": 9166
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 321.9,
+          "deforestation_pixels": 6154
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 435.8,
+          "deforestation_pixels": 8332,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 691811.0,
+          "deforestation_ha": 332.1,
+          "deforestation_pixels": 6349,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 682100.0,
+          "deforestation_ha": 401.2,
+          "deforestation_pixels": 7672,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 270.7,
+          "deforestation_pixels": 5176,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 791885.0,
+          "deforestation_ha": 613.8,
+          "deforestation_pixels": 11737,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 280.5,
+          "deforestation_pixels": 5364,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 762.4,
+          "deforestation_pixels": 14578,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 814312.0,
+          "deforestation_ha": 929.6,
+          "deforestation_pixels": 17775,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 740615.0,
+          "deforestation_ha": 908.6,
+          "deforestation_pixels": 17373,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 690860.0,
+          "deforestation_ha": 907.3,
+          "deforestation_pixels": 17348,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 644859.0,
+          "deforestation_ha": 831.4,
+          "deforestation_pixels": 15896,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 656339.0,
+          "deforestation_ha": 583.5,
+          "deforestation_pixels": 11156,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 715789.0,
+          "deforestation_ha": 752.2,
+          "deforestation_pixels": 14383,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 724685.0,
+          "deforestation_ha": 1035.5,
+          "deforestation_pixels": 19800,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 651997.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 7805252.0,
+      "total_deforestation_ha": 13340.6
+    },
+    "Kärnten": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 1591.4,
+          "deforestation_pixels": 30429
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 2348.7,
+          "deforestation_pixels": 44909
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 1243.7,
+          "deforestation_pixels": 23781
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 1910.6,
+          "deforestation_pixels": 36531
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 4255.2,
+          "deforestation_pixels": 81362
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 2182.0,
+          "deforestation_pixels": 41721
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 3323.5,
+          "deforestation_pixels": 63546
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 4934.9,
+          "deforestation_pixels": 94357
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 2708.5,
+          "deforestation_pixels": 51788
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 3145.7,
+          "deforestation_pixels": 60148,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 2961152.0,
+          "deforestation_ha": 3619.5,
+          "deforestation_pixels": 69207,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 2542365.0,
+          "deforestation_ha": 1811.3,
+          "deforestation_pixels": 34633,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 1526.1,
+          "deforestation_pixels": 29179,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 2523965.0,
+          "deforestation_ha": 1884.5,
+          "deforestation_pixels": 36032,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 1325.1,
+          "deforestation_pixels": 25337,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 3635.7,
+          "deforestation_pixels": 69517,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 2564595.0,
+          "deforestation_ha": 4396.2,
+          "deforestation_pixels": 84058,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 2637771.0,
+          "deforestation_ha": 6377.7,
+          "deforestation_pixels": 121945,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 2644430.0,
+          "deforestation_ha": 6031.3,
+          "deforestation_pixels": 115322,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 2190293.0,
+          "deforestation_ha": 3444.3,
+          "deforestation_pixels": 65856,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 2581471.0,
+          "deforestation_ha": 2894.7,
+          "deforestation_pixels": 55348,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 2913498.0,
+          "deforestation_ha": 4131.8,
+          "deforestation_pixels": 79001,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 3207412.0,
+          "deforestation_ha": 7446.4,
+          "deforestation_pixels": 142378,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 3044996.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 29811948.0,
+      "total_deforestation_ha": 76168.8
+    },
+    "Niederösterreich": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 1449.8,
+          "deforestation_pixels": 27721
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 1409.8,
+          "deforestation_pixels": 26956
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 1393.8,
+          "deforestation_pixels": 26650
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 1803.6,
+          "deforestation_pixels": 34485
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 3600.4,
+          "deforestation_pixels": 68841
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 2106.6,
+          "deforestation_pixels": 40279
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 7427.8,
+          "deforestation_pixels": 142022
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 3017.0,
+          "deforestation_pixels": 57687
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 2312.8,
+          "deforestation_pixels": 44221
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 2507.5,
+          "deforestation_pixels": 47944,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 3829984.0,
+          "deforestation_ha": 2851.6,
+          "deforestation_pixels": 54523,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 3691062.0,
+          "deforestation_ha": 2020.6,
+          "deforestation_pixels": 38635,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 1506.2,
+          "deforestation_pixels": 28800,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 3637385.0,
+          "deforestation_ha": 2329.7,
+          "deforestation_pixels": 44544,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 1797.7,
+          "deforestation_pixels": 34372,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 3264.8,
+          "deforestation_pixels": 62425,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 4249988.0,
+          "deforestation_ha": 3674.5,
+          "deforestation_pixels": 70258,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 5307215.0,
+          "deforestation_ha": 8160.1,
+          "deforestation_pixels": 156025,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 5298263.0,
+          "deforestation_ha": 11649.9,
+          "deforestation_pixels": 222751,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 4330023.0,
+          "deforestation_ha": 9764.5,
+          "deforestation_pixels": 186701,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 3886799.0,
+          "deforestation_ha": 3337.5,
+          "deforestation_pixels": 63815,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 4025307.0,
+          "deforestation_ha": 4047.9,
+          "deforestation_pixels": 77398,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 3623667.0,
+          "deforestation_ha": 3774.8,
+          "deforestation_pixels": 72176,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 3772132.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 45651825.0,
+      "total_deforestation_ha": 85208.9
+    },
+    "Oberösterreich": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 588.5,
+          "deforestation_pixels": 11252
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 1110.2,
+          "deforestation_pixels": 21228
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 887.9,
+          "deforestation_pixels": 16977
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 2136.4,
+          "deforestation_pixels": 40848
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 3142.4,
+          "deforestation_pixels": 60084
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 1701.4,
+          "deforestation_pixels": 32531
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 7689.9,
+          "deforestation_pixels": 147035
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 4011.0,
+          "deforestation_pixels": 76692
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 2402.6,
+          "deforestation_pixels": 45938
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 2311.7,
+          "deforestation_pixels": 44200,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 2974993.0,
+          "deforestation_ha": 3322.8,
+          "deforestation_pixels": 63534,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 2883028.0,
+          "deforestation_ha": 1629.4,
+          "deforestation_pixels": 31155,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 912.0,
+          "deforestation_pixels": 17438,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 2655485.0,
+          "deforestation_ha": 969.5,
+          "deforestation_pixels": 18537,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 808.9,
+          "deforestation_pixels": 15467,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 1874.4,
+          "deforestation_pixels": 35840,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 3044330.0,
+          "deforestation_ha": 2065.2,
+          "deforestation_pixels": 39487,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 3473034.0,
+          "deforestation_ha": 3735.1,
+          "deforestation_pixels": 71416,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 3818611.0,
+          "deforestation_ha": 5237.3,
+          "deforestation_pixels": 100139,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 3086007.0,
+          "deforestation_ha": 4164.9,
+          "deforestation_pixels": 79635,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 3161822.0,
+          "deforestation_ha": 2255.3,
+          "deforestation_pixels": 43122,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 2923590.0,
+          "deforestation_ha": 2183.1,
+          "deforestation_pixels": 41741,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 2854125.0,
+          "deforestation_ha": 2076.6,
+          "deforestation_pixels": 39705,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 3171058.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 34046083.0,
+      "total_deforestation_ha": 57216.5
+    },
+    "Salzburg": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 381.4,
+          "deforestation_pixels": 7293
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 1023.2,
+          "deforestation_pixels": 19565
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 4014.8,
+          "deforestation_pixels": 76764
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 1672.6,
+          "deforestation_pixels": 31980
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 1774.0,
+          "deforestation_pixels": 33920
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 1316.1,
+          "deforestation_pixels": 25165
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 2306.8,
+          "deforestation_pixels": 44108
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 2222.3,
+          "deforestation_pixels": 42492
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 944.8,
+          "deforestation_pixels": 18065
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 1290.8,
+          "deforestation_pixels": 24681,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 1330244.0,
+          "deforestation_ha": 1642.1,
+          "deforestation_pixels": 31397,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 1264858.0,
+          "deforestation_ha": 1148.9,
+          "deforestation_pixels": 21968,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 831.5,
+          "deforestation_pixels": 15898,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 1060228.0,
+          "deforestation_ha": 796.1,
+          "deforestation_pixels": 15222,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 621.1,
+          "deforestation_pixels": 11876,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 1559.2,
+          "deforestation_pixels": 29812,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 1043634.0,
+          "deforestation_ha": 1504.9,
+          "deforestation_pixels": 28774,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 942338.0,
+          "deforestation_ha": 1138.5,
+          "deforestation_pixels": 21769,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 967801.0,
+          "deforestation_ha": 1324.9,
+          "deforestation_pixels": 25333,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 985162.0,
+          "deforestation_ha": 962.4,
+          "deforestation_pixels": 18401,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 1190409.0,
+          "deforestation_ha": 1261.7,
+          "deforestation_pixels": 24125,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 1183215.0,
+          "deforestation_ha": 1165.6,
+          "deforestation_pixels": 22287,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 991757.0,
+          "deforestation_ha": 1174.1,
+          "deforestation_pixels": 22450,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 1165442.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 12125088.0,
+      "total_deforestation_ha": 32077.8
+    },
+    "Steiermark": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 2119.7,
+          "deforestation_pixels": 40530
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 3375.7,
+          "deforestation_pixels": 64545
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 5914.6,
+          "deforestation_pixels": 113090
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 5266.6,
+          "deforestation_pixels": 100700
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 6469.3,
+          "deforestation_pixels": 123696
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 3690.7,
+          "deforestation_pixels": 70568
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 9606.6,
+          "deforestation_pixels": 183682
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 10552.5,
+          "deforestation_pixels": 201769
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 5513.3,
+          "deforestation_pixels": 105417
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 5862.1,
+          "deforestation_pixels": 112086,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 5005997.0,
+          "deforestation_ha": 5356.6,
+          "deforestation_pixels": 102421,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 4993996.0,
+          "deforestation_ha": 2522.9,
+          "deforestation_pixels": 48239,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 2011.0,
+          "deforestation_pixels": 38451,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 4570751.0,
+          "deforestation_ha": 2530.0,
+          "deforestation_pixels": 48374,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 2641.8,
+          "deforestation_pixels": 50513,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 4751.0,
+          "deforestation_pixels": 90841,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 4376058.0,
+          "deforestation_ha": 4475.9,
+          "deforestation_pixels": 85581,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 4608459.0,
+          "deforestation_ha": 5071.5,
+          "deforestation_pixels": 96970,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 3937737.0,
+          "deforestation_ha": 5621.4,
+          "deforestation_pixels": 107483,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 3853947.0,
+          "deforestation_ha": 4280.8,
+          "deforestation_pixels": 81850,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 5121785.0,
+          "deforestation_ha": 4254.4,
+          "deforestation_pixels": 81347,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 5395454.0,
+          "deforestation_ha": 5699.5,
+          "deforestation_pixels": 108978,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 5240565.0,
+          "deforestation_ha": 7525.7,
+          "deforestation_pixels": 143894,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 5930674.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 53035423.0,
+      "total_deforestation_ha": 115113.6
+    },
+    "Tirol": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 442.2,
+          "deforestation_pixels": 8455
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 1013.0,
+          "deforestation_pixels": 19369
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 749.6,
+          "deforestation_pixels": 14333
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 1236.7,
+          "deforestation_pixels": 23647
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 1382.8,
+          "deforestation_pixels": 26440
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 1036.0,
+          "deforestation_pixels": 19808
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 1063.3,
+          "deforestation_pixels": 20331
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 1554.7,
+          "deforestation_pixels": 29726
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 1573.4,
+          "deforestation_pixels": 30085
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 1082.0,
+          "deforestation_pixels": 20688,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 1473245.0,
+          "deforestation_ha": 931.5,
+          "deforestation_pixels": 17811,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 1565375.0,
+          "deforestation_ha": 1621.7,
+          "deforestation_pixels": 31007,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 808.5,
+          "deforestation_pixels": 15458,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 1439681.0,
+          "deforestation_ha": 929.2,
+          "deforestation_pixels": 17767,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 550.4,
+          "deforestation_pixels": 10524,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 1522.2,
+          "deforestation_pixels": 29106,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 1190002.0,
+          "deforestation_ha": 1630.3,
+          "deforestation_pixels": 31173,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 1032610.0,
+          "deforestation_ha": 1237.8,
+          "deforestation_pixels": 23668,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 1156391.0,
+          "deforestation_ha": 3299.6,
+          "deforestation_pixels": 63090,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 1373292.0,
+          "deforestation_ha": 2883.9,
+          "deforestation_pixels": 55141,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 1453008.0,
+          "deforestation_ha": 2296.3,
+          "deforestation_pixels": 43907,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 1837912.0,
+          "deforestation_ha": 2327.3,
+          "deforestation_pixels": 44499,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 2041576.0,
+          "deforestation_ha": 3945.8,
+          "deforestation_pixels": 75446,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 1938159.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 16501251.0,
+      "total_deforestation_ha": 35118.2
+    },
+    "Vorarlberg": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 9.1,
+          "deforestation_pixels": 174
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 9.5,
+          "deforestation_pixels": 181
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 5.8,
+          "deforestation_pixels": 111
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 25.1,
+          "deforestation_pixels": 480
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 29.3,
+          "deforestation_pixels": 560
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 58.2,
+          "deforestation_pixels": 1112
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 18.3,
+          "deforestation_pixels": 349
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 35.1,
+          "deforestation_pixels": 672
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 70.8,
+          "deforestation_pixels": 1354
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 26.4,
+          "deforestation_pixels": 504,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 398383.0,
+          "deforestation_ha": 21.2,
+          "deforestation_pixels": 405,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 359121.0,
+          "deforestation_ha": 40.6,
+          "deforestation_pixels": 776,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 17.3,
+          "deforestation_pixels": 330,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 362334.0,
+          "deforestation_ha": 20.2,
+          "deforestation_pixels": 386,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 14.4,
+          "deforestation_pixels": 275,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 38.0,
+          "deforestation_pixels": 726,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 313802.0,
+          "deforestation_ha": 44.7,
+          "deforestation_pixels": 854,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 399735.0,
+          "deforestation_ha": 17.4,
+          "deforestation_pixels": 333,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 342556.0,
+          "deforestation_ha": 81.8,
+          "deforestation_pixels": 1564,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 293337.0,
+          "deforestation_ha": 25.9,
+          "deforestation_pixels": 496,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 335699.0,
+          "deforestation_ha": 24.0,
+          "deforestation_pixels": 458,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 340485.0,
+          "deforestation_ha": 25.6,
+          "deforestation_pixels": 489,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 308292.0,
+          "deforestation_ha": 50.1,
+          "deforestation_pixels": 957,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 339744.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 3793488.0,
+      "total_deforestation_ha": 708.8
+    },
+    "Wien": {
+      "yearly_data": {
+        "2001": {
+          "year": 2001,
+          "deforestation_ha": 8.5,
+          "deforestation_pixels": 163
+        },
+        "2002": {
+          "year": 2002,
+          "deforestation_ha": 6.1,
+          "deforestation_pixels": 117
+        },
+        "2003": {
+          "year": 2003,
+          "deforestation_ha": 8.7,
+          "deforestation_pixels": 167
+        },
+        "2004": {
+          "year": 2004,
+          "deforestation_ha": 7.6,
+          "deforestation_pixels": 145
+        },
+        "2005": {
+          "year": 2005,
+          "deforestation_ha": 18.0,
+          "deforestation_pixels": 345
+        },
+        "2006": {
+          "year": 2006,
+          "deforestation_ha": 8.2,
+          "deforestation_pixels": 157
+        },
+        "2007": {
+          "year": 2007,
+          "deforestation_ha": 13.1,
+          "deforestation_pixels": 250
+        },
+        "2008": {
+          "year": 2008,
+          "deforestation_ha": 16.3,
+          "deforestation_pixels": 311
+        },
+        "2009": {
+          "year": 2009,
+          "deforestation_ha": 11.9,
+          "deforestation_pixels": 228
+        },
+        "2010": {
+          "year": 2010,
+          "deforestation_ha": 7.6,
+          "deforestation_pixels": 145,
+          "price_spruce_fir": 83.69
+        },
+        "2011": {
+          "year": 2011,
+          "harvest_efm": 29861.0,
+          "deforestation_ha": 6.6,
+          "deforestation_pixels": 127,
+          "price_spruce_fir": 93.65
+        },
+        "2012": {
+          "year": 2012,
+          "harvest_efm": 38776.0,
+          "deforestation_ha": 3.6,
+          "deforestation_pixels": 68,
+          "price_spruce_fir": 95.6
+        },
+        "2013": {
+          "year": 2013,
+          "deforestation_ha": 5.3,
+          "deforestation_pixels": 101,
+          "price_spruce_fir": 99.07
+        },
+        "2014": {
+          "year": 2014,
+          "harvest_efm": 46838.0,
+          "deforestation_ha": 7.1,
+          "deforestation_pixels": 136,
+          "price_spruce_fir": 97.99
+        },
+        "2015": {
+          "year": 2015,
+          "deforestation_ha": 4.2,
+          "deforestation_pixels": 81,
+          "price_spruce_fir": 92.19
+        },
+        "2016": {
+          "year": 2016,
+          "deforestation_ha": 11.2,
+          "deforestation_pixels": 214,
+          "price_spruce_fir": 89.95
+        },
+        "2017": {
+          "year": 2017,
+          "harvest_efm": 50397.0,
+          "deforestation_ha": 9.8,
+          "deforestation_pixels": 188,
+          "price_spruce_fir": 90.65
+        },
+        "2018": {
+          "year": 2018,
+          "harvest_efm": 50283.0,
+          "deforestation_ha": 10.2,
+          "deforestation_pixels": 195,
+          "price_spruce_fir": 88.16
+        },
+        "2019": {
+          "year": 2019,
+          "harvest_efm": 47066.0,
+          "deforestation_ha": 6.7,
+          "deforestation_pixels": 129,
+          "price_spruce_fir": 76.86
+        },
+        "2020": {
+          "year": 2020,
+          "harvest_efm": 32650.0,
+          "deforestation_ha": 12.0,
+          "deforestation_pixels": 230,
+          "price_spruce_fir": 72.67
+        },
+        "2021": {
+          "year": 2021,
+          "harvest_efm": 32934.0,
+          "deforestation_ha": 5.4,
+          "deforestation_pixels": 104,
+          "price_spruce_fir": 100.5
+        },
+        "2022": {
+          "year": 2022,
+          "harvest_efm": 22685.0,
+          "deforestation_ha": 5.4,
+          "deforestation_pixels": 104,
+          "price_spruce_fir": 112.75
+        },
+        "2023": {
+          "year": 2023,
+          "harvest_efm": 25926.0,
+          "deforestation_ha": 7.5,
+          "deforestation_pixels": 143,
+          "price_spruce_fir": 102.63
+        },
+        "2024": {
+          "year": 2024,
+          "harvest_efm": 17096.0,
+          "price_spruce_fir": 101.91
+        }
+      },
+      "total_harvest_efm": 394512.0,
+      "total_deforestation_ha": 201.0
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "2011": {
+    "year": 2011,
+    "austria_total": 18695671.0,
+    "states": {
+      "Burgenland": 691811.0,
+      "K\u00e4rnten": 2961152.0,
+      "Nieder\u00f6sterreich": 3829984.0,
+      "Ober\u00f6sterreich": 2974993.0,
+      "Salzburg": 1330244.0,
+      "Steiermark": 5005997.0,
+      "Tirol": 1473245.0,
+      "Vorarlberg": 398383.0,
+      "Wien": 29861.0
+    }
+  },
+  "2012": {
+    "year": 2012,
+    "austria_total": 18020680.0,
+    "states": {
+      "Burgenland": 682100.0,
+      "K\u00e4rnten": 2542365.0,
+      "Nieder\u00f6sterreich": 3691062.0,
+      "Ober\u00f6sterreich": 2883028.0,
+      "Salzburg": 1264858.0,
+      "Steiermark": 4993996.0,
+      "Tirol": 1565375.0,
+      "Vorarlberg": 359121.0,
+      "Wien": 38776.0
+    }
+  },
+  "2014": {
+    "year": 2014,
+    "austria_total": 17088552.0,
+    "states": {
+      "Burgenland": 791885.0,
+      "K\u00e4rnten": 2523965.0,
+      "Nieder\u00f6sterreich": 3637385.0,
+      "Ober\u00f6sterreich": 2655485.0,
+      "Salzburg": 1060228.0,
+      "Steiermark": 4570751.0,
+      "Tirol": 1439681.0,
+      "Vorarlberg": 362334.0,
+      "Wien": 46838.0
+    }
+  },
+  "2017": {
+    "year": 2017,
+    "austria_total": 17647118.0,
+    "states": {
+      "Burgenland": 814312.0,
+      "K\u00e4rnten": 2564595.0,
+      "Nieder\u00f6sterreich": 4249988.0,
+      "Ober\u00f6sterreich": 3044330.0,
+      "Salzburg": 1043634.0,
+      "Steiermark": 4376058.0,
+      "Tirol": 1190002.0,
+      "Vorarlberg": 313802.0,
+      "Wien": 50397.0
+    }
+  },
+  "2018": {
+    "year": 2018,
+    "austria_total": 19192059.0,
+    "states": {
+      "Burgenland": 740615.0,
+      "K\u00e4rnten": 2637771.0,
+      "Nieder\u00f6sterreich": 5307215.0,
+      "Ober\u00f6sterreich": 3473034.0,
+      "Salzburg": 942338.0,
+      "Steiermark": 4608459.0,
+      "Tirol": 1032610.0,
+      "Vorarlberg": 399735.0,
+      "Wien": 50283.0
+    }
+  },
+  "2019": {
+    "year": 2019,
+    "austria_total": 18903716.0,
+    "states": {
+      "Burgenland": 690860.0,
+      "K\u00e4rnten": 2644430.0,
+      "Nieder\u00f6sterreich": 5298263.0,
+      "Ober\u00f6sterreich": 3818611.0,
+      "Salzburg": 967801.0,
+      "Steiermark": 3937737.0,
+      "Tirol": 1156391.0,
+      "Vorarlberg": 342556.0,
+      "Wien": 47066.0
+    }
+  },
+  "2020": {
+    "year": 2020,
+    "austria_total": 16789570.0,
+    "states": {
+      "Burgenland": 644859.0,
+      "K\u00e4rnten": 2190293.0,
+      "Nieder\u00f6sterreich": 4330023.0,
+      "Ober\u00f6sterreich": 3086007.0,
+      "Salzburg": 985162.0,
+      "Steiermark": 3853947.0,
+      "Tirol": 1373292.0,
+      "Vorarlberg": 293337.0,
+      "Wien": 32650.0
+    }
+  },
+  "2021": {
+    "year": 2021,
+    "austria_total": 18420265.0,
+    "states": {
+      "Burgenland": 656339.0,
+      "K\u00e4rnten": 2581471.0,
+      "Nieder\u00f6sterreich": 3886799.0,
+      "Ober\u00f6sterreich": 3161822.0,
+      "Salzburg": 1190409.0,
+      "Steiermark": 5121785.0,
+      "Tirol": 1453008.0,
+      "Vorarlberg": 335699.0,
+      "Wien": 32934.0
+    }
+  },
+  "2022": {
+    "year": 2022,
+    "austria_total": 19357935.0,
+    "states": {
+      "Burgenland": 715789.0,
+      "K\u00e4rnten": 2913498.0,
+      "Nieder\u00f6sterreich": 4025307.0,
+      "Ober\u00f6sterreich": 2923590.0,
+      "Salzburg": 1183215.0,
+      "Steiermark": 5395454.0,
+      "Tirol": 1837912.0,
+      "Vorarlberg": 340485.0,
+      "Wien": 22685.0
+    }
+  },
+  "2023": {
+    "year": 2023,
+    "austria_total": 19018004.0,
+    "states": {
+      "Burgenland": 724685.0,
+      "K\u00e4rnten": 3207412.0,
+      "Nieder\u00f6sterreich": 3623667.0,
+      "Ober\u00f6sterreich": 2854125.0,
+      "Salzburg": 991757.0,
+      "Steiermark": 5240565.0,
+      "Tirol": 2041576.0,
+      "Vorarlberg": 308292.0,
+      "Wien": 25926.0
+    }
+  },
+  "2024": {
+    "year": 2024,
+    "austria_total": 20031299.0,
+    "states": {
+      "Burgenland": 651997.0,
+      "K\u00e4rnten": 3044996.0,
+      "Nieder\u00f6sterreich": 3772132.0,
+      "Ober\u00f6sterreich": 3171058.0,
+      "Salzburg": 1165442.0,
+      "Steiermark": 5930674.0,
+      "Tirol": 1938159.0,
+      "Vorarlberg": 339744.0,
+      "Wien": 17096.0
+    }
+  }
+}

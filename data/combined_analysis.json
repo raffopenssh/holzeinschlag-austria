@@ -1,0 +1,96 @@
+{
+  "description": "Statistical analysis of Austrian forestry data",
+  "years_analyzed": [
+    "2011",
+    "2012",
+    "2014",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023"
+  ],
+  "austria": {
+    "harvest_deforestation_correlation": 0.398,
+    "harvest_price_correlation": 0.421,
+    "avg_harvest_intensity_efm_per_ha": 993.5,
+    "avg_annual_harvest_efm": 18313357,
+    "avg_annual_deforestation_ha": 20957.0
+  },
+  "states": {
+    "Burgenland": {
+      "harvest_deforestation_correlation": 0.304,
+      "harvest_price_correlation": 0.24,
+      "avg_harvest_intensity_efm_per_ha": 1107.8,
+      "avg_annual_harvest_efm": 715326,
+      "avg_annual_deforestation_ha": 729.5,
+      "years_analyzed": 10
+    },
+    "Kärnten": {
+      "harvest_deforestation_correlation": 0.526,
+      "harvest_price_correlation": 0.627,
+      "avg_harvest_intensity_efm_per_ha": 766.0,
+      "avg_annual_harvest_efm": 2676695,
+      "avg_annual_deforestation_ha": 4203.8,
+      "years_analyzed": 10
+    },
+    "Niederösterreich": {
+      "harvest_deforestation_correlation": 0.853,
+      "harvest_price_correlation": -0.612,
+      "avg_harvest_intensity_efm_per_ha": 1055.5,
+      "avg_annual_harvest_efm": 4187969,
+      "avg_annual_deforestation_ha": 5161.1,
+      "years_analyzed": 10
+    },
+    "Oberösterreich": {
+      "harvest_deforestation_correlation": 0.854,
+      "harvest_price_correlation": -0.591,
+      "avg_harvest_intensity_efm_per_ha": 1339.3,
+      "avg_annual_harvest_efm": 3087502,
+      "avg_annual_deforestation_ha": 2763.9,
+      "years_analyzed": 10
+    },
+    "Salzburg": {
+      "harvest_deforestation_correlation": 0.397,
+      "harvest_price_correlation": 0.482,
+      "avg_harvest_intensity_efm_per_ha": 932.1,
+      "avg_annual_harvest_efm": 1095965,
+      "avg_annual_deforestation_ha": 1211.9,
+      "years_analyzed": 10
+    },
+    "Steiermark": {
+      "harvest_deforestation_correlation": 0.217,
+      "harvest_price_correlation": 0.93,
+      "avg_harvest_intensity_efm_per_ha": 1105.5,
+      "avg_annual_harvest_efm": 4710475,
+      "avg_annual_deforestation_ha": 4733.9,
+      "years_analyzed": 10
+    },
+    "Tirol": {
+      "harvest_deforestation_correlation": 0.416,
+      "harvest_price_correlation": 0.687,
+      "avg_harvest_intensity_efm_per_ha": 842.7,
+      "avg_annual_harvest_efm": 1456309,
+      "avg_annual_deforestation_ha": 2110.3,
+      "years_analyzed": 10
+    },
+    "Vorarlberg": {
+      "harvest_deforestation_correlation": -0.35,
+      "harvest_price_correlation": 0.142,
+      "avg_harvest_intensity_efm_per_ha": 12452.2,
+      "avg_annual_harvest_efm": 345374,
+      "avg_annual_deforestation_ha": 35.2,
+      "years_analyzed": 10
+    },
+    "Wien": {
+      "harvest_deforestation_correlation": 0.31,
+      "harvest_price_correlation": -0.488,
+      "avg_harvest_intensity_efm_per_ha": 5546.7,
+      "avg_annual_harvest_efm": 37742,
+      "avg_annual_deforestation_ha": 7.4,
+      "years_analyzed": 10
+    }
+  }
+}

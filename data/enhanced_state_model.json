@@ -1,0 +1,521 @@
+{
+  "description": "Enhanced Austrian timber harvest model with historical trends",
+  "data_sources": {
+    "harvest": "Holzeinschlagsmeldung (BML), 2011-2024 (missing 2010, 2013, 2015, 2016)",
+    "deforestation": "Hansen Global Forest Change v1.11, 2001-2023",
+    "prices": "preise.agrarforschung.at, 2010-2024"
+  },
+  "units": {
+    "harvest": "Erntefestmeter (Efm) - m³ of solid timber",
+    "deforestation": "hectares (ha)",
+    "price": "EUR/Efm"
+  },
+  "price_context": {
+    "2024_spruce_fir_price": 101.91,
+    "2020_low": 72.67,
+    "2022_high": 112.75,
+    "unit": "EUR/Efm"
+  },
+  "austria": {
+    "latest_year": 2024,
+    "latest_harvest_efm": 20031299.0,
+    "latest_deforestation_ha": 27036.5,
+    "historical": {
+      "total_harvest_efm": 203164869.0,
+      "total_deforestation_ha": 415154.2,
+      "avg_annual_harvest": 18313357,
+      "avg_annual_deforestation": 20957.0,
+      "harvest_deforestation_correlation": 0.398,
+      "harvest_price_correlation": 0.421,
+      "harvest_intensity_efm_per_ha": 993.5
+    }
+  },
+  "states": {
+    "Burgenland": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 651997.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 7805252.0,
+        "total_deforestation_ha": 13340.6,
+        "avg_annual_harvest": 715326,
+        "avg_annual_deforestation": 729.5,
+        "harvest_deforestation_correlation": 0.304,
+        "harvest_price_correlation": 0.24,
+        "harvest_intensity_efm_per_ha": 1107.8
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 644859.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 656339.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 715789.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 724685.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 651997.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 831.4
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 583.5
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 752.2
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 1035.5
+        }
+      ]
+    },
+    "Kärnten": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 3044996.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 29811948.0,
+        "total_deforestation_ha": 76168.8,
+        "avg_annual_harvest": 2676695,
+        "avg_annual_deforestation": 4203.8,
+        "harvest_deforestation_correlation": 0.526,
+        "harvest_price_correlation": 0.627,
+        "harvest_intensity_efm_per_ha": 766.0
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 2190293.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 2581471.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 2913498.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 3207412.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 3044996.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 3444.3
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 2894.7
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 4131.8
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 7446.4
+        }
+      ]
+    },
+    "Niederösterreich": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 3772132.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 45651825.0,
+        "total_deforestation_ha": 85208.9,
+        "avg_annual_harvest": 4187969,
+        "avg_annual_deforestation": 5161.1,
+        "harvest_deforestation_correlation": 0.853,
+        "harvest_price_correlation": -0.612,
+        "harvest_intensity_efm_per_ha": 1055.5
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 4330023.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 3886799.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 4025307.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 3623667.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 3772132.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 9764.5
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 3337.5
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 4047.9
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 3774.8
+        }
+      ]
+    },
+    "Oberösterreich": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 3171058.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 34046083.0,
+        "total_deforestation_ha": 57216.5,
+        "avg_annual_harvest": 3087502,
+        "avg_annual_deforestation": 2763.9,
+        "harvest_deforestation_correlation": 0.854,
+        "harvest_price_correlation": -0.591,
+        "harvest_intensity_efm_per_ha": 1339.3
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 3086007.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 3161822.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 2923590.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 2854125.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 3171058.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 4164.9
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 2255.3
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 2183.1
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 2076.6
+        }
+      ]
+    },
+    "Salzburg": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 1165442.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 12125088.0,
+        "total_deforestation_ha": 32077.8,
+        "avg_annual_harvest": 1095965,
+        "avg_annual_deforestation": 1211.9,
+        "harvest_deforestation_correlation": 0.397,
+        "harvest_price_correlation": 0.482,
+        "harvest_intensity_efm_per_ha": 932.1
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 985162.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 1190409.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 1183215.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 991757.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 1165442.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 962.4
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 1261.7
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 1165.6
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 1174.1
+        }
+      ]
+    },
+    "Steiermark": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 5930674.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 53035423.0,
+        "total_deforestation_ha": 115113.6,
+        "avg_annual_harvest": 4710475,
+        "avg_annual_deforestation": 4733.9,
+        "harvest_deforestation_correlation": 0.217,
+        "harvest_price_correlation": 0.93,
+        "harvest_intensity_efm_per_ha": 1105.5
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 3853947.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 5121785.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 5395454.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 5240565.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 5930674.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 4280.8
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 4254.4
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 5699.5
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 7525.7
+        }
+      ]
+    },
+    "Tirol": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 1938159.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 16501251.0,
+        "total_deforestation_ha": 35118.2,
+        "avg_annual_harvest": 1456309,
+        "avg_annual_deforestation": 2110.3,
+        "harvest_deforestation_correlation": 0.416,
+        "harvest_price_correlation": 0.687,
+        "harvest_intensity_efm_per_ha": 842.7
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 1373292.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 1453008.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 1837912.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 2041576.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 1938159.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 2883.9
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 2296.3
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 2327.3
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 3945.8
+        }
+      ]
+    },
+    "Vorarlberg": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 339744.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 3793488.0,
+        "total_deforestation_ha": 708.8,
+        "avg_annual_harvest": 345374,
+        "avg_annual_deforestation": 35.2,
+        "harvest_deforestation_correlation": -0.35,
+        "harvest_price_correlation": 0.142,
+        "harvest_intensity_efm_per_ha": 12452.2
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 293337.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 335699.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 340485.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 308292.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 339744.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 25.9
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 24.0
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 25.6
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 50.1
+        }
+      ]
+    },
+    "Wien": {
+      "latest_year": 2024,
+      "latest_harvest_efm": 17096.0,
+      "latest_deforestation_ha": null,
+      "historical": {
+        "total_harvest_efm": 394512.0,
+        "total_deforestation_ha": 201.0,
+        "avg_annual_harvest": 37742,
+        "avg_annual_deforestation": 7.4,
+        "harvest_deforestation_correlation": 0.31,
+        "harvest_price_correlation": -0.488,
+        "harvest_intensity_efm_per_ha": 5546.7
+      },
+      "recent_harvest_trend": [
+        {
+          "year": 2020,
+          "harvest_efm": 32650.0
+        },
+        {
+          "year": 2021,
+          "harvest_efm": 32934.0
+        },
+        {
+          "year": 2022,
+          "harvest_efm": 22685.0
+        },
+        {
+          "year": 2023,
+          "harvest_efm": 25926.0
+        },
+        {
+          "year": 2024,
+          "harvest_efm": 17096.0
+        }
+      ],
+      "recent_deforestation_trend": [
+        {
+          "year": 2020,
+          "deforestation_ha": 12.0
+        },
+        {
+          "year": 2021,
+          "deforestation_ha": 5.4
+        },
+        {
+          "year": 2022,
+          "deforestation_ha": 5.4
+        },
+        {
+          "year": 2023,
+          "deforestation_ha": 7.5
+        }
+      ]
+    }
+  }
+}
