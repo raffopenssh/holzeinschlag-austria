@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /api/
+
+Sitemap: https://holzeinschlag-at.exe.xyz:8000/sitemap.xml
