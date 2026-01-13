@@ -237,6 +237,58 @@
         }
         @keyframes spin { to { transform: rotate(360deg); } }
         
+        /* Search box */
+        .search-container {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            padding-left: 2.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.1);
+        }
+        .search-icon {
+            position: absolute;
+            left: 0.875rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            pointer-events: none;
+        }
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 100;
+            margin-top: 4px;
+        }
+        .search-result-item {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.15s;
+        }
+        .search-result-item:last-child { border-bottom: none; }
+        .search-result-item:hover { background: #e8f5e9; }
+        .search-result-name { font-weight: 500; font-size: 0.9rem; }
+        .search-result-state { font-size: 0.75rem; color: var(--text-light); }
+        
         /* Modal */
         .modal-overlay {
             position: fixed;
@@ -272,6 +324,100 @@
         }
         .modal-close:hover { color: var(--text); }
         
+        /* Municipality detail modal */
+        .muni-modal {
+            max-width: 500px;
+            width: 100%;
+        }
+        .muni-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        .muni-modal-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .muni-modal-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+        .muni-modal-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .muni-modal-nav-btn {
+            background: var(--bg);
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            width: 36px;
+            height: 32px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--primary);
+            transition: all 0.15s;
+        }
+        .muni-modal-nav-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .muni-modal-nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        .muni-modal-year {
+            flex: 1;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .muni-modal-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+        .muni-modal-stat {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+        .muni-modal-stat.full { grid-column: 1 / -1; }
+        .muni-modal-stat.highlight-red { background: #ffebee; }
+        .muni-modal-stat.highlight-orange { background: #fff3e0; }
+        .muni-modal-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+        .muni-modal-stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .muni-modal-stat-value.red { color: #c0392b; }
+        .muni-modal-stat-value.orange { color: #e65100; }
+        .muni-modal-stat-unit {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+        .muni-modal-footer {
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+        
         @media (max-width: 768px) {
             .app-container { flex-direction: column; }
             .sidebar { width: 100%; height: auto; max-height: 45vh; }
@@ -289,6 +435,27 @@
             </div>
             
             <div class="sidebar-content">
+                <!-- Search box -->
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" 
+                           class="search-input" 
+                           placeholder="Gemeinde suchen..."
+                           x-model="searchQuery"
+                           @input="onSearchInput()"
+                           @focus="showSearchResults = searchQuery.length >= 2"
+                           @blur="setTimeout(() => showSearchResults = false, 200)"
+                           @keydown.escape="showSearchResults = false; searchQuery = ''">
+                    <div class="search-results" x-show="showSearchResults && searchResults.length > 0" x-cloak>
+                        <template x-for="result in searchResults" :key="result.iso">
+                            <div class="search-result-item" @mousedown="selectSearchResult(result)">
+                                <div class="search-result-name" x-text="result.name"></div>
+                                <div class="search-result-state" x-text="result.state"></div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                
                 <!-- Year toggle buttons -->
                 <div class="year-toggles">
                     <template x-for="year in availableYears" :key="year">
@@ -401,6 +568,76 @@
             </div>
         </div>
         
+        <!-- Municipality Detail Modal -->
+        <div class="modal-overlay" x-show="showMuniModal" x-cloak @click.self="closeMuniModal()">
+            <div class="modal muni-modal" @click.stop>
+                <div class="muni-modal-header">
+                    <div>
+                        <div class="muni-modal-title" x-text="modalMuniData?.name"></div>
+                        <div class="muni-modal-subtitle" x-text="modalMuniData?.state"></div>
+                    </div>
+                    <button class="modal-close" @click="closeMuniModal()">&times;</button>
+                </div>
+                
+                <div class="muni-modal-nav">
+                    <button class="muni-modal-nav-btn" 
+                            :disabled="!canGoPrevYear" 
+                            @click="prevYearModal()">◀</button>
+                    <div class="muni-modal-year" x-text="selectedYear"></div>
+                    <button class="muni-modal-nav-btn" 
+                            :disabled="!canGoNextYear" 
+                            @click="nextYearModal()">▶</button>
+                </div>
+                
+                <div class="muni-modal-stats">
+                    <div class="muni-modal-stat full">
+                        <div class="muni-modal-stat-label">🛰️ Waldverlust (Satellitendaten)</div>
+                        <div class="muni-modal-stat-value">
+                            <span x-text="formatNumber(modalMuniData?.lossArea)"></span>
+                            <span class="muni-modal-stat-unit">ha</span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat">
+                        <div class="muni-modal-stat-label">🪵 Gesch. Einschlag</div>
+                        <div class="muni-modal-stat-value">
+                            <span x-text="formatNumber(modalMuniData?.harvest)"></span>
+                            <span class="muni-modal-stat-unit">Efm</span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat">
+                        <div class="muni-modal-stat-label">💰 Holzwert</div>
+                        <div class="muni-modal-stat-value">
+                            €<span x-text="formatNumber(modalMuniData?.value)"></span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat highlight-red">
+                        <div class="muni-modal-stat-label">🏭 CO₂-Emissionen</div>
+                        <div class="muni-modal-stat-value red">
+                            <span x-text="formatNumber(modalMuniData?.co2)"></span>
+                            <span class="muni-modal-stat-unit">t</span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat highlight-orange">
+                        <div class="muni-modal-stat-label">💸 ETS-Haftung</div>
+                        <div class="muni-modal-stat-value orange">
+                            €<span x-text="formatNumber(modalMuniData?.ets)"></span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat">
+                        <div class="muni-modal-stat-label">👥 ETS pro Kopf</div>
+                        <div class="muni-modal-stat-value">
+                            €<span x-text="formatNumber(modalMuniData?.etsPc)"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="muni-modal-footer">
+                    <span>Bevölkerung: <span x-text="formatNumber(modalMuniData?.population)"></span></span>
+                    <span>ETS-Preis: €<span x-text="yearSummary?.ets_price_eur_tco2"></span>/tCO₂</span>
+                </div>
+            </div>
+        </div>
+        
         <!-- Methods Modal -->
         <div class="modal-overlay" x-show="showMethodsModal" x-cloak @click.self="showMethodsModal = false">
             <div class="modal">
@@ -466,7 +703,14 @@
                 loading: true,
                 loadingYear: null,
                 showMethodsModal: false,
+                showMuniModal: false,
+                modalMuniIso: null,
                 visibleIsos: new Set(),  // ISOs visible in current map extent
+                
+                // Search
+                searchQuery: '',
+                searchResults: [],
+                showSearchResults: false,
                 
                 // Map
                 map: null,
@@ -483,6 +727,38 @@
                 
                 get currentYearData() {
                     return this.yearData[this.selectedYear] || {};
+                },
+                
+                get modalMuniData() {
+                    if (!this.modalMuniIso) return null;
+                    const d = this.currentYearData[this.modalMuniIso];
+                    if (!d) return {
+                        name: this.lookup?.names?.[this.modalMuniIso] || this.modalMuniIso,
+                        state: this.lookup?.states?.[this.modalMuniIso] || '',
+                        population: this.lookup?.population?.[this.modalMuniIso] || 0,
+                        lossArea: 0, harvest: 0, value: 0, co2: 0, ets: 0, etsPc: 0
+                    };
+                    return {
+                        name: this.lookup?.names?.[this.modalMuniIso] || this.modalMuniIso,
+                        state: this.lookup?.states?.[this.modalMuniIso] || '',
+                        population: this.lookup?.population?.[this.modalMuniIso] || 0,
+                        lossArea: Math.round(d[1] || 0),
+                        harvest: Math.round(d[2] || 0),
+                        value: Math.round(d[3] || 0),
+                        co2: Math.round(d[4] || 0),
+                        ets: Math.round(d[5] || 0),
+                        etsPc: Math.round(d[6] || 0)
+                    };
+                },
+                
+                get canGoPrevYear() {
+                    const idx = this.availableYears.indexOf(this.selectedYear);
+                    return idx > 0;
+                },
+                
+                get canGoNextYear() {
+                    const idx = this.availableYears.indexOf(this.selectedYear);
+                    return idx < this.availableYears.length - 1;
                 },
                 
                 get sortedMunicipalities() {
@@ -526,6 +802,84 @@
                     
                     this.visibleIsos = visible;
                     this.displayCount = 20; // Reset when view changes
+                },
+                
+                // Search functionality
+                onSearchInput() {
+                    const query = this.searchQuery.trim().toLowerCase();
+                    if (query.length < 2) {
+                        this.searchResults = [];
+                        this.showSearchResults = false;
+                        return;
+                    }
+                    
+                    const names = this.lookup?.names || {};
+                    const states = this.lookup?.states || {};
+                    
+                    this.searchResults = Object.entries(names)
+                        .filter(([iso, name]) => name.toLowerCase().includes(query))
+                        .slice(0, 10)
+                        .map(([iso, name]) => ({
+                            iso,
+                            name,
+                            state: states[iso] || ''
+                        }));
+                    
+                    this.showSearchResults = this.searchResults.length > 0;
+                },
+                
+                selectSearchResult(result) {
+                    this.searchQuery = '';
+                    this.showSearchResults = false;
+                    this.selectedMuni = result.iso;
+                    this.openMuniModal(result.iso);
+                    
+                    // Zoom to municipality
+                    if (this.gemeindenLayer) {
+                        this.gemeindenLayer.eachLayer((layer) => {
+                            if (layer.feature?.properties?.iso === result.iso) {
+                                const bounds = layer.getBounds();
+                                this.map.flyToBounds(bounds, { 
+                                    maxZoom: 11, 
+                                    padding: [50, 50],
+                                    duration: 1.0
+                                });
+                            }
+                        });
+                    }
+                },
+                
+                // Modal functionality
+                openMuniModal(iso) {
+                    this.modalMuniIso = iso;
+                    this.showMuniModal = true;
+                    this.closeAllPopups();
+                },
+                
+                closeMuniModal() {
+                    this.showMuniModal = false;
+                    this.modalMuniIso = null;
+                },
+                
+                async prevYearModal() {
+                    const idx = this.availableYears.indexOf(this.selectedYear);
+                    if (idx > 0) {
+                        await this.selectYear(this.availableYears[idx - 1]);
+                    }
+                },
+                
+                async nextYearModal() {
+                    const idx = this.availableYears.indexOf(this.selectedYear);
+                    if (idx < this.availableYears.length - 1) {
+                        await this.selectYear(this.availableYears[idx + 1]);
+                    }
+                },
+                
+                closeAllPopups() {
+                    if (this.map) {
+                        this.map.closePopup();
+                    }
+                    this.activePopup = null;
                 },
                 
                 async init() {
@@ -688,7 +1042,7 @@
                 onMuniClick(feature, layer) {
                     const iso = feature.properties.iso;
                     this.selectedMuni = iso;
-                    this.openPopupFor(iso, layer);
+                    this.openMuniModal(iso);
                 },
                 
                 buildPopupContent(iso) {
@@ -767,13 +1121,17 @@
                 
                 selectMuni(iso) {
                     this.selectedMuni = iso;
+                    this.openMuniModal(iso);
                     
                     if (this.gemeindenLayer) {
                         this.gemeindenLayer.eachLayer((layer) => {
                             if (layer.feature?.properties?.iso === iso) {
                                 const bounds = layer.getBounds();
-                                this.map.fitBounds(bounds, { maxZoom: 11, padding: [50, 50] });
-                                this.openPopupFor(iso, layer);
+                                this.map.flyToBounds(bounds, { 
+                                    maxZoom: 11, 
+                                    padding: [50, 50],
+                                    duration: 1.0
+                                });
                             }
                         });
                     }
