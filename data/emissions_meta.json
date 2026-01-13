@@ -26,257 +26,257 @@
   ],
   "summary": {
     "2001": {
-      "total_loss_pixels": 132542,
-      "total_loss_area_ha": 11928.8,
+      "total_loss_pixels": 133494,
+      "total_loss_area_ha": 12014.5,
       "total_harvest_efm": 14499999.0,
       "total_value_eur": 1087499942.0,
       "ets_price_eur_tco2": 0,
       "timber_price_eur_efm": 75,
       "total_co2_tonnes": 6889041.0,
       "total_ets_liability_eur": 0.0,
-      "gemeinde_count": 1645
+      "gemeinde_count": 1711
     },
     "2002": {
-      "total_loss_pixels": 208288,
-      "total_loss_area_ha": 18745.9,
+      "total_loss_pixels": 209286,
+      "total_loss_area_ha": 18835.7,
       "total_harvest_efm": 14799999.0,
       "total_value_eur": 1035999945.0,
       "ets_price_eur_tco2": 0,
       "timber_price_eur_efm": 70,
       "total_co2_tonnes": 7031573.0,
       "total_ets_liability_eur": 0.0,
-      "gemeinde_count": 1826
+      "gemeinde_count": 1884
     },
     "2003": {
-      "total_loss_pixels": 277342,
-      "total_loss_area_ha": 24960.8,
+      "total_loss_pixels": 277541,
+      "total_loss_area_ha": 24978.7,
       "total_harvest_efm": 16199999.0,
       "total_value_eur": 1166399938.0,
       "ets_price_eur_tco2": 0,
       "timber_price_eur_efm": 72,
       "total_co2_tonnes": 7696722.0,
       "total_ets_liability_eur": 0.0,
-      "gemeinde_count": 1528
+      "gemeinde_count": 1548
     },
     "2004": {
-      "total_loss_pixels": 277590,
-      "total_loss_area_ha": 24983.1,
+      "total_loss_pixels": 280261,
+      "total_loss_area_ha": 25223.5,
       "total_harvest_efm": 16499999.0,
       "total_value_eur": 1253999933.0,
       "ets_price_eur_tco2": 0,
       "timber_price_eur_efm": 76,
       "total_co2_tonnes": 7839254.0,
       "total_ets_liability_eur": 0.0,
-      "gemeinde_count": 1776
+      "gemeinde_count": 1844
     },
     "2005": {
-      "total_loss_pixels": 413829,
-      "total_loss_area_ha": 37244.6,
+      "total_loss_pixels": 415933,
+      "total_loss_area_ha": 37434.0,
       "total_harvest_efm": 16099999.0,
       "total_value_eur": 1287999931.0,
       "ets_price_eur_tco2": 22,
       "timber_price_eur_efm": 80,
       "total_co2_tonnes": 7649211.0,
       "total_ets_liability_eur": 168282653.0,
-      "gemeinde_count": 1876
+      "gemeinde_count": 1942
     },
     "2006": {
-      "total_loss_pixels": 239378,
-      "total_loss_area_ha": 21544.0,
+      "total_loss_pixels": 241655,
+      "total_loss_area_ha": 21749.0,
       "total_harvest_efm": 16799999.0,
       "total_value_eur": 1377599926.0,
       "ets_price_eur_tco2": 17,
       "timber_price_eur_efm": 82,
       "total_co2_tonnes": 7981786.0,
       "total_ets_liability_eur": 135690361.0,
-      "gemeinde_count": 1782
+      "gemeinde_count": 1852
     },
     "2007": {
-      "total_loss_pixels": 609339,
-      "total_loss_area_ha": 54840.5,
+      "total_loss_pixels": 610528,
+      "total_loss_area_ha": 54947.5,
       "total_harvest_efm": 21099999.0,
       "total_value_eur": 1898999898.0,
       "ets_price_eur_tco2": 0.7,
       "timber_price_eur_efm": 90,
       "total_co2_tonnes": 10024743.0,
       "total_ets_liability_eur": 7017320.0,
-      "gemeinde_count": 1792
+      "gemeinde_count": 1855
     },
     "2008": {
-      "total_loss_pixels": 512872,
-      "total_loss_area_ha": 46158.5,
+      "total_loss_pixels": 515370,
+      "total_loss_area_ha": 46383.3,
       "total_harvest_efm": 19199999.0,
       "total_value_eur": 1823999902.0,
       "ets_price_eur_tco2": 22,
       "timber_price_eur_efm": 95,
       "total_co2_tonnes": 9122041.0,
       "total_ets_liability_eur": 200684903.0,
-      "gemeinde_count": 1764
+      "gemeinde_count": 1834
     },
     "2009": {
-      "total_loss_pixels": 303250,
-      "total_loss_area_ha": 27292.5,
+      "total_loss_pixels": 305379,
+      "total_loss_area_ha": 27484.1,
       "total_harvest_efm": 16299999.0,
       "total_value_eur": 1140999939.0,
       "ets_price_eur_tco2": 13,
       "timber_price_eur_efm": 70,
       "total_co2_tonnes": 7744233.0,
       "total_ets_liability_eur": 100675026.0,
-      "gemeinde_count": 1847
+      "gemeinde_count": 1913
     },
     "2010": {
-      "total_loss_pixels": 318728,
-      "total_loss_area_ha": 28685.5,
+      "total_loss_pixels": 320969,
+      "total_loss_area_ha": 28887.2,
       "total_harvest_efm": 17499999.0,
       "total_value_eur": 1434999923.0,
       "ets_price_eur_tco2": 15,
       "timber_price_eur_efm": 82,
       "total_co2_tonnes": 8314360.0,
       "total_ets_liability_eur": 124715405.0,
-      "gemeinde_count": 1812
+      "gemeinde_count": 1882
     },
     "2011": {
-      "total_loss_pixels": 345774,
-      "total_loss_area_ha": 31119.7,
+      "total_loss_pixels": 347032,
+      "total_loss_area_ha": 31232.9,
       "total_harvest_efm": 18695670.0,
       "total_value_eur": 1757392980.0,
       "ets_price_eur_tco2": 15,
       "timber_price_eur_efm": 94,
       "total_co2_tonnes": 8882431.0,
       "total_ets_liability_eur": 133236467.0,
-      "gemeinde_count": 1813
+      "gemeinde_count": 1874
     },
     "2012": {
-      "total_loss_pixels": 214153,
-      "total_loss_area_ha": 19273.8,
+      "total_loss_pixels": 216051,
+      "total_loss_area_ha": 19444.6,
       "total_harvest_efm": 18020681.0,
       "total_value_eur": 1729985376.0,
       "ets_price_eur_tco2": 8,
       "timber_price_eur_efm": 96,
       "total_co2_tonnes": 8554058.0,
       "total_ets_liability_eur": 68432466.0,
-      "gemeinde_count": 1820
+      "gemeinde_count": 1887
     },
     "2013": {
-      "total_loss_pixels": 150831,
-      "total_loss_area_ha": 13574.8,
+      "total_loss_pixels": 152227,
+      "total_loss_area_ha": 13700.4,
       "total_harvest_efm": 17554617.0,
       "total_value_eur": 1702797800.0,
       "ets_price_eur_tco2": 5,
       "timber_price_eur_efm": 97,
       "total_co2_tonnes": 8319293.0,
       "total_ets_liability_eur": 41596465.0,
-      "gemeinde_count": 1797
+      "gemeinde_count": 1870
     },
     "2014": {
-      "total_loss_pixels": 192735,
-      "total_loss_area_ha": 17346.2,
+      "total_loss_pixels": 195139,
+      "total_loss_area_ha": 17562.5,
       "total_harvest_efm": 17088552.0,
       "total_value_eur": 1674678096.0,
       "ets_price_eur_tco2": 6,
       "timber_price_eur_efm": 98,
       "total_co2_tonnes": 8084528.0,
       "total_ets_liability_eur": 48507166.0,
-      "gemeinde_count": 1831
+      "gemeinde_count": 1900
     },
     "2015": {
-      "total_loss_pixels": 153809,
-      "total_loss_area_ha": 13842.8,
+      "total_loss_pixels": 154617,
+      "total_loss_area_ha": 13915.5,
       "total_harvest_efm": 17274741.0,
       "total_value_eur": 1589276141.0,
       "ets_price_eur_tco2": 8,
       "timber_price_eur_efm": 92,
       "total_co2_tonnes": 8171534.0,
       "total_ets_liability_eur": 65372270.0,
-      "gemeinde_count": 1659
+      "gemeinde_count": 1706
     },
     "2016": {
-      "total_loss_pixels": 333059,
-      "total_loss_area_ha": 29975.3,
+      "total_loss_pixels": 335588,
+      "total_loss_area_ha": 30202.9,
       "total_harvest_efm": 17460929.0,
       "total_value_eur": 1571483640.0,
       "ets_price_eur_tco2": 5,
       "timber_price_eur_efm": 90,
       "total_co2_tonnes": 8258540.0,
       "total_ets_liability_eur": 41292699.0,
-      "gemeinde_count": 1843
+      "gemeinde_count": 1905
     },
     "2017": {
-      "total_loss_pixels": 358148,
-      "total_loss_area_ha": 32233.3,
+      "total_loss_pixels": 360970,
+      "total_loss_area_ha": 32487.3,
       "total_harvest_efm": 17647118.0,
       "total_value_eur": 1605887738.0,
       "ets_price_eur_tco2": 6,
       "timber_price_eur_efm": 91,
       "total_co2_tonnes": 8345546.0,
       "total_ets_liability_eur": 50073276.0,
-      "gemeinde_count": 1862
+      "gemeinde_count": 1924
     },
     "2018": {
-      "total_loss_pixels": 509694,
-      "total_loss_area_ha": 45872.5,
+      "total_loss_pixels": 512381,
+      "total_loss_area_ha": 46114.3,
       "total_harvest_efm": 19192060.0,
       "total_value_eur": 1688901280.0,
       "ets_price_eur_tco2": 16,
       "timber_price_eur_efm": 88,
       "total_co2_tonnes": 9072030.0,
       "total_ets_liability_eur": 145152483.0,
-      "gemeinde_count": 1795
+      "gemeinde_count": 1844
     },
     "2019": {
-      "total_loss_pixels": 653159,
-      "total_loss_area_ha": 58784.3,
+      "total_loss_pixels": 657608,
+      "total_loss_area_ha": 59184.7,
       "total_harvest_efm": 18903715.0,
       "total_value_eur": 1455586055.0,
       "ets_price_eur_tco2": 25,
       "timber_price_eur_efm": 77,
       "total_co2_tonnes": 8936429.0,
       "total_ets_liability_eur": 223410736.0,
-      "gemeinde_count": 1834
+      "gemeinde_count": 1891
     },
     "2020": {
-      "total_loss_pixels": 504206,
-      "total_loss_area_ha": 45378.5,
+      "total_loss_pixels": 506730,
+      "total_loss_area_ha": 45605.7,
       "total_harvest_efm": 16789570.0,
       "total_value_eur": 1225638610.0,
       "ets_price_eur_tco2": 25,
       "timber_price_eur_efm": 73,
       "total_co2_tonnes": 7936324.0,
       "total_ets_liability_eur": 198408098.0,
-      "gemeinde_count": 1816
+      "gemeinde_count": 1878
     },
     "2021": {
-      "total_loss_pixels": 323382,
-      "total_loss_area_ha": 29104.4,
+      "total_loss_pixels": 324787,
+      "total_loss_area_ha": 29230.8,
       "total_harvest_efm": 18420266.0,
       "total_value_eur": 1842026600.0,
       "ets_price_eur_tco2": 53,
       "timber_price_eur_efm": 100,
       "total_co2_tonnes": 8754476.0,
       "total_ets_liability_eur": 463987206.0,
-      "gemeinde_count": 1718
+      "gemeinde_count": 1774
     },
     "2022": {
-      "total_loss_pixels": 388880,
-      "total_loss_area_ha": 34999.2,
+      "total_loss_pixels": 390656,
+      "total_loss_area_ha": 35159.0,
       "total_harvest_efm": 19357935.0,
       "total_value_eur": 2187446655.0,
       "ets_price_eur_tco2": 81,
       "timber_price_eur_efm": 113,
       "total_co2_tonnes": 9187995.0,
       "total_ets_liability_eur": 744227622.0,
-      "gemeinde_count": 1792
+      "gemeinde_count": 1847
     },
     "2023": {
-      "total_loss_pixels": 516949,
-      "total_loss_area_ha": 46525.4,
+      "total_loss_pixels": 519317,
+      "total_loss_area_ha": 46738.5,
       "total_harvest_efm": 19018005.0,
       "total_value_eur": 1958854515.0,
       "ets_price_eur_tco2": 85,
       "timber_price_eur_efm": 103,
       "total_co2_tonnes": 9029898.0,
       "total_ets_liability_eur": 767541311.0,
-      "gemeinde_count": 1773
+      "gemeinde_count": 1829
     }
   },
   "methodology": {

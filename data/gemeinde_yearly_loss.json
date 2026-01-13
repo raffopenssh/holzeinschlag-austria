@@ -28,96 +28,96 @@
   ],
   "summary": {
     "2001": {
-      "total_pixels": 132542,
-      "total_area_ha": 11928.78
+      "total_pixels": 133494,
+      "total_area_ha": 12014.46
     },
     "2002": {
-      "total_pixels": 208288,
-      "total_area_ha": 18745.92
+      "total_pixels": 209286,
+      "total_area_ha": 18835.74
     },
     "2003": {
-      "total_pixels": 277342,
-      "total_area_ha": 24960.78
+      "total_pixels": 277541,
+      "total_area_ha": 24978.69
     },
     "2004": {
-      "total_pixels": 277590,
-      "total_area_ha": 24983.1
+      "total_pixels": 280261,
+      "total_area_ha": 25223.49
     },
     "2005": {
-      "total_pixels": 413829,
-      "total_area_ha": 37244.61
+      "total_pixels": 415933,
+      "total_area_ha": 37433.97
     },
     "2006": {
-      "total_pixels": 239378,
-      "total_area_ha": 21544.02
+      "total_pixels": 241655,
+      "total_area_ha": 21748.95
     },
     "2007": {
-      "total_pixels": 609339,
-      "total_area_ha": 54840.51
+      "total_pixels": 610528,
+      "total_area_ha": 54947.52
     },
     "2008": {
-      "total_pixels": 512872,
-      "total_area_ha": 46158.48
+      "total_pixels": 515370,
+      "total_area_ha": 46383.3
     },
     "2009": {
-      "total_pixels": 303250,
-      "total_area_ha": 27292.5
+      "total_pixels": 305379,
+      "total_area_ha": 27484.11
     },
     "2010": {
-      "total_pixels": 318728,
-      "total_area_ha": 28685.52
+      "total_pixels": 320969,
+      "total_area_ha": 28887.21
     },
     "2011": {
-      "total_pixels": 345774,
-      "total_area_ha": 31119.66
+      "total_pixels": 347032,
+      "total_area_ha": 31232.88
     },
     "2012": {
-      "total_pixels": 214153,
-      "total_area_ha": 19273.77
+      "total_pixels": 216051,
+      "total_area_ha": 19444.59
     },
     "2013": {
-      "total_pixels": 150831,
-      "total_area_ha": 13574.79
+      "total_pixels": 152227,
+      "total_area_ha": 13700.43
     },
     "2014": {
-      "total_pixels": 192735,
-      "total_area_ha": 17346.15
+      "total_pixels": 195139,
+      "total_area_ha": 17562.51
     },
     "2015": {
-      "total_pixels": 153809,
-      "total_area_ha": 13842.81
+      "total_pixels": 154617,
+      "total_area_ha": 13915.53
     },
     "2016": {
-      "total_pixels": 333059,
-      "total_area_ha": 29975.31
+      "total_pixels": 335588,
+      "total_area_ha": 30202.92
     },
     "2017": {
-      "total_pixels": 358148,
-      "total_area_ha": 32233.32
+      "total_pixels": 360970,
+      "total_area_ha": 32487.3
     },
     "2018": {
-      "total_pixels": 509694,
-      "total_area_ha": 45872.46
+      "total_pixels": 512381,
+      "total_area_ha": 46114.29
     },
     "2019": {
-      "total_pixels": 653159,
-      "total_area_ha": 58784.31
+      "total_pixels": 657608,
+      "total_area_ha": 59184.72
     },
     "2020": {
-      "total_pixels": 504206,
-      "total_area_ha": 45378.54
+      "total_pixels": 506730,
+      "total_area_ha": 45605.7
     },
     "2021": {
-      "total_pixels": 323382,
-      "total_area_ha": 29104.38
+      "total_pixels": 324787,
+      "total_area_ha": 29230.83
     },
     "2022": {
-      "total_pixels": 388880,
-      "total_area_ha": 34999.2
+      "total_pixels": 390656,
+      "total_area_ha": 35159.04
     },
     "2023": {
-      "total_pixels": 516949,
-      "total_area_ha": 46525.41
+      "total_pixels": 519317,
+      "total_area_ha": 46738.53
     }
   },
   "gemeinden": {
@@ -180111,84 +180111,703 @@
       "name": "Bartholom\u00e4berg",
       "state": "Vorarlberg",
       "iso": "80101",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 885,
+      "total_area_ha": 79.65,
+      "years": {
+        "2001": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2003": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2004": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2005": {
+          "pixels": 57,
+          "area_ha": 5.13
+        },
+        "2006": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2007": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2008": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2009": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2010": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2011": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2012": {
+          "pixels": 150,
+          "area_ha": 13.5
+        },
+        "2013": {
+          "pixels": 40,
+          "area_ha": 3.6
+        },
+        "2014": {
+          "pixels": 134,
+          "area_ha": 12.06
+        },
+        "2015": {
+          "pixels": 49,
+          "area_ha": 4.41
+        },
+        "2016": {
+          "pixels": 55,
+          "area_ha": 4.95
+        },
+        "2017": {
+          "pixels": 82,
+          "area_ha": 7.38
+        },
+        "2018": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2019": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2020": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2021": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2022": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2023": {
+          "pixels": 25,
+          "area_ha": 2.25
+        }
+      }
     },
     "80102": {
       "name": "Blons",
       "state": "Vorarlberg",
       "iso": "80102",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 319,
+      "total_area_ha": 28.71,
+      "years": {
+        "2001": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2002": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2003": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2004": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2005": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2007": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2008": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2009": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2010": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2011": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2012": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2013": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2014": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2015": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2016": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2017": {
+          "pixels": 36,
+          "area_ha": 3.24
+        },
+        "2018": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2019": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2020": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2021": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2022": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2023": {
+          "pixels": 20,
+          "area_ha": 1.8
+        }
+      }
     },
     "80103": {
       "name": "Bludenz",
       "state": "Vorarlberg",
       "iso": "80103",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 1278,
+      "total_area_ha": 115.02,
+      "years": {
+        "2001": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2002": {
+          "pixels": 55,
+          "area_ha": 4.95
+        },
+        "2004": {
+          "pixels": 110,
+          "area_ha": 9.9
+        },
+        "2005": {
+          "pixels": 70,
+          "area_ha": 6.3
+        },
+        "2006": {
+          "pixels": 86,
+          "area_ha": 7.74
+        },
+        "2007": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2008": {
+          "pixels": 40,
+          "area_ha": 3.6
+        },
+        "2009": {
+          "pixels": 57,
+          "area_ha": 5.13
+        },
+        "2010": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2011": {
+          "pixels": 58,
+          "area_ha": 5.22
+        },
+        "2012": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2013": {
+          "pixels": 59,
+          "area_ha": 5.31
+        },
+        "2014": {
+          "pixels": 92,
+          "area_ha": 8.28
+        },
+        "2015": {
+          "pixels": 28,
+          "area_ha": 2.52
+        },
+        "2016": {
+          "pixels": 108,
+          "area_ha": 9.72
+        },
+        "2017": {
+          "pixels": 89,
+          "area_ha": 8.01
+        },
+        "2018": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2019": {
+          "pixels": 99,
+          "area_ha": 8.91
+        },
+        "2020": {
+          "pixels": 121,
+          "area_ha": 10.89
+        },
+        "2021": {
+          "pixels": 57,
+          "area_ha": 5.13
+        },
+        "2022": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2023": {
+          "pixels": 11,
+          "area_ha": 0.99
+        }
+      }
     },
     "80104": {
       "name": "Bludesch",
       "state": "Vorarlberg",
       "iso": "80104",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 1033,
+      "total_area_ha": 92.97,
+      "years": {
+        "2001": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2002": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2003": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2004": {
+          "pixels": 40,
+          "area_ha": 3.6
+        },
+        "2005": {
+          "pixels": 72,
+          "area_ha": 6.48
+        },
+        "2006": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2007": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2008": {
+          "pixels": 58,
+          "area_ha": 5.22
+        },
+        "2009": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2010": {
+          "pixels": 36,
+          "area_ha": 3.24
+        },
+        "2011": {
+          "pixels": 93,
+          "area_ha": 8.37
+        },
+        "2012": {
+          "pixels": 173,
+          "area_ha": 15.57
+        },
+        "2013": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2014": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2015": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2016": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2017": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2018": {
+          "pixels": 80,
+          "area_ha": 7.2
+        },
+        "2019": {
+          "pixels": 182,
+          "area_ha": 16.38
+        },
+        "2020": {
+          "pixels": 68,
+          "area_ha": 6.12
+        },
+        "2021": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2022": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2023": {
+          "pixels": 31,
+          "area_ha": 2.79
+        }
+      }
     },
     "80105": {
       "name": "Brand",
       "state": "Vorarlberg",
       "iso": "80105",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 287,
+      "total_area_ha": 25.83,
+      "years": {
+        "2001": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2004": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2005": {
+          "pixels": 53,
+          "area_ha": 4.77
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2007": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2008": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2009": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2010": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2011": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2012": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2013": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2014": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2016": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2017": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2018": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2019": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2020": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2021": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2022": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2023": {
+          "pixels": 55,
+          "area_ha": 4.95
+        }
+      }
     },
     "80106": {
       "name": "B\u00fcrs",
       "state": "Vorarlberg",
       "iso": "80106",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 614,
+      "total_area_ha": 55.26,
+      "years": {
+        "2001": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2002": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2004": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2005": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2007": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2008": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2009": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2010": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2011": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2012": {
+          "pixels": 34,
+          "area_ha": 3.06
+        },
+        "2013": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2014": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2015": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2016": {
+          "pixels": 55,
+          "area_ha": 4.95
+        },
+        "2017": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2018": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2019": {
+          "pixels": 86,
+          "area_ha": 7.74
+        },
+        "2020": {
+          "pixels": 67,
+          "area_ha": 6.03
+        },
+        "2021": {
+          "pixels": 43,
+          "area_ha": 3.87
+        },
+        "2022": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2023": {
+          "pixels": 47,
+          "area_ha": 4.23
+        }
+      }
     },
     "80107": {
       "name": "B\u00fcrserberg",
       "state": "Vorarlberg",
       "iso": "80107",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 747,
+      "total_area_ha": 67.23,
+      "years": {
+        "2001": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2002": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2004": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2005": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2006": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2007": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2008": {
+          "pixels": 47,
+          "area_ha": 4.23
+        },
+        "2009": {
+          "pixels": 133,
+          "area_ha": 11.97
+        },
+        "2010": {
+          "pixels": 26,
+          "area_ha": 2.34
+        },
+        "2011": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2012": {
+          "pixels": 114,
+          "area_ha": 10.26
+        },
+        "2013": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2014": {
+          "pixels": 81,
+          "area_ha": 7.29
+        },
+        "2015": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2016": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2018": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2019": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2020": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2021": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2022": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2023": {
+          "pixels": 62,
+          "area_ha": 5.58
+        }
+      }
     },
     "80108": {
       "name": "Dalaas",
       "state": "Vorarlberg",
       "iso": "80108",
-      "total_pixels": 269,
-      "total_area_ha": 24.21,
+      "total_pixels": 540,
+      "total_area_ha": 48.6,
       "years": {
         "2001": {
-          "pixels": 1,
-          "area_ha": 0.09
+          "pixels": 12,
+          "area_ha": 1.08
         },
         "2002": {
-          "pixels": 33,
-          "area_ha": 2.97
+          "pixels": 43,
+          "area_ha": 3.87
         },
         "2003": {
           "pixels": 2,
           "area_ha": 0.18
         },
         "2004": {
-          "pixels": 23,
-          "area_ha": 2.07
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2005": {
+          "pixels": 11,
+          "area_ha": 0.99
         },
         "2006": {
-          "pixels": 27,
-          "area_ha": 2.43
+          "pixels": 48,
+          "area_ha": 4.32
         },
         "2007": {
           "pixels": 10,
@@ -180199,52 +180818,64 @@
           "area_ha": 1.62
         },
         "2009": {
-          "pixels": 8,
-          "area_ha": 0.72
-        },
-        "2010": {
-          "pixels": 6,
-          "area_ha": 0.54
-        },
-        "2011": {
           "pixels": 15,
           "area_ha": 1.35
         },
-        "2012": {
-          "pixels": 13,
-          "area_ha": 1.17
+        "2010": {
+          "pixels": 11,
+          "area_ha": 0.99
         },
-        "2014": {
+        "2011": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2012": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2013": {
           "pixels": 4,
           "area_ha": 0.36
         },
+        "2014": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
         "2015": {
-          "pixels": 16,
-          "area_ha": 1.44
+          "pixels": 20,
+          "area_ha": 1.8
         },
         "2016": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2017": {
+          "pixels": 58,
+          "area_ha": 5.22
+        },
+        "2018": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2019": {
+          "pixels": 58,
+          "area_ha": 5.22
+        },
+        "2020": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2021": {
           "pixels": 8,
           "area_ha": 0.72
         },
-        "2017": {
+        "2022": {
           "pixels": 41,
           "area_ha": 3.69
         },
-        "2018": {
-          "pixels": 6,
-          "area_ha": 0.54
-        },
-        "2019": {
-          "pixels": 16,
-          "area_ha": 1.44
-        },
-        "2021": {
-          "pixels": 3,
-          "area_ha": 0.27
-        },
-        "2022": {
-          "pixels": 19,
-          "area_ha": 1.71
+        "2023": {
+          "pixels": 24,
+          "area_ha": 2.16
         }
       }
     },
@@ -180252,16 +180883,105 @@
       "name": "Fontanella",
       "state": "Vorarlberg",
       "iso": "80109",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 760,
+      "total_area_ha": 68.4,
+      "years": {
+        "2001": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2002": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2004": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2005": {
+          "pixels": 26,
+          "area_ha": 2.34
+        },
+        "2006": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2007": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2008": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2009": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2010": {
+          "pixels": 43,
+          "area_ha": 3.87
+        },
+        "2011": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2012": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2013": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2014": {
+          "pixels": 75,
+          "area_ha": 6.75
+        },
+        "2015": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2016": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2017": {
+          "pixels": 38,
+          "area_ha": 3.42
+        },
+        "2018": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2019": {
+          "pixels": 255,
+          "area_ha": 22.95
+        },
+        "2020": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2021": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2022": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2023": {
+          "pixels": 20,
+          "area_ha": 1.8
+        }
+      }
     },
     "80110": {
       "name": "Gaschurn",
       "state": "Vorarlberg",
       "iso": "80110",
-      "total_pixels": 1814,
-      "total_area_ha": 163.26,
+      "total_pixels": 1817,
+      "total_area_ha": 163.53,
       "years": {
         "2001": {
           "pixels": 7,
@@ -180340,8 +181060,8 @@
           "area_ha": 21.24
         },
         "2020": {
-          "pixels": 129,
-          "area_ha": 11.61
+          "pixels": 132,
+          "area_ha": 11.88
         },
         "2021": {
           "pixels": 111,
@@ -180361,9 +181081,94 @@
       "name": "Innerbraz",
       "state": "Vorarlberg",
       "iso": "80111",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 658,
+      "total_area_ha": 59.22,
+      "years": {
+        "2001": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2002": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2004": {
+          "pixels": 52,
+          "area_ha": 4.68
+        },
+        "2005": {
+          "pixels": 46,
+          "area_ha": 4.14
+        },
+        "2006": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2007": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2008": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2009": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2010": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2012": {
+          "pixels": 79,
+          "area_ha": 7.11
+        },
+        "2013": {
+          "pixels": 83,
+          "area_ha": 7.47
+        },
+        "2014": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2015": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2016": {
+          "pixels": 57,
+          "area_ha": 5.13
+        },
+        "2017": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2018": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2019": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2020": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2021": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2022": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2023": {
+          "pixels": 20,
+          "area_ha": 1.8
+        }
+      }
     },
     "80112": {
       "name": "Kl\u00f6sterle",
@@ -180515,132 +181320,654 @@
       "name": "Lor\u00fcns",
       "state": "Vorarlberg",
       "iso": "80114",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 298,
+      "total_area_ha": 26.82,
+      "years": {
+        "2002": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2003": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2004": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2005": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2007": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2009": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2010": {
+          "pixels": 56,
+          "area_ha": 5.04
+        },
+        "2011": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2012": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2013": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2014": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2016": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2017": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2019": {
+          "pixels": 36,
+          "area_ha": 3.24
+        },
+        "2020": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2021": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2022": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2023": {
+          "pixels": 10,
+          "area_ha": 0.9
+        }
+      }
     },
     "80115": {
       "name": "Ludesch",
       "state": "Vorarlberg",
       "iso": "80115",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 934,
+      "total_area_ha": 84.06,
+      "years": {
+        "2001": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2002": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2003": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2004": {
+          "pixels": 71,
+          "area_ha": 6.39
+        },
+        "2005": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2006": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2007": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2008": {
+          "pixels": 68,
+          "area_ha": 6.12
+        },
+        "2009": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2010": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2011": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2012": {
+          "pixels": 96,
+          "area_ha": 8.64
+        },
+        "2013": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2014": {
+          "pixels": 56,
+          "area_ha": 5.04
+        },
+        "2015": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2016": {
+          "pixels": 142,
+          "area_ha": 12.78
+        },
+        "2017": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2018": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2019": {
+          "pixels": 96,
+          "area_ha": 8.64
+        },
+        "2020": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2021": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2022": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2023": {
+          "pixels": 10,
+          "area_ha": 0.9
+        }
+      }
     },
     "80116": {
       "name": "Nenzing",
       "state": "Vorarlberg",
       "iso": "80116",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 2066,
+      "total_area_ha": 185.94,
+      "years": {
+        "2001": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2002": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2003": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2004": {
+          "pixels": 111,
+          "area_ha": 9.99
+        },
+        "2005": {
+          "pixels": 50,
+          "area_ha": 4.5
+        },
+        "2006": {
+          "pixels": 115,
+          "area_ha": 10.35
+        },
+        "2007": {
+          "pixels": 146,
+          "area_ha": 13.14
+        },
+        "2008": {
+          "pixels": 176,
+          "area_ha": 15.84
+        },
+        "2009": {
+          "pixels": 90,
+          "area_ha": 8.1
+        },
+        "2010": {
+          "pixels": 127,
+          "area_ha": 11.43
+        },
+        "2011": {
+          "pixels": 53,
+          "area_ha": 4.77
+        },
+        "2012": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2013": {
+          "pixels": 77,
+          "area_ha": 6.93
+        },
+        "2014": {
+          "pixels": 67,
+          "area_ha": 6.03
+        },
+        "2015": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2016": {
+          "pixels": 125,
+          "area_ha": 11.25
+        },
+        "2017": {
+          "pixels": 156,
+          "area_ha": 14.04
+        },
+        "2018": {
+          "pixels": 85,
+          "area_ha": 7.65
+        },
+        "2019": {
+          "pixels": 227,
+          "area_ha": 20.43
+        },
+        "2020": {
+          "pixels": 152,
+          "area_ha": 13.68
+        },
+        "2021": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2022": {
+          "pixels": 79,
+          "area_ha": 7.11
+        },
+        "2023": {
+          "pixels": 94,
+          "area_ha": 8.46
+        }
+      }
     },
     "80117": {
       "name": "N\u00fcziders",
       "state": "Vorarlberg",
       "iso": "80117",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 1083,
+      "total_area_ha": 97.47,
+      "years": {
+        "2001": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2002": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2003": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2004": {
+          "pixels": 64,
+          "area_ha": 5.76
+        },
+        "2005": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2006": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2007": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2008": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2009": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2010": {
+          "pixels": 32,
+          "area_ha": 2.88
+        },
+        "2011": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2012": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2013": {
+          "pixels": 58,
+          "area_ha": 5.22
+        },
+        "2014": {
+          "pixels": 77,
+          "area_ha": 6.93
+        },
+        "2015": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2016": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2017": {
+          "pixels": 69,
+          "area_ha": 6.21
+        },
+        "2018": {
+          "pixels": 63,
+          "area_ha": 5.67
+        },
+        "2019": {
+          "pixels": 112,
+          "area_ha": 10.08
+        },
+        "2020": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2021": {
+          "pixels": 68,
+          "area_ha": 6.12
+        },
+        "2022": {
+          "pixels": 86,
+          "area_ha": 7.74
+        },
+        "2023": {
+          "pixels": 116,
+          "area_ha": 10.44
+        }
+      }
     },
     "80118": {
       "name": "Raggal",
       "state": "Vorarlberg",
       "iso": "80118",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 692,
+      "total_area_ha": 62.28,
+      "years": {
+        "2001": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2002": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2003": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2004": {
+          "pixels": 34,
+          "area_ha": 3.06
+        },
+        "2005": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2006": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2007": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2009": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2010": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2011": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2012": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2013": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2014": {
+          "pixels": 28,
+          "area_ha": 2.52
+        },
+        "2015": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2016": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2017": {
+          "pixels": 71,
+          "area_ha": 6.39
+        },
+        "2018": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2019": {
+          "pixels": 99,
+          "area_ha": 8.91
+        },
+        "2020": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2021": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2022": {
+          "pixels": 52,
+          "area_ha": 4.68
+        },
+        "2023": {
+          "pixels": 113,
+          "area_ha": 10.17
+        }
+      }
     },
     "80119": {
       "name": "St. Anton im Montafon",
       "state": "Vorarlberg",
       "iso": "80119",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80120": {
-      "name": "St. Gallenkirch",
-      "state": "Vorarlberg",
-      "iso": "80120",
-      "total_pixels": 744,
-      "total_area_ha": 66.96,
+      "total_pixels": 93,
+      "total_area_ha": 8.37,
       "years": {
-        "2001": {
-          "pixels": 7,
-          "area_ha": 0.63
-        },
         "2002": {
-          "pixels": 23,
-          "area_ha": 2.07
-        },
-        "2003": {
-          "pixels": 12,
-          "area_ha": 1.08
+          "pixels": 1,
+          "area_ha": 0.09
         },
         "2004": {
-          "pixels": 20,
-          "area_ha": 1.8
+          "pixels": 14,
+          "area_ha": 1.26
         },
         "2005": {
-          "pixels": 6,
-          "area_ha": 0.54
+          "pixels": 5,
+          "area_ha": 0.45
         },
         "2006": {
           "pixels": 1,
           "area_ha": 0.09
         },
-        "2007": {
-          "pixels": 8,
-          "area_ha": 0.72
-        },
         "2008": {
-          "pixels": 70,
-          "area_ha": 6.3
+          "pixels": 24,
+          "area_ha": 2.16
         },
         "2009": {
-          "pixels": 6,
-          "area_ha": 0.54
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2010": {
+          "pixels": 4,
+          "area_ha": 0.36
         },
         "2011": {
-          "pixels": 6,
-          "area_ha": 0.54
+          "pixels": 1,
+          "area_ha": 0.09
         },
         "2012": {
-          "pixels": 56,
-          "area_ha": 5.04
+          "pixels": 2,
+          "area_ha": 0.18
         },
-        "2014": {
-          "pixels": 18,
-          "area_ha": 1.62
-        },
-        "2015": {
-          "pixels": 7,
-          "area_ha": 0.63
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
         },
         "2016": {
-          "pixels": 29,
-          "area_ha": 2.61
+          "pixels": 2,
+          "area_ha": 0.18
         },
         "2017": {
-          "pixels": 49,
-          "area_ha": 4.41
-        },
-        "2019": {
-          "pixels": 147,
-          "area_ha": 13.23
+          "pixels": 15,
+          "area_ha": 1.35
         },
         "2020": {
-          "pixels": 118,
-          "area_ha": 10.62
-        },
-        "2022": {
-          "pixels": 12,
-          "area_ha": 1.08
+          "pixels": 16,
+          "area_ha": 1.44
         },
         "2023": {
-          "pixels": 149,
-          "area_ha": 13.41
+          "pixels": 4,
+          "area_ha": 0.36
+        }
+      }
+    },
+    "80120": {
+      "name": "St. Gallenkirch",
+      "state": "Vorarlberg",
+      "iso": "80120",
+      "total_pixels": 3512,
+      "total_area_ha": 316.08,
+      "years": {
+        "2001": {
+          "pixels": 46,
+          "area_ha": 4.14
+        },
+        "2002": {
+          "pixels": 50,
+          "area_ha": 4.5
+        },
+        "2003": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2004": {
+          "pixels": 139,
+          "area_ha": 12.51
+        },
+        "2005": {
+          "pixels": 212,
+          "area_ha": 19.08
+        },
+        "2006": {
+          "pixels": 153,
+          "area_ha": 13.77
+        },
+        "2007": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2008": {
+          "pixels": 182,
+          "area_ha": 16.38
+        },
+        "2009": {
+          "pixels": 98,
+          "area_ha": 8.82
+        },
+        "2010": {
+          "pixels": 163,
+          "area_ha": 14.67
+        },
+        "2011": {
+          "pixels": 144,
+          "area_ha": 12.96
+        },
+        "2012": {
+          "pixels": 185,
+          "area_ha": 16.65
+        },
+        "2013": {
+          "pixels": 28,
+          "area_ha": 2.52
+        },
+        "2014": {
+          "pixels": 126,
+          "area_ha": 11.34
+        },
+        "2015": {
+          "pixels": 63,
+          "area_ha": 5.67
+        },
+        "2016": {
+          "pixels": 134,
+          "area_ha": 12.06
+        },
+        "2017": {
+          "pixels": 189,
+          "area_ha": 17.01
+        },
+        "2018": {
+          "pixels": 159,
+          "area_ha": 14.31
+        },
+        "2019": {
+          "pixels": 710,
+          "area_ha": 63.9
+        },
+        "2020": {
+          "pixels": 191,
+          "area_ha": 17.19
+        },
+        "2021": {
+          "pixels": 65,
+          "area_ha": 5.85
+        },
+        "2022": {
+          "pixels": 34,
+          "area_ha": 3.06
+        },
+        "2023": {
+          "pixels": 408,
+          "area_ha": 36.72
         }
       }
     },
@@ -180648,116 +181975,274 @@
       "name": "St. Gerold",
       "state": "Vorarlberg",
       "iso": "80121",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 172,
+      "total_area_ha": 15.48,
+      "years": {
+        "2001": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2002": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2004": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2005": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2007": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2008": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2010": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2012": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2013": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2014": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2015": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2017": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2018": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2019": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2021": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2022": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2023": {
+          "pixels": 53,
+          "area_ha": 4.77
+        }
+      }
     },
     "80122": {
       "name": "Schruns",
       "state": "Vorarlberg",
       "iso": "80122",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 443,
+      "total_area_ha": 39.87,
+      "years": {
+        "2001": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2002": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2004": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2005": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2006": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2007": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2008": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2009": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2010": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2011": {
+          "pixels": 47,
+          "area_ha": 4.23
+        },
+        "2012": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2013": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2014": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2015": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2016": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2017": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2018": {
+          "pixels": 51,
+          "area_ha": 4.59
+        },
+        "2019": {
+          "pixels": 41,
+          "area_ha": 3.69
+        },
+        "2020": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2021": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2022": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2023": {
+          "pixels": 33,
+          "area_ha": 2.97
+        }
+      }
     },
     "80123": {
       "name": "Silbertal",
       "state": "Vorarlberg",
       "iso": "80123",
-      "total_pixels": 2057,
-      "total_area_ha": 185.13,
+      "total_pixels": 2854,
+      "total_area_ha": 256.86,
       "years": {
         "2001": {
-          "pixels": 39,
-          "area_ha": 3.51
+          "pixels": 41,
+          "area_ha": 3.69
         },
         "2002": {
-          "pixels": 42,
-          "area_ha": 3.78
+          "pixels": 52,
+          "area_ha": 4.68
         },
         "2003": {
           "pixels": 9,
           "area_ha": 0.81
         },
         "2004": {
+          "pixels": 82,
+          "area_ha": 7.38
+        },
+        "2005": {
+          "pixels": 116,
+          "area_ha": 10.44
+        },
+        "2006": {
+          "pixels": 200,
+          "area_ha": 18.0
+        },
+        "2007": {
+          "pixels": 79,
+          "area_ha": 7.11
+        },
+        "2008": {
+          "pixels": 157,
+          "area_ha": 14.13
+        },
+        "2009": {
+          "pixels": 348,
+          "area_ha": 31.32
+        },
+        "2010": {
+          "pixels": 134,
+          "area_ha": 12.06
+        },
+        "2011": {
           "pixels": 57,
           "area_ha": 5.13
         },
-        "2005": {
-          "pixels": 94,
-          "area_ha": 8.46
-        },
-        "2006": {
-          "pixels": 168,
-          "area_ha": 15.12
-        },
-        "2007": {
-          "pixels": 61,
-          "area_ha": 5.49
-        },
-        "2008": {
-          "pixels": 115,
-          "area_ha": 10.35
-        },
-        "2009": {
-          "pixels": 269,
-          "area_ha": 24.21
-        },
-        "2010": {
-          "pixels": 87,
-          "area_ha": 7.83
-        },
-        "2011": {
-          "pixels": 55,
-          "area_ha": 4.95
-        },
         "2012": {
-          "pixels": 67,
-          "area_ha": 6.03
+          "pixels": 92,
+          "area_ha": 8.28
         },
         "2013": {
-          "pixels": 59,
-          "area_ha": 5.31
+          "pixels": 70,
+          "area_ha": 6.3
         },
         "2014": {
-          "pixels": 17,
-          "area_ha": 1.53
+          "pixels": 94,
+          "area_ha": 8.46
         },
         "2015": {
           "pixels": 29,
           "area_ha": 2.61
         },
         "2016": {
-          "pixels": 125,
-          "area_ha": 11.25
+          "pixels": 148,
+          "area_ha": 13.32
         },
         "2017": {
-          "pixels": 85,
-          "area_ha": 7.65
+          "pixels": 195,
+          "area_ha": 17.55
         },
         "2018": {
-          "pixels": 46,
-          "area_ha": 4.14
+          "pixels": 55,
+          "area_ha": 4.95
         },
         "2019": {
-          "pixels": 164,
-          "area_ha": 14.76
+          "pixels": 265,
+          "area_ha": 23.85
         },
         "2020": {
-          "pixels": 35,
-          "area_ha": 3.15
+          "pixels": 68,
+          "area_ha": 6.12
         },
         "2021": {
-          "pixels": 99,
-          "area_ha": 8.91
+          "pixels": 100,
+          "area_ha": 9.0
         },
         "2022": {
-          "pixels": 88,
-          "area_ha": 7.92
+          "pixels": 143,
+          "area_ha": 12.87
         },
         "2023": {
-          "pixels": 247,
-          "area_ha": 22.23
+          "pixels": 320,
+          "area_ha": 28.8
         }
       }
     },
@@ -180765,76 +182250,100 @@
       "name": "Sonntag",
       "state": "Vorarlberg",
       "iso": "80124",
-      "total_pixels": 193,
-      "total_area_ha": 17.37,
+      "total_pixels": 1162,
+      "total_area_ha": 104.58,
       "years": {
-        "2002": {
-          "pixels": 1,
-          "area_ha": 0.09
-        },
-        "2004": {
-          "pixels": 10,
-          "area_ha": 0.9
-        },
-        "2005": {
-          "pixels": 14,
-          "area_ha": 1.26
-        },
-        "2006": {
-          "pixels": 28,
-          "area_ha": 2.52
-        },
-        "2007": {
-          "pixels": 10,
-          "area_ha": 0.9
-        },
-        "2008": {
+        "2001": {
           "pixels": 5,
           "area_ha": 0.45
         },
-        "2009": {
-          "pixels": 21,
-          "area_ha": 1.89
-        },
-        "2010": {
+        "2002": {
           "pixels": 7,
           "area_ha": 0.63
         },
-        "2012": {
-          "pixels": 7,
-          "area_ha": 0.63
-        },
-        "2013": {
-          "pixels": 1,
-          "area_ha": 0.09
-        },
-        "2014": {
-          "pixels": 32,
-          "area_ha": 2.88
-        },
-        "2015": {
+        "2003": {
           "pixels": 15,
           "area_ha": 1.35
         },
+        "2004": {
+          "pixels": 43,
+          "area_ha": 3.87
+        },
+        "2005": {
+          "pixels": 98,
+          "area_ha": 8.82
+        },
+        "2006": {
+          "pixels": 143,
+          "area_ha": 12.87
+        },
+        "2007": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2008": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2009": {
+          "pixels": 47,
+          "area_ha": 4.23
+        },
+        "2010": {
+          "pixels": 75,
+          "area_ha": 6.75
+        },
+        "2011": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2012": {
+          "pixels": 36,
+          "area_ha": 3.24
+        },
+        "2013": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2014": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2015": {
+          "pixels": 49,
+          "area_ha": 4.41
+        },
         "2016": {
-          "pixels": 11,
-          "area_ha": 0.99
+          "pixels": 75,
+          "area_ha": 6.75
         },
         "2017": {
+          "pixels": 87,
+          "area_ha": 7.83
+        },
+        "2018": {
+          "pixels": 65,
+          "area_ha": 5.85
+        },
+        "2019": {
+          "pixels": 168,
+          "area_ha": 15.12
+        },
+        "2020": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2021": {
           "pixels": 12,
           "area_ha": 1.08
         },
-        "2019": {
-          "pixels": 3,
-          "area_ha": 0.27
-        },
-        "2020": {
-          "pixels": 2,
-          "area_ha": 0.18
-        },
         "2022": {
-          "pixels": 14,
-          "area_ha": 1.26
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2023": {
+          "pixels": 65,
+          "area_ha": 5.85
         }
       }
     },
@@ -180842,104 +182351,699 @@
       "name": "Stallehr",
       "state": "Vorarlberg",
       "iso": "80125",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 41,
+      "total_area_ha": 3.69,
+      "years": {
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2007": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2008": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2010": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2011": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2012": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2013": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2021": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2022": {
+          "pixels": 1,
+          "area_ha": 0.09
+        }
+      }
     },
     "80126": {
       "name": "Th\u00fcringen",
       "state": "Vorarlberg",
       "iso": "80126",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 379,
+      "total_area_ha": 34.11,
+      "years": {
+        "2004": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2005": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2006": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2007": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2008": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2009": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2010": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2011": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2012": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2013": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2014": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2015": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2016": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2017": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2018": {
+          "pixels": 78,
+          "area_ha": 7.02
+        },
+        "2019": {
+          "pixels": 79,
+          "area_ha": 7.11
+        },
+        "2020": {
+          "pixels": 41,
+          "area_ha": 3.69
+        },
+        "2022": {
+          "pixels": 3,
+          "area_ha": 0.27
+        }
+      }
     },
     "80127": {
       "name": "Th\u00fcringerberg",
       "state": "Vorarlberg",
       "iso": "80127",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 860,
+      "total_area_ha": 77.4,
+      "years": {
+        "2001": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2002": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2003": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2004": {
+          "pixels": 63,
+          "area_ha": 5.67
+        },
+        "2005": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2006": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2007": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2008": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2009": {
+          "pixels": 59,
+          "area_ha": 5.31
+        },
+        "2010": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2011": {
+          "pixels": 43,
+          "area_ha": 3.87
+        },
+        "2012": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2013": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2014": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2015": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2016": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2017": {
+          "pixels": 52,
+          "area_ha": 4.68
+        },
+        "2018": {
+          "pixels": 210,
+          "area_ha": 18.9
+        },
+        "2019": {
+          "pixels": 58,
+          "area_ha": 5.22
+        },
+        "2020": {
+          "pixels": 96,
+          "area_ha": 8.64
+        },
+        "2021": {
+          "pixels": 49,
+          "area_ha": 4.41
+        },
+        "2022": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2023": {
+          "pixels": 9,
+          "area_ha": 0.81
+        }
+      }
     },
     "80128": {
       "name": "Tschagguns",
       "state": "Vorarlberg",
       "iso": "80128",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80129": {
-      "name": "Vandans",
-      "state": "Vorarlberg",
-      "iso": "80129",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80201": {
-      "name": "Alberschwende",
-      "state": "Vorarlberg",
-      "iso": "80201",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80202": {
-      "name": "Andelsbuch",
-      "state": "Vorarlberg",
-      "iso": "80202",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80203": {
-      "name": "Au",
-      "state": "Vorarlberg",
-      "iso": "80203",
-      "total_pixels": 120,
-      "total_area_ha": 10.8,
+      "total_pixels": 590,
+      "total_area_ha": 53.1,
       "years": {
         "2001": {
-          "pixels": 1,
-          "area_ha": 0.09
-        },
-        "2002": {
-          "pixels": 22,
-          "area_ha": 1.98
-        },
-        "2008": {
           "pixels": 3,
           "area_ha": 0.27
         },
+        "2002": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2003": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2004": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2005": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2006": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2007": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2008": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
         "2009": {
-          "pixels": 7,
-          "area_ha": 0.63
+          "pixels": 61,
+          "area_ha": 5.49
         },
         "2010": {
-          "pixels": 11,
-          "area_ha": 0.99
-        },
-        "2011": {
           "pixels": 22,
           "area_ha": 1.98
         },
+        "2011": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2012": {
+          "pixels": 26,
+          "area_ha": 2.34
+        },
         "2013": {
-          "pixels": 1,
-          "area_ha": 0.09
+          "pixels": 22,
+          "area_ha": 1.98
         },
         "2014": {
-          "pixels": 18,
-          "area_ha": 1.62
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2015": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2016": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2017": {
+          "pixels": 62,
+          "area_ha": 5.58
+        },
+        "2018": {
+          "pixels": 40,
+          "area_ha": 3.6
         },
         "2019": {
           "pixels": 30,
           "area_ha": 2.7
         },
         "2020": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2021": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2022": {
+          "pixels": 32,
+          "area_ha": 2.88
+        },
+        "2023": {
+          "pixels": 14,
+          "area_ha": 1.26
+        }
+      }
+    },
+    "80129": {
+      "name": "Vandans",
+      "state": "Vorarlberg",
+      "iso": "80129",
+      "total_pixels": 696,
+      "total_area_ha": 62.64,
+      "years": {
+        "2001": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2002": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2003": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2004": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2005": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2006": {
           "pixels": 5,
           "area_ha": 0.45
+        },
+        "2007": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2008": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2009": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2010": {
+          "pixels": 41,
+          "area_ha": 3.69
+        },
+        "2011": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2012": {
+          "pixels": 40,
+          "area_ha": 3.6
+        },
+        "2013": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2014": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2015": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2016": {
+          "pixels": 46,
+          "area_ha": 4.14
+        },
+        "2017": {
+          "pixels": 72,
+          "area_ha": 6.48
+        },
+        "2018": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2019": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2020": {
+          "pixels": 63,
+          "area_ha": 5.67
+        },
+        "2021": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2022": {
+          "pixels": 99,
+          "area_ha": 8.91
+        },
+        "2023": {
+          "pixels": 44,
+          "area_ha": 3.96
+        }
+      }
+    },
+    "80201": {
+      "name": "Alberschwende",
+      "state": "Vorarlberg",
+      "iso": "80201",
+      "total_pixels": 332,
+      "total_area_ha": 29.88,
+      "years": {
+        "2001": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2002": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2004": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2005": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2006": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2007": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2009": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2010": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2011": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2012": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2013": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2014": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2016": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2017": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2018": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2019": {
+          "pixels": 63,
+          "area_ha": 5.67
+        },
+        "2020": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2021": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2022": {
+          "pixels": 7,
+          "area_ha": 0.63
+        }
+      }
+    },
+    "80202": {
+      "name": "Andelsbuch",
+      "state": "Vorarlberg",
+      "iso": "80202",
+      "total_pixels": 228,
+      "total_area_ha": 20.52,
+      "years": {
+        "2001": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2002": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2004": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2005": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2006": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2007": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2008": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2009": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2010": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2012": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2013": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2014": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2016": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2018": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2019": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2020": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2021": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2022": {
+          "pixels": 1,
+          "area_ha": 0.09
+        }
+      }
+    },
+    "80203": {
+      "name": "Au",
+      "state": "Vorarlberg",
+      "iso": "80203",
+      "total_pixels": 1286,
+      "total_area_ha": 115.74,
+      "years": {
+        "2001": {
+          "pixels": 53,
+          "area_ha": 4.77
+        },
+        "2002": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2003": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2004": {
+          "pixels": 89,
+          "area_ha": 8.01
+        },
+        "2005": {
+          "pixels": 67,
+          "area_ha": 6.03
+        },
+        "2006": {
+          "pixels": 72,
+          "area_ha": 6.48
+        },
+        "2007": {
+          "pixels": 52,
+          "area_ha": 4.68
+        },
+        "2008": {
+          "pixels": 70,
+          "area_ha": 6.3
+        },
+        "2009": {
+          "pixels": 159,
+          "area_ha": 14.31
+        },
+        "2010": {
+          "pixels": 184,
+          "area_ha": 16.56
+        },
+        "2011": {
+          "pixels": 76,
+          "area_ha": 6.84
+        },
+        "2012": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2013": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2014": {
+          "pixels": 60,
+          "area_ha": 5.4
+        },
+        "2015": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2016": {
+          "pixels": 32,
+          "area_ha": 2.88
+        },
+        "2017": {
+          "pixels": 106,
+          "area_ha": 9.54
+        },
+        "2018": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2019": {
+          "pixels": 62,
+          "area_ha": 5.58
+        },
+        "2020": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2021": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2022": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2023": {
+          "pixels": 42,
+          "area_ha": 3.78
         }
       }
     },
@@ -180947,76 +183051,88 @@
       "name": "Bezau",
       "state": "Vorarlberg",
       "iso": "80204",
-      "total_pixels": 357,
-      "total_area_ha": 32.13,
+      "total_pixels": 686,
+      "total_area_ha": 61.74,
       "years": {
+        "2001": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
         "2002": {
           "pixels": 12,
           "area_ha": 1.08
         },
-        "2005": {
-          "pixels": 28,
-          "area_ha": 2.52
+        "2003": {
+          "pixels": 4,
+          "area_ha": 0.36
         },
-        "2006": {
-          "pixels": 31,
-          "area_ha": 2.79
-        },
-        "2007": {
-          "pixels": 9,
-          "area_ha": 0.81
-        },
-        "2008": {
-          "pixels": 6,
-          "area_ha": 0.54
-        },
-        "2009": {
-          "pixels": 13,
-          "area_ha": 1.17
-        },
-        "2010": {
-          "pixels": 9,
-          "area_ha": 0.81
-        },
-        "2011": {
-          "pixels": 1,
-          "area_ha": 0.09
-        },
-        "2012": {
-          "pixels": 9,
-          "area_ha": 0.81
-        },
-        "2013": {
-          "pixels": 12,
-          "area_ha": 1.08
-        },
-        "2014": {
-          "pixels": 27,
-          "area_ha": 2.43
-        },
-        "2016": {
+        "2004": {
           "pixels": 11,
           "area_ha": 0.99
         },
+        "2005": {
+          "pixels": 87,
+          "area_ha": 7.83
+        },
+        "2006": {
+          "pixels": 96,
+          "area_ha": 8.64
+        },
+        "2007": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2008": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2009": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2010": {
+          "pixels": 41,
+          "area_ha": 3.69
+        },
+        "2011": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2012": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2013": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2014": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2016": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
         "2017": {
-          "pixels": 27,
-          "area_ha": 2.43
+          "pixels": 30,
+          "area_ha": 2.7
         },
         "2018": {
           "pixels": 40,
           "area_ha": 3.6
         },
         "2019": {
-          "pixels": 55,
-          "area_ha": 4.95
+          "pixels": 66,
+          "area_ha": 5.94
         },
         "2022": {
-          "pixels": 49,
-          "area_ha": 4.41
+          "pixels": 72,
+          "area_ha": 6.48
         },
         "2023": {
-          "pixels": 18,
-          "area_ha": 1.62
+          "pixels": 59,
+          "area_ha": 5.31
         }
       }
     },
@@ -181024,36 +183140,145 @@
       "name": "Bildstein",
       "state": "Vorarlberg",
       "iso": "80205",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80206": {
-      "name": "Bizau",
-      "state": "Vorarlberg",
-      "iso": "80206",
-      "total_pixels": 14,
-      "total_area_ha": 1.26,
+      "total_pixels": 126,
+      "total_area_ha": 11.34,
       "years": {
         "2001": {
           "pixels": 2,
           "area_ha": 0.18
         },
         "2004": {
-          "pixels": 7,
-          "area_ha": 0.63
-        },
-        "2006": {
           "pixels": 2,
           "area_ha": 0.18
         },
-        "2009": {
+        "2005": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2006": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2010": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2012": {
           "pixels": 2,
           "area_ha": 0.18
         },
         "2013": {
           "pixels": 1,
           "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2016": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2017": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2020": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2021": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2023": {
+          "pixels": 33,
+          "area_ha": 2.97
+        }
+      }
+    },
+    "80206": {
+      "name": "Bizau",
+      "state": "Vorarlberg",
+      "iso": "80206",
+      "total_pixels": 221,
+      "total_area_ha": 19.89,
+      "years": {
+        "2001": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2002": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2004": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2005": {
+          "pixels": 28,
+          "area_ha": 2.52
+        },
+        "2006": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2007": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2009": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2010": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2012": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2013": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2014": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2015": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2016": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2017": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2019": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2020": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2023": {
+          "pixels": 8,
+          "area_ha": 0.72
         }
       }
     },
@@ -181061,132 +183286,404 @@
       "name": "Bregenz",
       "state": "Vorarlberg",
       "iso": "80207",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80208": {
-      "name": "Buch",
-      "state": "Vorarlberg",
-      "iso": "80208",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80209": {
-      "name": "Dam\u00fcls",
-      "state": "Vorarlberg",
-      "iso": "80209",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80210": {
-      "name": "Doren",
-      "state": "Vorarlberg",
-      "iso": "80210",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
-    },
-    "80211": {
-      "name": "Egg",
-      "state": "Vorarlberg",
-      "iso": "80211",
-      "total_pixels": 583,
-      "total_area_ha": 52.47,
+      "total_pixels": 630,
+      "total_area_ha": 56.7,
       "years": {
         "2001": {
-          "pixels": 6,
-          "area_ha": 0.54
+          "pixels": 17,
+          "area_ha": 1.53
         },
         "2002": {
-          "pixels": 11,
-          "area_ha": 0.99
-        },
-        "2003": {
           "pixels": 3,
           "area_ha": 0.27
         },
         "2004": {
-          "pixels": 4,
-          "area_ha": 0.36
+          "pixels": 72,
+          "area_ha": 6.48
         },
         "2005": {
-          "pixels": 44,
-          "area_ha": 3.96
+          "pixels": 59,
+          "area_ha": 5.31
         },
         "2006": {
-          "pixels": 33,
-          "area_ha": 2.97
+          "pixels": 37,
+          "area_ha": 3.33
         },
         "2007": {
-          "pixels": 12,
-          "area_ha": 1.08
+          "pixels": 29,
+          "area_ha": 2.61
         },
         "2008": {
-          "pixels": 5,
-          "area_ha": 0.45
+          "pixels": 43,
+          "area_ha": 3.87
         },
         "2009": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2010": {
+          "pixels": 57,
+          "area_ha": 5.13
+        },
+        "2011": {
           "pixels": 2,
           "area_ha": 0.18
         },
-        "2010": {
-          "pixels": 44,
-          "area_ha": 3.96
-        },
-        "2011": {
-          "pixels": 41,
-          "area_ha": 3.69
-        },
         "2012": {
-          "pixels": 49,
-          "area_ha": 4.41
+          "pixels": 5,
+          "area_ha": 0.45
         },
         "2013": {
-          "pixels": 60,
-          "area_ha": 5.4
+          "pixels": 30,
+          "area_ha": 2.7
         },
         "2014": {
-          "pixels": 31,
-          "area_ha": 2.79
-        },
-        "2015": {
-          "pixels": 25,
-          "area_ha": 2.25
+          "pixels": 16,
+          "area_ha": 1.44
         },
         "2016": {
           "pixels": 6,
           "area_ha": 0.54
         },
         "2017": {
-          "pixels": 41,
-          "area_ha": 3.69
+          "pixels": 16,
+          "area_ha": 1.44
         },
         "2018": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2019": {
+          "pixels": 59,
+          "area_ha": 5.31
+        },
+        "2020": {
+          "pixels": 58,
+          "area_ha": 5.22
+        },
+        "2021": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2022": {
+          "pixels": 75,
+          "area_ha": 6.75
+        },
+        "2023": {
+          "pixels": 7,
+          "area_ha": 0.63
+        }
+      }
+    },
+    "80208": {
+      "name": "Buch",
+      "state": "Vorarlberg",
+      "iso": "80208",
+      "total_pixels": 41,
+      "total_area_ha": 3.69,
+      "years": {
+        "2006": {
           "pixels": 4,
           "area_ha": 0.36
+        },
+        "2007": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2011": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2012": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2013": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2014": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2019": {
+          "pixels": 4,
+          "area_ha": 0.36
+        }
+      }
+    },
+    "80209": {
+      "name": "Dam\u00fcls",
+      "state": "Vorarlberg",
+      "iso": "80209",
+      "total_pixels": 277,
+      "total_area_ha": 24.93,
+      "years": {
+        "2002": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2004": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2005": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2006": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2007": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2008": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2009": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2010": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2012": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2013": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2014": {
+          "pixels": 57,
+          "area_ha": 5.13
+        },
+        "2015": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2016": {
+          "pixels": 68,
+          "area_ha": 6.12
+        },
+        "2017": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2018": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2019": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2021": {
+          "pixels": 26,
+          "area_ha": 2.34
+        },
+        "2022": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2023": {
+          "pixels": 20,
+          "area_ha": 1.8
+        }
+      }
+    },
+    "80210": {
+      "name": "Doren",
+      "state": "Vorarlberg",
+      "iso": "80210",
+      "total_pixels": 362,
+      "total_area_ha": 32.58,
+      "years": {
+        "2002": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2004": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2005": {
+          "pixels": 141,
+          "area_ha": 12.69
+        },
+        "2006": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2007": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2008": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2009": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2010": {
+          "pixels": 34,
+          "area_ha": 3.06
+        },
+        "2011": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2012": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2013": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2014": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2015": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2016": {
+          "pixels": 49,
+          "area_ha": 4.41
+        },
+        "2017": {
+          "pixels": 8,
+          "area_ha": 0.72
         },
         "2019": {
           "pixels": 17,
           "area_ha": 1.53
         },
         "2020": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2021": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2022": {
           "pixels": 8,
           "area_ha": 0.72
         },
+        "2023": {
+          "pixels": 11,
+          "area_ha": 0.99
+        }
+      }
+    },
+    "80211": {
+      "name": "Egg",
+      "state": "Vorarlberg",
+      "iso": "80211",
+      "total_pixels": 972,
+      "total_area_ha": 87.48,
+      "years": {
+        "2001": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2002": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2003": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2004": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2005": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2006": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2007": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2008": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2009": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2010": {
+          "pixels": 65,
+          "area_ha": 5.85
+        },
+        "2011": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2012": {
+          "pixels": 60,
+          "area_ha": 5.4
+        },
+        "2013": {
+          "pixels": 81,
+          "area_ha": 7.29
+        },
+        "2014": {
+          "pixels": 65,
+          "area_ha": 5.85
+        },
+        "2015": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2016": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2017": {
+          "pixels": 85,
+          "area_ha": 7.65
+        },
+        "2018": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2019": {
+          "pixels": 68,
+          "area_ha": 6.12
+        },
+        "2020": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
         "2021": {
-          "pixels": 50,
-          "area_ha": 4.5
+          "pixels": 56,
+          "area_ha": 5.04
         },
         "2022": {
-          "pixels": 52,
-          "area_ha": 4.68
+          "pixels": 65,
+          "area_ha": 5.85
         },
         "2023": {
-          "pixels": 35,
-          "area_ha": 3.15
+          "pixels": 71,
+          "area_ha": 6.39
         }
       }
     },
@@ -181194,120 +183691,316 @@
       "name": "Eichenberg",
       "state": "Vorarlberg",
       "iso": "80212",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 218,
+      "total_area_ha": 19.62,
+      "years": {
+        "2001": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2002": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2005": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2008": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2009": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2010": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2011": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2012": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2015": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2016": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2017": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2019": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2020": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2021": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2023": {
+          "pixels": 77,
+          "area_ha": 6.93
+        }
+      }
     },
     "80213": {
       "name": "Fu\u00dfach",
       "state": "Vorarlberg",
       "iso": "80213",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 74,
+      "total_area_ha": 6.66,
+      "years": {
+        "2002": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2004": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2006": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2007": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2008": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2009": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2010": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2011": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2013": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2014": {
+          "pixels": 6,
+          "area_ha": 0.54
+        }
+      }
     },
     "80214": {
       "name": "Gai\u00dfau",
       "state": "Vorarlberg",
       "iso": "80214",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 30,
+      "total_area_ha": 2.7,
+      "years": {
+        "2001": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2004": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2006": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2007": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2011": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2012": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2016": {
+          "pixels": 1,
+          "area_ha": 0.09
+        }
+      }
     },
     "80215": {
       "name": "Hard",
       "state": "Vorarlberg",
       "iso": "80215",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 92,
+      "total_area_ha": 8.28,
+      "years": {
+        "2001": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2004": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2006": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2007": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2008": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2009": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2011": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2016": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2022": {
+          "pixels": 37,
+          "area_ha": 3.33
+        }
+      }
     },
     "80216": {
       "name": "Hittisau",
       "state": "Vorarlberg",
       "iso": "80216",
-      "total_pixels": 560,
-      "total_area_ha": 50.4,
+      "total_pixels": 894,
+      "total_area_ha": 80.46,
       "years": {
         "2001": {
-          "pixels": 15,
-          "area_ha": 1.35
+          "pixels": 18,
+          "area_ha": 1.62
         },
-        "2004": {
-          "pixels": 7,
-          "area_ha": 0.63
-        },
-        "2005": {
-          "pixels": 23,
-          "area_ha": 2.07
-        },
-        "2006": {
-          "pixels": 28,
-          "area_ha": 2.52
-        },
-        "2007": {
-          "pixels": 3,
-          "area_ha": 0.27
-        },
-        "2008": {
-          "pixels": 22,
-          "area_ha": 1.98
-        },
-        "2009": {
-          "pixels": 24,
-          "area_ha": 2.16
-        },
-        "2010": {
-          "pixels": 38,
-          "area_ha": 3.42
-        },
-        "2011": {
+        "2002": {
           "pixels": 2,
           "area_ha": 0.18
         },
-        "2012": {
-          "pixels": 47,
-          "area_ha": 4.23
+        "2004": {
+          "pixels": 16,
+          "area_ha": 1.44
         },
-        "2013": {
-          "pixels": 35,
-          "area_ha": 3.15
+        "2005": {
+          "pixels": 32,
+          "area_ha": 2.88
         },
-        "2014": {
-          "pixels": 50,
-          "area_ha": 4.5
+        "2006": {
+          "pixels": 53,
+          "area_ha": 4.77
         },
-        "2015": {
+        "2007": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2008": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2009": {
+          "pixels": 28,
+          "area_ha": 2.52
+        },
+        "2010": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2011": {
           "pixels": 6,
           "area_ha": 0.54
         },
+        "2012": {
+          "pixels": 64,
+          "area_ha": 5.76
+        },
+        "2013": {
+          "pixels": 49,
+          "area_ha": 4.41
+        },
+        "2014": {
+          "pixels": 68,
+          "area_ha": 6.12
+        },
+        "2015": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
         "2016": {
-          "pixels": 69,
-          "area_ha": 6.21
+          "pixels": 94,
+          "area_ha": 8.46
         },
         "2017": {
-          "pixels": 95,
-          "area_ha": 8.55
+          "pixels": 126,
+          "area_ha": 11.34
         },
         "2018": {
-          "pixels": 25,
-          "area_ha": 2.25
+          "pixels": 36,
+          "area_ha": 3.24
         },
         "2019": {
-          "pixels": 34,
-          "area_ha": 3.06
+          "pixels": 66,
+          "area_ha": 5.94
+        },
+        "2020": {
+          "pixels": 15,
+          "area_ha": 1.35
         },
         "2021": {
-          "pixels": 21,
-          "area_ha": 1.89
+          "pixels": 41,
+          "area_ha": 3.69
         },
         "2022": {
-          "pixels": 9,
-          "area_ha": 0.81
+          "pixels": 19,
+          "area_ha": 1.71
         },
         "2023": {
-          "pixels": 7,
-          "area_ha": 0.63
+          "pixels": 57,
+          "area_ha": 5.13
         }
       }
     },
@@ -181315,89 +184008,748 @@
       "name": "H\u00f6chst",
       "state": "Vorarlberg",
       "iso": "80217",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 173,
+      "total_area_ha": 15.57,
+      "years": {
+        "2001": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2002": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2004": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2006": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2007": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2008": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2009": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2010": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2011": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2013": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2014": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2016": {
+          "pixels": 28,
+          "area_ha": 2.52
+        },
+        "2021": {
+          "pixels": 8,
+          "area_ha": 0.72
+        }
+      }
     },
     "80218": {
       "name": "H\u00f6rbranz",
       "state": "Vorarlberg",
       "iso": "80218",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 92,
+      "total_area_ha": 8.28,
+      "years": {
+        "2001": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2005": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2008": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2009": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2010": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2011": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2012": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2016": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2017": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2018": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2019": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2020": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2022": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2023": {
+          "pixels": 28,
+          "area_ha": 2.52
+        }
+      }
     },
     "80219": {
       "name": "Hohenweiler",
       "state": "Vorarlberg",
       "iso": "80219",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 213,
+      "total_area_ha": 19.17,
+      "years": {
+        "2001": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2002": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2004": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2005": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2006": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2008": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2009": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2010": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2011": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2012": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2013": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2014": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2017": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2018": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2020": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2021": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2022": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2023": {
+          "pixels": 8,
+          "area_ha": 0.72
+        }
+      }
     },
     "80220": {
       "name": "Kennelbach",
       "state": "Vorarlberg",
       "iso": "80220",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 125,
+      "total_area_ha": 11.25,
+      "years": {
+        "2001": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2002": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2004": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2006": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2007": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2008": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2009": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2010": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2015": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2017": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2018": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2019": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2020": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2021": {
+          "pixels": 4,
+          "area_ha": 0.36
+        }
+      }
     },
     "80221": {
       "name": "Krumbach",
       "state": "Vorarlberg",
       "iso": "80221",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 87,
+      "total_area_ha": 7.83,
+      "years": {
+        "2004": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2005": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2008": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2009": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2010": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2011": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2012": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2020": {
+          "pixels": 3,
+          "area_ha": 0.27
+        }
+      }
     },
     "80222": {
       "name": "Langen bei Bregenz",
       "state": "Vorarlberg",
       "iso": "80222",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 423,
+      "total_area_ha": 38.07,
+      "years": {
+        "2001": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2002": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2004": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2005": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2006": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2007": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2009": {
+          "pixels": 36,
+          "area_ha": 3.24
+        },
+        "2010": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2011": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2012": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2013": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2014": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2015": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2016": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2017": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2018": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2019": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2020": {
+          "pixels": 71,
+          "area_ha": 6.39
+        },
+        "2021": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2022": {
+          "pixels": 7,
+          "area_ha": 0.63
+        }
+      }
     },
     "80223": {
       "name": "Langenegg",
       "state": "Vorarlberg",
       "iso": "80223",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 76,
+      "total_area_ha": 6.84,
+      "years": {
+        "2001": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2006": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2008": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2009": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2010": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2011": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2012": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2013": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2014": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2017": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2021": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2023": {
+          "pixels": 8,
+          "area_ha": 0.72
+        }
+      }
     },
     "80224": {
       "name": "Lauterach",
       "state": "Vorarlberg",
       "iso": "80224",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 52,
+      "total_area_ha": 4.68,
+      "years": {
+        "2004": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2006": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2008": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2009": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2010": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2011": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2012": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2017": {
+          "pixels": 1,
+          "area_ha": 0.09
+        }
+      }
     },
     "80225": {
       "name": "Lingenau",
       "state": "Vorarlberg",
       "iso": "80225",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 41,
+      "total_area_ha": 3.69,
+      "years": {
+        "2002": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2006": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2009": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2010": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2015": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2019": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2020": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2023": {
+          "pixels": 24,
+          "area_ha": 2.16
+        }
+      }
     },
     "80226": {
       "name": "Lochau",
       "state": "Vorarlberg",
       "iso": "80226",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 297,
+      "total_area_ha": 26.73,
+      "years": {
+        "2001": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2002": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2004": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2005": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2006": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2007": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2008": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2009": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2010": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2012": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2013": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2014": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2015": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2017": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2019": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2020": {
+          "pixels": 52,
+          "area_ha": 4.68
+        },
+        "2022": {
+          "pixels": 2,
+          "area_ha": 0.18
+        }
+      }
     },
     "80227": {
       "name": "Mellau",
       "state": "Vorarlberg",
       "iso": "80227",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 977,
+      "total_area_ha": 87.93,
+      "years": {
+        "2001": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2003": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2004": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2005": {
+          "pixels": 61,
+          "area_ha": 5.49
+        },
+        "2006": {
+          "pixels": 148,
+          "area_ha": 13.32
+        },
+        "2007": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2008": {
+          "pixels": 47,
+          "area_ha": 4.23
+        },
+        "2009": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2010": {
+          "pixels": 26,
+          "area_ha": 2.34
+        },
+        "2011": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2012": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2013": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2014": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2015": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2016": {
+          "pixels": 88,
+          "area_ha": 7.92
+        },
+        "2017": {
+          "pixels": 72,
+          "area_ha": 6.48
+        },
+        "2018": {
+          "pixels": 36,
+          "area_ha": 3.24
+        },
+        "2019": {
+          "pixels": 90,
+          "area_ha": 8.1
+        },
+        "2020": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2021": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2022": {
+          "pixels": 77,
+          "area_ha": 6.93
+        },
+        "2023": {
+          "pixels": 50,
+          "area_ha": 4.5
+        }
+      }
     },
     "80228": {
       "name": "Mittelberg",
@@ -181504,40 +184856,308 @@
       "name": "M\u00f6ggers",
       "state": "Vorarlberg",
       "iso": "80229",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 152,
+      "total_area_ha": 13.68,
+      "years": {
+        "2001": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2002": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2004": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2005": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2007": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2009": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2010": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2011": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2016": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2017": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2018": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2019": {
+          "pixels": 32,
+          "area_ha": 2.88
+        },
+        "2020": {
+          "pixels": 9,
+          "area_ha": 0.81
+        }
+      }
     },
     "80230": {
       "name": "Reuthe",
       "state": "Vorarlberg",
       "iso": "80230",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 141,
+      "total_area_ha": 12.69,
+      "years": {
+        "2001": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2005": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2006": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2007": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2008": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2009": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2010": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2011": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2012": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2013": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2014": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2015": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2016": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2017": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2019": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2020": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2021": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2022": {
+          "pixels": 3,
+          "area_ha": 0.27
+        }
+      }
     },
     "80231": {
       "name": "Riefensberg",
       "state": "Vorarlberg",
       "iso": "80231",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 158,
+      "total_area_ha": 14.22,
+      "years": {
+        "2001": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2006": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2008": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2009": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2010": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2012": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2013": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2014": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2017": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2018": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2019": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2020": {
+          "pixels": 34,
+          "area_ha": 3.06
+        },
+        "2021": {
+          "pixels": 10,
+          "area_ha": 0.9
+        }
+      }
     },
     "80232": {
       "name": "Schnepfau",
       "state": "Vorarlberg",
       "iso": "80232",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 291,
+      "total_area_ha": 26.19,
+      "years": {
+        "2001": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2002": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2005": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2006": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2007": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2008": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2009": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2011": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2012": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2013": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2014": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2015": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2016": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2017": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2018": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2019": {
+          "pixels": 58,
+          "area_ha": 5.22
+        },
+        "2020": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2022": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2023": {
+          "pixels": 4,
+          "area_ha": 0.36
+        }
+      }
     },
     "80233": {
       "name": "Schoppernau",
       "state": "Vorarlberg",
       "iso": "80233",
-      "total_pixels": 1506,
-      "total_area_ha": 135.54,
+      "total_pixels": 1516,
+      "total_area_ha": 136.44,
       "years": {
         "2001": {
           "pixels": 4,
@@ -181592,8 +185212,8 @@
           "area_ha": 3.87
         },
         "2014": {
-          "pixels": 33,
-          "area_ha": 2.97
+          "pixels": 41,
+          "area_ha": 3.69
         },
         "2015": {
           "pixels": 31,
@@ -181624,12 +185244,12 @@
           "area_ha": 0.36
         },
         "2022": {
-          "pixels": 97,
-          "area_ha": 8.73
+          "pixels": 98,
+          "area_ha": 8.82
         },
         "2023": {
-          "pixels": 70,
-          "area_ha": 6.3
+          "pixels": 71,
+          "area_ha": 6.39
         }
       }
     },
@@ -181710,17 +185330,127 @@
       "name": "Schwarzach",
       "state": "Vorarlberg",
       "iso": "80235",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 19,
+      "total_area_ha": 1.71,
+      "years": {
+        "2002": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2005": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2010": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2012": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2015": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2023": {
+          "pixels": 4,
+          "area_ha": 0.36
+        }
+      }
     },
     "80236": {
       "name": "Schwarzenberg",
       "state": "Vorarlberg",
       "iso": "80236",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 656,
+      "total_area_ha": 59.04,
+      "years": {
+        "2001": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2002": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2004": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2005": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2006": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2007": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2008": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2010": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2011": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2012": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2013": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2014": {
+          "pixels": 151,
+          "area_ha": 13.59
+        },
+        "2015": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2016": {
+          "pixels": 87,
+          "area_ha": 7.83
+        },
+        "2017": {
+          "pixels": 115,
+          "area_ha": 10.35
+        },
+        "2019": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2020": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2021": {
+          "pixels": 26,
+          "area_ha": 2.34
+        },
+        "2022": {
+          "pixels": 46,
+          "area_ha": 4.14
+        },
+        "2023": {
+          "pixels": 48,
+          "area_ha": 4.32
+        }
+      }
     },
     "80237": {
       "name": "Sibratsgf\u00e4ll",
@@ -181823,9 +185553,86 @@
       "name": "Sulzberg",
       "state": "Vorarlberg",
       "iso": "80238",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 332,
+      "total_area_ha": 29.88,
+      "years": {
+        "2001": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2002": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2004": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2005": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2007": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2008": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2009": {
+          "pixels": 38,
+          "area_ha": 3.42
+        },
+        "2010": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2011": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2012": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2013": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2014": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2016": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2017": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2019": {
+          "pixels": 46,
+          "area_ha": 4.14
+        },
+        "2020": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2022": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2023": {
+          "pixels": 8,
+          "area_ha": 0.72
+        }
+      }
     },
     "80239": {
       "name": "Warth",
@@ -181892,225 +185699,2069 @@
       "name": "Wolfurt",
       "state": "Vorarlberg",
       "iso": "80240",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 40,
+      "total_area_ha": 3.6,
+      "years": {
+        "2002": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2004": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2006": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2007": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2009": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2011": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2013": {
+          "pixels": 5,
+          "area_ha": 0.45
+        }
+      }
     },
     "80301": {
       "name": "Dornbirn",
       "state": "Vorarlberg",
       "iso": "80301",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 3813,
+      "total_area_ha": 343.17,
+      "years": {
+        "2001": {
+          "pixels": 67,
+          "area_ha": 6.03
+        },
+        "2002": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2003": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2004": {
+          "pixels": 190,
+          "area_ha": 17.1
+        },
+        "2005": {
+          "pixels": 132,
+          "area_ha": 11.88
+        },
+        "2006": {
+          "pixels": 169,
+          "area_ha": 15.21
+        },
+        "2007": {
+          "pixels": 88,
+          "area_ha": 7.92
+        },
+        "2008": {
+          "pixels": 205,
+          "area_ha": 18.45
+        },
+        "2009": {
+          "pixels": 162,
+          "area_ha": 14.58
+        },
+        "2010": {
+          "pixels": 145,
+          "area_ha": 13.05
+        },
+        "2011": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2012": {
+          "pixels": 71,
+          "area_ha": 6.39
+        },
+        "2013": {
+          "pixels": 260,
+          "area_ha": 23.4
+        },
+        "2014": {
+          "pixels": 267,
+          "area_ha": 24.03
+        },
+        "2015": {
+          "pixels": 81,
+          "area_ha": 7.29
+        },
+        "2016": {
+          "pixels": 243,
+          "area_ha": 21.87
+        },
+        "2017": {
+          "pixels": 213,
+          "area_ha": 19.17
+        },
+        "2018": {
+          "pixels": 147,
+          "area_ha": 13.23
+        },
+        "2019": {
+          "pixels": 350,
+          "area_ha": 31.5
+        },
+        "2020": {
+          "pixels": 209,
+          "area_ha": 18.81
+        },
+        "2021": {
+          "pixels": 212,
+          "area_ha": 19.08
+        },
+        "2022": {
+          "pixels": 272,
+          "area_ha": 24.48
+        },
+        "2023": {
+          "pixels": 228,
+          "area_ha": 20.52
+        }
+      }
     },
     "80302": {
       "name": "Hohenems",
       "state": "Vorarlberg",
       "iso": "80302",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 807,
+      "total_area_ha": 72.63,
+      "years": {
+        "2001": {
+          "pixels": 38,
+          "area_ha": 3.42
+        },
+        "2002": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2003": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2004": {
+          "pixels": 102,
+          "area_ha": 9.18
+        },
+        "2005": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2006": {
+          "pixels": 37,
+          "area_ha": 3.33
+        },
+        "2007": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2008": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2009": {
+          "pixels": 41,
+          "area_ha": 3.69
+        },
+        "2010": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2011": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2012": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2013": {
+          "pixels": 40,
+          "area_ha": 3.6
+        },
+        "2014": {
+          "pixels": 52,
+          "area_ha": 4.68
+        },
+        "2015": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2016": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2017": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2018": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2019": {
+          "pixels": 138,
+          "area_ha": 12.42
+        },
+        "2020": {
+          "pixels": 60,
+          "area_ha": 5.4
+        },
+        "2021": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2022": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2023": {
+          "pixels": 27,
+          "area_ha": 2.43
+        }
+      }
     },
     "80303": {
       "name": "Lustenau",
       "state": "Vorarlberg",
       "iso": "80303",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 279,
+      "total_area_ha": 25.11,
+      "years": {
+        "2001": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2002": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2004": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2005": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2006": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2007": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2008": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2009": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2010": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2011": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2012": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2013": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2018": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2019": {
+          "pixels": 80,
+          "area_ha": 7.2
+        },
+        "2020": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2021": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2022": {
+          "pixels": 7,
+          "area_ha": 0.63
+        }
+      }
     },
     "80401": {
       "name": "Altach",
       "state": "Vorarlberg",
       "iso": "80401",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 7,
+      "total_area_ha": 0.63,
+      "years": {
+        "2004": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2009": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2011": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2016": {
+          "pixels": 1,
+          "area_ha": 0.09
+        }
+      }
     },
     "80402": {
       "name": "D\u00fcns",
       "state": "Vorarlberg",
       "iso": "80402",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 359,
+      "total_area_ha": 32.31,
+      "years": {
+        "2001": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2002": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2004": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2005": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2006": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2007": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2008": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2009": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2010": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2013": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2014": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2015": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2016": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2017": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2018": {
+          "pixels": 40,
+          "area_ha": 3.6
+        },
+        "2019": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2020": {
+          "pixels": 86,
+          "area_ha": 7.74
+        },
+        "2021": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2022": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2023": {
+          "pixels": 36,
+          "area_ha": 3.24
+        }
+      }
     },
     "80403": {
       "name": "D\u00fcnserberg",
       "state": "Vorarlberg",
       "iso": "80403",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 144,
+      "total_area_ha": 12.96,
+      "years": {
+        "2001": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2002": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2003": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2004": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2005": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2008": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2010": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2012": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2013": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2014": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2015": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2017": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2018": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2021": {
+          "pixels": 32,
+          "area_ha": 2.88
+        }
+      }
     },
     "80404": {
       "name": "Feldkirch",
       "state": "Vorarlberg",
       "iso": "80404",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 3598,
+      "total_area_ha": 323.82,
+      "years": {
+        "2001": {
+          "pixels": 72,
+          "area_ha": 6.48
+        },
+        "2002": {
+          "pixels": 103,
+          "area_ha": 9.27
+        },
+        "2004": {
+          "pixels": 337,
+          "area_ha": 30.33
+        },
+        "2005": {
+          "pixels": 95,
+          "area_ha": 8.55
+        },
+        "2006": {
+          "pixels": 144,
+          "area_ha": 12.96
+        },
+        "2007": {
+          "pixels": 66,
+          "area_ha": 5.94
+        },
+        "2008": {
+          "pixels": 528,
+          "area_ha": 47.52
+        },
+        "2009": {
+          "pixels": 134,
+          "area_ha": 12.06
+        },
+        "2010": {
+          "pixels": 253,
+          "area_ha": 22.77
+        },
+        "2011": {
+          "pixels": 112,
+          "area_ha": 10.08
+        },
+        "2012": {
+          "pixels": 83,
+          "area_ha": 7.47
+        },
+        "2013": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2014": {
+          "pixels": 105,
+          "area_ha": 9.45
+        },
+        "2015": {
+          "pixels": 64,
+          "area_ha": 5.76
+        },
+        "2016": {
+          "pixels": 152,
+          "area_ha": 13.68
+        },
+        "2017": {
+          "pixels": 203,
+          "area_ha": 18.27
+        },
+        "2018": {
+          "pixels": 559,
+          "area_ha": 50.31
+        },
+        "2019": {
+          "pixels": 359,
+          "area_ha": 32.31
+        },
+        "2020": {
+          "pixels": 93,
+          "area_ha": 8.37
+        },
+        "2021": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2022": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2023": {
+          "pixels": 78,
+          "area_ha": 7.02
+        }
+      }
     },
     "80405": {
       "name": "Frastanz",
       "state": "Vorarlberg",
       "iso": "80405",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 871,
+      "total_area_ha": 78.39,
+      "years": {
+        "2001": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2004": {
+          "pixels": 54,
+          "area_ha": 4.86
+        },
+        "2005": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2006": {
+          "pixels": 100,
+          "area_ha": 9.0
+        },
+        "2007": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2008": {
+          "pixels": 70,
+          "area_ha": 6.3
+        },
+        "2009": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2010": {
+          "pixels": 36,
+          "area_ha": 3.24
+        },
+        "2011": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2012": {
+          "pixels": 56,
+          "area_ha": 5.04
+        },
+        "2013": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2014": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2015": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2016": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2017": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2018": {
+          "pixels": 152,
+          "area_ha": 13.68
+        },
+        "2019": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2020": {
+          "pixels": 82,
+          "area_ha": 7.38
+        },
+        "2021": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2022": {
+          "pixels": 60,
+          "area_ha": 5.4
+        },
+        "2023": {
+          "pixels": 9,
+          "area_ha": 0.81
+        }
+      }
     },
     "80406": {
       "name": "Fraxern",
       "state": "Vorarlberg",
       "iso": "80406",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 592,
+      "total_area_ha": 53.28,
+      "years": {
+        "2001": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2002": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2003": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2004": {
+          "pixels": 70,
+          "area_ha": 6.3
+        },
+        "2005": {
+          "pixels": 78,
+          "area_ha": 7.02
+        },
+        "2006": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2007": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2008": {
+          "pixels": 34,
+          "area_ha": 3.06
+        },
+        "2009": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2010": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2012": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2013": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2014": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2015": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2016": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2017": {
+          "pixels": 38,
+          "area_ha": 3.42
+        },
+        "2018": {
+          "pixels": 97,
+          "area_ha": 8.73
+        },
+        "2019": {
+          "pixels": 44,
+          "area_ha": 3.96
+        },
+        "2020": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2021": {
+          "pixels": 41,
+          "area_ha": 3.69
+        },
+        "2022": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2023": {
+          "pixels": 12,
+          "area_ha": 1.08
+        }
+      }
     },
     "80407": {
       "name": "G\u00f6fis",
       "state": "Vorarlberg",
       "iso": "80407",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 1200,
+      "total_area_ha": 108.0,
+      "years": {
+        "2001": {
+          "pixels": 76,
+          "area_ha": 6.84
+        },
+        "2004": {
+          "pixels": 31,
+          "area_ha": 2.79
+        },
+        "2005": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2006": {
+          "pixels": 112,
+          "area_ha": 10.08
+        },
+        "2007": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2008": {
+          "pixels": 54,
+          "area_ha": 4.86
+        },
+        "2009": {
+          "pixels": 34,
+          "area_ha": 3.06
+        },
+        "2010": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2011": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2012": {
+          "pixels": 41,
+          "area_ha": 3.69
+        },
+        "2013": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2014": {
+          "pixels": 29,
+          "area_ha": 2.61
+        },
+        "2015": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2016": {
+          "pixels": 205,
+          "area_ha": 18.45
+        },
+        "2017": {
+          "pixels": 72,
+          "area_ha": 6.48
+        },
+        "2018": {
+          "pixels": 200,
+          "area_ha": 18.0
+        },
+        "2019": {
+          "pixels": 94,
+          "area_ha": 8.46
+        },
+        "2020": {
+          "pixels": 104,
+          "area_ha": 9.36
+        },
+        "2021": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2022": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2023": {
+          "pixels": 19,
+          "area_ha": 1.71
+        }
+      }
     },
     "80408": {
       "name": "G\u00f6tzis",
       "state": "Vorarlberg",
       "iso": "80408",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 249,
+      "total_area_ha": 22.41,
+      "years": {
+        "2001": {
+          "pixels": 35,
+          "area_ha": 3.15
+        },
+        "2002": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2004": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2005": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2006": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2007": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2008": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2009": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2010": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2011": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2012": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2013": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2014": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2016": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2017": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2019": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2020": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2022": {
+          "pixels": 10,
+          "area_ha": 0.9
+        }
+      }
     },
     "80409": {
       "name": "Klaus",
       "state": "Vorarlberg",
       "iso": "80409",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 322,
+      "total_area_ha": 28.98,
+      "years": {
+        "2001": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2002": {
+          "pixels": 207,
+          "area_ha": 18.63
+        },
+        "2004": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2005": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2006": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2007": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2008": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2009": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2010": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2011": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2012": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2016": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2017": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2023": {
+          "pixels": 8,
+          "area_ha": 0.72
+        }
+      }
     },
     "80410": {
       "name": "Koblach",
       "state": "Vorarlberg",
       "iso": "80410",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 93,
+      "total_area_ha": 8.37,
+      "years": {
+        "2004": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2006": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2007": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2008": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2010": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2012": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2016": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2023": {
+          "pixels": 21,
+          "area_ha": 1.89
+        }
+      }
     },
     "80411": {
       "name": "Laterns",
       "state": "Vorarlberg",
       "iso": "80411",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 1105,
+      "total_area_ha": 99.45,
+      "years": {
+        "2001": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2002": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2003": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2004": {
+          "pixels": 80,
+          "area_ha": 7.2
+        },
+        "2005": {
+          "pixels": 53,
+          "area_ha": 4.77
+        },
+        "2006": {
+          "pixels": 85,
+          "area_ha": 7.65
+        },
+        "2007": {
+          "pixels": 73,
+          "area_ha": 6.57
+        },
+        "2008": {
+          "pixels": 52,
+          "area_ha": 4.68
+        },
+        "2009": {
+          "pixels": 30,
+          "area_ha": 2.7
+        },
+        "2010": {
+          "pixels": 59,
+          "area_ha": 5.31
+        },
+        "2011": {
+          "pixels": 27,
+          "area_ha": 2.43
+        },
+        "2012": {
+          "pixels": 52,
+          "area_ha": 4.68
+        },
+        "2013": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2014": {
+          "pixels": 151,
+          "area_ha": 13.59
+        },
+        "2015": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2016": {
+          "pixels": 54,
+          "area_ha": 4.86
+        },
+        "2017": {
+          "pixels": 86,
+          "area_ha": 7.74
+        },
+        "2019": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2020": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2021": {
+          "pixels": 40,
+          "area_ha": 3.6
+        },
+        "2022": {
+          "pixels": 51,
+          "area_ha": 4.59
+        },
+        "2023": {
+          "pixels": 42,
+          "area_ha": 3.78
+        }
+      }
     },
     "80412": {
       "name": "M\u00e4der",
       "state": "Vorarlberg",
       "iso": "80412",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 5,
+      "total_area_ha": 0.45,
+      "years": {
+        "2001": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2008": {
+          "pixels": 3,
+          "area_ha": 0.27
+        }
+      }
     },
     "80413": {
       "name": "Meiningen",
       "state": "Vorarlberg",
       "iso": "80413",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 37,
+      "total_area_ha": 3.33,
+      "years": {
+        "2001": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2004": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2005": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2009": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2011": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2013": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2014": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2016": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2017": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2022": {
+          "pixels": 3,
+          "area_ha": 0.27
+        }
+      }
     },
     "80414": {
       "name": "Rankweil",
       "state": "Vorarlberg",
       "iso": "80414",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 655,
+      "total_area_ha": 58.95,
+      "years": {
+        "2001": {
+          "pixels": 68,
+          "area_ha": 6.12
+        },
+        "2002": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2004": {
+          "pixels": 57,
+          "area_ha": 5.13
+        },
+        "2005": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2006": {
+          "pixels": 49,
+          "area_ha": 4.41
+        },
+        "2007": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2008": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2009": {
+          "pixels": 39,
+          "area_ha": 3.51
+        },
+        "2010": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2011": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2012": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2013": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2014": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2015": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2016": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2017": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2018": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2019": {
+          "pixels": 54,
+          "area_ha": 4.86
+        },
+        "2020": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2021": {
+          "pixels": 54,
+          "area_ha": 4.86
+        },
+        "2022": {
+          "pixels": 38,
+          "area_ha": 3.42
+        },
+        "2023": {
+          "pixels": 45,
+          "area_ha": 4.05
+        }
+      }
     },
     "80415": {
       "name": "R\u00f6ns",
       "state": "Vorarlberg",
       "iso": "80415",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 41,
+      "total_area_ha": 3.69,
+      "years": {
+        "2001": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2004": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2005": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2007": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2010": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2011": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2014": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2016": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2017": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2019": {
+          "pixels": 2,
+          "area_ha": 0.18
+        }
+      }
     },
     "80416": {
       "name": "R\u00f6this",
       "state": "Vorarlberg",
       "iso": "80416",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 178,
+      "total_area_ha": 16.02,
+      "years": {
+        "2001": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2002": {
+          "pixels": 66,
+          "area_ha": 5.94
+        },
+        "2004": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2006": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2009": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2011": {
+          "pixels": 8,
+          "area_ha": 0.72
+        },
+        "2013": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2014": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2015": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2016": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2017": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2018": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2020": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2022": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2023": {
+          "pixels": 9,
+          "area_ha": 0.81
+        }
+      }
     },
     "80417": {
       "name": "Satteins",
       "state": "Vorarlberg",
       "iso": "80417",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 560,
+      "total_area_ha": 50.4,
+      "years": {
+        "2001": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2002": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2004": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2005": {
+          "pixels": 14,
+          "area_ha": 1.26
+        },
+        "2006": {
+          "pixels": 17,
+          "area_ha": 1.53
+        },
+        "2007": {
+          "pixels": 45,
+          "area_ha": 4.05
+        },
+        "2008": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2009": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2010": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2011": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2012": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2015": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2016": {
+          "pixels": 56,
+          "area_ha": 5.04
+        },
+        "2017": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2018": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2019": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2020": {
+          "pixels": 64,
+          "area_ha": 5.76
+        },
+        "2021": {
+          "pixels": 59,
+          "area_ha": 5.31
+        },
+        "2022": {
+          "pixels": 43,
+          "area_ha": 3.87
+        },
+        "2023": {
+          "pixels": 47,
+          "area_ha": 4.23
+        }
+      }
     },
     "80418": {
       "name": "Schlins",
       "state": "Vorarlberg",
       "iso": "80418",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 191,
+      "total_area_ha": 17.19,
+      "years": {
+        "2001": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2002": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2004": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2005": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2006": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2007": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2008": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2009": {
+          "pixels": 22,
+          "area_ha": 1.98
+        },
+        "2010": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2012": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2013": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2014": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2015": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2016": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2017": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2018": {
+          "pixels": 41,
+          "area_ha": 3.69
+        },
+        "2019": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2020": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2021": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2022": {
+          "pixels": 19,
+          "area_ha": 1.71
+        },
+        "2023": {
+          "pixels": 5,
+          "area_ha": 0.45
+        }
+      }
     },
     "80419": {
       "name": "Schnifis",
       "state": "Vorarlberg",
       "iso": "80419",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 148,
+      "total_area_ha": 13.32,
+      "years": {
+        "2001": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2002": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2005": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2007": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2008": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2009": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2010": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2012": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2013": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2014": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2016": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2019": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2020": {
+          "pixels": 62,
+          "area_ha": 5.58
+        },
+        "2021": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2022": {
+          "pixels": 9,
+          "area_ha": 0.81
+        },
+        "2023": {
+          "pixels": 4,
+          "area_ha": 0.36
+        }
+      }
     },
     "80420": {
       "name": "Sulz",
       "state": "Vorarlberg",
       "iso": "80420",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 29,
+      "total_area_ha": 2.61,
+      "years": {
+        "2001": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2005": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2006": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2012": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2016": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2020": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2021": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2023": {
+          "pixels": 4,
+          "area_ha": 0.36
+        }
+      }
     },
     "80421": {
       "name": "\u00dcbersaxen",
       "state": "Vorarlberg",
       "iso": "80421",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 89,
+      "total_area_ha": 8.01,
+      "years": {
+        "2001": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2002": {
+          "pixels": 11,
+          "area_ha": 0.99
+        },
+        "2004": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2005": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2006": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2007": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2009": {
+          "pixels": 1,
+          "area_ha": 0.09
+        },
+        "2010": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2011": {
+          "pixels": 7,
+          "area_ha": 0.63
+        },
+        "2012": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2013": {
+          "pixels": 13,
+          "area_ha": 1.17
+        },
+        "2014": {
+          "pixels": 6,
+          "area_ha": 0.54
+        },
+        "2017": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2020": {
+          "pixels": 8,
+          "area_ha": 0.72
+        }
+      }
     },
     "80422": {
       "name": "Viktorsberg",
       "state": "Vorarlberg",
       "iso": "80422",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 703,
+      "total_area_ha": 63.27,
+      "years": {
+        "2001": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2002": {
+          "pixels": 21,
+          "area_ha": 1.89
+        },
+        "2004": {
+          "pixels": 63,
+          "area_ha": 5.67
+        },
+        "2005": {
+          "pixels": 69,
+          "area_ha": 6.21
+        },
+        "2006": {
+          "pixels": 50,
+          "area_ha": 4.5
+        },
+        "2007": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2008": {
+          "pixels": 24,
+          "area_ha": 2.16
+        },
+        "2009": {
+          "pixels": 56,
+          "area_ha": 5.04
+        },
+        "2010": {
+          "pixels": 33,
+          "area_ha": 2.97
+        },
+        "2011": {
+          "pixels": 26,
+          "area_ha": 2.34
+        },
+        "2012": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2013": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2014": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2015": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2016": {
+          "pixels": 40,
+          "area_ha": 3.6
+        },
+        "2017": {
+          "pixels": 75,
+          "area_ha": 6.75
+        },
+        "2018": {
+          "pixels": 78,
+          "area_ha": 7.02
+        },
+        "2019": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2020": {
+          "pixels": 12,
+          "area_ha": 1.08
+        },
+        "2021": {
+          "pixels": 20,
+          "area_ha": 1.8
+        },
+        "2022": {
+          "pixels": 38,
+          "area_ha": 3.42
+        },
+        "2023": {
+          "pixels": 19,
+          "area_ha": 1.71
+        }
+      }
     },
     "80423": {
       "name": "Weiler",
       "state": "Vorarlberg",
       "iso": "80423",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 27,
+      "total_area_ha": 2.43,
+      "years": {
+        "2001": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2002": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2004": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2005": {
+          "pixels": 3,
+          "area_ha": 0.27
+        },
+        "2013": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2014": {
+          "pixels": 3,
+          "area_ha": 0.27
+        }
+      }
     },
     "80424": {
       "name": "Zwischenwasser",
       "state": "Vorarlberg",
       "iso": "80424",
-      "total_pixels": 0,
-      "total_area_ha": 0.0,
-      "years": {}
+      "total_pixels": 554,
+      "total_area_ha": 49.86,
+      "years": {
+        "2001": {
+          "pixels": 4,
+          "area_ha": 0.36
+        },
+        "2002": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2004": {
+          "pixels": 34,
+          "area_ha": 3.06
+        },
+        "2005": {
+          "pixels": 18,
+          "area_ha": 1.62
+        },
+        "2006": {
+          "pixels": 26,
+          "area_ha": 2.34
+        },
+        "2007": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2008": {
+          "pixels": 10,
+          "area_ha": 0.9
+        },
+        "2009": {
+          "pixels": 25,
+          "area_ha": 2.25
+        },
+        "2010": {
+          "pixels": 16,
+          "area_ha": 1.44
+        },
+        "2011": {
+          "pixels": 2,
+          "area_ha": 0.18
+        },
+        "2012": {
+          "pixels": 15,
+          "area_ha": 1.35
+        },
+        "2013": {
+          "pixels": 48,
+          "area_ha": 4.32
+        },
+        "2014": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2015": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2016": {
+          "pixels": 5,
+          "area_ha": 0.45
+        },
+        "2017": {
+          "pixels": 23,
+          "area_ha": 2.07
+        },
+        "2018": {
+          "pixels": 43,
+          "area_ha": 3.87
+        },
+        "2019": {
+          "pixels": 65,
+          "area_ha": 5.85
+        },
+        "2020": {
+          "pixels": 67,
+          "area_ha": 6.03
+        },
+        "2021": {
+          "pixels": 36,
+          "area_ha": 3.24
+        },
+        "2022": {
+          "pixels": 42,
+          "area_ha": 3.78
+        },
+        "2023": {
+          "pixels": 35,
+          "area_ha": 3.15
+        }
+      }
     },
     "90101": {
       "name": "Wien-Innere Stadt",
