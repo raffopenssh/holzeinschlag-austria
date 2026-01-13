@@ -43,24 +43,35 @@
         .sidebar-header .subtitle { font-size: 0.85rem; opacity: 0.9; }
         .sidebar-content { flex: 1; overflow-y: auto; padding: 1rem; }
         
-        /* Year selector */
-        .year-selector {
+        /* Year toggle buttons */
+        .year-toggles {
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            flex-wrap: wrap;
+            gap: 4px;
             margin-bottom: 1rem;
-            padding: 0.75rem;
+            padding: 0.5rem;
             background: var(--bg);
             border-radius: 8px;
         }
-        .year-selector label { font-weight: 500; font-size: 0.9rem; }
-        .year-selector select {
-            flex: 1;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 0.9rem;
+        .year-btn {
+            padding: 6px 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.15s;
             background: white;
+            color: var(--text);
+        }
+        .year-btn:hover { background: #e8f5e9; }
+        .year-btn.active {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .year-btn.loading {
+            opacity: 0.5;
+            cursor: wait;
         }
         
         /* Stats cards */
@@ -179,6 +190,25 @@
         .popup-stat-value { font-weight: 500; }
         .popup-highlight { background: #e8f5e9; margin: 0.25rem -0.5rem; padding: 0.25rem 0.5rem; }
         
+        /* Loading spinner */
+        .loading-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 4px solid var(--bg);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
         @media (max-width: 768px) {
             .app-container { flex-direction: column; }
             .sidebar { width: 100%; height: auto; max-height: 45vh; }
@@ -192,18 +222,18 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h1>🌲 Holzeinschlag Österreich</h1>
-                <div class="subtitle">Timber Harvest by Municipality</div>
+                <div class="subtitle">Forest Loss & Carbon Emissions by Municipality</div>
             </div>
             
             <div class="sidebar-content">
-                <!-- Year selector -->
-                <div class="year-selector">
-                    <label>📅 Jahr:</label>
-                    <select x-model="selectedYear" @change="updateYear()">
-                        <template x-for="year in availableYears" :key="year">
-                            <option :value="year" x-text="year"></option>
-                        </template>
-                    </select>
+                <!-- Year toggle buttons -->
+                <div class="year-toggles">
+                    <template x-for="year in availableYears" :key="year">
+                        <button class="year-btn"
+                                :class="{ active: selectedYear === year, loading: loadingYear === year }"
+                                @click="selectYear(year)"
+                                x-text="year"></button>
+                    </template>
                 </div>
                 
                 <!-- Austria totals -->
@@ -216,7 +246,7 @@
                         </div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-label">🌲 Geschätzter Einschlag</div>
+                        <div class="stat-label">🌲 Gesch. Einschlag</div>
                         <div class="stat-value small">
                             <span x-text="formatNumber(yearSummary?.total_harvest_efm)"></span>
                             <span class="stat-unit">Efm</span>
@@ -253,7 +283,7 @@
                 </div>
                 
                 <!-- Top municipalities -->
-                <div class="section-header">🏆 Top Gemeinden (nach Einschlag)</div>
+                <div class="section-header">🏆 Top Gemeinden (nach Waldverlust)</div>
                 <div class="muni-list">
                     <template x-for="(muni, index) in displayedMunicipalities" :key="muni.iso">
                         <div class="muni-item"
@@ -278,78 +308,91 @@
                 <button class="load-more" 
                         x-show="displayCount < sortedMunicipalities.length"
                         @click="loadMore()">
-                    Mehr laden (<span x-text="displayCount"></span> / <span x-text="sortedMunicipalities.length"></span> Gemeinden)
+                    Mehr laden (<span x-text="displayCount"></span> / <span x-text="sortedMunicipalities.length"></span>)
                 </button>
                 
                 <!-- Legend -->
                 <div class="legend">
-                    <div class="legend-title">Einschlag pro Gemeinde (Efm)</div>
+                    <div class="legend-title">Waldverlust pro Gemeinde</div>
                     <div class="legend-scale" style="background: linear-gradient(90deg, #f5f5f5, #c8e6c9, #81c784, #4caf50, #388e3c, #1b5e20);"></div>
                     <div class="legend-labels">
                         <span>0</span>
-                        <span>5k</span>
-                        <span>25k</span>
-                        <span>50k</span>
-                        <span>100k+</span>
+                        <span>100</span>
+                        <span>500</span>
+                        <span>1000+ ha</span>
                     </div>
                 </div>
             </div>
             
             <div class="sidebar-footer">
-                Datenquellen: <a href="https://www.bmluk.gv.at" target="_blank">BML</a> Holzeinschlagsmeldung, 
-                <a href="https://glad.umd.edu/" target="_blank">Hansen/GLAD</a> Satellite Data<br>
-                Einheit: Efm = Erntefestmeter (m³ Holz ohne Rinde)
+                Daten: <a href="https://glad.umd.edu/" target="_blank">Hansen/GLAD</a> Satellite, 
+                <a href="https://www.bmluk.gv.at" target="_blank">BML</a> | 
+                CO₂ nach Schadholzanteil
             </div>
         </aside>
         
         <!-- Map -->
         <div class="map-container">
             <div id="map"></div>
+            <div class="loading-overlay" x-show="loading" x-cloak>
+                <div class="spinner"></div>
+            </div>
         </div>
     </div>
     
     <script>
         function holzeinschlagApp() {
             return {
-                yearlyData: null,
+                // Data stores
+                meta: null,
+                lookup: null,
+                yearData: {},      // Cache: { year: data }
                 gemeindenGeoJson: null,
-                gemeindenLayer: null,
-                map: null,
-                selectedYear: null,
+                
+                // UI state
+                selectedYear: '2023',
                 selectedMuni: null,
                 highlightedMuni: null,
                 displayCount: 20,
+                loading: true,
+                loadingYear: null,
+                
+                // Map
+                map: null,
+                gemeindenLayer: null,
+                activePopup: null,
                 
                 get availableYears() {
-                    return this.yearlyData?.years_available || [];
+                    return this.meta?.years || [];
                 },
                 
                 get yearSummary() {
-                    return this.yearlyData?.summary?.[this.selectedYear];
+                    return this.meta?.summary?.[this.selectedYear];
                 },
                 
                 get currentYearData() {
-                    return this.yearlyData?.gemeinden?.[this.selectedYear] || {};
+                    return this.yearData[this.selectedYear] || {};
                 },
                 
                 get sortedMunicipalities() {
                     const data = this.currentYearData;
+                    const lookup = this.lookup || {};
+                    
                     return Object.entries(data)
                         .map(([iso, d]) => ({
                             iso,
-                            name: d.n,
-                            state: d.s,
-                            harvest: d.h || 0,
-                            value: d.v || 0,
-                            lossPixels: d.lp || 0,
-                            lossArea: d.la || 0,
-                            price: d.p || 0,
-                            population: d.pop || 0,
-                            co2: d.co2 || 0,
-                            ets: d.ets || 0,
-                            etsPc: d.ets_pc || 0
+                            name: lookup.names?.[iso] || iso,
+                            state: lookup.states?.[iso] || '',
+                            lossPixels: d[0] || 0,
+                            lossArea: d[1] || 0,
+                            harvest: d[2] || 0,
+                            value: d[3] || 0,
+                            co2: d[4] || 0,
+                            ets: d[5] || 0,
+                            etsPc: d[6] || 0,
+                            population: lookup.population?.[iso] || 0
                         }))
-                        .sort((a, b) => b.harvest - a.harvest);
+                        .sort((a, b) => b.lossArea - a.lossArea);
                 },
                 
                 get displayedMunicipalities() {
@@ -357,22 +400,59 @@
                 },
                 
                 async init() {
-                    // Load data
-                    const [yearlyResp, geoResp] = await Promise.all([
-                        fetch('/data/gemeinde_emissions.json'),
+                    this.loading = true;
+                    
+                    // Load metadata and lookup (small files, load first)
+                    const [metaResp, lookupResp, geoResp] = await Promise.all([
+                        fetch('/data/emissions_meta.json'),
+                        fetch('/data/gemeinde_lookup.json'),
                         fetch('/data/austria_gemeinden.geojson')
                     ]);
                     
-                    this.yearlyData = await yearlyResp.json();
+                    this.meta = await metaResp.json();
+                    this.lookup = await lookupResp.json();
                     this.gemeindenGeoJson = await geoResp.json();
                     
-                    // Set default to latest year
-                    if (this.availableYears.length > 0) {
-                        this.selectedYear = this.availableYears[this.availableYears.length - 1];
-                    }
+                    // Load default year data
+                    await this.loadYearData(this.selectedYear);
                     
                     // Initialize map
                     this.initMap();
+                    this.loading = false;
+                },
+                
+                async loadYearData(year) {
+                    if (this.yearData[year]) return; // Already cached
+                    
+                    this.loadingYear = year;
+                    const resp = await fetch(`/data/year_${year}.json`);
+                    this.yearData[year] = await resp.json();
+                    this.loadingYear = null;
+                },
+                
+                async selectYear(year) {
+                    if (year === this.selectedYear) return;
+                    
+                    // Close any open popup
+                    if (this.activePopup) {
+                        this.map.closePopup(this.activePopup);
+                        this.activePopup = null;
+                    }
+                    
+                    await this.loadYearData(year);
+                    this.selectedYear = year;
+                    this.displayCount = 20;
+                    this.selectedMuni = null;
+                    
+                    // Update map colors
+                    if (this.gemeindenLayer) {
+                        this.gemeindenLayer.setStyle((f) => this.getStyle(f));
+                    }
+                    
+                    // Reopen popup for selected municipality if any
+                    if (this.selectedMuni) {
+                        this.openPopupFor(this.selectedMuni);
+                    }
                 },
                 
                 initMap() {
@@ -394,10 +474,6 @@
                 },
                 
                 createGemeindenLayer() {
-                    if (this.gemeindenLayer) {
-                        this.map.removeLayer(this.gemeindenLayer);
-                    }
-                    
                     this.gemeindenLayer = L.geoJSON(this.gemeindenGeoJson, {
                         style: (feature) => this.getStyle(feature),
                         onEachFeature: (feature, layer) => {
@@ -417,13 +493,13 @@
                 
                 getStyle(feature) {
                     const iso = feature.properties.iso;
-                    const data = this.currentYearData[iso];
-                    const harvest = data?.h || 0;
+                    const d = this.currentYearData[iso];
+                    const lossArea = d ? d[1] : 0;  // d[1] = loss area
                     
                     const isHighlighted = this.highlightedMuni === iso || this.selectedMuni === iso;
                     
                     return {
-                        fillColor: this.getColor(harvest),
+                        fillColor: this.getColor(lossArea),
                         weight: isHighlighted ? 2 : 0.5,
                         opacity: 1,
                         color: isHighlighted ? '#1e3d1a' : '#ffffff',
@@ -431,82 +507,90 @@
                     };
                 },
                 
-                getColor(harvest) {
-                    if (harvest === 0) return '#f5f5f5';
-                    if (harvest < 1000) return '#e8f5e9';
-                    if (harvest < 5000) return '#c8e6c9';
-                    if (harvest < 10000) return '#a5d6a7';
-                    if (harvest < 25000) return '#81c784';
-                    if (harvest < 50000) return '#66bb6a';
-                    if (harvest < 75000) return '#4caf50';
-                    if (harvest < 100000) return '#43a047';
-                    if (harvest < 150000) return '#388e3c';
+                getColor(lossArea) {
+                    if (!lossArea || lossArea === 0) return '#f5f5f5';
+                    if (lossArea < 10) return '#e8f5e9';
+                    if (lossArea < 50) return '#c8e6c9';
+                    if (lossArea < 100) return '#a5d6a7';
+                    if (lossArea < 200) return '#81c784';
+                    if (lossArea < 500) return '#66bb6a';
+                    if (lossArea < 750) return '#4caf50';
+                    if (lossArea < 1000) return '#43a047';
+                    if (lossArea < 1500) return '#388e3c';
                     return '#1b5e20';
                 },
                 
                 onMuniClick(feature, layer) {
                     const iso = feature.properties.iso;
-                    const data = this.currentYearData[iso];
+                    this.selectedMuni = iso;
+                    this.openPopupFor(iso, layer);
+                },
+                
+                openPopupFor(iso, layer) {
+                    const d = this.currentYearData[iso];
+                    const name = this.lookup?.names?.[iso] || iso;
+                    const state = this.lookup?.states?.[iso] || '';
+                    const pop = this.lookup?.population?.[iso] || 0;
                     
-                    if (!data) {
-                        layer.bindPopup(`<b>${feature.properties.name}</b><br>Keine Daten verfügbar`).openPopup();
+                    if (!d) {
+                        const content = `<b>${name}</b><br>Keine Daten für ${this.selectedYear}`;
+                        if (layer) layer.bindPopup(content).openPopup();
                         return;
                     }
                     
-                    this.selectedMuni = iso;
-                    
-                    const pop = data.pop || 0;
+                    // d = [lp, la, h, v, co2, ets, ets_pc]
                     const content = `
-                        <div class="popup-title">${data.n}</div>
-                        <div style="font-size: 0.75rem; color: #666; margin-bottom: 0.5rem;">${data.s} | ${this.selectedYear}</div>
+                        <div class="popup-title">${name}</div>
+                        <div style="font-size: 0.75rem; color: #666; margin-bottom: 0.5rem;">${state} | ${this.selectedYear}</div>
                         <div class="popup-stat popup-highlight">
                             <span class="popup-stat-label">🛰️ Waldverlust</span>
-                            <span class="popup-stat-value" style="color: #2e7d32;">${(data.la || 0).toFixed(1)} ha</span>
+                            <span class="popup-stat-value" style="color: #2e7d32;">${(d[1] || 0).toFixed(1)} ha</span>
                         </div>
                         <div class="popup-stat">
                             <span class="popup-stat-label">🪵 Gesch. Einschlag</span>
-                            <span class="popup-stat-value">${this.formatNumber(data.h)} Efm</span>
+                            <span class="popup-stat-value">${this.formatNumber(d[2])} Efm</span>
                         </div>
                         <div class="popup-stat">
                             <span class="popup-stat-label">💰 Holzwert</span>
-                            <span class="popup-stat-value">€${this.formatNumber(data.v)}</span>
+                            <span class="popup-stat-value">€${this.formatNumber(d[3])}</span>
                         </div>
                         <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid #ddd;">
                         <div class="popup-stat" style="background: #ffebee; margin: 0 -0.5rem; padding: 0.25rem 0.5rem;">
                             <span class="popup-stat-label">🏭 CO₂-Emissionen</span>
-                            <span class="popup-stat-value" style="color: #c0392b;">${this.formatNumber(data.co2)} t</span>
+                            <span class="popup-stat-value" style="color: #c0392b;">${this.formatNumber(d[4])} t</span>
                         </div>
                         <div class="popup-stat" style="background: #fff3e0; margin: 0 -0.5rem; padding: 0.25rem 0.5rem;">
                             <span class="popup-stat-label">💸 ETS-Haftung</span>
-                            <span class="popup-stat-value" style="color: #e65100;">€${this.formatNumber(data.ets)}</span>
+                            <span class="popup-stat-value" style="color: #e65100;">€${this.formatNumber(d[5])}</span>
                         </div>
                         <div class="popup-stat">
                             <span class="popup-stat-label">👥 ETS pro Kopf</span>
-                            <span class="popup-stat-value" style="font-weight: bold;">€${(data.ets_pc || 0).toFixed(2)}</span>
+                            <span class="popup-stat-value" style="font-weight: bold;">€${(d[6] || 0).toFixed(2)}</span>
                         </div>
                         <div style="font-size: 0.65rem; color: #999; margin-top: 0.5rem;">Bevölkerung: ${this.formatNumber(pop)}</div>
                     `;
-                    layer.bindPopup(content, { maxWidth: 300 }).openPopup();
-                },
-                
-                updateYear() {
-                    this.displayCount = 20;
-                    this.selectedMuni = null;
-                    if (this.gemeindenLayer) {
-                        this.gemeindenLayer.setStyle((f) => this.getStyle(f));
+                    
+                    if (layer) {
+                        this.activePopup = layer.bindPopup(content, { maxWidth: 300 }).openPopup().getPopup();
+                    } else {
+                        // Find layer by ISO
+                        this.gemeindenLayer.eachLayer((l) => {
+                            if (l.feature?.properties?.iso === iso) {
+                                this.activePopup = l.bindPopup(content, { maxWidth: 300 }).openPopup().getPopup();
+                            }
+                        });
                     }
                 },
                 
                 selectMuni(iso) {
                     this.selectedMuni = iso;
                     
-                    // Find the layer and open popup
                     if (this.gemeindenLayer) {
                         this.gemeindenLayer.eachLayer((layer) => {
                             if (layer.feature?.properties?.iso === iso) {
                                 const bounds = layer.getBounds();
                                 this.map.fitBounds(bounds, { maxZoom: 11, padding: [50, 50] });
-                                this.onMuniClick(layer.feature, layer);
+                                this.openPopupFor(iso, layer);
                             }
                         });
                     }
@@ -528,21 +612,9 @@
                     return new Intl.NumberFormat('de-AT').format(Math.round(num));
                 },
                 
-                formatBillion(num) {
-                    if (!num) return '0';
-                    return (num / 1e9).toFixed(2);
-                },
-                
                 formatMillion(num) {
                     if (!num) return '0';
                     return (num / 1e6).toFixed(1);
-                },
-                
-                formatThousand(num) {
-                    if (!num) return '0';
-                    if (num >= 1e6) return (num / 1e6).toFixed(1) + 'M';
-                    if (num >= 1e3) return (num / 1e3).toFixed(0) + 'k';
-                    return num.toString();
                 }
             };
         }
