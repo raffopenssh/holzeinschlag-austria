@@ -1,0 +1,362 @@
+{
+  "2011": {
+    "year": 2011,
+    "austria_total": 18695671.0,
+    "states": {
+      "Burgenland": 691811.0,
+      "K\u00e4rnten": 2961152.0,
+      "Nieder\u00f6sterreich": 3829984.0,
+      "Ober\u00f6sterreich": 2974993.0,
+      "Salzburg": 1330244.0,
+      "Steiermark": 5005997.0,
+      "Tirol": 1473245.0,
+      "Vorarlberg": 398383.0,
+      "Wien": 29861.0
+    }
+  },
+  "2012": {
+    "year": 2012,
+    "austria_total": 18020680.0,
+    "states": {
+      "Burgenland": 682100.0,
+      "K\u00e4rnten": 2542365.0,
+      "Nieder\u00f6sterreich": 3691062.0,
+      "Ober\u00f6sterreich": 2883028.0,
+      "Salzburg": 1264858.0,
+      "Steiermark": 4993996.0,
+      "Tirol": 1565375.0,
+      "Vorarlberg": 359121.0,
+      "Wien": 38776.0
+    }
+  },
+  "2014": {
+    "year": 2014,
+    "austria_total": 17088552.0,
+    "states": {
+      "Burgenland": 791885.0,
+      "K\u00e4rnten": 2523965.0,
+      "Nieder\u00f6sterreich": 3637385.0,
+      "Ober\u00f6sterreich": 2655485.0,
+      "Salzburg": 1060228.0,
+      "Steiermark": 4570751.0,
+      "Tirol": 1439681.0,
+      "Vorarlberg": 362334.0,
+      "Wien": 46838.0
+    }
+  },
+  "2017": {
+    "year": 2017,
+    "austria_total": 17647118.0,
+    "states": {
+      "Burgenland": 814312.0,
+      "K\u00e4rnten": 2564595.0,
+      "Nieder\u00f6sterreich": 4249988.0,
+      "Ober\u00f6sterreich": 3044330.0,
+      "Salzburg": 1043634.0,
+      "Steiermark": 4376058.0,
+      "Tirol": 1190002.0,
+      "Vorarlberg": 313802.0,
+      "Wien": 50397.0
+    }
+  },
+  "2018": {
+    "year": 2018,
+    "austria_total": 19192059.0,
+    "states": {
+      "Burgenland": 740615.0,
+      "K\u00e4rnten": 2637771.0,
+      "Nieder\u00f6sterreich": 5307215.0,
+      "Ober\u00f6sterreich": 3473034.0,
+      "Salzburg": 942338.0,
+      "Steiermark": 4608459.0,
+      "Tirol": 1032610.0,
+      "Vorarlberg": 399735.0,
+      "Wien": 50283.0
+    }
+  },
+  "2019": {
+    "year": 2019,
+    "austria_total": 18903716.0,
+    "states": {
+      "Burgenland": 690860.0,
+      "K\u00e4rnten": 2644430.0,
+      "Nieder\u00f6sterreich": 5298263.0,
+      "Ober\u00f6sterreich": 3818611.0,
+      "Salzburg": 967801.0,
+      "Steiermark": 3937737.0,
+      "Tirol": 1156391.0,
+      "Vorarlberg": 342556.0,
+      "Wien": 47066.0
+    }
+  },
+  "2020": {
+    "year": 2020,
+    "austria_total": 16789570.0,
+    "states": {
+      "Burgenland": 644859.0,
+      "K\u00e4rnten": 2190293.0,
+      "Nieder\u00f6sterreich": 4330023.0,
+      "Ober\u00f6sterreich": 3086007.0,
+      "Salzburg": 985162.0,
+      "Steiermark": 3853947.0,
+      "Tirol": 1373292.0,
+      "Vorarlberg": 293337.0,
+      "Wien": 32650.0
+    }
+  },
+  "2021": {
+    "year": 2021,
+    "austria_total": 18420265.0,
+    "states": {
+      "Burgenland": 656339.0,
+      "K\u00e4rnten": 2581471.0,
+      "Nieder\u00f6sterreich": 3886799.0,
+      "Ober\u00f6sterreich": 3161822.0,
+      "Salzburg": 1190409.0,
+      "Steiermark": 5121785.0,
+      "Tirol": 1453008.0,
+      "Vorarlberg": 335699.0,
+      "Wien": 32934.0
+    }
+  },
+  "2022": {
+    "year": 2022,
+    "austria_total": 19357935.0,
+    "states": {
+      "Burgenland": 715789.0,
+      "K\u00e4rnten": 2913498.0,
+      "Nieder\u00f6sterreich": 4025307.0,
+      "Ober\u00f6sterreich": 2923590.0,
+      "Salzburg": 1183215.0,
+      "Steiermark": 5395454.0,
+      "Tirol": 1837912.0,
+      "Vorarlberg": 340485.0,
+      "Wien": 22685.0
+    }
+  },
+  "2023": {
+    "year": 2023,
+    "austria_total": 19018004.0,
+    "states": {
+      "Burgenland": 724685.0,
+      "K\u00e4rnten": 3207412.0,
+      "Nieder\u00f6sterreich": 3623667.0,
+      "Ober\u00f6sterreich": 2854125.0,
+      "Salzburg": 991757.0,
+      "Steiermark": 5240565.0,
+      "Tirol": 2041576.0,
+      "Vorarlberg": 308292.0,
+      "Wien": 25926.0
+    }
+  },
+  "2024": {
+    "year": 2024,
+    "austria_total": 20031299.0,
+    "states": {
+      "Burgenland": 651997.0,
+      "K\u00e4rnten": 3044996.0,
+      "Nieder\u00f6sterreich": 3772132.0,
+      "Ober\u00f6sterreich": 3171058.0,
+      "Salzburg": 1165442.0,
+      "Steiermark": 5930674.0,
+      "Tirol": 1938159.0,
+      "Vorarlberg": 339744.0,
+      "Wien": 17096.0
+    }
+  },
+  "2013": {
+    "year": 2013,
+    "austria_total": 17554616.0,
+    "states": {
+      "Burgenland": 736992.5,
+      "K\u00e4rnten": 2533165.0,
+      "Nieder\u00f6sterreich": 3664223.5,
+      "Ober\u00f6sterreich": 2769256.5,
+      "Salzburg": 1162543.0,
+      "Steiermark": 4782373.5,
+      "Tirol": 1502528.0,
+      "Vorarlberg": 360727.5,
+      "Wien": 42807.0
+    }
+  },
+  "2015": {
+    "year": 2015,
+    "austria_total": 17274740.666666668,
+    "states": {
+      "Burgenland": 799360.6666666667,
+      "K\u00e4rnten": 2537508.3333333335,
+      "Nieder\u00f6sterreich": 3841586.0,
+      "Ober\u00f6sterreich": 2785100.0,
+      "Salzburg": 1054696.6666666667,
+      "Steiermark": 4505853.333333334,
+      "Tirol": 1356454.6666666667,
+      "Vorarlberg": 346156.6666666667,
+      "Wien": 48024.333333333336
+    }
+  },
+  "2016": {
+    "year": 2016,
+    "austria_total": 17460929.333333332,
+    "states": {
+      "Burgenland": 806836.3333333333,
+      "K\u00e4rnten": 2551051.666666667,
+      "Nieder\u00f6sterreich": 4045787.0,
+      "Ober\u00f6sterreich": 2914715.0,
+      "Salzburg": 1049165.3333333335,
+      "Steiermark": 4440955.666666667,
+      "Tirol": 1273228.3333333335,
+      "Vorarlberg": 329979.3333333333,
+      "Wien": 49210.66666666667
+    }
+  },
+  "2001": {
+    "year": 2001,
+    "austria_total": 14500000,
+    "states": {
+      "Burgenland": 536555.2003990656,
+      "K\u00e4rnten": 2296612.0873650373,
+      "Nieder\u00f6sterreich": 2970461.3436982282,
+      "Ober\u00f6sterreich": 2307346.8986483556,
+      "Salzburg": 1031711.458764973,
+      "Steiermark": 3882554.228730276,
+      "Tirol": 1142620.2621986663,
+      "Vorarlberg": 308978.1318894626,
+      "Wien": 23159.61272532021
+    }
+  },
+  "2002": {
+    "year": 2002,
+    "austria_total": 14800000,
+    "states": {
+      "Burgenland": 547656.3424762876,
+      "K\u00e4rnten": 2344128.1995174177,
+      "Nieder\u00f6sterreich": 3031919.1646023295,
+      "Ober\u00f6sterreich": 2355085.1103445287,
+      "Salzburg": 1053057.2130842481,
+      "Steiermark": 3962882.9369109026,
+      "Tirol": 1166260.6814165697,
+      "Vorarlberg": 315370.7828940721,
+      "Wien": 23638.77712653373
+    }
+  },
+  "2003": {
+    "year": 2003,
+    "austria_total": 16200000,
+    "states": {
+      "Burgenland": 599461.6721699906,
+      "K\u00e4rnten": 2565870.0562285245,
+      "Nieder\u00f6sterreich": 3318722.328821469,
+      "Ober\u00f6sterreich": 2577863.4315933352,
+      "Salzburg": 1152670.7332408663,
+      "Steiermark": 4337750.241753826,
+      "Tirol": 1276582.6377667857,
+      "Vorarlberg": 345203.1542489168,
+      "Wien": 25874.877665530166
+    }
+  },
+  "2004": {
+    "year": 2004,
+    "austria_total": 16500000,
+    "states": {
+      "Burgenland": 610562.8142472126,
+      "K\u00e4rnten": 2613386.1683809045,
+      "Nieder\u00f6sterreich": 3380180.1497255703,
+      "Ober\u00f6sterreich": 2625601.6432895083,
+      "Salzburg": 1174016.4875601416,
+      "Steiermark": 4418078.949934453,
+      "Tirol": 1300223.056984689,
+      "Vorarlberg": 351595.80525352637,
+      "Wien": 26354.042066743685
+    }
+  },
+  "2005": {
+    "year": 2005,
+    "austria_total": 16100000,
+    "states": {
+      "Burgenland": 595761.2914775832,
+      "K\u00e4rnten": 2550031.352177731,
+      "Nieder\u00f6sterreich": 3298236.388520102,
+      "Ober\u00f6sterreich": 2561950.6943612774,
+      "Salzburg": 1145555.481801108,
+      "Steiermark": 4310974.005693617,
+      "Tirol": 1268702.4980274846,
+      "Vorarlberg": 343072.2705807136,
+      "Wien": 25715.15619845899
+    }
+  },
+  "2006": {
+    "year": 2006,
+    "austria_total": 16800000,
+    "states": {
+      "Burgenland": 621663.9563244346,
+      "K\u00e4rnten": 2660902.280533285,
+      "Nieder\u00f6sterreich": 3441637.9706296716,
+      "Ober\u00f6sterreich": 2673339.854985681,
+      "Salzburg": 1195362.2418794169,
+      "Steiermark": 4498407.658115079,
+      "Tirol": 1323863.4762025927,
+      "Vorarlberg": 357988.4562581359,
+      "Wien": 26833.206467957207
+    }
+  },
+  "2007": {
+    "year": 2007,
+    "austria_total": 21100000,
+    "states": {
+      "Burgenland": 780780.3260979507,
+      "K\u00e4rnten": 3341966.554717399,
+      "Nieder\u00f6sterreich": 4322533.403588456,
+      "Ober\u00f6sterreich": 3357587.555964159,
+      "Salzburg": 1501318.0537890296,
+      "Steiermark": 5649785.808704058,
+      "Tirol": 1662709.4849925418,
+      "Vorarlberg": 449616.4539908731,
+      "Wien": 33701.229552017685
+    }
+  },
+  "2008": {
+    "year": 2008,
+    "austria_total": 19200000,
+    "states": {
+      "Burgenland": 710473.0929422111,
+      "K\u00e4rnten": 3041031.1777523253,
+      "Nieder\u00f6sterreich": 3933300.5378624815,
+      "Ober\u00f6sterreich": 3055245.548555064,
+      "Salzburg": 1366128.2764336194,
+      "Steiermark": 5141037.32356009,
+      "Tirol": 1512986.8299458202,
+      "Vorarlberg": 409129.6642950125,
+      "Wien": 30666.52167766538
+    }
+  },
+  "2009": {
+    "year": 2009,
+    "austria_total": 16300000,
+    "states": {
+      "Burgenland": 603162.0528623979,
+      "K\u00e4rnten": 2581708.760279318,
+      "Nieder\u00f6sterreich": 3339208.269122836,
+      "Ober\u00f6sterreich": 2593776.168825393,
+      "Salzburg": 1159785.9846806247,
+      "Steiermark": 4364526.477814035,
+      "Tirol": 1284462.777506087,
+      "Vorarlberg": 347334.03791712,
+      "Wien": 26034.59913260134
+    }
+  },
+  "2010": {
+    "year": 2010,
+    "austria_total": 17500000,
+    "states": {
+      "Burgenland": 647566.6211712861,
+      "K\u00e4rnten": 2771773.2088888385,
+      "Nieder\u00f6sterreich": 3585039.552739241,
+      "Ober\u00f6sterreich": 2784729.0156100844,
+      "Salzburg": 1245169.001957726,
+      "Steiermark": 4685841.31053654,
+      "Tirol": 1379024.4543777006,
+      "Vorarlberg": 372904.6419355583,
+      "Wien": 27951.256737455424
+    }
+  }
+}
