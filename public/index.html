@@ -371,6 +371,26 @@
                     </div>
                 </div>
                 
+                <!-- Economic value section -->
+                <div class="section-header" x-show="valueData">💰 Timber Value 2024</div>
+                <div class="stats-grid" x-show="valueData">
+                    <div class="stat-card full-width" style="background: #e8f5e9;">
+                        <div class="stat-label">Estimated Total Value</div>
+                        <div class="stat-value" style="color: #2e7d32;" x-text="'€' + (valueData?.austria?.total_value_eur / 1e9).toFixed(2) + ' Mrd.'"></div>
+                        <div class="stat-change" style="color: #7f8c8d;" x-text="'Avg. €' + valueData?.prices?.weighted_avg_eur_efm + '/Efm'"></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Sawlogs</div>
+                        <div class="stat-value small" x-text="'€' + (valueData?.austria?.sawlog_value_eur / 1e9).toFixed(2) + 'B'"></div>
+                        <div style="font-size: 0.7rem; color: var(--text-light);" x-text="'€' + valueData?.prices?.sawlog_eur_efm + '/Efm'"></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Industrial + Energy</div>
+                        <div class="stat-value small" x-text="'€' + ((valueData?.austria?.industrial_value_eur + valueData?.austria?.energy_value_eur) / 1e9).toFixed(2) + 'B'"></div>
+                        <div style="font-size: 0.7rem; color: var(--text-light);" x-text="'Schadholz: €' + valueData?.prices?.industrial_eur_efm?.toFixed(0) + '/Efm'"></div>
+                    </div>
+                </div>
+                
                 <!-- State breakdown -->
                 <div class="section-header">Bundesländer (by harvest volume)</div>
                 <div class="state-list">
@@ -409,6 +429,12 @@
                 <div x-show="hansenData" style="margin: 1rem 0; background: var(--bg); border-radius: 10px; padding: 1rem;">
                     <div class="legend-title">Forest Loss by Year (Hansen satellite data)</div>
                     <canvas id="lossChart" style="max-height: 150px;"></canvas>
+                </div>
+                
+                <!-- Price trend chart -->
+                <div x-show="priceData" style="margin: 1rem 0; background: var(--bg); border-radius: 10px; padding: 1rem;">
+                    <div class="legend-title">Sawlog Prices (Fichte/Tanne) €/Efm</div>
+                    <canvas id="priceChart" style="max-height: 120px;"></canvas>
                 </div>
                 
                 <!-- Legend -->
@@ -453,6 +479,8 @@
                 data: null,
                 geoJson: null,
                 hansenData: null,
+                valueData: null,
+                priceData: null,
                 map: null,
                 stateLayer: null,
                 selectedState: null,
@@ -460,13 +488,16 @@
                 showForestLoss: false,
                 forestLossLayer: null,
                 lossChart: null,
+                priceChart: null,
                 
                 async init() {
                     // Load data
-                    const [dataResp, geoResp, hansenResp] = await Promise.all([
+                    const [dataResp, geoResp, hansenResp, valueResp, priceResp] = await Promise.all([
                         fetch('/data/holzeinschlag_full.json'),
                         fetch('/data/austria_states.geojson'),
-                        fetch('/data/hansen_state_analysis.json').catch(() => null)
+                        fetch('/data/hansen_state_analysis.json').catch(() => null),
+                        fetch('/data/timber_values.json').catch(() => null),
+                        fetch('/data/timber_prices.json').catch(() => null)
                     ]);
                     this.data = await dataResp.json();
                     this.geoJson = await geoResp.json();
@@ -474,13 +505,22 @@
                     if (hansenResp && hansenResp.ok) {
                         this.hansenData = await hansenResp.json();
                     }
+                    if (valueResp && valueResp.ok) {
+                        this.valueData = await valueResp.json();
+                    }
+                    if (priceResp && priceResp.ok) {
+                        this.priceData = await priceResp.json();
+                    }
                     
                     // Initialize map
                     this.initMap();
                     
-                    // Initialize chart if hansen data available
+                    // Initialize charts
                     if (this.hansenData) {
                         this.$nextTick(() => this.initLossChart());
+                    }
+                    if (this.priceData) {
+                        this.$nextTick(() => this.initPriceChart());
                     }
                     
                     // Watch for forest loss toggle
@@ -534,6 +574,51 @@
                                     beginAtZero: true,
                                     ticks: {
                                         callback: (v) => (v / 1000).toFixed(0) + 'k'
+                                    }
+                                },
+                                x: {
+                                    ticks: {
+                                        maxRotation: 45,
+                                        minRotation: 45
+                                    }
+                                }
+                            }
+                        }
+                    });
+                },
+                
+                initPriceChart() {
+                    const ctx = document.getElementById('priceChart');
+                    if (!ctx || !this.priceData) return;
+                    
+                    const priceInfo = this.priceData.prices.spruce_fir_3a;
+                    const years = Object.keys(priceInfo.yearly_avg).map(Number).sort();
+                    const prices = years.map(y => priceInfo.yearly_avg[y]);
+                    
+                    this.priceChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: years,
+                            datasets: [{
+                                label: '€/Efm',
+                                data: prices,
+                                borderColor: '#1565c0',
+                                backgroundColor: 'rgba(21, 101, 192, 0.1)',
+                                fill: true,
+                                tension: 0.3
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { display: false }
+                            },
+                            scales: {
+                                y: {
+                                    min: 60,
+                                    ticks: {
+                                        callback: (v) => '€' + v
                                     }
                                 },
                                 x: {
@@ -629,6 +714,7 @@
                     this.selectedState = stateName;
                     const stateData = this.data.states[stateName];
                     const hansenState = this.hansenData?.states[stateName];
+                    const valueState = this.valueData?.states[stateName];
                     
                     if (stateData) {
                         let popupContent = `
@@ -644,22 +730,34 @@
                                 </span>
                             </div>`;
                         
+                        if (valueState) {
+                            const valueM = valueState.estimated_value_eur / 1e6;
+                            popupContent += `
+                            <div class="popup-stat" style="background: #e8f5e9; margin: 0.25rem -0.5rem; padding: 0.25rem 0.5rem;">
+                                <span class="popup-stat-label">💰 Est. Value</span>
+                                <span class="popup-stat-value" style="color: #2e7d32; font-weight: bold;">€${valueM.toFixed(0)}M</span>
+                            </div>`;
+                        }
+                        
                         if (hansenState) {
                             popupContent += `
                             <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid #eee;">
-                            <div style="font-size: 0.75rem; color: #666; margin-bottom: 0.25rem;">🛰️ Satellite Analysis (2001-2023)</div>
+                            <div style="font-size: 0.75rem; color: #666; margin-bottom: 0.25rem;">🛰️ Satellite + Economics</div>
                             <div class="popup-stat">
                                 <span class="popup-stat-label">Detected Loss</span>
                                 <span class="popup-stat-value">${this.formatNumber(hansenState.total_area_ha)} ha</span>
                             </div>
                             <div class="popup-stat">
                                 <span class="popup-stat-label">Harvest Intensity</span>
-                                <span class="popup-stat-value" style="color: #2e7d32; font-weight: bold;">${hansenState.efm_per_ha_ratio.toFixed(1)} Efm/ha</span>
-                            </div>
-                            <div class="popup-stat">
-                                <span class="popup-stat-label">Loss Pixels</span>
-                                <span class="popup-stat-value">${this.formatNumber(hansenState.total_pixels)}</span>
+                                <span class="popup-stat-value" style="color: #2e7d32;">${hansenState.efm_per_ha_ratio.toFixed(1)} Efm/ha</span>
                             </div>`;
+                            if (valueState && valueState.eur_per_ha) {
+                                popupContent += `
+                            <div class="popup-stat">
+                                <span class="popup-stat-label">Value per ha loss</span>
+                                <span class="popup-stat-value" style="color: #1565c0;">€${this.formatNumber(valueState.eur_per_ha)}/ha</span>
+                            </div>`;
+                            }
                         }
                         
                         popupContent += `

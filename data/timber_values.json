@@ -1,0 +1,78 @@
+{
+  "year": 2024,
+  "prices": {
+    "sawlog_eur_efm": 102.45,
+    "industrial_eur_efm": 35.8575,
+    "energy_eur_efm": 25.6125,
+    "weighted_avg_eur_efm": 70.22
+  },
+  "austria": {
+    "total_harvest_efm": 20031299.0,
+    "sawlogs_efm": 11196780,
+    "industrial_efm": 3250037,
+    "energy_efm": 5584482,
+    "damage_wood_efm": 11014163.0,
+    "damage_share_pct": 55.0,
+    "total_value_eur": 1406680858.0,
+    "sawlog_value_eur": 1147110111.0,
+    "industrial_value_eur": 116538202.0,
+    "energy_value_eur": 143032545.0
+  },
+  "states": {
+    "Steiermark": {
+      "harvest_2024": 5930674.0,
+      "estimated_value_eur": 416476515.0,
+      "efm_per_ha": 29.9,
+      "eur_per_ha": 2102.0
+    },
+    "Nieder\u00f6sterreich": {
+      "harvest_2024": 3772132.0,
+      "estimated_value_eur": 264894747.0,
+      "efm_per_ha": 25.7,
+      "eur_per_ha": 1807.0
+    },
+    "Ober\u00f6sterreich": {
+      "harvest_2024": 3171058.0,
+      "estimated_value_eur": 222684839.0,
+      "efm_per_ha": 32.2,
+      "eur_per_ha": 2262.0
+    },
+    "K\u00e4rnten": {
+      "harvest_2024": 3044996.0,
+      "estimated_value_eur": 213832243.0,
+      "efm_per_ha": 23.2,
+      "eur_per_ha": 1631.0
+    },
+    "Tirol": {
+      "harvest_2024": 1938159.0,
+      "estimated_value_eur": 136105560.0,
+      "efm_per_ha": 32.1,
+      "eur_per_ha": 2252.0
+    },
+    "Salzburg": {
+      "harvest_2024": 1165442.0,
+      "estimated_value_eur": 81842169.0,
+      "efm_per_ha": 21.1,
+      "eur_per_ha": 1483.0
+    },
+    "Burgenland": {
+      "harvest_2024": 651997.0,
+      "estimated_value_eur": 45785932.0,
+      "efm_per_ha": 28.4,
+      "eur_per_ha": 1994.0
+    },
+    "Vorarlberg": {
+      "harvest_2024": 339744.0,
+      "estimated_value_eur": 23858232.0,
+      "efm_per_ha": 278.7,
+      "eur_per_ha": 19570.0
+    },
+    "Wien": {
+      "harvest_2024": 17096.0,
+      "estimated_value_eur": 1200552.0,
+      "efm_per_ha": 49.4,
+      "eur_per_ha": 3467.0
+    }
+  },
+  "note": "Schadholz (damage wood from storms/bark beetles) is sold as Industrieholz at ~35% of sawlog price"
+}
