@@ -318,7 +318,7 @@
                 </div>
                 
                 <!-- Top municipalities -->
-                <div class="section-header">🏆 Top Gemeinden (nach Waldverlust)</div>
+                <div class="section-header">🏆 Top Gemeinden (nach Efm)</div>
                 <div class="muni-list">
                     <template x-for="(muni, index) in displayedMunicipalities" :key="muni.iso">
                         <div class="muni-item"
@@ -474,7 +474,7 @@
                             etsPc: d[6] || 0,
                             population: lookup.population?.[iso] || 0
                         }))
-                        .sort((a, b) => b.lossArea - a.lossArea);
+                        .sort((a, b) => b.harvest - a.harvest);
                 },
                 
                 get displayedMunicipalities() {
