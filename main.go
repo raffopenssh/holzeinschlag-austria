@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/sha256"
+	"crypto/subtle"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -13,7 +15,45 @@ import (
 var (
 	pipelineRunning bool
 	pipelineMutex   sync.Mutex
+	
+	// Valid passwords (hashed)
+	validPasswords = []string{
+		"fridolin2026",
+		"lutz2026",
+	}
 )
+
+// basicAuth wraps a handler with HTTP Basic Authentication
+func basicAuth(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		_, password, ok := r.BasicAuth()
+		if !ok {
+			w.Header().Set("WWW-Authenticate", `Basic realm="Holzeinschlag Austria"`)
+			http.Error(w, "Unauthorized", http.StatusUnauthorized)
+			return
+		}
+		
+		// Check password against valid passwords
+		valid := false
+		for _, validPwd := range validPasswords {
+			// Use constant-time comparison to prevent timing attacks
+			pwdHash := sha256.Sum256([]byte(password))
+			validHash := sha256.Sum256([]byte(validPwd))
+			if subtle.ConstantTimeCompare(pwdHash[:], validHash[:]) == 1 {
+				valid = true
+				break
+			}
+		}
+		
+		if !valid {
+			w.Header().Set("WWW-Authenticate", `Basic realm="Holzeinschlag Austria"`)
+			http.Error(w, "Unauthorized", http.StatusUnauthorized)
+			return
+		}
+		
+		next.ServeHTTP(w, r)
+	})
+}
 
 func main() {
 	// Serve static files
@@ -21,12 +61,15 @@ func main() {
 	dataDir := filepath.Join(".", "data")
 	processingDir := filepath.Join(".", "processing")
 
+	// Create a new mux for protected routes
+	mux := http.NewServeMux()
+
 	// File server for public assets
-	http.Handle("/", http.FileServer(http.Dir(publicDir)))
-	http.Handle("/data/", http.StripPrefix("/data/", http.FileServer(http.Dir(dataDir))))
+	mux.Handle("/", http.FileServer(http.Dir(publicDir)))
+	mux.Handle("/data/", http.StripPrefix("/data/", http.FileServer(http.Dir(dataDir))))
 
 	// API endpoints
-	http.HandleFunc("/api/status", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/api/status", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		
 		statusFile := filepath.Join(processingDir, "status.json")
@@ -41,7 +84,7 @@ func main() {
 		w.Write(data)
 	})
 
-	http.HandleFunc("/api/start-pipeline", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/api/start-pipeline", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != "POST" {
 			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 			return
@@ -99,7 +142,7 @@ func main() {
 		})
 	})
 
-	http.HandleFunc("/api/pipeline-log", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/api/pipeline-log", func(w http.ResponseWriter, r *http.Request) {
 		logFile := filepath.Join(processingDir, "pipeline.log")
 		data, err := os.ReadFile(logFile)
 		if err != nil {
@@ -113,10 +156,13 @@ func main() {
 		w.Write(data)
 	})
 
-	log.Println("Starting server on :8000")
+	// Wrap entire mux with basic auth
+	protectedHandler := basicAuth(mux)
+
+	log.Println("Starting server on :8000 (password protected)")
 	log.Println("View at http://localhost:8000")
 
-	if err := http.ListenAndServe(":8000", nil); err != nil {
+	if err := http.ListenAndServe(":8000", protectedHandler); err != nil {
 		log.Fatal(err)
 	}
 }
