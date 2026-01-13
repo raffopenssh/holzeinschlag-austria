@@ -62,18 +62,23 @@ func isValidSession(r *http.Request) bool {
 	return exists && time.Now().Before(expiry)
 }
 
-func createSession(w http.ResponseWriter) {
+func createSession(w http.ResponseWriter, r *http.Request) {
 	token := generateToken()
 
 	sessionMutex.Lock()
 	sessions[token] = time.Now().Add(sessionDuration)
 	sessionMutex.Unlock()
 
+	// Check if behind HTTPS proxy
+	isSecure := r.Header.Get("X-Forwarded-Proto") == "https" || r.TLS != nil
+
 	http.SetCookie(w, &http.Cookie{
 		Name:     "session",
 		Value:    token,
 		Path:     "/",
 		HttpOnly: true,
+		Secure:   isSecure,
+		SameSite: http.SameSiteLaxMode,
 		MaxAge:   int(sessionDuration.Seconds()),
 	})
 }
@@ -192,7 +197,7 @@ func main() {
 		if r.Method == "POST" {
 			password := r.FormValue("password")
 			if checkPassword(password) {
-				createSession(w)
+				createSession(w, r)
 				http.Redirect(w, r, "/", http.StatusSeeOther)
 				return
 			}
