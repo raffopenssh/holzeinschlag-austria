@@ -726,6 +726,20 @@
                     <a href="#" @click.prevent="clearRange()" style="color: var(--primary);">Zeitraum aufheben</a>
                 </div>
                 
+                <!-- Multi-select info bar -->
+                <div class="multi-select-bar" x-show="selectedMunis.size > 0" x-cloak>
+                    <div class="multi-select-info">
+                        <div class="multi-select-count">
+                            <span x-text="selectedMunis.size"></span> Gemeinden ausgewählt
+                        </div>
+                        <div class="multi-select-hint">Shift+Klick für weitere, Klick ohne Shift zum Zurücksetzen</div>
+                    </div>
+                    <div class="multi-select-actions">
+                        <button class="multi-select-btn" @click="showMultiSelectModal()">📊 Anzeigen</button>
+                        <button class="multi-select-btn secondary" @click="clearMultiSelect()">✕ Aufheben</button>
+                    </div>
+                </div>
+                
                 <!-- Austria totals -->
                 <div class="stats-grid">
                     <div class="stat-card full-width">
@@ -769,20 +783,6 @@
                             €<span x-text="yearSummary?.ets_price_eur_tco2"></span>
                             <span class="stat-unit">/tCO₂</span>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Multi-select info bar -->
-                <div class="multi-select-bar" x-show="selectedMunis.size > 0" x-cloak>
-                    <div class="multi-select-info">
-                        <div class="multi-select-count">
-                            <span x-text="selectedMunis.size"></span> Gemeinden ausgewählt
-                        </div>
-                        <div class="multi-select-hint">Shift+Klick für weitere, Klick ohne Shift zum Zurücksetzen</div>
-                    </div>
-                    <div class="multi-select-actions">
-                        <button class="multi-select-btn" @click="showMultiSelectModal()">📊 Anzeigen</button>
-                        <button class="multi-select-btn secondary" @click="clearMultiSelect()">✕ Aufheben</button>
                     </div>
                 </div>
                 
