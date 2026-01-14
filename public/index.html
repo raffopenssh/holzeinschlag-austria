@@ -367,6 +367,110 @@
         .search-result-name { font-weight: 500; font-size: 0.9rem; }
         .search-result-state { font-size: 0.75rem; color: var(--text-light); }
         
+        /* Cluster UI */
+        .cluster-section {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        .cluster-section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        .cluster-section-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .cluster-add-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+        .cluster-add-btn:hover { background: var(--primary-dark); }
+        .cluster-add-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .cluster-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .cluster-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid;
+        }
+        .cluster-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .cluster-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .cluster-name {
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .cluster-count {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        .cluster-actions {
+            display: flex;
+            gap: 0.25rem;
+        }
+        .cluster-action-btn {
+            background: none;
+            border: none;
+            padding: 0.25rem;
+            cursor: pointer;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+        .cluster-action-btn:hover { opacity: 1; }
+        .cluster-empty {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .cluster-mode-banner {
+            background: #fff3e0;
+            border: 1px solid #ffcc80;
+            border-radius: 6px;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .cluster-mode-banner button {
+            margin-left: auto;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+        
         /* Modal */
         .modal-overlay {
             position: fixed;
@@ -404,8 +508,16 @@
         
         /* Municipality detail modal */
         .muni-modal {
+            background: white;
+            border-radius: 12px;
             max-width: 500px;
             width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 1.5rem;
+            margin: 1rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            position: relative;
         }
         .muni-modal-header {
             display: flex;
@@ -716,6 +828,42 @@
                     </div>
                 </div>
                 
+                <!-- Clusters -->
+                <div class="cluster-section">
+                    <div class="cluster-section-header">
+                        <span class="cluster-section-title">📦 Gemeinde-Cluster</span>
+                        <button class="cluster-add-btn" @click="createNewCluster()" :disabled="editingCluster !== null">
+                            + Neu
+                        </button>
+                    </div>
+                    
+                    <!-- Cluster editing mode banner -->
+                    <div class="cluster-mode-banner" x-show="editingCluster !== null" x-cloak>
+                        <span>🎯 Klicken Sie Gemeinden um sie zu <strong x-text="getClusterById(editingCluster)?.name"></strong> hinzuzufügen</span>
+                        <button @click="finishEditingCluster()">Fertig</button>
+                    </div>
+                    
+                    <div class="cluster-list" x-show="clusters.length > 0">
+                        <template x-for="cluster in clusters" :key="cluster.id">
+                            <div class="cluster-item" :style="{ borderColor: cluster.color }">
+                                <div class="cluster-color" :style="{ background: cluster.color }"></div>
+                                <div class="cluster-info">
+                                    <div class="cluster-name" x-text="cluster.name"></div>
+                                    <div class="cluster-count" x-text="cluster.isos.size + ' Gemeinden'"></div>
+                                </div>
+                                <div class="cluster-actions">
+                                    <button class="cluster-action-btn" title="Anzeigen" @click="viewCluster(cluster.id)">👁️</button>
+                                    <button class="cluster-action-btn" title="Bearbeiten" @click="editCluster(cluster.id)" :disabled="editingCluster !== null">✏️</button>
+                                    <button class="cluster-action-btn" title="Löschen" @click="deleteCluster(cluster.id)">🗑️</button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="cluster-empty" x-show="clusters.length === 0 && editingCluster === null">
+                        Keine Cluster erstellt. Klicken Sie "+ Neu" um einen zu erstellen.
+                    </div>
+                </div>
+                
                 <!-- Top municipalities -->
                 <div class="section-header">🏆 Top Gemeinden in Karte (Efm)</div>
                 <div class="muni-list">
@@ -900,6 +1048,88 @@
                 </ul>
             </div>
         </div>
+        
+        <!-- Cluster Modal -->
+        <div class="modal-overlay" x-show="showClusterModal" x-cloak @click.self="showClusterModal = false">
+            <div class="muni-modal" x-show="viewingCluster">
+                <button class="modal-close" @click="showClusterModal = false">&times;</button>
+                
+                <div class="muni-modal-header">
+                    <div>
+                        <div class="muni-modal-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span class="cluster-color" :style="{ background: viewingCluster?.color, width: '16px', height: '16px' }"></span>
+                            <input type="text" 
+                                   x-model="viewingCluster.name" 
+                                   @change="updateMapStyles()"
+                                   style="border: none; font-size: inherit; font-weight: inherit; background: transparent; width: 200px;"
+                            >
+                        </div>
+                        <div class="muni-modal-subtitle" x-text="(getClusterStats(viewingClusterId)?.count || 0) + ' Gemeinden'"></div>
+                    </div>
+                </div>
+                
+                <template x-if="getClusterStats(viewingClusterId)">
+                    <div>
+                        <div class="muni-modal-year" x-text="isRangeSelected ? rangeLabel : selectedYear"></div>
+                        
+                        <div class="muni-modal-stats">
+                            <div class="muni-modal-stat">
+                                <div class="muni-modal-stat-label">🛰️ Waldverlust (Satellitendaten)</div>
+                                <div class="muni-modal-stat-value">
+                                    <span x-text="formatNumber(getClusterStats(viewingClusterId).lossArea)"></span>
+                                    <span class="muni-modal-stat-unit">ha</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="muni-modal-grid">
+                            <div class="muni-modal-stat-small">
+                                <div class="muni-modal-stat-label">🌲 Gesch. Einschlag</div>
+                                <div class="muni-modal-stat-value">
+                                    <span x-text="formatNumber(getClusterStats(viewingClusterId).harvest)"></span>
+                                    <span class="muni-modal-stat-unit">Efm</span>
+                                </div>
+                            </div>
+                            <div class="muni-modal-stat-small">
+                                <div class="muni-modal-stat-label">💰 Holzwert</div>
+                                <div class="muni-modal-stat-value">
+                                    <span>€</span><span x-text="formatNumber(getClusterStats(viewingClusterId).value)"></span>
+                                </div>
+                            </div>
+                            <div class="muni-modal-stat-small co2">
+                                <div class="muni-modal-stat-label">🏭 CO₂-Emissionen</div>
+                                <div class="muni-modal-stat-value">
+                                    <span x-text="formatNumber(getClusterStats(viewingClusterId).co2)"></span>
+                                    <span class="muni-modal-stat-unit">t</span>
+                                </div>
+                            </div>
+                            <div class="muni-modal-stat-small ets">
+                                <div class="muni-modal-stat-label">🌱 ETS-Haftung</div>
+                                <div class="muni-modal-stat-value">
+                                    <span>€</span><span x-text="formatNumber(getClusterStats(viewingClusterId).ets)"></span>
+                                </div>
+                            </div>
+                            <div class="muni-modal-stat-small">
+                                <div class="muni-modal-stat-label">👥 ETS pro Kopf</div>
+                                <div class="muni-modal-stat-value">
+                                    <span>€</span><span x-text="getClusterStats(viewingClusterId).etsPc"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;">
+                            <div style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.5rem;">Bevölkerung: <span x-text="formatNumber(getClusterStats(viewingClusterId).population)"></span></div>
+                            <div style="font-size: 0.75rem; color: var(--text-light);">Gemeinden im Cluster:</div>
+                            <div style="max-height: 150px; overflow-y: auto; font-size: 0.75rem; margin-top: 0.25rem;">
+                                <template x-for="iso in Array.from(viewingCluster?.isos || [])" :key="iso">
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.15rem 0.4rem; margin: 0.1rem; border-radius: 3px;" x-text="lookup?.names?.[iso] || iso"></span>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
     </div>
     
     <script>
@@ -927,6 +1157,14 @@
                 showMuniModal: false,
                 modalMuniIso: null,
                 visibleIsos: new Set(),  // ISOs visible in current map extent
+                
+                // Clusters
+                clusters: [],            // Array of {id, name, color, isos: Set}
+                nextClusterId: 1,
+                editingCluster: null,    // Cluster ID being edited (adding munis)
+                showClusterModal: false,
+                viewingClusterId: null,  // Cluster ID being viewed in modal
+                clusterColors: ['#e91e63', '#9c27b0', '#3f51b5', '#00bcd4', '#009688', '#ff9800', '#795548', '#607d8b'],
                 
                 // Search
                 searchQuery: '',
@@ -1331,6 +1569,118 @@
                     }
                 },
                 
+                // Cluster methods
+                createNewCluster() {
+                    const colorIndex = this.clusters.length % this.clusterColors.length;
+                    const cluster = {
+                        id: this.nextClusterId++,
+                        name: `Cluster ${this.clusters.length + 1}`,
+                        color: this.clusterColors[colorIndex],
+                        isos: new Set()
+                    };
+                    this.clusters.push(cluster);
+                    this.editingCluster = cluster.id;
+                },
+                
+                getClusterById(id) {
+                    return this.clusters.find(c => c.id === id);
+                },
+                
+                getClusterForIso(iso) {
+                    return this.clusters.find(c => c.isos.has(iso));
+                },
+                
+                editCluster(id) {
+                    this.editingCluster = id;
+                },
+                
+                finishEditingCluster() {
+                    const cluster = this.getClusterById(this.editingCluster);
+                    if (cluster && cluster.isos.size === 0) {
+                        // Remove empty cluster
+                        this.clusters = this.clusters.filter(c => c.id !== this.editingCluster);
+                    }
+                    this.editingCluster = null;
+                    this.updateMapStyles();
+                },
+                
+                deleteCluster(id) {
+                    this.clusters = this.clusters.filter(c => c.id !== id);
+                    if (this.editingCluster === id) {
+                        this.editingCluster = null;
+                    }
+                    this.updateMapStyles();
+                },
+                
+                toggleMuniInCluster(iso) {
+                    if (!this.editingCluster) return false;
+                    
+                    const cluster = this.getClusterById(this.editingCluster);
+                    if (!cluster) return false;
+                    
+                    // Remove from any other cluster first
+                    for (const c of this.clusters) {
+                        if (c.id !== this.editingCluster) {
+                            c.isos.delete(iso);
+                        }
+                    }
+                    
+                    // Toggle in current cluster
+                    if (cluster.isos.has(iso)) {
+                        cluster.isos.delete(iso);
+                    } else {
+                        cluster.isos.add(iso);
+                    }
+                    
+                    this.updateMapStyles();
+                    return true; // Handled
+                },
+                
+                viewCluster(id) {
+                    this.viewingClusterId = id;
+                    this.showClusterModal = true;
+                },
+                
+                updateMapStyles() {
+                    if (this.gemeindenLayer) {
+                        this.gemeindenLayer.setStyle((f) => this.getStyle(f));
+                    }
+                },
+                
+                get viewingCluster() {
+                    return this.getClusterById(this.viewingClusterId);
+                },
+                
+                getClusterStats(clusterId) {
+                    const cluster = this.getClusterById(clusterId);
+                    if (!cluster || cluster.isos.size === 0) return null;
+                    
+                    let totalLoss = 0, totalHarvest = 0, totalValue = 0, totalCo2 = 0, totalEts = 0, totalPop = 0;
+                    
+                    for (const iso of cluster.isos) {
+                        const d = this.currentYearData[iso];
+                        if (d) {
+                            totalLoss += d[1] || 0;
+                            totalHarvest += d[2] || 0;
+                            totalValue += d[3] || 0;
+                            totalCo2 += d[4] || 0;
+                            totalEts += d[5] || 0;
+                        }
+                        totalPop += this.lookup?.population?.[iso] || 0;
+                    }
+                    
+                    return {
+                        count: cluster.isos.size,
+                        population: totalPop,
+                        lossArea: Math.round(totalLoss),
+                        harvest: Math.round(totalHarvest),
+                        value: Math.round(totalValue),
+                        co2: Math.round(totalCo2),
+                        ets: Math.round(totalEts),
+                        etsPc: totalPop > 0 ? Math.round(totalEts / totalPop) : 0
+                    };
+                },
+                
                 getYearButtonClass(year) {
                     const classes = {};
                     
@@ -1441,13 +1791,25 @@
                     const lossArea = d ? d[1] : 0;  // d[1] = loss area
                     
                     const isHighlighted = this.highlightedMuni === iso || this.selectedMuni === iso;
+                    const cluster = this.getClusterForIso(iso);
+                    const isInEditingCluster = this.editingCluster && cluster?.id === this.editingCluster;
+                    
+                    // Determine fill color
+                    let fillColor = this.getColor(lossArea);
+                    let fillOpacity = 0.75;
+                    
+                    if (cluster) {
+                        // Show cluster color with pattern/overlay
+                        fillColor = cluster.color;
+                        fillOpacity = 0.6;
+                    }
                     
                     return {
-                        fillColor: this.getColor(lossArea),
-                        weight: isHighlighted ? 2 : 0.5,
+                        fillColor: fillColor,
+                        weight: isHighlighted || isInEditingCluster ? 2 : (cluster ? 1.5 : 0.5),
                         opacity: 1,
-                        color: isHighlighted ? '#1e3d1a' : '#ffffff',
-                        fillOpacity: 0.75
+                        color: isInEditingCluster ? cluster.color : (isHighlighted ? '#1e3d1a' : (cluster ? cluster.color : '#ffffff')),
+                        fillOpacity: fillOpacity
                     };
                 },
                 
@@ -1466,6 +1828,13 @@
                 
                 onMuniClick(feature, layer) {
                     const iso = feature.properties.iso;
+                    
+                    // If editing a cluster, toggle this muni in the cluster
+                    if (this.editingCluster) {
+                        this.toggleMuniInCluster(iso);
+                        return;
+                    }
+                    
                     this.selectedMuni = iso;
                     this.openMuniModal(iso);
                 },
