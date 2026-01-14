@@ -367,108 +367,52 @@
         .search-result-name { font-weight: 500; font-size: 0.9rem; }
         .search-result-state { font-size: 0.75rem; color: var(--text-light); }
         
-        /* Cluster UI */
-        .cluster-section {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #e0e0e0;
-        }
-        .cluster-section-header {
+        /* Multi-select UI */
+        .multi-select-bar {
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
+            gap: 0.75rem;
         }
-        .cluster-section-title {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text);
-        }
-        .cluster-add-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            cursor: pointer;
-        }
-        .cluster-add-btn:hover { background: var(--primary-dark); }
-        .cluster-add-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        .cluster-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .cluster-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem;
-            background: #f8f9fa;
-            border-radius: 6px;
-            border-left: 4px solid;
-        }
-        .cluster-color {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-        .cluster-info {
+        .multi-select-info {
             flex: 1;
-            min-width: 0;
         }
-        .cluster-name {
-            font-size: 0.85rem;
-            font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .multi-select-count {
+            font-weight: 600;
+            color: #1565c0;
         }
-        .cluster-count {
-            font-size: 0.7rem;
-            color: var(--text-light);
+        .multi-select-hint {
+            font-size: 0.75rem;
+            color: #546e7a;
+            margin-top: 0.25rem;
         }
-        .cluster-actions {
+        .multi-select-actions {
             display: flex;
-            gap: 0.25rem;
-        }
-        .cluster-action-btn {
-            background: none;
-            border: none;
-            padding: 0.25rem;
-            cursor: pointer;
-            font-size: 0.8rem;
-            opacity: 0.6;
-        }
-        .cluster-action-btn:hover { opacity: 1; }
-        .cluster-empty {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            text-align: center;
-            padding: 0.5rem;
-        }
-        .cluster-mode-banner {
-            background: #fff3e0;
-            border: 1px solid #ffcc80;
-            border-radius: 6px;
-            padding: 0.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
             gap: 0.5rem;
         }
-        .cluster-mode-banner button {
-            margin-left: auto;
-            background: var(--accent);
+        .multi-select-btn {
+            background: #1976d2;
             color: white;
             border: none;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
             cursor: pointer;
+            transition: background 0.15s;
+        }
+        .multi-select-btn:hover { background: #1565c0; }
+        .multi-select-btn.secondary {
+            background: #f5f5f5;
+            color: #424242;
+        }
+        .multi-select-btn.secondary:hover { background: #e0e0e0; }
+        .selected-muni {
+            outline: 3px solid #1976d2 !important;
+            outline-offset: -3px;
         }
         
         /* Modal */
@@ -828,39 +772,17 @@
                     </div>
                 </div>
                 
-                <!-- Clusters -->
-                <div class="cluster-section">
-                    <div class="cluster-section-header">
-                        <span class="cluster-section-title">📦 Gemeinde-Cluster</span>
-                        <button class="cluster-add-btn" @click="createNewCluster()" :disabled="editingCluster !== null">
-                            + Neu
-                        </button>
+                <!-- Multi-select info bar -->
+                <div class="multi-select-bar" x-show="selectedMunis.size > 0" x-cloak>
+                    <div class="multi-select-info">
+                        <div class="multi-select-count">
+                            <span x-text="selectedMunis.size"></span> Gemeinden ausgewählt
+                        </div>
+                        <div class="multi-select-hint">Shift+Klick für weitere, Klick ohne Shift zum Zurücksetzen</div>
                     </div>
-                    
-                    <!-- Cluster editing mode banner -->
-                    <div class="cluster-mode-banner" x-show="editingCluster !== null" x-cloak>
-                        <span>🎯 Klicken Sie Gemeinden um sie zu <strong x-text="getClusterById(editingCluster)?.name"></strong> hinzuzufügen</span>
-                        <button @click="finishEditingCluster()">Fertig</button>
-                    </div>
-                    
-                    <div class="cluster-list" x-show="clusters.length > 0">
-                        <template x-for="cluster in clusters" :key="cluster.id">
-                            <div class="cluster-item" :style="{ borderColor: cluster.color }">
-                                <div class="cluster-color" :style="{ background: cluster.color }"></div>
-                                <div class="cluster-info">
-                                    <div class="cluster-name" x-text="cluster.name"></div>
-                                    <div class="cluster-count" x-text="cluster.isos.size + ' Gemeinden'"></div>
-                                </div>
-                                <div class="cluster-actions">
-                                    <button class="cluster-action-btn" title="Anzeigen" @click="viewCluster(cluster.id)">👁️</button>
-                                    <button class="cluster-action-btn" title="Bearbeiten" @click="editCluster(cluster.id)" :disabled="editingCluster !== null">✏️</button>
-                                    <button class="cluster-action-btn" title="Löschen" @click="deleteCluster(cluster.id)">🗑️</button>
-                                </div>
-                            </div>
-                        </template>
-                    </div>
-                    <div class="cluster-empty" x-show="clusters.length === 0 && editingCluster === null">
-                        Keine Cluster erstellt. Klicken Sie "+ Neu" um einen zu erstellen.
+                    <div class="multi-select-actions">
+                        <button class="multi-select-btn" @click="showMultiSelectModal()">📊 Anzeigen</button>
+                        <button class="multi-select-btn secondary" @click="clearMultiSelect()">✕ Aufheben</button>
                     </div>
                 </div>
                 
@@ -1050,84 +972,94 @@
         </div>
         
         <!-- Cluster Modal -->
-        <div class="modal-overlay" x-show="showClusterModal" x-cloak @click.self="showClusterModal = false">
-            <div class="muni-modal" x-show="viewingCluster">
-                <button class="modal-close" @click="showClusterModal = false">&times;</button>
-                
+        <!-- Multi-Select Modal -->
+        <div class="modal-overlay" x-show="showMultiModal" x-cloak @click.self="closeMultiModal()">
+            <div class="modal muni-modal" @click.stop>
                 <div class="muni-modal-header">
                     <div>
-                        <div class="muni-modal-title" style="display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="cluster-color" :style="{ background: viewingCluster?.color, width: '16px', height: '16px' }"></span>
-                            <input type="text" 
-                                   x-model="viewingCluster.name" 
-                                   @change="updateMapStyles()"
-                                   style="border: none; font-size: inherit; font-weight: inherit; background: transparent; width: 200px;"
-                            >
+                        <div class="muni-modal-title">📍 <span x-text="selectedMunis.size"></span> Gemeinden</div>
+                        <div class="muni-modal-subtitle">Kombinierte Statistik</div>
+                    </div>
+                    <button class="modal-close" @click="closeMultiModal()">&times;</button>
+                </div>
+                
+                <div class="muni-modal-nav">
+                    <button class="muni-modal-nav-btn" 
+                            :disabled="!canGoPrevYear || isRangeSelected" 
+                            @click="prevYearModal()">◀</button>
+                    <div class="muni-modal-chart-container">
+                        <div class="muni-modal-year" x-text="isRangeSelected ? rangeLabel : selectedYear"></div>
+                        <div class="muni-modal-chart">
+                            <template x-for="year in availableYears" :key="year">
+                                <div class="muni-modal-chart-bar" 
+                                     :class="getModalChartBarClass(year)"
+                                     :style="{ height: getMultiYearBarHeight(year) + '%' }"
+                                     :data-year="year.slice(-2)"
+                                     :title="year + ': ' + formatNumber(getMultiYearLossArea(year)) + ' ha'"
+                                     @click="handleModalChartClick($event, year)"></div>
+                            </template>
                         </div>
-                        <div class="muni-modal-subtitle" x-text="(getClusterStats(viewingClusterId)?.count || 0) + ' Gemeinden'"></div>
+                    </div>
+                    <button class="muni-modal-nav-btn" 
+                            :disabled="!canGoNextYear || isRangeSelected" 
+                            @click="nextYearModal()">▶</button>
+                </div>
+                
+                <div class="muni-modal-stats">
+                    <div class="muni-modal-stat full">
+                        <div class="muni-modal-stat-label">🛰️ Waldverlust (Satellitendaten)</div>
+                        <div class="muni-modal-stat-value">
+                            <span x-text="formatNumber(multiSelectData?.lossArea)"></span>
+                            <span class="muni-modal-stat-unit">ha</span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat">
+                        <div class="muni-modal-stat-label">🪵 Gesch. Einschlag</div>
+                        <div class="muni-modal-stat-value">
+                            <span x-text="formatNumber(multiSelectData?.harvest)"></span>
+                            <span class="muni-modal-stat-unit">Efm</span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat">
+                        <div class="muni-modal-stat-label">💰 Holzwert</div>
+                        <div class="muni-modal-stat-value">
+                            €<span x-text="formatNumber(multiSelectData?.value)"></span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat highlight-red">
+                        <div class="muni-modal-stat-label">🏭 CO₂-Emissionen</div>
+                        <div class="muni-modal-stat-value red">
+                            <span x-text="formatNumber(multiSelectData?.co2)"></span>
+                            <span class="muni-modal-stat-unit">t</span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat highlight-orange">
+                        <div class="muni-modal-stat-label">💸 ETS-Haftung</div>
+                        <div class="muni-modal-stat-value orange">
+                            €<span x-text="formatNumber(multiSelectData?.ets)"></span>
+                        </div>
+                    </div>
+                    <div class="muni-modal-stat">
+                        <div class="muni-modal-stat-label">👥 ETS pro Kopf</div>
+                        <div class="muni-modal-stat-value">
+                            €<span x-text="formatNumber(multiSelectData?.etsPc)"></span>
+                        </div>
                     </div>
                 </div>
                 
-                <template x-if="getClusterStats(viewingClusterId)">
-                    <div>
-                        <div class="muni-modal-year" x-text="isRangeSelected ? rangeLabel : selectedYear"></div>
-                        
-                        <div class="muni-modal-stats">
-                            <div class="muni-modal-stat">
-                                <div class="muni-modal-stat-label">🛰️ Waldverlust (Satellitendaten)</div>
-                                <div class="muni-modal-stat-value">
-                                    <span x-text="formatNumber(getClusterStats(viewingClusterId).lossArea)"></span>
-                                    <span class="muni-modal-stat-unit">ha</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="muni-modal-grid">
-                            <div class="muni-modal-stat-small">
-                                <div class="muni-modal-stat-label">🌲 Gesch. Einschlag</div>
-                                <div class="muni-modal-stat-value">
-                                    <span x-text="formatNumber(getClusterStats(viewingClusterId).harvest)"></span>
-                                    <span class="muni-modal-stat-unit">Efm</span>
-                                </div>
-                            </div>
-                            <div class="muni-modal-stat-small">
-                                <div class="muni-modal-stat-label">💰 Holzwert</div>
-                                <div class="muni-modal-stat-value">
-                                    <span>€</span><span x-text="formatNumber(getClusterStats(viewingClusterId).value)"></span>
-                                </div>
-                            </div>
-                            <div class="muni-modal-stat-small co2">
-                                <div class="muni-modal-stat-label">🏭 CO₂-Emissionen</div>
-                                <div class="muni-modal-stat-value">
-                                    <span x-text="formatNumber(getClusterStats(viewingClusterId).co2)"></span>
-                                    <span class="muni-modal-stat-unit">t</span>
-                                </div>
-                            </div>
-                            <div class="muni-modal-stat-small ets">
-                                <div class="muni-modal-stat-label">🌱 ETS-Haftung</div>
-                                <div class="muni-modal-stat-value">
-                                    <span>€</span><span x-text="formatNumber(getClusterStats(viewingClusterId).ets)"></span>
-                                </div>
-                            </div>
-                            <div class="muni-modal-stat-small">
-                                <div class="muni-modal-stat-label">👥 ETS pro Kopf</div>
-                                <div class="muni-modal-stat-value">
-                                    <span>€</span><span x-text="getClusterStats(viewingClusterId).etsPc"></span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;">
-                            <div style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.5rem;">Bevölkerung: <span x-text="formatNumber(getClusterStats(viewingClusterId).population)"></span></div>
-                            <div style="font-size: 0.75rem; color: var(--text-light);">Gemeinden im Cluster:</div>
-                            <div style="max-height: 150px; overflow-y: auto; font-size: 0.75rem; margin-top: 0.25rem;">
-                                <template x-for="iso in Array.from(viewingCluster?.isos || [])" :key="iso">
-                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.15rem 0.4rem; margin: 0.1rem; border-radius: 3px;" x-text="lookup?.names?.[iso] || iso"></span>
-                                </template>
-                            </div>
-                        </div>
+                <div class="muni-modal-footer">
+                    <span>Bevölkerung: <span x-text="formatNumber(multiSelectData?.population)"></span></span>
+                    <span>ETS-Preis: €<span x-text="yearSummary?.ets_price_eur_tco2"></span>/tCO₂</span>
+                </div>
+                
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;">
+                    <div style="font-size: 0.75rem; color: var(--text-light); margin-bottom: 0.5rem;">Ausgewählte Gemeinden:</div>
+                    <div style="max-height: 100px; overflow-y: auto; font-size: 0.75rem;">
+                        <template x-for="iso in Array.from(selectedMunis)" :key="iso">
+                            <span style="display: inline-block; background: #e3f2fd; padding: 0.2rem 0.5rem; margin: 0.1rem; border-radius: 4px; color: #1565c0;" x-text="lookup?.names?.[iso] || iso"></span>
+                        </template>
                     </div>
-                </template>
+                </div>
             </div>
         </div>
     </div>
@@ -1158,13 +1090,9 @@
                 modalMuniIso: null,
                 visibleIsos: new Set(),  // ISOs visible in current map extent
                 
-                // Clusters
-                clusters: [],            // Array of {id, name, color, isos: Set}
-                nextClusterId: 1,
-                editingCluster: null,    // Cluster ID being edited (adding munis)
-                showClusterModal: false,
-                viewingClusterId: null,  // Cluster ID being viewed in modal
-                clusterColors: ['#e91e63', '#9c27b0', '#3f51b5', '#00bcd4', '#009688', '#ff9800', '#795548', '#607d8b'],
+                // Multi-select
+                selectedMunis: new Set(),  // Set of ISO codes for shift-click selection
+                showMultiModal: false,
                 
                 // Search
                 searchQuery: '',
@@ -1569,76 +1497,31 @@
                     }
                 },
                 
-                // Cluster methods
-                createNewCluster() {
-                    const colorIndex = this.clusters.length % this.clusterColors.length;
-                    const cluster = {
-                        id: this.nextClusterId++,
-                        name: `Cluster ${this.clusters.length + 1}`,
-                        color: this.clusterColors[colorIndex],
-                        isos: new Set()
-                    };
-                    this.clusters.push(cluster);
-                    this.editingCluster = cluster.id;
-                },
-                
-                getClusterById(id) {
-                    return this.clusters.find(c => c.id === id);
-                },
-                
-                getClusterForIso(iso) {
-                    return this.clusters.find(c => c.isos.has(iso));
-                },
-                
-                editCluster(id) {
-                    this.editingCluster = id;
-                },
-                
-                finishEditingCluster() {
-                    const cluster = this.getClusterById(this.editingCluster);
-                    if (cluster && cluster.isos.size === 0) {
-                        // Remove empty cluster
-                        this.clusters = this.clusters.filter(c => c.id !== this.editingCluster);
-                    }
-                    this.editingCluster = null;
-                    this.updateMapStyles();
-                },
-                
-                deleteCluster(id) {
-                    this.clusters = this.clusters.filter(c => c.id !== id);
-                    if (this.editingCluster === id) {
-                        this.editingCluster = null;
-                    }
-                    this.updateMapStyles();
-                },
-                
-                toggleMuniInCluster(iso) {
-                    if (!this.editingCluster) return false;
-                    
-                    const cluster = this.getClusterById(this.editingCluster);
-                    if (!cluster) return false;
-                    
-                    // Remove from any other cluster first
-                    for (const c of this.clusters) {
-                        if (c.id !== this.editingCluster) {
-                            c.isos.delete(iso);
-                        }
-                    }
-                    
-                    // Toggle in current cluster
-                    if (cluster.isos.has(iso)) {
-                        cluster.isos.delete(iso);
+                // Multi-select methods
+                toggleMultiSelect(iso) {
+                    if (this.selectedMunis.has(iso)) {
+                        this.selectedMunis.delete(iso);
                     } else {
-                        cluster.isos.add(iso);
+                        this.selectedMunis.add(iso);
                     }
-                    
+                    // Force reactivity
+                    this.selectedMunis = new Set(this.selectedMunis);
                     this.updateMapStyles();
-                    return true; // Handled
                 },
                 
-                viewCluster(id) {
-                    this.viewingClusterId = id;
-                    this.showClusterModal = true;
+                clearMultiSelect() {
+                    this.selectedMunis = new Set();
+                    this.updateMapStyles();
+                },
+                
+                async showMultiSelectModal() {
+                    // Ensure all year data is loaded for the chart
+                    await this.preloadAllYears();
+                    this.showMultiModal = true;
+                },
+                
+                closeMultiModal() {
+                    this.showMultiModal = false;
                 },
                 
                 updateMapStyles() {
@@ -1647,17 +1530,12 @@
                     }
                 },
                 
-                get viewingCluster() {
-                    return this.getClusterById(this.viewingClusterId);
-                },
-                
-                getClusterStats(clusterId) {
-                    const cluster = this.getClusterById(clusterId);
-                    if (!cluster || cluster.isos.size === 0) return null;
+                get multiSelectData() {
+                    if (this.selectedMunis.size === 0) return null;
                     
                     let totalLoss = 0, totalHarvest = 0, totalValue = 0, totalCo2 = 0, totalEts = 0, totalPop = 0;
                     
-                    for (const iso of cluster.isos) {
+                    for (const iso of this.selectedMunis) {
                         const d = this.currentYearData[iso];
                         if (d) {
                             totalLoss += d[1] || 0;
@@ -1670,7 +1548,7 @@
                     }
                     
                     return {
-                        count: cluster.isos.size,
+                        count: this.selectedMunis.size,
                         population: totalPop,
                         lossArea: Math.round(totalLoss),
                         harvest: Math.round(totalHarvest),
@@ -1679,6 +1557,33 @@
                         ets: Math.round(totalEts),
                         etsPc: totalPop > 0 ? Math.round(totalEts / totalPop) : 0
                     };
+                },
+                
+                getMultiYearLossArea(year) {
+                    let total = 0;
+                    // Use yearData which gets preloaded
+                    const yearDataForYear = this.yearData[year];
+                    if (!yearDataForYear) return 0;
+                    
+                    for (const iso of this.selectedMunis) {
+                        const d = yearDataForYear[iso];
+                        if (d) total += d[1] || 0;
+                    }
+                    return Math.round(total);
+                },
+                
+                getMultiYearBarHeight(year) {
+                    // Find max loss area across all years for selected municipalities
+                    let maxLoss = 0;
+                    for (const y of this.availableYears) {
+                        const l = this.getMultiYearLossArea(y);
+                        if (l > maxLoss) maxLoss = l;
+                    }
+                    
+                    if (maxLoss === 0) return 5;
+                    
+                    const loss = this.getMultiYearLossArea(year);
+                    return Math.max(5, (loss / maxLoss) * 100);
                 },
                 
                 getYearButtonClass(year) {
@@ -1772,7 +1677,7 @@
                         style: (feature) => this.getStyle(feature),
                         onEachFeature: (feature, layer) => {
                             layer.on({
-                                click: (e) => this.onMuniClick(feature, layer),
+                                click: (e) => this.onMuniClick(e, feature, layer),
                                 mouseover: (e) => {
                                     layer.setStyle({ weight: 2, color: '#1e3d1a' });
                                     layer.bringToFront();
@@ -1791,25 +1696,14 @@
                     const lossArea = d ? d[1] : 0;  // d[1] = loss area
                     
                     const isHighlighted = this.highlightedMuni === iso || this.selectedMuni === iso;
-                    const cluster = this.getClusterForIso(iso);
-                    const isInEditingCluster = this.editingCluster && cluster?.id === this.editingCluster;
-                    
-                    // Determine fill color
-                    let fillColor = this.getColor(lossArea);
-                    let fillOpacity = 0.75;
-                    
-                    if (cluster) {
-                        // Show cluster color with pattern/overlay
-                        fillColor = cluster.color;
-                        fillOpacity = 0.6;
-                    }
+                    const isMultiSelected = this.selectedMunis.has(iso);
                     
                     return {
-                        fillColor: fillColor,
-                        weight: isHighlighted || isInEditingCluster ? 2 : (cluster ? 1.5 : 0.5),
+                        fillColor: this.getColor(lossArea),
+                        weight: isHighlighted ? 2 : (isMultiSelected ? 3 : 0.5),
                         opacity: 1,
-                        color: isInEditingCluster ? cluster.color : (isHighlighted ? '#1e3d1a' : (cluster ? cluster.color : '#ffffff')),
-                        fillOpacity: fillOpacity
+                        color: isMultiSelected ? '#1976d2' : (isHighlighted ? '#1e3d1a' : '#ffffff'),
+                        fillOpacity: 0.75
                     };
                 },
                 
@@ -1826,13 +1720,18 @@
                     return '#1b5e20';
                 },
                 
-                onMuniClick(feature, layer) {
+                onMuniClick(e, feature, layer) {
                     const iso = feature.properties.iso;
                     
-                    // If editing a cluster, toggle this muni in the cluster
-                    if (this.editingCluster) {
-                        this.toggleMuniInCluster(iso);
+                    // Shift+click for multi-select
+                    if (e.originalEvent?.shiftKey) {
+                        this.toggleMultiSelect(iso);
                         return;
+                    }
+                    
+                    // Normal click - clear multi-select if any, then show single muni
+                    if (this.selectedMunis.size > 0) {
+                        this.clearMultiSelect();
                     }
                     
                     this.selectedMuni = iso;
