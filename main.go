@@ -313,14 +313,9 @@ func main() {
 	})
 
 	// Auth middleware for all other routes
+	// Auth middleware disabled - public access
 	authMiddleware := func(next http.Handler) http.Handler {
-		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			if !isValidSession(r) {
-				http.Redirect(w, r, "/login", http.StatusSeeOther)
-				return
-			}
-			next.ServeHTTP(w, r)
-		})
+		return next
 	}
 
 	// Public files (SEO, social sharing)
@@ -424,7 +419,7 @@ func main() {
 		w.Write(data)
 	})))
 
-	log.Println("Starting server on :8000 (password protected)")
+	log.Println("Starting server on :8000 (public access)")
 	log.Println("View at http://localhost:8000")
 
 	if err := http.ListenAndServe(":8000", nil); err != nil {
