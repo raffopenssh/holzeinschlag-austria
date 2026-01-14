@@ -1,0 +1,15 @@
+[Unit]
+Description=Carbon Flux Calculation Job
+After=network.target
+
+[Service]
+Type=oneshot
+User=exedev
+WorkingDirectory=/home/exedev/holzeinschlag-austria
+ExecStart=/home/exedev/holzeinschlag-austria/.venv/bin/python /home/exedev/holzeinschlag-austria/processing/carbon_flux_job.py
+RemainAfterExit=yes
+StandardOutput=append:/home/exedev/holzeinschlag-austria/processing/carbon_flux.log
+StandardError=append:/home/exedev/holzeinschlag-austria/processing/carbon_flux.log
+
+[Install]
+WantedBy=multi-user.target
