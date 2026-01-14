@@ -252,6 +252,40 @@
         .map-legend-scale { height: 8px; border-radius: 4px; background: linear-gradient(90deg, #f5f5f5, #c8e6c9, #81c784, #4caf50, #388e3c, #1b5e20); }
         .map-legend-labels { display: flex; justify-content: space-between; font-size: 0.6rem; color: #666; margin-top: 3px; }
         
+        /* Shift hint toast */
+        .shift-hint {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(25, 118, 210, 0.95);
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: fadeInUp 0.3s ease-out;
+        }
+        .shift-hint-icon { font-size: 1.1rem; }
+        .shift-hint-close {
+            background: none;
+            border: none;
+            color: white;
+            opacity: 0.7;
+            cursor: pointer;
+            padding: 0 0 0 8px;
+            font-size: 1rem;
+        }
+        .shift-hint-close:hover { opacity: 1; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
         /* Footer */
         .sidebar-footer {
             padding: 0.875rem;
@@ -835,6 +869,12 @@
             <div class="loading-overlay" x-show="loading" x-cloak>
                 <div class="spinner"></div>
             </div>
+            <!-- Shift hint -->
+            <div class="shift-hint" x-show="showShiftHint" x-cloak x-transition>
+                <span class="shift-hint-icon">⌨️</span>
+                <span>Tipp: Halte <strong>Shift</strong> gedrückt und klicke mehrere Gemeinden um sie zu vergleichen</span>
+                <button class="shift-hint-close" @click="dismissShiftHint()">✕</button>
+            </div>
             <!-- Map Legend -->
             <div class="map-legend">
                 <div class="map-legend-title">Einschlag pro Gemeinde</div>
@@ -1099,6 +1139,7 @@
                 // Multi-select
                 selectedMunis: new Set(),  // Set of ISO codes for shift-click selection
                 showMultiModal: false,
+                showShiftHint: false,      // Show hint about shift-click
                 
                 // Search
                 searchQuery: '',
@@ -1520,6 +1561,19 @@
                     this.updateMapStyles();
                 },
                 
+                showShiftHintOnce() {
+                    // Show hint only if not seen before
+                    if (localStorage.getItem('shiftHintSeen')) return;
+                    this.showShiftHint = true;
+                    // Auto-hide after 6 seconds
+                    setTimeout(() => this.dismissShiftHint(), 6000);
+                },
+                
+                dismissShiftHint() {
+                    this.showShiftHint = false;
+                    localStorage.setItem('shiftHintSeen', 'true');
+                },
+                
                 async showMultiSelectModal() {
                     // Ensure all year data is loaded for the chart
                     await this.preloadAllYears();
@@ -1742,6 +1796,9 @@
                     
                     this.selectedMuni = iso;
                     this.openMuniModal(iso);
+                    
+                    // Show shift hint after first click
+                    this.showShiftHintOnce();
                 },
                 
                 buildPopupContent(iso) {
@@ -1821,6 +1878,7 @@
                 selectMuni(iso) {
                     this.selectedMuni = iso;
                     this.openMuniModal(iso);
+                    this.showShiftHintOnce();
                     
                     if (this.gemeindenLayer) {
                         this.gemeindenLayer.eachLayer((layer) => {
