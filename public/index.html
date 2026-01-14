@@ -236,16 +236,21 @@
         }
         .load-more:hover { border-color: var(--primary); color: var(--primary); background: #f0f7f0; }
         
-        /* Legend */
-        .legend {
-            margin-top: 1rem;
-            padding: 0.875rem;
-            background: var(--bg);
-            border-radius: 10px;
+        /* Legend (positioned inside map) */
+        .map-legend {
+            position: absolute;
+            bottom: 30px;
+            left: 10px;
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            z-index: 1000;
+            min-width: 160px;
         }
-        .legend-title { font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .legend-scale { display: flex; height: 10px; border-radius: 5px; overflow: hidden; }
-        .legend-labels { display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--text-light); margin-top: 0.25rem; }
+        .map-legend-title { font-size: 0.7rem; font-weight: 600; margin-bottom: 4px; color: #333; }
+        .map-legend-scale { height: 8px; border-radius: 4px; background: linear-gradient(90deg, #f5f5f5, #c8e6c9, #81c784, #4caf50, #388e3c, #1b5e20); }
+        .map-legend-labels { display: flex; justify-content: space-between; font-size: 0.6rem; color: #666; margin-top: 3px; }
         
         /* Footer */
         .sidebar-footer {
@@ -815,17 +820,7 @@
                     Mehr laden (<span x-text="displayCount"></span> / <span x-text="sortedMunicipalities.length"></span>)
                 </button>
                 
-                <!-- Legend -->
-                <div class="legend">
-                    <div class="legend-title">Waldverlust pro Gemeinde</div>
-                    <div class="legend-scale" style="background: linear-gradient(90deg, #f5f5f5, #c8e6c9, #81c784, #4caf50, #388e3c, #1b5e20);"></div>
-                    <div class="legend-labels">
-                        <span>0</span>
-                        <span>100</span>
-                        <span>500</span>
-                        <span>1000+ ha</span>
-                    </div>
-                </div>
+
             </div>
             
             <div class="sidebar-footer">
@@ -839,6 +834,17 @@
             <div id="map"></div>
             <div class="loading-overlay" x-show="loading" x-cloak>
                 <div class="spinner"></div>
+            </div>
+            <!-- Map Legend -->
+            <div class="map-legend">
+                <div class="map-legend-title">Einschlag pro Gemeinde</div>
+                <div class="map-legend-scale"></div>
+                <div class="map-legend-labels">
+                    <span>0</span>
+                    <span>50k</span>
+                    <span>200k</span>
+                    <span>400k+ Efm</span>
+                </div>
             </div>
         </div>
         
@@ -1693,13 +1699,13 @@
                 getStyle(feature) {
                     const iso = feature.properties.iso;
                     const d = this.currentYearData[iso];
-                    const lossArea = d ? d[1] : 0;  // d[1] = loss area
+                    const harvest = d ? d[2] : 0;  // d[2] = harvest Efm
                     
                     const isHighlighted = this.highlightedMuni === iso || this.selectedMuni === iso;
                     const isMultiSelected = this.selectedMunis.has(iso);
                     
                     return {
-                        fillColor: this.getColor(lossArea),
+                        fillColor: this.getColor(harvest),
                         weight: isHighlighted ? 2 : (isMultiSelected ? 3 : 0.5),
                         opacity: 1,
                         color: isMultiSelected ? '#1976d2' : (isHighlighted ? '#1e3d1a' : '#ffffff'),
@@ -1707,16 +1713,16 @@
                     };
                 },
                 
-                getColor(lossArea) {
-                    if (!lossArea || lossArea === 0) return '#f5f5f5';
-                    if (lossArea < 10) return '#e8f5e9';
-                    if (lossArea < 50) return '#c8e6c9';
-                    if (lossArea < 100) return '#a5d6a7';
-                    if (lossArea < 200) return '#81c784';
-                    if (lossArea < 500) return '#66bb6a';
-                    if (lossArea < 750) return '#4caf50';
-                    if (lossArea < 1000) return '#43a047';
-                    if (lossArea < 1500) return '#388e3c';
+                getColor(harvest) {
+                    if (!harvest || harvest === 0) return '#f5f5f5';
+                    if (harvest < 5000) return '#e8f5e9';
+                    if (harvest < 20000) return '#c8e6c9';
+                    if (harvest < 50000) return '#a5d6a7';
+                    if (harvest < 100000) return '#81c784';
+                    if (harvest < 200000) return '#66bb6a';
+                    if (harvest < 300000) return '#4caf50';
+                    if (harvest < 400000) return '#43a047';
+                    if (harvest < 500000) return '#388e3c';
                     return '#1b5e20';
                 },
                 
