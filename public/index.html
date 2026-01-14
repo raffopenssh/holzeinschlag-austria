@@ -650,7 +650,10 @@
                 </div>
                 
                 <!-- Year toggle buttons -->
-                <div class="year-range-label" x-show="isRangeSelected" x-text="rangeLabel" x-cloak></div>
+                <div class="year-range-label" x-show="isRangeSelected" x-cloak>
+                    <span x-show="processingRange">⏳ Berechne...</span>
+                    <span x-show="!processingRange" x-text="rangeLabel"></span>
+                </div>
                 <div class="year-toggles">
                     <template x-for="year in availableYears" :key="year">
                         <button class="year-btn"
@@ -918,6 +921,7 @@
                 loading: true,
                 loadingYear: null,
                 preloadProgress: 0,      // 0-100 progress of background preload
+                processingRange: false,  // True while processing range selection
                 showMethodsModal: false,
                 showMuniModal: false,
                 modalMuniIso: null,
@@ -1285,15 +1289,20 @@
                         // Shift+click: set range
                         this.rangeStartYear = this.selectedYear;
                         this.rangeEndYear = year;
+                        this.processingRange = true;
                         
                         // Load all years in range
                         await this.loadRangeYears();
+                        
+                        // Defer heavy map update to let UI show loading state
+                        await new Promise(r => requestAnimationFrame(r));
                         
                         // Update display
                         this.displayCount = 20;
                         if (this.gemeindenLayer) {
                             this.gemeindenLayer.setStyle((f) => this.getStyle(f));
                         }
+                        this.processingRange = false;
                     } else {
                         // Normal click: single year, clear range
                         this.rangeStartYear = null;
@@ -1630,11 +1639,18 @@
                         const baseYear = this.rangeStartYear || this.selectedYear;
                         this.rangeStartYear = baseYear;
                         this.rangeEndYear = year;
+                        this.processingRange = true;
+                        
                         await this.loadRangeYears();
+                        
+                        // Defer heavy map update to let UI show loading state
+                        await new Promise(r => requestAnimationFrame(r));
+                        
                         this.displayCount = 20;
                         if (this.gemeindenLayer) {
                             this.gemeindenLayer.setStyle((f) => this.getStyle(f));
                         }
+                        this.processingRange = false;
                     } else {
                         // Normal click: single year, clear range
                         this.rangeStartYear = null;
