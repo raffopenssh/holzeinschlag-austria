@@ -254,21 +254,24 @@
         
         /* Shift hint toast */
         .shift-hint {
-            position: absolute;
-            bottom: 80px;
-            left: 50%;
+            position: fixed;
+            top: 20px;
+            left: calc(50% + 200px);
             transform: translateX(-50%);
             background: rgba(25, 118, 210, 0.95);
             color: white;
             padding: 10px 16px;
             border-radius: 8px;
             font-size: 0.85rem;
-            z-index: 1000;
+            z-index: 10000;
             box-shadow: 0 3px 12px rgba(0,0,0,0.2);
             display: flex;
             align-items: center;
             gap: 8px;
-            animation: fadeInUp 0.3s ease-out;
+            transition: opacity 0.5s ease-out;
+        }
+        .shift-hint.fade-out {
+            opacity: 0;
         }
         .shift-hint-icon { font-size: 1.1rem; }
         .shift-hint-close {
@@ -281,9 +284,13 @@
             font-size: 1rem;
         }
         .shift-hint-close:hover { opacity: 1; }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateX(-50%) translateY(10px); }
-            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        @media (max-width: 768px) {
+            .shift-hint {
+                left: 50%;
+                top: 10px;
+                font-size: 0.75rem;
+                padding: 8px 12px;
+            }
         }
 
         /* Footer */
@@ -768,10 +775,8 @@
                 <!-- Multi-select info bar -->
                 <div class="multi-select-bar" x-show="selectedMunis.size > 0" x-cloak>
                     <div class="multi-select-info">
-                        <div class="multi-select-count">
-                            <span x-text="selectedMunis.size"></span> Gemeinden ausgewählt
-                        </div>
-                        <div class="multi-select-hint">Shift+Klick für weitere, Klick ohne Shift zum Zurücksetzen</div>
+                        <div class="multi-select-count" x-text="selectedMuniNames" style="font-weight: 500;"></div>
+                        <div class="multi-select-hint"><span x-text="selectedMunis.size"></span> Gemeinden · Shift+Klick für weitere</div>
                     </div>
                     <div class="multi-select-actions">
                         <button class="multi-select-btn" @click="showMultiSelectModal()">📊 Anzeigen</button>
@@ -870,7 +875,7 @@
                 <div class="spinner"></div>
             </div>
             <!-- Shift hint -->
-            <div class="shift-hint" x-show="showShiftHint" x-cloak x-transition>
+            <div class="shift-hint" :class="{ 'fade-out': shiftHintFading }" x-show="showShiftHint" x-cloak>
                 <span class="shift-hint-icon">⌨️</span>
                 <span>Tipp: Halte <strong>Shift</strong> gedrückt und klicke mehrere Gemeinden um sie zu vergleichen</span>
                 <button class="shift-hint-close" @click="dismissShiftHint()">✕</button>
@@ -1023,8 +1028,8 @@
             <div class="modal muni-modal" @click.stop>
                 <div class="muni-modal-header">
                     <div>
-                        <div class="muni-modal-title">📍 <span x-text="selectedMunis.size"></span> Gemeinden</div>
-                        <div class="muni-modal-subtitle">Kombinierte Statistik</div>
+                        <div class="muni-modal-title" x-text="selectedMuniNames" style="font-size: 1.1rem;"></div>
+                        <div class="muni-modal-subtitle"><span x-text="selectedMunis.size"></span> Gemeinden · Kombinierte Statistik</div>
                     </div>
                     <button class="modal-close" @click="closeMultiModal()">&times;</button>
                 </div>
@@ -1140,6 +1145,7 @@
                 selectedMunis: new Set(),  // Set of ISO codes for shift-click selection
                 showMultiModal: false,
                 showShiftHint: false,      // Show hint about shift-click
+                shiftHintFading: false,    // Fade-out animation state
                 
                 // Search
                 searchQuery: '',
@@ -1565,12 +1571,18 @@
                     // Show hint only if not seen before
                     if (localStorage.getItem('shiftHintSeen')) return;
                     this.showShiftHint = true;
-                    // Auto-hide after 6 seconds
-                    setTimeout(() => this.dismissShiftHint(), 6000);
+                    this.shiftHintFading = false;
+                    // Start fade out after 3 seconds
+                    setTimeout(() => {
+                        this.shiftHintFading = true;
+                        // Remove after fade animation (0.5s)
+                        setTimeout(() => this.dismissShiftHint(), 500);
+                    }, 3000);
                 },
                 
                 dismissShiftHint() {
                     this.showShiftHint = false;
+                    this.shiftHintFading = false;
                     localStorage.setItem('shiftHintSeen', 'true');
                 },
                 
@@ -1588,6 +1600,15 @@
                     if (this.gemeindenLayer) {
                         this.gemeindenLayer.setStyle((f) => this.getStyle(f));
                     }
+                },
+                
+                get selectedMuniNames() {
+                    if (this.selectedMunis.size === 0) return '';
+                    const names = [];
+                    for (const iso of this.selectedMunis) {
+                        names.push(this.lookup?.names?.[iso] || iso);
+                    }
+                    return names.join(' + ');
                 },
                 
                 get multiSelectData() {
