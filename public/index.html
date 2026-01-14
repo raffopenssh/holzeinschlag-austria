@@ -659,7 +659,10 @@
                                 x-text="year"></button>
                     </template>
                 </div>
-                <div class="year-range-hint" x-show="!isRangeSelected">Shift+Klick für Zeitraum</div>
+                <div class="year-range-hint" x-show="!isRangeSelected">
+                    <span x-show="preloadProgress < 100">Lade Daten... <span x-text="preloadProgress + '%'"></span></span>
+                    <span x-show="preloadProgress >= 100">Shift+Klick für Zeitraum</span>
+                </div>
                 <div class="year-range-hint" x-show="isRangeSelected">
                     <a href="#" @click.prevent="clearRange()" style="color: var(--primary);">Zeitraum aufheben</a>
                 </div>
@@ -914,6 +917,7 @@
                 displayCount: 20,
                 loading: true,
                 loadingYear: null,
+                preloadProgress: 0,      // 0-100 progress of background preload
                 showMethodsModal: false,
                 showMuniModal: false,
                 modalMuniIso: null,
@@ -1229,10 +1233,19 @@
                 async preloadAllYears() {
                     // Load remaining years in background (low priority)
                     const yearsToLoad = this.availableYears.filter(y => !this.yearData[y]);
+                    const total = yearsToLoad.length;
+                    if (total === 0) {
+                        this.preloadProgress = 100;
+                        return;
+                    }
+                    
+                    let loaded = 0;
                     // Load in batches of 4 to avoid overwhelming the connection
                     for (let i = 0; i < yearsToLoad.length; i += 4) {
                         const batch = yearsToLoad.slice(i, i + 4);
                         await Promise.all(batch.map(y => this.loadYearData(y)));
+                        loaded += batch.length;
+                        this.preloadProgress = Math.round((loaded / total) * 100);
                     }
                 },
                 
