@@ -140,7 +140,8 @@
             font-size: 0.65rem;
             color: var(--text-light);
             text-align: center;
-            margin-top: 0.25rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
             opacity: 0.8;
         }
         .year-range-label {
@@ -1220,6 +1221,19 @@
                     // Initialize map
                     this.initMap();
                     this.loading = false;
+                    
+                    // Preload all years in background for faster range selection
+                    this.preloadAllYears();
+                },
+                
+                async preloadAllYears() {
+                    // Load remaining years in background (low priority)
+                    const yearsToLoad = this.availableYears.filter(y => !this.yearData[y]);
+                    // Load in batches of 4 to avoid overwhelming the connection
+                    for (let i = 0; i < yearsToLoad.length; i += 4) {
+                        const batch = yearsToLoad.slice(i, i + 4);
+                        await Promise.all(batch.map(y => this.loadYearData(y)));
+                    }
                 },
                 
                 async loadYearData(year) {
