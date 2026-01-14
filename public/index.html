@@ -122,9 +122,33 @@
             color: white;
             font-weight: 600;
         }
+        .year-btn.in-range {
+            background: #a5d6a7;
+            color: var(--primary-dark);
+        }
+        .year-btn.range-start,
+        .year-btn.range-end {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
         .year-btn.loading {
             opacity: 0.5;
             cursor: wait;
+        }
+        .year-range-hint {
+            font-size: 0.65rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 0.25rem;
+            opacity: 0.8;
+        }
+        .year-range-label {
+            font-size: 0.75rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0.25rem;
         }
         
         /* Stats cards */
@@ -464,6 +488,13 @@
         .muni-modal-chart-bar.active:hover {
             background: var(--primary-dark);
         }
+        .muni-modal-chart-bar.in-range {
+            background: #a5d6a7;
+        }
+        .muni-modal-chart-bar.range-start,
+        .muni-modal-chart-bar.range-end {
+            background: var(--primary);
+        }
         .muni-modal-chart-bar::after {
             content: attr(data-year);
             position: absolute;
@@ -618,13 +649,18 @@
                 </div>
                 
                 <!-- Year toggle buttons -->
+                <div class="year-range-label" x-show="isRangeSelected" x-text="rangeLabel" x-cloak></div>
                 <div class="year-toggles">
                     <template x-for="year in availableYears" :key="year">
                         <button class="year-btn"
-                                :class="{ active: selectedYear === year, loading: loadingYear === year }"
-                                @click="selectYear(year)"
+                                :class="getYearButtonClass(year)"
+                                @click="handleYearClick($event, year)"
                                 x-text="year"></button>
                     </template>
+                </div>
+                <div class="year-range-hint" x-show="!isRangeSelected">Shift+Klick für Zeitraum</div>
+                <div class="year-range-hint" x-show="isRangeSelected">
+                    <a href="#" @click.prevent="clearRange()" style="color: var(--primary);">Zeitraum aufheben</a>
                 </div>
                 
                 <!-- Austria totals -->
@@ -742,23 +778,23 @@
                 
                 <div class="muni-modal-nav">
                     <button class="muni-modal-nav-btn" 
-                            :disabled="!canGoPrevYear" 
+                            :disabled="!canGoPrevYear || isRangeSelected" 
                             @click="prevYearModal()">◀</button>
                     <div class="muni-modal-chart-container">
-                        <div class="muni-modal-year" x-text="selectedYear"></div>
+                        <div class="muni-modal-year" x-text="isRangeSelected ? rangeLabel : selectedYear"></div>
                         <div class="muni-modal-chart">
                             <template x-for="year in availableYears" :key="year">
                                 <div class="muni-modal-chart-bar" 
-                                     :class="{ active: year === selectedYear }"
+                                     :class="getModalChartBarClass(year)"
                                      :style="{ height: getYearBarHeight(year) + '%' }"
                                      :data-year="year.slice(-2)"
                                      :title="year + ': ' + formatNumber(getYearLossArea(year)) + ' ha'"
-                                     @click="selectYear(year)"></div>
+                                     @click="handleModalChartClick($event, year)"></div>
                             </template>
                         </div>
                     </div>
                     <button class="muni-modal-nav-btn" 
-                            :disabled="!canGoNextYear" 
+                            :disabled="!canGoNextYear || isRangeSelected" 
                             @click="nextYearModal()">▶</button>
                 </div>
                 
@@ -870,6 +906,8 @@
                 
                 // UI state
                 selectedYear: '2024',
+                rangeStartYear: null,    // For range selection
+                rangeEndYear: null,      // For range selection
                 selectedMuni: null,
                 highlightedMuni: null,
                 displayCount: 20,
@@ -894,12 +932,107 @@
                     return this.meta?.years || [];
                 },
                 
+                get isRangeSelected() {
+                    return this.rangeStartYear !== null && this.rangeEndYear !== null;
+                },
+                
+                get rangeYears() {
+                    if (!this.isRangeSelected) return [this.selectedYear];
+                    const start = Math.min(parseInt(this.rangeStartYear), parseInt(this.rangeEndYear));
+                    const end = Math.max(parseInt(this.rangeStartYear), parseInt(this.rangeEndYear));
+                    return this.availableYears.filter(y => {
+                        const yr = parseInt(y);
+                        return yr >= start && yr <= end;
+                    });
+                },
+                
+                get rangeLabel() {
+                    if (!this.isRangeSelected) return this.selectedYear;
+                    const years = this.rangeYears;
+                    return `${years[0]} - ${years[years.length - 1]} (${years.length} Jahre)`;
+                },
+                
                 get yearSummary() {
-                    return this.meta?.summary?.[this.selectedYear];
+                    if (!this.isRangeSelected) {
+                        return this.meta?.summary?.[this.selectedYear];
+                    }
+                    // Aggregate summary across range
+                    return this.getAggregatedSummary();
                 },
                 
                 get currentYearData() {
-                    return this.yearData[this.selectedYear] || {};
+                    if (!this.isRangeSelected) {
+                        return this.yearData[this.selectedYear] || {};
+                    }
+                    // Aggregate data across range
+                    return this.getAggregatedYearData();
+                },
+                
+                getAggregatedSummary() {
+                    const years = this.rangeYears;
+                    const summary = {
+                        total_loss_pixels: 0,
+                        total_loss_area_ha: 0,
+                        total_harvest_efm: 0,
+                        total_value_eur: 0,
+                        total_co2_tonnes: 0,
+                        total_ets_liability_eur: 0,
+                        ets_price_eur_tco2: 0,
+                        timber_price_eur_efm: 0,
+                        gemeinde_count: 0
+                    };
+                    
+                    let etsSum = 0, timberSum = 0;
+                    for (const year of years) {
+                        const s = this.meta?.summary?.[year];
+                        if (s) {
+                            summary.total_loss_pixels += s.total_loss_pixels || 0;
+                            summary.total_loss_area_ha += s.total_loss_area_ha || 0;
+                            summary.total_harvest_efm += s.total_harvest_efm || 0;
+                            summary.total_value_eur += s.total_value_eur || 0;
+                            summary.total_co2_tonnes += s.total_co2_tonnes || 0;
+                            summary.total_ets_liability_eur += s.total_ets_liability_eur || 0;
+                            etsSum += s.ets_price_eur_tco2 || 0;
+                            timberSum += s.timber_price_eur_efm || 0;
+                        }
+                    }
+                    // Average prices
+                    summary.ets_price_eur_tco2 = Math.round(etsSum / years.length);
+                    summary.timber_price_eur_efm = Math.round(timberSum / years.length);
+                    return summary;
+                },
+                
+                getAggregatedYearData() {
+                    const years = this.rangeYears;
+                    const aggregated = {};
+                    
+                    // Collect all ISOs across all years
+                    const allIsos = new Set();
+                    for (const year of years) {
+                        const data = this.yearData[year] || {};
+                        Object.keys(data).forEach(iso => allIsos.add(iso));
+                    }
+                    
+                    // Aggregate each ISO
+                    for (const iso of allIsos) {
+                        let lossPixels = 0, lossArea = 0, harvest = 0, value = 0, co2 = 0, ets = 0;
+                        for (const year of years) {
+                            const d = this.yearData[year]?.[iso];
+                            if (d) {
+                                lossPixels += d[0] || 0;
+                                lossArea += d[1] || 0;
+                                harvest += d[2] || 0;
+                                value += d[3] || 0;
+                                co2 += d[4] || 0;
+                                ets += d[5] || 0;
+                            }
+                        }
+                        // d[6] is ets per capita - recalculate from total
+                        const pop = this.lookup?.population?.[iso] || 0;
+                        const etsPc = pop > 0 ? ets / pop : 0;
+                        aggregated[iso] = [lossPixels, lossArea, harvest, value, co2, ets, etsPc];
+                    }
+                    return aggregated;
                 },
                 
                 get modalMuniData() {
@@ -1099,7 +1232,7 @@
                 },
                 
                 async selectYear(year) {
-                    if (year === this.selectedYear) return;
+                    if (year === this.selectedYear && !this.isRangeSelected) return;
                     
                     const currentMuni = this.selectedMuni;
                     const hadPopupOpen = this.activePopup && this.activePopup.isOpen();
@@ -1118,6 +1251,74 @@
                         const content = this.buildPopupContent(currentMuni);
                         this.activePopup.setContent(content);
                     }
+                },
+                
+                async handleYearClick(event, year) {
+                    if (event.shiftKey && this.selectedYear) {
+                        // Shift+click: set range
+                        this.rangeStartYear = this.selectedYear;
+                        this.rangeEndYear = year;
+                        
+                        // Load all years in range
+                        await this.loadRangeYears();
+                        
+                        // Update display
+                        this.displayCount = 20;
+                        if (this.gemeindenLayer) {
+                            this.gemeindenLayer.setStyle((f) => this.getStyle(f));
+                        }
+                    } else {
+                        // Normal click: single year, clear range
+                        this.rangeStartYear = null;
+                        this.rangeEndYear = null;
+                        await this.selectYear(year);
+                    }
+                },
+                
+                async loadRangeYears() {
+                    const years = this.rangeYears;
+                    await Promise.all(years.map(y => this.loadYearData(y)));
+                },
+                
+                clearRange() {
+                    this.rangeStartYear = null;
+                    this.rangeEndYear = null;
+                    this.displayCount = 20;
+                    if (this.gemeindenLayer) {
+                        this.gemeindenLayer.setStyle((f) => this.getStyle(f));
+                    }
+                },
+                
+                getYearButtonClass(year) {
+                    const classes = {};
+                    
+                    if (this.loadingYear === year) {
+                        classes.loading = true;
+                    }
+                    
+                    if (this.isRangeSelected) {
+                        const start = Math.min(parseInt(this.rangeStartYear), parseInt(this.rangeEndYear));
+                        const end = Math.max(parseInt(this.rangeStartYear), parseInt(this.rangeEndYear));
+                        const yr = parseInt(year);
+                        
+                        if (year === this.rangeStartYear || year === this.rangeEndYear) {
+                            if (this.rangeStartYear === this.rangeEndYear) {
+                                classes.active = true;
+                            } else if (yr === start) {
+                                classes['range-start'] = true;
+                            } else {
+                                classes['range-end'] = true;
+                            }
+                        } else if (yr > start && yr < end) {
+                            classes['in-range'] = true;
+                        }
+                    } else {
+                        if (year === this.selectedYear) {
+                            classes.active = true;
+                        }
+                    }
+                    
+                    return classes;
                 },
                 
                 prevYear(event) {
@@ -1370,6 +1571,49 @@
                     const loss = this.getYearLossArea(year);
                     // Minimum height of 5%, scale the rest
                     return Math.max(5, (loss / maxLoss) * 100);
+                },
+                
+                getModalChartBarClass(year) {
+                    const classes = {};
+                    
+                    if (this.isRangeSelected) {
+                        const start = Math.min(parseInt(this.rangeStartYear), parseInt(this.rangeEndYear));
+                        const end = Math.max(parseInt(this.rangeStartYear), parseInt(this.rangeEndYear));
+                        const yr = parseInt(year);
+                        
+                        if (yr === start) {
+                            classes['range-start'] = true;
+                        } else if (yr === end) {
+                            classes['range-end'] = true;
+                        } else if (yr > start && yr < end) {
+                            classes['in-range'] = true;
+                        }
+                    } else {
+                        if (year === this.selectedYear) {
+                            classes.active = true;
+                        }
+                    }
+                    
+                    return classes;
+                },
+                
+                async handleModalChartClick(event, year) {
+                    if (event.shiftKey && (this.selectedYear || this.rangeStartYear)) {
+                        // Shift+click: set/extend range
+                        const baseYear = this.rangeStartYear || this.selectedYear;
+                        this.rangeStartYear = baseYear;
+                        this.rangeEndYear = year;
+                        await this.loadRangeYears();
+                        this.displayCount = 20;
+                        if (this.gemeindenLayer) {
+                            this.gemeindenLayer.setStyle((f) => this.getStyle(f));
+                        }
+                    } else {
+                        // Normal click: single year, clear range
+                        this.rangeStartYear = null;
+                        this.rangeEndYear = null;
+                        await this.selectYear(year);
+                    }
                 }
             };
         }
