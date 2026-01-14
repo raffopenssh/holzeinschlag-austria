@@ -922,6 +922,7 @@
                 loadingYear: null,
                 preloadProgress: 0,      // 0-100 progress of background preload
                 processingRange: false,  // True while processing range selection
+                cachedAggregatedData: null, // Cached aggregated data for range
                 showMethodsModal: false,
                 showMuniModal: false,
                 modalMuniIso: null,
@@ -973,8 +974,8 @@
                     if (!this.isRangeSelected) {
                         return this.yearData[this.selectedYear] || {};
                     }
-                    // Aggregate data across range
-                    return this.getAggregatedYearData();
+                    // Use cached aggregated data
+                    return this.cachedAggregatedData || {};
                 },
                 
                 getAggregatedSummary() {
@@ -1011,7 +1012,7 @@
                     return summary;
                 },
                 
-                getAggregatedYearData() {
+                computeAggregatedYearData() {
                     const years = this.rangeYears;
                     const aggregated = {};
                     
@@ -1294,10 +1295,13 @@
                         // Load all years in range
                         await this.loadRangeYears();
                         
-                        // Defer heavy map update to let UI show loading state
+                        // Pre-compute aggregated data ONCE (this was the slow part)
+                        this.cachedAggregatedData = this.computeAggregatedYearData();
+                        
+                        // Defer map update to let UI show loading state
                         await new Promise(r => requestAnimationFrame(r));
                         
-                        // Update display
+                        // Update display - now fast because data is cached
                         this.displayCount = 20;
                         if (this.gemeindenLayer) {
                             this.gemeindenLayer.setStyle((f) => this.getStyle(f));
@@ -1307,6 +1311,7 @@
                         // Normal click: single year, clear range
                         this.rangeStartYear = null;
                         this.rangeEndYear = null;
+                        this.cachedAggregatedData = null;
                         await this.selectYear(year);
                     }
                 },
@@ -1319,6 +1324,7 @@
                 clearRange() {
                     this.rangeStartYear = null;
                     this.rangeEndYear = null;
+                    this.cachedAggregatedData = null;
                     this.displayCount = 20;
                     if (this.gemeindenLayer) {
                         this.gemeindenLayer.setStyle((f) => this.getStyle(f));
@@ -1643,7 +1649,10 @@
                         
                         await this.loadRangeYears();
                         
-                        // Defer heavy map update to let UI show loading state
+                        // Pre-compute aggregated data ONCE
+                        this.cachedAggregatedData = this.computeAggregatedYearData();
+                        
+                        // Defer map update to let UI show loading state
                         await new Promise(r => requestAnimationFrame(r));
                         
                         this.displayCount = 20;
@@ -1655,6 +1664,7 @@
                         // Normal click: single year, clear range
                         this.rangeStartYear = null;
                         this.rangeEndYear = null;
+                        this.cachedAggregatedData = null;
                         await this.selectYear(year);
                     }
                 }
