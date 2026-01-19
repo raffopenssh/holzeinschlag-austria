@@ -424,34 +424,20 @@ func main() {
 	// Dynamic GPKG export with filtering
 	http.Handle("/api/export", authMiddleware(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		yearsParam := r.URL.Query().Get("years")
-		gemeindenParam := r.URL.Query().Get("gemeinden")
+		gemeindenParam := r.URL.Query().Get("gemeinden") // Combined municipalities to merge
 
-		// Build ogr2ogr command
 		srcGpkg := filepath.Join(publicDir, "holzeinschlag_austria.gpkg")
-
-		// Create temp output path (not file - ogr2ogr needs to create it)
 		tmpPath := filepath.Join(os.TempDir(), fmt.Sprintf("export_%d.gpkg", time.Now().UnixNano()))
 		defer os.Remove(tmpPath)
 
-		// Build SQL for filtering
-		var whereClause string
-		if gemeindenParam != "" {
-			isos := strings.Split(gemeindenParam, ",")
-			quoted := make([]string, len(isos))
-			for i, iso := range isos {
-				quoted[i] = fmt.Sprintf("'%s'", strings.TrimSpace(iso))
-			}
-			whereClause = fmt.Sprintf("iso IN (%s)", strings.Join(quoted, ","))
-		}
-
 		// Build column selection based on years
-		var selectCols string
+		var yearCols []string
+		var sumCols []string
 		if yearsParam != "" {
 			years := strings.Split(yearsParam, ",")
-			cols := []string{"fid", "geom", "name", "iso", "state", "population"}
 			for _, year := range years {
 				y := strings.TrimSpace(year)
-				cols = append(cols,
+				yearCols = append(yearCols,
 					fmt.Sprintf("loss_pixels_%s", y),
 					fmt.Sprintf("loss_area_ha_%s", y),
 					fmt.Sprintf("harvest_efm_%s", y),
@@ -460,19 +446,27 @@ func main() {
 					fmt.Sprintf("ets_eur_%s", y),
 					fmt.Sprintf("ets_per_capita_%s", y),
 				)
+				sumCols = append(sumCols,
+					fmt.Sprintf("SUM(loss_pixels_%s) as loss_pixels_%s", y, y),
+					fmt.Sprintf("SUM(loss_area_ha_%s) as loss_area_ha_%s", y, y),
+					fmt.Sprintf("SUM(harvest_efm_%s) as harvest_efm_%s", y, y),
+					fmt.Sprintf("SUM(value_eur_%s) as value_eur_%s", y, y),
+					fmt.Sprintf("SUM(co2_tonnes_%s) as co2_tonnes_%s", y, y),
+					fmt.Sprintf("SUM(ets_eur_%s) as ets_eur_%s", y, y),
+					fmt.Sprintf("SUM(ets_per_capita_%s) as ets_per_capita_%s", y, y),
+				)
 			}
-			selectCols = strings.Join(cols, ", ")
+		}
+
+		var selectCols string
+		if len(yearCols) > 0 {
+			selectCols = "fid, geom, name, iso, state, population, " + strings.Join(yearCols, ", ")
 		} else {
 			selectCols = "*"
 		}
 
-		// Build SQL query
+		// First: export all municipalities
 		sql := fmt.Sprintf("SELECT %s FROM gemeinden", selectCols)
-		if whereClause != "" {
-			sql += " WHERE " + whereClause
-		}
-
-		// Run ogr2ogr
 		cmd := exec.Command("ogr2ogr",
 			"-f", "GPKG",
 			tmpPath,
@@ -487,6 +481,42 @@ func main() {
 			return
 		}
 
+		// If gemeinden are specified, add a merged feature
+		if gemeindenParam != "" && len(sumCols) > 0 {
+			isos := strings.Split(gemeindenParam, ",")
+			if len(isos) > 1 {
+				quoted := make([]string, len(isos))
+				for i, iso := range isos {
+					quoted[i] = fmt.Sprintf("'%s'", strings.TrimSpace(iso))
+				}
+				whereClause := fmt.Sprintf("iso IN (%s)", strings.Join(quoted, ","))
+
+				// Create merged feature with ST_Union and summed values
+				mergeSql := fmt.Sprintf(
+					"SELECT ST_Union(geom) as geom, 'Kombiniert: ' || GROUP_CONCAT(name, ', ') as name, "+
+						"'COMBINED' as iso, 'Kombiniert' as state, SUM(population) as population, %s "+
+						"FROM gemeinden WHERE %s",
+					strings.Join(sumCols, ", "),
+					whereClause,
+				)
+
+				// Append to existing GPKG
+				cmd2 := exec.Command("ogr2ogr",
+					"-f", "GPKG",
+					"-update", "-append",
+					tmpPath,
+					srcGpkg,
+					"-sql", mergeSql,
+					"-nln", "gemeinden",
+				)
+				output2, err2 := cmd2.CombinedOutput()
+				if err2 != nil {
+					log.Printf("ogr2ogr merge error: %v, output: %s", err2, string(output2))
+					// Continue anyway - we still have the base export
+				}
+			}
+		}
+
 		// Read and send file
 		data, err := os.ReadFile(tmpPath)
 		if err != nil {
@@ -496,11 +526,13 @@ func main() {
 
 		// Generate filename
 		filename := "holzeinschlag_austria"
-		if gemeindenParam != "" {
-			filename += "_selection"
-		}
 		if yearsParam != "" {
-			filename += "_" + strings.ReplaceAll(yearsParam, ",", "-")
+			yearList := strings.Split(yearsParam, ",")
+			if len(yearList) > 3 {
+				filename += fmt.Sprintf("_%s-%s", yearList[0], yearList[len(yearList)-1])
+			} else {
+				filename += "_" + strings.ReplaceAll(yearsParam, ",", "-")
+			}
 		}
 		filename += ".gpkg"
 
