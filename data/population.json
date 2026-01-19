@@ -8366,5 +8366,97 @@
   "90001": {
     "name": "Wien",
     "population": 2028289
+  },
+  "90101": {
+    "name": "Wien-Innere Stadt",
+    "population": 16047
+  },
+  "90201": {
+    "name": "Wien-Leopoldstadt",
+    "population": 105113
+  },
+  "90301": {
+    "name": "Wien-Landstraße",
+    "population": 91680
+  },
+  "90401": {
+    "name": "Wien-Wieden",
+    "population": 33743
+  },
+  "90501": {
+    "name": "Wien-Margareten",
+    "population": 55123
+  },
+  "90601": {
+    "name": "Wien-Mariahilf",
+    "population": 31362
+  },
+  "90701": {
+    "name": "Wien-Neubau",
+    "population": 32027
+  },
+  "90801": {
+    "name": "Wien-Josefstadt",
+    "population": 25135
+  },
+  "90901": {
+    "name": "Wien-Alsergrund",
+    "population": 42156
+  },
+  "91001": {
+    "name": "Wien-Favoriten",
+    "population": 218467
+  },
+  "91101": {
+    "name": "Wien-Simmering",
+    "population": 109837
+  },
+  "91201": {
+    "name": "Wien-Meidling",
+    "population": 99363
+  },
+  "91301": {
+    "name": "Wien-Hietzing",
+    "population": 53846
+  },
+  "91401": {
+    "name": "Wien-Penzing",
+    "population": 94053
+  },
+  "91501": {
+    "name": "Wien-Rudolfsheim-Fünfhaus",
+    "population": 77555
+  },
+  "91601": {
+    "name": "Wien-Ottakring",
+    "population": 105526
+  },
+  "91701": {
+    "name": "Wien-Hernals",
+    "population": 57555
+  },
+  "91801": {
+    "name": "Wien-Währing",
+    "population": 52214
+  },
+  "91901": {
+    "name": "Wien-Döbling",
+    "population": 74134
+  },
+  "92001": {
+    "name": "Wien-Brigittenau",
+    "population": 85332
+  },
+  "92101": {
+    "name": "Wien-Floridsdorf",
+    "population": 175331
+  },
+  "92201": {
+    "name": "Wien-Donaustadt",
+    "population": 210157
+  },
+  "92301": {
+    "name": "Wien-Liesing",
+    "population": 114533
   }
 }
