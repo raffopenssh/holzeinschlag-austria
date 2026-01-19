@@ -6,11 +6,13 @@ import (
 	"crypto/subtle"
 	"encoding/hex"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"os/exec"
 	"path/filepath"
+	"strings"
 	"sync"
 	"time"
 )
@@ -416,6 +418,95 @@ func main() {
 			return
 		}
 		w.Header().Set("Content-Type", "text/plain")
+		w.Write(data)
+	})))
+
+	// Dynamic GPKG export with filtering
+	http.Handle("/api/export", authMiddleware(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		yearsParam := r.URL.Query().Get("years")
+		gemeindenParam := r.URL.Query().Get("gemeinden")
+
+		// Build ogr2ogr command
+		srcGpkg := filepath.Join(publicDir, "holzeinschlag_austria.gpkg")
+
+		// Create temp output path (not file - ogr2ogr needs to create it)
+		tmpPath := filepath.Join(os.TempDir(), fmt.Sprintf("export_%d.gpkg", time.Now().UnixNano()))
+		defer os.Remove(tmpPath)
+
+		// Build SQL for filtering
+		var whereClause string
+		if gemeindenParam != "" {
+			isos := strings.Split(gemeindenParam, ",")
+			quoted := make([]string, len(isos))
+			for i, iso := range isos {
+				quoted[i] = fmt.Sprintf("'%s'", strings.TrimSpace(iso))
+			}
+			whereClause = fmt.Sprintf("iso IN (%s)", strings.Join(quoted, ","))
+		}
+
+		// Build column selection based on years
+		var selectCols string
+		if yearsParam != "" {
+			years := strings.Split(yearsParam, ",")
+			cols := []string{"fid", "geom", "name", "iso", "state", "population"}
+			for _, year := range years {
+				y := strings.TrimSpace(year)
+				cols = append(cols,
+					fmt.Sprintf("loss_pixels_%s", y),
+					fmt.Sprintf("loss_area_ha_%s", y),
+					fmt.Sprintf("harvest_efm_%s", y),
+					fmt.Sprintf("value_eur_%s", y),
+					fmt.Sprintf("co2_tonnes_%s", y),
+					fmt.Sprintf("ets_eur_%s", y),
+					fmt.Sprintf("ets_per_capita_%s", y),
+				)
+			}
+			selectCols = strings.Join(cols, ", ")
+		} else {
+			selectCols = "*"
+		}
+
+		// Build SQL query
+		sql := fmt.Sprintf("SELECT %s FROM gemeinden", selectCols)
+		if whereClause != "" {
+			sql += " WHERE " + whereClause
+		}
+
+		// Run ogr2ogr
+		cmd := exec.Command("ogr2ogr",
+			"-f", "GPKG",
+			tmpPath,
+			srcGpkg,
+			"-sql", sql,
+			"-nln", "gemeinden",
+		)
+		output, err := cmd.CombinedOutput()
+		if err != nil {
+			log.Printf("ogr2ogr error: %v, output: %s", err, string(output))
+			http.Error(w, "Failed to generate export", http.StatusInternalServerError)
+			return
+		}
+
+		// Read and send file
+		data, err := os.ReadFile(tmpPath)
+		if err != nil {
+			http.Error(w, "Failed to read export file", http.StatusInternalServerError)
+			return
+		}
+
+		// Generate filename
+		filename := "holzeinschlag_austria"
+		if gemeindenParam != "" {
+			filename += "_selection"
+		}
+		if yearsParam != "" {
+			filename += "_" + strings.ReplaceAll(yearsParam, ",", "-")
+		}
+		filename += ".gpkg"
+
+		w.Header().Set("Content-Type", "application/geopackage+sqlite3")
+		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=\"%s\"", filename))
+		w.Header().Set("Content-Length", fmt.Sprintf("%d", len(data)))
 		w.Write(data)
 	})))
 

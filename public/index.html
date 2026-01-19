@@ -864,7 +864,7 @@
             
             <div class="sidebar-footer">
                 <a href="#" @click.prevent="showMethodsModal = true" style="margin-right: 1rem;">Methoden & Quellen</a>
-                <a href="/holzeinschlag_austria.gpkg" download>📥 GeoPackage</a>
+                <a :href="exportUrl" download>📥 GeoPackage</a>
             </div>
         </aside>
         
@@ -1002,7 +1002,7 @@
                 <p>CO₂-Emissionen × historischer EU-ETS-Preis. Preise von 2005-2023 basieren auf realen Marktdaten. <em>Hinweis: Forstwirtschaft ist derzeit nicht im EU-ETS enthalten - dies ist eine hypothetische Berechnung.</em></p>
                 
                 <h3>📥 Datendownload</h3>
-                <p>GeoPackage enthält alle 2.118 Gemeinden mit Daten für 2001-2023. Felder pro Jahr:</p>
+                <p>GeoPackage enthält Daten für 2001-2024. Der Export berücksichtigt die aktuelle Auswahl (Jahre und Gemeinden). Felder pro Jahr:</p>
                 <ul>
                     <li><code>loss_pixels_YYYY</code> - Anzahl 30m-Pixel</li>
                     <li><code>loss_area_ha_YYYY</code> - Verlustfläche in Hektar</li>
@@ -1179,6 +1179,17 @@
                     if (!this.isRangeSelected) return this.selectedYear;
                     const years = this.rangeYears;
                     return `${years[0]} - ${years[years.length - 1]} (${years.length} Jahre)`;
+                },
+                
+                get exportUrl() {
+                    const params = new URLSearchParams();
+                    // Add years
+                    params.set('years', this.rangeYears.join(','));
+                    // Add selected municipalities if any
+                    if (this.selectedMunis.size > 0) {
+                        params.set('gemeinden', Array.from(this.selectedMunis).join(','));
+                    }
+                    return `/api/export?${params.toString()}`;
                 },
                 
                 get yearSummary() {
