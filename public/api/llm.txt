@@ -1,0 +1,88 @@
+# Holzeinschlag Austria — Forestry Context API
+# Base: https://holzeinschlag-at.exe.xyz  (port 8000)
+# Role: READ-ONLY historical/economic context provider for Austrian forest plots.
+#       Complements srtm-lidar-at (LiDAR segmentation/trees). No auth required.
+
+## What this VM holds (precomputed, Austria-wide)
+- Hansen GFC-2024 v1.12 forest loss, 30 m, per-year 2001–2024 (local rasters)
+- Hansen treecover2000 (forest baseline, threshold >= 30%)
+- Harris et al. forest carbon flux: net flux / gross emissions / gross removals,
+  Mg CO2e/ha cumulative 2001–2024 (local rasters)
+- Statistik Austria Holzeinschlag (timber harvest) 2001–2024, state totals
+  downscaled to all 2,118 municipalities via Hansen loss shares (model values!)
+- Timber prices EUR/Efm: national STAT sawlog series (spruce/fir, pine, beech)
+  since 2010 PLUS full catalogue: 280 series across 32 datasets — per-state LK
+  price ranges (sawlog/industrial roundwood/fuelwood for all 8 forested states),
+  pellets, wood products export, CME lumber futures. Auto-refreshed weekly
+  (cron Mon 05:17 UTC) from preise.agrarforschung.at.
+- Municipality boundaries, population, per-municipality CO2/ETS estimates
+
+## Primary endpoint
+
+POST /api/plot-context
+  Body: GeoJSON Geometry, Feature, or FeatureCollection (WGS84 lon/lat).
+        Polygon/MultiPolygon preferred; Point gets a 100 m buffer.
+  Slow-ish: 10–60 s (pixel-exact zonal stats + ring buffers). One request at a time.
+  Returns JSON:
+    input          – plot_area_ha
+    plot           – pixel-exact stats for the plot: forest_area_2000_ha,
+                     forest_share_2000_pct, loss_ha_by_year (2001–2024),
+                     loss_total, loss_pct_of_forest2000,
+                     net_flux/gross_emissions/gross_removals tCO2e/ha (2001–2024)
+    surroundings   – same stats for ring_0_1km and ring_1_5km around the plot
+                     (use to judge whether the plot is unusual vs its neighbourhood)
+    comparison     – annual_forest_loss_rate_pct and carbon flux for
+                     plot vs rings vs municipality (ready-made benchmark)
+    municipalities – intersecting municipalities with plot_share, forest_area_ha,
+                     harvest history, carbon flux densities
+    timeline       – unified per-year rows 2001–2024, each with:
+                       plot {loss_ha, loss_pct_of_forest}
+                       surroundings_5km {loss_pct_of_forest}
+                       municipality {loss_ha, harvest_efm, harvest_value_eur,
+                                     co2_tonnes, harvest_efm_per_forest_ha}
+                       austria {harvest_efm, loss_ha}
+                       price_spruce_eur_efm
+                     -> plot this directly; it is THE long-horizon view.
+    timber_prices_eur_per_efm – national STAT sawlog series (yearly avgs + monthly)
+    regional_prices – latest LK price ranges for the plot's state:
+                      assortments keyed by LK code (e.g. LK_BLFIM2b = spruce/fir
+                      Media 2b sawlog) with latest, range_low/high, yearly_avg.
+                      Use these for harvest-value estimates; they are the prices
+                      actually paid in the plot's region.
+    sources, caveats
+
+  Example:
+    curl -s -X POST https://holzeinschlag-at.exe.xyz/api/plot-context \
+      -H 'Content-Type: application/json' \
+      -d '{"type":"Polygon","coordinates":[[[15.113,47.134],[15.124,47.134],[15.124,47.141],[15.113,47.141],[15.113,47.134]]]}'
+
+## Supporting data endpoints (GET, static JSON under /data/)
+- /data/emissions_meta.json          – Austria yearly summary 2001–2024 (harvest, loss, CO2, prices)
+- /data/year_<YYYY>.json             – per-municipality compact rows:
+                                       [loss_pixels, loss_area_ha, harvest_efm, value_eur, co2_t, ets_eur, ets_per_capita]
+- /data/gemeinde_lookup.json         – iso -> name/state/population
+- /data/gemeinde_yearly_loss.json    – per-municipality Hansen loss by year
+- /data/carbon_flux_by_gemeinde.json – per-municipality carbon flux densities
+- /data/timber_prices.json           – national sawlog price series (compact)
+- /data/timber_price_catalog.json    – FULL price catalogue (280 series, ~700 KB):
+                                       pages{contentId:{title,area,series{code:{name,unit,
+                                       latest_value,last,yearly_avg,monthly}}}},
+                                       state_pages{state:{sawlog,industrial_roundwood,fuelwood}}.
+                                       _von/_bis codes = range bounds of base series.
+- /data/austria_gemeinden.geojson    – municipality boundaries
+- /api/export?years=2020,2024&gemeinden=61630  – filtered GPKG download
+
+## Semantics & caveats (IMPORTANT)
+- "Forest loss" = Hansen stand-replacement disturbance: includes normal harvest,
+  windthrow, bark-beetle salvage. It is NOT deforestation.
+- Municipal harvest_efm/value_eur are DOWNSCALED from official state totals
+  (proportional to Hansen loss). Treat as priors, not measurements.
+- Carbon flux sign: negative = net sink.
+- 30 m pixels: plot values for areas < 5 ha are indicative only.
+- Efm = Erntefestmeter (harvested solid cubic metre under bark).
+
+## Division of labour
+- THIS VM: history (2001–2024), economics (prices, harvest value), carbon,
+  regional benchmarks. Municipality/state/Austria context.
+- srtm-lidar-at: per-tree LiDAR segmentation, change 2022–2024, terrain.
+- Your VM (forestry management): domain logic, stands, yield models, UI.

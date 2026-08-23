@@ -1,11 +1,13 @@
 package main
 
 import (
+	"context"
 	"crypto/rand"
 	"crypto/sha256"
 	"crypto/subtle"
 	"encoding/hex"
 	"encoding/json"
+	"io"
 	"fmt"
 	"log"
 	"net/http"
@@ -541,6 +543,47 @@ func main() {
 		w.Header().Set("Content-Length", fmt.Sprintf("%d", len(data)))
 		w.Write(data)
 	})))
+
+	// Plot-context API for external forestry systems (see public/api/llm.txt)
+	var plotCtxMutex sync.Mutex
+	http.HandleFunc("/api/llm.txt", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+		http.ServeFile(w, r, filepath.Join(publicDir, "api", "llm.txt"))
+	})
+	http.HandleFunc("/api/plot-context", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != "POST" {
+			http.Error(w, `{"error":"POST a GeoJSON geometry; docs at /api/llm.txt"}`, http.StatusMethodNotAllowed)
+			return
+		}
+		body := http.MaxBytesReader(w, r.Body, 4<<20)
+		payload, err := io.ReadAll(body)
+		if err != nil {
+			http.Error(w, `{"error":"body too large or unreadable"}`, http.StatusBadRequest)
+			return
+		}
+		if !plotCtxMutex.TryLock() {
+			w.Header().Set("Retry-After", "30")
+			http.Error(w, `{"error":"busy: one plot-context request at a time"}`, http.StatusTooManyRequests)
+			return
+		}
+		defer plotCtxMutex.Unlock()
+
+		ctx, cancel := context.WithTimeout(r.Context(), 5*time.Minute)
+		defer cancel()
+		cmd := exec.CommandContext(ctx, "python3", filepath.Join(processingDir, "plot_context.py"))
+		cmd.Stdin = strings.NewReader(string(payload))
+		var stdout, stderr strings.Builder
+		cmd.Stdout = &stdout
+		cmd.Stderr = &stderr
+		if err := cmd.Run(); err != nil {
+			log.Printf("plot-context error: %v stderr: %s", err, stderr.String())
+			http.Error(w, `{"error":"plot-context processing failed; check geometry is valid GeoJSON within Austria"}`, http.StatusInternalServerError)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Write([]byte(stdout.String()))
+	})
 
 	log.Println("Starting server on :8000 (public access)")
 	log.Println("View at http://localhost:8000")
