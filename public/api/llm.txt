@@ -23,6 +23,12 @@ POST /api/plot-context
   Body: GeoJSON Geometry, Feature, or FeatureCollection (WGS84 lon/lat).
         Polygon/MultiPolygon preferred; Point gets a 100 m buffer.
   Slow-ish: 10–60 s (pixel-exact zonal stats + ring buffers). One request at a time.
+  Errors (JSON body {"error": "..."} in all cases):
+    400 – bad input (malformed JSON, invalid GeoJSON geometry, empty FeatureCollection)
+    422 – valid geometry but outside Austria (no municipality intersected)
+    429 – busy (one request at a time; Retry-After header set)
+    405 – non-POST method
+    5xx – genuine server fault only
   Returns JSON:
     input          – plot_area_ha
     plot           – pixel-exact stats for the plot: forest_area_2000_ha,
@@ -34,14 +40,17 @@ POST /api/plot-context
     comparison     – annual_forest_loss_rate_pct and carbon flux for
                      plot vs rings vs municipality (ready-made benchmark)
     municipalities – intersecting municipalities with plot_share, forest_area_ha,
-                     harvest history, carbon flux densities
+                     total 2001–2024 forest loss and carbon flux densities
+                     (flat objects; the per-year harvest/loss series live in `timeline`)
     timeline       – unified per-year rows 2001–2024, each with:
                        plot {loss_ha, loss_pct_of_forest}
                        surroundings_5km {loss_pct_of_forest}
                        municipality {loss_ha, harvest_efm, harvest_value_eur,
                                      co2_tonnes, harvest_efm_per_forest_ha}
                        austria {harvest_efm, loss_ha}
-                       price_spruce_eur_efm
+                       price_spruce_eur_efm (national spruce/fir sawlog yearly avg;
+                                             series starts 2010 -> null for 2001–2009,
+                                             nulls there are expected, not an error)
                      -> plot this directly; it is THE long-horizon view.
     timber_prices_eur_per_efm – national STAT sawlog series (yearly avgs + monthly)
     regional_prices – latest LK price ranges for the plot's state:

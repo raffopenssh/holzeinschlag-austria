@@ -124,15 +124,36 @@ def regional_prices(state):
             }
     return out
 
+def fail(msg, code):
+    """Print a JSON error and exit with a code the Go server maps to an HTTP status:
+    2 -> 400 bad input, 3 -> 422 outside Austria."""
+    print(json.dumps({"error": msg}))
+    sys.stdout.flush()
+    import os
+    os._exit(code)
+
 def main():
-    raw = json.load(sys.stdin)
+    try:
+        raw = json.load(sys.stdin)
+    except Exception:
+        fail("request body is not valid JSON", 2)
+    if not isinstance(raw, dict):
+        fail("expected a GeoJSON Geometry, Feature or FeatureCollection object", 2)
     if raw.get("type") == "FeatureCollection":
-        raw = raw["features"][0]
+        feats = raw.get("features") or []
+        if not feats:
+            fail("FeatureCollection has no features", 2)
+        raw = feats[0]
     if raw.get("type") == "Feature":
-        raw = raw["geometry"]
-    geom = ogr.CreateGeometryFromJson(json.dumps(raw))
+        raw = raw.get("geometry")
+        if not raw:
+            fail("Feature has no geometry", 2)
+    try:
+        geom = ogr.CreateGeometryFromJson(json.dumps(raw))
+    except Exception:
+        geom = None
     if geom is None:
-        print(json.dumps({"error": "invalid GeoJSON geometry"})); return
+        fail("invalid GeoJSON geometry", 2)
     if geom.GetGeometryName() in ("POINT", "MULTIPOINT"):
         g3 = geom.Clone(); g3.Transform(TO_3035); g3 = g3.Buffer(100); g3.Transform(TO_4326)
         geom, point_input = g3, True
@@ -152,7 +173,7 @@ def main():
             if ih > 1e-6:
                 hits.append((f["properties"], ih))
     if not hits:
-        print(json.dumps({"error": "plot outside Austria (no municipality intersected)"})); return
+        fail("plot outside Austria (no municipality intersected)", 3)
     hits.sort(key=lambda t: -t[1])
 
     munis = []

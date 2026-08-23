@@ -7,6 +7,7 @@ import (
 	"crypto/subtle"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"io"
 	"fmt"
 	"log"
@@ -575,13 +576,28 @@ func main() {
 		var stdout, stderr strings.Builder
 		cmd.Stdout = &stdout
 		cmd.Stderr = &stderr
-		if err := cmd.Run(); err != nil {
-			log.Printf("plot-context error: %v stderr: %s", err, stderr.String())
-			http.Error(w, `{"error":"plot-context processing failed; check geometry is valid GeoJSON within Austria"}`, http.StatusInternalServerError)
-			return
-		}
 		w.Header().Set("Content-Type", "application/json")
 		w.Header().Set("Access-Control-Allow-Origin", "*")
+		if err := cmd.Run(); err != nil {
+			// plot_context.py exit codes: 2 = bad input (400), 3 = outside Austria (422).
+			// Anything else is a genuine server fault (500).
+			var exitErr *exec.ExitError
+			if errors.As(err, &exitErr) {
+				switch exitErr.ExitCode() {
+				case 2:
+					w.WriteHeader(http.StatusBadRequest)
+					w.Write([]byte(stdout.String()))
+					return
+				case 3:
+					w.WriteHeader(http.StatusUnprocessableEntity)
+					w.Write([]byte(stdout.String()))
+					return
+				}
+			}
+			log.Printf("plot-context error: %v stderr: %s", err, stderr.String())
+			http.Error(w, `{"error":"plot-context processing failed"}`, http.StatusInternalServerError)
+			return
+		}
 		w.Write([]byte(stdout.String()))
 	})
 
