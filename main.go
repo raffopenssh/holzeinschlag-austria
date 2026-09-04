@@ -330,6 +330,16 @@ func main() {
 	http.HandleFunc("/sitemap.xml", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, filepath.Join(publicDir, "sitemap.xml"))
 	})
+	http.HandleFunc("/lizenz", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, filepath.Join(publicDir, "lizenz.html"))
+	})
+	http.HandleFunc("/license", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/lizenz", http.StatusMovedPermanently)
+	})
+	http.HandleFunc("/LICENSE", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+		http.ServeFile(w, r, filepath.Join(filepath.Dir(publicDir), "LICENSE"))
+	})
 	http.HandleFunc("/og-image.png", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, filepath.Join(publicDir, "og-image.png"))
 	})

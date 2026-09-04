@@ -1,0 +1,63 @@
+MIT License
+
+Copyright (c) 2026 Raffael Hickisch
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---------------------------------------------------------------------------
+
+Third-party data sources, APIs and tile providers
+
+The MIT license above covers the source code of this project only. The data
+sets, APIs and map tiles listed below are provided by third parties under
+their own terms; please consult each provider's license before reuse.
+
+Data sources
+- Hansen/UMD/Google/USGS/NASA Global Forest Change (GFC-2024 v1.12, GFC-2023
+  v1.11) – tree cover 2000 and annual loss year, 30 m (CC BY 4.0)
+  https://glad.earthengine.app/view/global-forest-change
+  https://storage.googleapis.com/earthenginepartners-hansen/GFC-2024-v1.12/download.html
+- WRI / Global Forest Watch – Forest Carbon Flux model (Harris et al. 2021,
+  Gibbs et al. 2025), 30 m gross emissions / removals / net flux (CC BY 4.0)
+  https://data.globalforestwatch.org/documents/gfw::forest-greenhouse-gas-net-flux/about
+- Statistik Austria – Holzeinschlag (timber harvest) by federal state,
+  2001–2024; municipality boundaries (Gemeindegrenzen) and population
+  https://www.statistik.at/statistiken/land-und-forstwirtschaft/land-und-forstwirtschaftliche-betriebe/holzeinschlag
+  https://www.statistik.at/services/tools/services/regionales/regionale-gliederungen
+  https://www.data.gv.at/
+- Bundesministerium für Land- und Forstwirtschaft, Klima- und Umweltschutz,
+  Regionen und Wasserwirtschaft (BML/BMLUK) – Holzeinschlagsmeldung
+  https://www.bmluk.gv.at/
+- preise.agrarforschung.at (AgrarMarkt Austria / LK Landwirtschaftskammern /
+  Statistik Austria / WIFO, HWWI, CME) – timber, pellet and futures price
+  series via https://preise.agrarforschung.at/api/getcontent
+  https://preise.agrarforschung.at/
+- EU Emissions Trading System (EU ETS) – historical EUA carbon prices used for
+  the hypothetical ETS liability
+  https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en
+
+Map tiles and front-end libraries
+- CARTO basemaps (light_all) – https://carto.com/basemaps/
+- OpenStreetMap contributors (ODbL) – https://www.openstreetmap.org/copyright
+- Leaflet (BSD-2-Clause) – https://leafletjs.com/
+- Alpine.js (MIT) – https://alpinejs.dev/
+
+Libraries used in processing
+- GDAL/OGR (MIT/X) – https://gdal.org/
+- NumPy (BSD-3-Clause) – https://numpy.org/

@@ -865,6 +865,9 @@
             <div class="sidebar-footer">
                 <a href="#" @click.prevent="showMethodsModal = true" style="margin-right: 1rem;">Methoden & Quellen</a>
                 <a :href="exportUrl" download>📥 GeoPackage</a>
+                <div style="margin-top: 0.5rem; opacity: 0.8;">
+                    © <span x-text="new Date().getFullYear()"></span> Raffael Hickisch · <a href="/lizenz" title="Lizenz & Datenquellen">Open Source · Daten</a>
+                </div>
             </div>
         </aside>
         
@@ -1749,7 +1752,7 @@
                     L.control.zoom({ position: 'bottomright' }).addTo(this.map);
                     
                     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_2f4r_1_641ea85562265ec4220f53fc', {
-                        attribution: '© OSM © CARTO',
+                        attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OSM</a> © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a> · <a href="/lizenz">Open Source · Daten</a>',
                         subdomains: 'abcd',
                         maxZoom: 19
                     }).addTo(this.map);

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizenz & Datenquellen – Holzeinschlag Österreich</title>
+    <meta name="description" content="Holzeinschlag Österreich ist Open Source (MIT-Lizenz). Übersicht aller verwendeten Datenquellen, APIs und Kartenanbieter.">
+    <link rel="canonical" href="https://holzeinschlag-at.exe.xyz/lizenz">
+    <style>
+        :root { --primary: #2d5a27; --text: #222; --text-light: #666; }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text); line-height: 1.6; background: #fafaf7; }
+        main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+        h1 { color: var(--primary); font-size: 1.7rem; margin: 0 0 .25rem; }
+        h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; color: var(--primary); }
+        p.lead { color: var(--text-light); margin-top: 0; }
+        a { color: var(--primary); }
+        ul { padding-left: 1.25rem; }
+        li { margin: .4rem 0; }
+        li small { color: var(--text-light); display: block; }
+        code { background: #eee; padding: .1em .35em; border-radius: 4px; font-size: .9em; }
+        pre { background: #f0f0ec; border: 1px solid #e0e0da; border-radius: 8px; padding: 1rem; font-size: .8rem; overflow-x: auto; white-space: pre-wrap; }
+        .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; text-decoration: none; }
+        footer { border-top: 1px solid #e0e0e0; margin-top: 3rem; padding-top: 1rem; font-size: .75rem; color: var(--text-light); }
+        footer a { text-decoration: none; }
+    </style>
+</head>
+<body>
+<main>
+    <a class="back" href="/">← Zurück zur Karte</a>
+    <h1>Lizenz & Datenquellen</h1>
+    <p class="lead">Holzeinschlag Österreich ist Open Source.</p>
+
+    <h2>Software: MIT-Lizenz</h2>
+    <p>Der Quellcode dieser Anwendung (Server, Verarbeitungsskripte, Web-Oberfläche und Plot-Context-API) steht unter der
+       <a href="https://opensource.org/license/mit" target="_blank" rel="noopener">MIT-Lizenz</a>.
+       Copyright © <span id="year">2026</span> Raffael Hickisch. Den vollständigen Lizenztext finden Sie in der Datei
+       <a href="/LICENSE">LICENSE</a>.</p>
+    <p>Die abgeleiteten Daten (Gemeindeschätzungen, GeoPackage-Export, API-Antworten) sind <strong>Modellwerte</strong>, keine amtlichen Messungen.
+       Sie basieren auf den unten genannten Drittquellen, für die jeweils deren eigene Nutzungsbedingungen gelten.</p>
+
+    <h2>Datenquellen</h2>
+    <ul>
+        <li><a href="https://glad.earthengine.app/view/global-forest-change" target="_blank" rel="noopener">Hansen / UMD / Google / USGS / NASA – Global Forest Change</a>
+            <small>GFC-2024 v1.12 (und v1.11): Baumbedeckung 2000 und jährlicher Waldverlust 2001–2024, 30 m. Lizenz: CC BY 4.0.
+            <a href="https://storage.googleapis.com/earthenginepartners-hansen/GFC-2024-v1.12/download.html" target="_blank" rel="noopener">Download</a></small></li>
+        <li><a href="https://data.globalforestwatch.org/documents/gfw::forest-greenhouse-gas-net-flux/about" target="_blank" rel="noopener">WRI / Global Forest Watch – Forest Carbon Flux</a>
+            <small>Harris et al. 2021, Gibbs et al. 2025: Brutto-Emissionen, -Senken und Nettofluss, 30 m, kumulativ 2001–2024. Lizenz: CC BY 4.0.</small></li>
+        <li><a href="https://www.statistik.at/statistiken/land-und-forstwirtschaft/land-und-forstwirtschaftliche-betriebe/holzeinschlag" target="_blank" rel="noopener">Statistik Austria – Holzeinschlag</a>
+            <small>Einschlag nach Bundesland 2001–2024 (Landestotale, auf Gemeinden mittels Hansen-Verlustanteilen heruntergerechnet). Außerdem
+            <a href="https://www.statistik.at/services/tools/services/regionales/regionale-gliederungen" target="_blank" rel="noopener">Gemeindegrenzen</a> und Bevölkerungsstände
+            (<a href="https://www.data.gv.at/" target="_blank" rel="noopener">data.gv.at</a>).</small></li>
+        <li><a href="https://www.bmluk.gv.at/" target="_blank" rel="noopener">BML / BMLUK – Holzeinschlagsmeldung</a>
+            <small>Bundesministerium für Land- und Forstwirtschaft, Klima- und Umweltschutz, Regionen und Wasserwirtschaft.</small></li>
+        <li><a href="https://preise.agrarforschung.at/" target="_blank" rel="noopener">preise.agrarforschung.at – Holzpreise</a>
+            <small>Sägerundholz, Industrieholz, Brennholz, Pellets und Futures; LK-Landwirtschaftskammern, Statistik Austria, WIFO/HWWI/CME.
+            Abgerufen über <code>/api/getcontent</code>.</small></li>
+        <li><a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank" rel="noopener">EU-Emissionshandel (EU ETS)</a>
+            <small>Historische EUA-Preise für die hypothetische ETS-Haftung. Forstwirtschaft ist nicht Teil des EU ETS.</small></li>
+    </ul>
+
+    <h2>Kartenkacheln & Bibliotheken</h2>
+    <ul>
+        <li><a href="https://carto.com/basemaps/" target="_blank" rel="noopener">CARTO Basemaps</a> (light_all) auf Basis von
+            <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap-Mitwirkende</a> (ODbL)</li>
+        <li><a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> (BSD-2-Clause)</li>
+        <li><a href="https://alpinejs.dev/" target="_blank" rel="noopener">Alpine.js</a> (MIT)</li>
+        <li><a href="https://gdal.org/" target="_blank" rel="noopener">GDAL/OGR</a> (MIT/X), <a href="https://numpy.org/" target="_blank" rel="noopener">NumPy</a> (BSD-3-Clause), <a href="https://go.dev/" target="_blank" rel="noopener">Go</a> (BSD-3-Clause)</li>
+    </ul>
+
+    <h2>Zitiervorschlag</h2>
+    <pre>Hickisch, R. (<span class="year">2026</span>). Holzeinschlag Österreich – Waldverlust, Einschlag und CO₂ pro Gemeinde 2001–2024.
+https://holzeinschlag-at.exe.xyz — Software: MIT; Daten: siehe Quellenangaben.</pre>
+
+    <footer>
+        © <span class="year">2026</span> Raffael Hickisch · <a href="/lizenz">Open Source · Daten</a> · <a href="/api/llm.txt">API</a>
+    </footer>
+</main>
+<script>
+    var y = new Date().getFullYear();
+    document.querySelectorAll('#year, .year').forEach(function (el) { el.textContent = y; });
+</script>
+</body>
+</html>
