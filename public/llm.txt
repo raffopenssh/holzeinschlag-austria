@@ -1,0 +1,42 @@
+# holzeinschlag-at — Austrian forest loss, timber harvest, carbon & prices (2001–2024)
+# Base: https://holzeinschlag-at.exe.xyz   License: CC-BY-4.0   No auth, CORS *, ETag/304 + gzip
+# Rate limits: none on /llm/* and /data/* (in-memory). POST /api/plot-context: 4 concurrent (fast), 1 (full); 429 + Retry-After when busy.
+# Full API reference (plot-context details): /api/llm.txt
+
+## Sibling-service contract (cadastre integration spec)
+GET /llm/kg/{kg_code}        Municipal forest dossier for one Katastralgemeinde (5-char code, leading zeros kept).
+                             granularity=gemeinde (every KG in a Gemeinde returns the same block).
+                             metrics: forest_area_ha, loss_ha, loss_ha_2024, loss_total_ha, harvest_efm,
+                             harvest_value_eur, co2_t, net_flux_tco2e_ha, price_spruce_eur_efm
+                             history[]: one row per year 2001-12-31 … 2024-12-31, same keys (null where absent;
+                             prices start 2010). Unknown KG -> 404 {"kg_code":..,"error":"no_data"}.
+GET /llm/kg/{kg_code}.json   alias
+GET /llm/kgs?codes=a,b,c     batch (<=500) -> {results:[...], missing:[...]}
+GET /llm/kgs?all=1           all covered KG codes
+GET /llm/manifest.json       {service, finest_granularity, join_keys, kg_endpoint, metrics_schema, kg_count, updated_at}
+kg_code -> gemeinde_code via cadastre-process-api.exe.xyz /api/v1/lookup (BEV EDM register), cached in data/kg_gemeinde.json.
+
+## Prices
+GET /data/prices/state/{1-8}.json   Slim LK regional prices per Bundesland (digit = first digit of KG/Gemeinde code;
+                                    6 = Steiermark; Wien(9) -> 404). ~3 KB: series{LK_BLFIM2b (spruce/fir sawlog 2b),
+                                    LK_BLLA3aplus (larch), LK_BLKI2aplus (pine), LK_BLBU3plus (beech), LK_ISFI_FMO
+                                    (pulpwood spruce), LK_BHH/LK_BHW (fuelwood hard/soft)}: {name, unit, latest,
+                                    latest_date, range_low, range_high, yearly_avg{year:EUR}}. Refreshed weekly.
+GET /data/timber_prices.json        national STAT sawlog series (compact)
+GET /data/timber_price_catalog.json full catalogue (~700 KB; use ETag)
+
+## Plot-level (pixel-exact, 30 m Hansen + carbon rasters)
+POST /api/plot-context?fast=1  body: GeoJSON geometry/Feature (WGS84). Plot-only: {fast:true, input, plot{forest_share_2000_pct,
+                               loss_ha_by_year, loss_total, net_flux_tco2e_ha, gross_emissions, gross_removals},
+                               municipality_codes[], state}. <1 s typical, 4 concurrent, 24 h cache by geometry hash.
+POST /api/plot-context         full: rings 1/5 km, municipal timeline, benchmarks, regional prices (1–60 s, serialized).
+Errors: 400 bad geometry, 422 outside Austria, 429 busy (+retry_after_s), never hangs.
+
+## Other static data (/data/*, ETag + gzip)
+emissions_meta.json (Austria yearly summary), year_<YYYY>.json (per-Gemeinde rows
+[loss_px, loss_ha, harvest_efm, value_eur, co2_t, ets_eur, ets_pc]), gemeinde_lookup.json, gemeinde_yearly_loss.json,
+carbon_flux_by_gemeinde.json, austria_gemeinden.geojson.
+
+Sources: Hansen GFC-2024 v1.12 (loss, forest=treecover2000>=30%); Statistik Austria Holzeinschlag (state totals,
+downscaled to Gemeinden via loss shares — model values); Harris et al./GFW carbon flux (tCO2e/ha 2001–2024,
+negative = sink); LK Holzmarktberichte via preise.agrarforschung.at.

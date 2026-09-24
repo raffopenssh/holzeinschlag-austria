@@ -17,16 +17,26 @@
   (cron Mon 05:17 UTC) from preise.agrarforschung.at.
 - Municipality boundaries, population, per-municipality CO2/ETS estimates
 
+## Sibling-service endpoints (KG dossiers, manifest, slim state prices) — see /llm.txt
+  GET /llm/kg/{kg_code}  ·  GET /llm/kgs?codes=  ·  GET /llm/manifest.json  ·  GET /data/prices/state/{1-8}.json
+  All /llm/* and /data/* responses carry ETag (304 on If-None-Match), gzip, CORS *, Cache-Control max-age=3600.
+
 ## Primary endpoint
 
 POST /api/plot-context
   Body: GeoJSON Geometry, Feature, or FeatureCollection (WGS84 lon/lat).
         Polygon/MultiPolygon preferred; Point gets a 100 m buffer.
-  Slow-ish: 10–60 s (pixel-exact zonal stats + ring buffers). One request at a time.
+  Full mode: 1–60 s (pixel-exact zonal stats + ring buffers). One request at a time.
+  ?fast=1 : plot-only mode — skips rings and the municipal timeline; returns
+            {fast:true, input, plot{area_ha, forest_area_2000_ha, forest_share_2000_pct,
+             loss_ha_by_year, loss_total, loss_pct_of_forest2000, net_flux_tco2e_ha,
+             gross_emissions, gross_removals}, municipality_codes[], state}.
+            <1 s typical, up to 4 concurrent, cached 24 h by geometry hash (X-Cache header).
+  Unclosed rings / slightly invalid polygons are repaired (CloseRings + MakeValid).
   Errors (JSON body {"error": "..."} in all cases):
     400 – bad input (malformed JSON, invalid GeoJSON geometry, empty FeatureCollection)
     422 – valid geometry but outside Austria (no municipality intersected)
-    429 – busy (one request at a time; Retry-After header set)
+    429 – busy (Retry-After header + retry_after_s in body; never hangs)
     405 – non-POST method
     5xx – genuine server fault only
   Returns JSON:

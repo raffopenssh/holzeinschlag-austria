@@ -8,8 +8,8 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"errors"
-	"io"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -346,7 +346,10 @@ func main() {
 
 	// Protected file servers
 	http.Handle("/", authMiddleware(http.FileServer(http.Dir(publicDir))))
-	http.Handle("/data/", authMiddleware(http.StripPrefix("/data/", http.FileServer(http.Dir(dataDir)))))
+	// Sibling-service contract endpoints (/llm/*, /data/prices/state/*, /llm.txt) — see llm.go.
+	// Must be registered before /data/ so the more specific prefix wins.
+	registerLLM(dataDir, publicDir)
+	http.Handle("/data/", authMiddleware(http.StripPrefix("/data/", cachedFileServer(dataDir))))
 
 	// Protected API endpoints
 	http.Handle("/api/status", authMiddleware(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -561,7 +564,16 @@ func main() {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		http.ServeFile(w, r, filepath.Join(publicDir, "api", "llm.txt"))
 	})
+	// fast=1: plot-only (no rings/municipal timeline), up to 4 concurrent, 24 h geometry-hash cache.
+	fastSem := make(chan struct{}, 4)
 	http.HandleFunc("/api/plot-context", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+		w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+		if r.Method == http.MethodOptions {
+			w.WriteHeader(http.StatusNoContent)
+			return
+		}
 		if r.Method != "POST" {
 			http.Error(w, `{"error":"POST a GeoJSON geometry; docs at /api/llm.txt"}`, http.StatusMethodNotAllowed)
 			return
@@ -572,49 +584,81 @@ func main() {
 			http.Error(w, `{"error":"body too large or unreadable"}`, http.StatusBadRequest)
 			return
 		}
-		if !plotCtxMutex.TryLock() {
-			w.Header().Set("Retry-After", "30")
-			http.Error(w, `{"error":"busy: one plot-context request at a time"}`, http.StatusTooManyRequests)
-			return
+		fast := r.URL.Query().Get("fast") == "1" || r.URL.Query().Get("fast") == "true"
+		w.Header().Set("Content-Type", "application/json")
+		cacheKey := ""
+		if fast {
+			cacheKey = plotCache.key(payload)
+			if e, ok := plotCache.get(cacheKey); ok {
+				w.Header().Set("X-Cache", "hit")
+				w.WriteHeader(e.code)
+				w.Write(e.body)
+				return
+			}
+			select {
+			case fastSem <- struct{}{}:
+				defer func() { <-fastSem }()
+			case <-time.After(3 * time.Second): // brief queue, never hang
+				w.Header().Set("Retry-After", "5")
+				http.Error(w, `{"error":"busy","ready":false,"retry_after_s":5}`, http.StatusTooManyRequests)
+				return
+			}
+		} else {
+			if !plotCtxMutex.TryLock() {
+				w.Header().Set("Retry-After", "30")
+				http.Error(w, `{"error":"busy: one full plot-context request at a time; use ?fast=1 for the concurrent plot-only mode","ready":false,"retry_after_s":30}`, http.StatusTooManyRequests)
+				return
+			}
+			defer plotCtxMutex.Unlock()
 		}
-		defer plotCtxMutex.Unlock()
 
-		ctx, cancel := context.WithTimeout(r.Context(), 5*time.Minute)
+		timeout := 5 * time.Minute
+		if fast {
+			timeout = 60 * time.Second
+		}
+		ctx, cancel := context.WithTimeout(r.Context(), timeout)
 		defer cancel()
-		cmd := exec.CommandContext(ctx, "python3", filepath.Join(processingDir, "plot_context.py"))
+		args := []string{filepath.Join(processingDir, "plot_context.py")}
+		if fast {
+			args = append(args, "--fast")
+		}
+		cmd := exec.CommandContext(ctx, "python3", args...)
 		cmd.Stdin = strings.NewReader(string(payload))
 		var stdout, stderr strings.Builder
 		cmd.Stdout = &stdout
 		cmd.Stderr = &stderr
-		w.Header().Set("Content-Type", "application/json")
-		w.Header().Set("Access-Control-Allow-Origin", "*")
+		status := http.StatusOK
 		if err := cmd.Run(); err != nil {
 			// plot_context.py exit codes: 2 = bad input (400), 3 = outside Austria (422).
 			// Anything else is a genuine server fault (500).
 			var exitErr *exec.ExitError
-			if errors.As(err, &exitErr) {
-				switch exitErr.ExitCode() {
-				case 2:
-					w.WriteHeader(http.StatusBadRequest)
-					w.Write([]byte(stdout.String()))
-					return
-				case 3:
-					w.WriteHeader(http.StatusUnprocessableEntity)
-					w.Write([]byte(stdout.String()))
-					return
+			if errors.As(err, &exitErr) && (exitErr.ExitCode() == 2 || exitErr.ExitCode() == 3) {
+				status = http.StatusBadRequest
+				if exitErr.ExitCode() == 3 {
+					status = http.StatusUnprocessableEntity
 				}
+			} else {
+				log.Printf("plot-context error: %v stderr: %s", err, stderr.String())
+				http.Error(w, `{"error":"plot-context processing failed"}`, http.StatusInternalServerError)
+				return
 			}
-			log.Printf("plot-context error: %v stderr: %s", err, stderr.String())
-			http.Error(w, `{"error":"plot-context processing failed"}`, http.StatusInternalServerError)
-			return
 		}
-		w.Write([]byte(stdout.String()))
+		out := []byte(stdout.String())
+		if fast {
+			plotCache.put(cacheKey, status, out)
+			w.Header().Set("X-Cache", "miss")
+		}
+		w.WriteHeader(status)
+		w.Write(out)
 	})
 
-	log.Println("Starting server on :8000 (public access)")
-	log.Println("View at http://localhost:8000")
+	addr := ":8000"
+	if v := os.Getenv("PORT"); v != "" {
+		addr = ":" + v
+	}
+	log.Printf("Starting server on %s (public access)", addr)
 
-	if err := http.ListenAndServe(":8000", nil); err != nil {
+	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Fatal(err)
 	}
 }

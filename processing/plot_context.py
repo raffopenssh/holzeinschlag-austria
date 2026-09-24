@@ -133,6 +133,7 @@ def fail(msg, code):
     os._exit(code)
 
 def main():
+    fast = "--fast" in sys.argv[1:]
     try:
         raw = json.load(sys.stdin)
     except Exception:
@@ -154,6 +155,14 @@ def main():
         geom = None
     if geom is None:
         fail("invalid GeoJSON geometry", 2)
+    try:
+        geom.CloseRings()
+        if not geom.IsValid():
+            geom = geom.MakeValid()
+        if geom is None or geom.IsEmpty():
+            fail("invalid GeoJSON geometry (empty after repair)", 2)
+    except Exception as e:
+        fail(f"invalid GeoJSON geometry: {e}", 2)
     if geom.GetGeometryName() in ("POINT", "MULTIPOINT"):
         g3 = geom.Clone(); g3.Transform(TO_3035); g3 = g3.Buffer(100); g3.Transform(TO_4326)
         geom, point_input = g3, True
@@ -166,7 +175,11 @@ def main():
     loss_g, meta = load("gemeinde_yearly_loss.json"), load("emissions_meta.json")
     yearly = {y: load(f"year_{y}.json") for y in YEARS}
     hits = []
+    env = geom.GetEnvelope()  # minx,maxx,miny,maxy — cheap bbox prefilter before exact intersect
     for f in load("austria_gemeinden.geojson")["features"]:
+        b = f.get("bbox")
+        if b and (b[2] < env[0] or b[0] > env[1] or b[3] < env[2] or b[1] > env[3]):
+            continue
         g = ogr.CreateGeometryFromJson(json.dumps(f["geometry"]))
         if g.Intersects(geom):
             ih = area_ha(g.Intersection(geom))
@@ -190,8 +203,35 @@ def main():
         })
     main_iso, main_state = munis[0]["iso"], munis[0]["state"]
 
-    # --- pixel-exact zonal stats: plot + rings ---
+    # --- pixel-exact zonal stats: plot (+ rings unless fast) ---
     plot_z = zonal(geom)
+    if fast:
+        # HOLZ-3 contract: plot-only, no rings, no municipal timeline; cheap + concurrent.
+        slim = None
+        if plot_z:
+            slim = {
+                "area_ha": plot_z["area_ha"],
+                "forest_area_2000_ha": plot_z["forest_area_2000_ha"],
+                "forest_share_2000_pct": plot_z["forest_share_2000_pct"],
+                "loss_ha_by_year": plot_z["loss_ha_by_year"],
+                "loss_total": plot_z["loss_total_2001_2024_ha"],
+                "loss_total_2001_2024_ha": plot_z["loss_total_2001_2024_ha"],
+                "loss_pct_of_forest2000": plot_z["loss_pct_of_forest2000"],
+                "net_flux_tco2e_ha": plot_z.get("net_flux_tCO2e_per_ha_2001_2024"),
+                "gross_emissions": plot_z.get("gross_emissions_tCO2e_per_ha_2001_2024"),
+                "gross_removals": plot_z.get("gross_removals_tCO2e_per_ha_2001_2024"),
+            }
+        print(json.dumps({
+            "fast": True,
+            "input": {"type": "point (100m buffer applied)" if point_input else "polygon", "plot_area_ha": round(plot_ha, 3)},
+            "plot": slim,
+            "municipality_codes": [m["iso"] for m in munis],
+            "state": main_state,
+            "units": {"loss_*": "ha", "net_flux_tco2e_ha/gross_*": "tCO2e per ha, cumulative 2001-2024 (negative = sink)"},
+            "sources": {"forest_loss": "Hansen GFC-2024 v1.12, 30m; forest = treecover2000>=30%",
+                        "carbon": "Harris et al. forest carbon flux, Mg CO2e/ha cumulative 2001-2024"},
+        }))
+        return
     ring1 = zonal(ring(geom, 0, 1000))
     ring5 = zonal(ring(geom, 1000, 5000))
 
