@@ -14,7 +14,7 @@ GET /llm/kg/{kg_code}.json   alias
 GET /llm/kgs?codes=a,b,c     batch (<=500) -> {results:[...], missing:[...]}
 GET /llm/kgs?all=1           all covered KG codes
 GET /llm/manifest.json       {service, finest_granularity, join_keys, kg_endpoint, metrics_schema, kg_count, updated_at}
-kg_code -> gemeinde_code via cadastre-process-api.exe.xyz /api/v1/lookup (BEV EDM register), cached in data/kg_gemeinde.json.
+kg_code -> gemeinde_code via umfeld-at.exe.xyz /api/v1/lookup (BEV EDM register), cached in data/kg_gemeinde.json.
 
 ## Prices
 GET /data/prices/state/{1-8}.json   Slim LK regional prices per Bundesland (digit = first digit of KG/Gemeinde code;

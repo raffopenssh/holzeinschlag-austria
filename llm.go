@@ -245,7 +245,7 @@ func loadStore(dataDir string) error {
 		"history":         "one row per year 2001-2024, same keys as metrics (null where series absent; prices start 2010)",
 		"as_of":           "2024-12-31",
 		"updated_at":      s.loadedAt.Format(time.RFC3339),
-		"kg_map_source":   "cadastre-process-api.exe.xyz /api/v1/lookup (BEV EDM register), fetched " + s.kgSrcTime,
+		"kg_map_source":   "umfeld-at.exe.xyz /api/v1/lookup (BEV EDM register), fetched " + s.kgSrcTime,
 		"other_endpoints": []string{"/data/prices/state/{1-9}.json", "POST /api/plot-context[?fast=1]", "/api/llm.txt", "/data/*"},
 		"license":         "CC-BY-4.0",
 		"cache":           "ETag + gzip on /llm/* and /data/*; Cache-Control max-age=3600",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build data/kg_gemeinde.json: Katastralgemeinde (kg_code) -> gemeinde_code.
 
-Source of truth: cadastre-process-api EDM register lookup (/api/v1/lookup?q=<gemeinde_code>&type=kg),
+Source of truth: umfeld-at.exe.xyz (formerly cadastre-process-api) EDM register lookup (/api/v1/lookup?q=<gemeinde_code>&type=kg),
 per the sibling integration spec — never maintain our own code tables. One request per Gemeinde in gemeinde_lookup.json.
 Idempotent: existing entries kept; only missing Gemeinden are (re)fetched.
 """
@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "kg_gemeinde.json"
-BASE = "https://cadastre-process-api.exe.xyz/api/v1/lookup"
+BASE = "https://umfeld-at.exe.xyz/api/v1/lookup"
 
 lookup = json.load(open(ROOT / "data" / "gemeinde_lookup.json"))
 gemeinden = sorted(lookup["names"])
@@ -45,7 +45,7 @@ for i, g in enumerate(gemeinden):
         tmp.replace(OUT)
     time.sleep(0.05)
 
-out = {"source": "cadastre-process-api.exe.xyz /api/v1/lookup?type=kg (BEV EDM register)",
+out = {"source": "umfeld-at.exe.xyz /api/v1/lookup?type=kg (BEV EDM register)",
        "updated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
        "kg_count": len(kg), "kg": kg, "done_gemeinden": sorted(done)}
 tmp = OUT.with_suffix(".tmp")
